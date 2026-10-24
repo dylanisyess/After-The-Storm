@@ -1,0 +1,5934 @@
+{
+ "issued": "2026-10-24",
+ "mode": "live",
+ "rain_source": "Open-Meteo forecast",
+ "levels": {
+  "low": "risk under 0.17",
+  "caution": "0.17 to 0.50 (the warning threshold tested on 2023-2026)",
+  "high": "0.50 or more: unsafe more likely than not"
+ },
+ "standard": "enterococcus over 104 MPN/100 mL",
+ "stations": [
+  {
+   "station": "10000",
+   "name": "10000-Solimar Beach, Ventura",
+   "lat": 34.3108,
+   "lon": -119.359,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.029,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.083,
+     "level": "low",
+     "reasons": [
+      "0.34 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.342,
+     "level": "caution",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.286,
+     "level": "caution",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "13000",
+   "name": "13000-Surfers Point at Seaside, Ventura",
+   "lat": 34.273,
+   "lon": -119.305,
+   "type": "rain-driven",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.061,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.09,
+     "level": "low",
+     "reasons": [
+      "0.34 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.299,
+     "level": "caution",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.245,
+     "level": "caution",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "14000",
+   "name": "14000-Promenade Park Beach, Ventura",
+   "lat": 34.2742,
+   "lon": -119.297,
+   "type": "rain-driven",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.06,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.09,
+     "level": "low",
+     "reasons": [
+      "0.34 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.35,
+     "level": "caution",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.264,
+     "level": "caution",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "15000",
+   "name": "15000-Promenade Park Beach, Ventura",
+   "lat": 34.2751,
+   "lon": -119.296,
+   "type": "rain-driven",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.051,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.098,
+     "level": "low",
+     "reasons": [
+      "0.34 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.366,
+     "level": "caution",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.303,
+     "level": "caution",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "17000",
+   "name": "17000-Promenade Park Beach, Ventura",
+   "lat": 34.2752,
+   "lon": -119.293,
+   "type": "rain-driven",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.032,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.103,
+     "level": "low",
+     "reasons": [
+      "0.34 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.357,
+     "level": "caution",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.295,
+     "level": "caution",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "18000",
+   "name": "18000-San Buenaventura State Beach, Ventura",
+   "lat": 34.2736,
+   "lon": -119.289,
+   "type": "rain-driven",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.053,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.114,
+     "level": "low",
+     "reasons": [
+      "0.34 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.383,
+     "level": "caution",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.318,
+     "level": "caution",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "19000",
+   "name": "19000-San Buenaventura State Beach, Ventura",
+   "lat": 34.272,
+   "lon": -119.286,
+   "type": "rain-driven",
+   "last_test": {
+    "date": "2026-06-01",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.077,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.082,
+     "level": "low",
+     "reasons": [
+      "0.34 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.215,
+     "level": "caution",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.173,
+     "level": "caution",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "22000",
+   "name": "22000-Marina Park Beach, Ventura",
+   "lat": 34.2538,
+   "lon": -119.27,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.041,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.043,
+     "level": "low",
+     "reasons": [
+      "0.34 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.154,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.12,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "23000",
+   "name": "23000-Penninsula Beach, Ventura",
+   "lat": 34.2464,
+   "lon": -119.268,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.06,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.104,
+     "level": "low",
+     "reasons": [
+      "0.34 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.343,
+     "level": "caution",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.282,
+     "level": "caution",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "2500",
+   "name": "2500",
+   "lat": 34.364201,
+   "lon": -119.450103,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.022,
+     "level": "low",
+     "reasons": [
+      "1.59 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.02,
+     "level": "low",
+     "reasons": [
+      "0.13 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.068,
+     "level": "low",
+     "reasons": [
+      "1.59 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.069,
+     "level": "low",
+     "reasons": [
+      "1.59 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "25000",
+   "name": "25000-Surfers Knoll Beach, Ventura",
+   "lat": 34.2397,
+   "lon": -119.267,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.062,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.075,
+     "level": "low",
+     "reasons": [
+      "0.34 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.259,
+     "level": "caution",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.208,
+     "level": "caution",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "29000",
+   "name": "29000-Oxnard Beach, Ventura",
+   "lat": 34.1979,
+   "lon": -119.249,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.037,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.035,
+     "level": "low",
+     "reasons": [
+      "0.34 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.123,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.095,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "30000",
+   "name": "30000-Oxnard Beach, Ventura",
+   "lat": 34.1904,
+   "lon": -119.245,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.015,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.016,
+     "level": "low",
+     "reasons": [
+      "0.34 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.059,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.047,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "32000",
+   "name": "32000-Oxnard Beach Park, Ventura",
+   "lat": 34.1787,
+   "lon": -119.238,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.034,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.035,
+     "level": "low",
+     "reasons": [
+      "0.34 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.123,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.095,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "33000",
+   "name": "33000-Oxnard Beach Park, Ventura",
+   "lat": 34.1765,
+   "lon": -119.237,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.003,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.004,
+     "level": "low",
+     "reasons": [
+      "0.34 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.013,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.011,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "34000",
+   "name": "34000-Hollywood Beach, Ventura",
+   "lat": 34.1686,
+   "lon": -119.233,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.003,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.004,
+     "level": "low",
+     "reasons": [
+      "0.34 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.013,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.011,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "35000",
+   "name": "35000-Hollywood Beach, Ventura",
+   "lat": 34.1633,
+   "lon": -119.23,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.033,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.03,
+     "level": "low",
+     "reasons": [
+      "0.34 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.109,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.077,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "36000",
+   "name": "36000-Hobie Beach, Ventura",
+   "lat": 34.1601,
+   "lon": -119.222,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.068,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.11,
+     "level": "low",
+     "reasons": [
+      "0.34 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.298,
+     "level": "caution",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.25,
+     "level": "caution",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "37000",
+   "name": "37000-Kiddie Beach, Ventura",
+   "lat": 34.1612,
+   "lon": -119.222,
+   "type": "rain-driven",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 31.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.238,
+     "level": "caution",
+     "reasons": [
+      "0.80 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.224,
+     "level": "caution",
+     "reasons": [
+      "0.34 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.284,
+     "level": "caution",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.281,
+     "level": "caution",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "38000",
+   "name": "38000-Silverstrand Beach, Ventura",
+   "lat": 34.1573,
+   "lon": -119.225,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 42.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.049,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.043,
+     "level": "low",
+     "reasons": [
+      "0.34 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.103,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.073,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "39000",
+   "name": "39000-Silverstrand Beach, Ventura",
+   "lat": 34.1524,
+   "lon": -119.22,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.033,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.03,
+     "level": "low",
+     "reasons": [
+      "0.34 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.109,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.077,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "4000",
+   "name": "4000-Oil Piers Beach, Ventura",
+   "lat": 34.3522,
+   "lon": -119.428,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.036,
+     "level": "low",
+     "reasons": [
+      "1.59 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.068,
+     "level": "low",
+     "reasons": [
+      "0.13 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.225,
+     "level": "caution",
+     "reasons": [
+      "1.59 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.228,
+     "level": "caution",
+     "reasons": [
+      "1.59 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "40000",
+   "name": "40000-Silverstrand Beach, Ventura",
+   "lat": 34.1474,
+   "lon": -119.217,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.037,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.038,
+     "level": "low",
+     "reasons": [
+      "0.34 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.133,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.103,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "41000",
+   "name": "41000-Port Hueneme Beach Park, Ventura",
+   "lat": 34.1413,
+   "lon": -119.195,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.06,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.109,
+     "level": "low",
+     "reasons": [
+      "0.34 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.336,
+     "level": "caution",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.263,
+     "level": "caution",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "42000",
+   "name": "42000-Ormond Beach, Ventura",
+   "lat": 34.139,
+   "lon": -119.189,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.101,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.151,
+     "level": "low",
+     "reasons": [
+      "0.34 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.367,
+     "level": "caution",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.312,
+     "level": "caution",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "43000",
+   "name": "43000-Ormond Beach, Ventura",
+   "lat": 34.1358,
+   "lon": -119.184,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.037,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.038,
+     "level": "low",
+     "reasons": [
+      "0.34 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.133,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.103,
+     "level": "low",
+     "reasons": [
+      "0.80 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "44000",
+   "name": "44000-Ormond Beach, Ventura",
+   "lat": 34.1195,
+   "lon": -119.16,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.027,
+     "level": "low",
+     "reasons": [
+      "0.75 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.043,
+     "level": "low",
+     "reasons": [
+      "0.24 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.145,
+     "level": "low",
+     "reasons": [
+      "0.75 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.112,
+     "level": "low",
+     "reasons": [
+      "0.75 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "45000",
+   "name": "45000-Point Mugu Beach, Ventura",
+   "lat": 34.0878,
+   "lon": -119.065,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.017,
+     "level": "low",
+     "reasons": [
+      "1.53 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.014,
+     "level": "low",
+     "reasons": [
+      "0.33 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.049,
+     "level": "low",
+     "reasons": [
+      "1.53 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.043,
+     "level": "low",
+     "reasons": [
+      "1.53 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "46000",
+   "name": "46000-Thornhill Broome Beach, Ventura",
+   "lat": 34.0752,
+   "lon": -119.024,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-06",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.004,
+     "level": "low",
+     "reasons": [
+      "1.53 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.003,
+     "level": "low",
+     "reasons": [
+      "0.33 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.012,
+     "level": "low",
+     "reasons": [
+      "1.53 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.011,
+     "level": "low",
+     "reasons": [
+      "1.53 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "47000",
+   "name": "47000-Sycamore Cove Beach, Ventura",
+   "lat": 34.0698,
+   "lon": -119.015,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.004,
+     "level": "low",
+     "reasons": [
+      "1.53 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.003,
+     "level": "low",
+     "reasons": [
+      "0.33 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.012,
+     "level": "low",
+     "reasons": [
+      "1.53 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.01,
+     "level": "low",
+     "reasons": [
+      "1.53 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "49500",
+   "name": "49500",
+   "lat": 34.051551,
+   "lon": -118.959972,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.004,
+     "level": "low",
+     "reasons": [
+      "1.53 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.003,
+     "level": "low",
+     "reasons": [
+      "0.33 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.012,
+     "level": "low",
+     "reasons": [
+      "1.53 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.01,
+     "level": "low",
+     "reasons": [
+      "1.53 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "5000",
+   "name": "5000-Hobson County Park Beach, Ventura",
+   "lat": 34.3378,
+   "lon": -119.412,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.026,
+     "level": "low",
+     "reasons": [
+      "1.59 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.024,
+     "level": "low",
+     "reasons": [
+      "0.13 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.085,
+     "level": "low",
+     "reasons": [
+      "1.59 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.087,
+     "level": "low",
+     "reasons": [
+      "1.59 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "50000",
+   "name": "50000-Staircase Beach, Ventura",
+   "lat": 34.0461,
+   "lon": -118.951,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.021,
+     "level": "low",
+     "reasons": [
+      "1.53 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.017,
+     "level": "low",
+     "reasons": [
+      "0.33 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.06,
+     "level": "low",
+     "reasons": [
+      "1.53 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.052,
+     "level": "low",
+     "reasons": [
+      "1.53 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "B-10",
+   "name": "B-10-Long Beach, Long Beach City",
+   "lat": 33.7501,
+   "lon": -118.13,
+   "type": "rain-driven",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.09,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.13,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.163,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.074,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "B-11",
+   "name": "B-11-Long Beach, Long Beach City",
+   "lat": 33.7445,
+   "lon": -118.119,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 31.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.325,
+     "level": "caution",
+     "reasons": [
+      "0.16 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.404,
+     "level": "caution",
+     "reasons": [
+      "0.13 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.281,
+     "level": "caution",
+     "reasons": [
+      "0.11 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.269,
+     "level": "caution",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "B-14",
+   "name": "B-14-Long Beach, Long Beach City",
+   "lat": 33.7545,
+   "lon": -118.132,
+   "type": "rain-driven",
+   "last_test": {
+    "date": "2026-10-12",
+    "value": 2005.0,
+    "unsafe": true
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.213,
+     "level": "caution",
+     "reasons": [
+      "0.10 in of rain in the 3 days before",
+      "last test (Oct 12) was over the limit"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.214,
+     "level": "caution",
+     "reasons": [
+      "last test (Oct 12) was over the limit"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.179,
+     "level": "caution",
+     "reasons": [
+      "last test (Oct 12) was over the limit"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.142,
+     "level": "low",
+     "reasons": [
+      "last test (Oct 12) was over the limit"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "B-22",
+   "name": "B-22-Long Beach, Long Beach City",
+   "lat": 33.7597,
+   "lon": -118.119,
+   "type": "rain-driven",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.437,
+     "level": "caution",
+     "reasons": [
+      "0.16 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.344,
+     "level": "caution",
+     "reasons": [
+      "0.13 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.225,
+     "level": "caution",
+     "reasons": [
+      "0.11 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.261,
+     "level": "caution",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "B-24",
+   "name": "B-24-Long Beach, Long Beach City",
+   "lat": 33.7706,
+   "lon": -118.135,
+   "type": "rain-driven",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.067,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.064,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.091,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.088,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "B-25",
+   "name": "B-25-Long Beach, Long Beach City",
+   "lat": 33.7712,
+   "lon": -118.134,
+   "type": "rain-driven",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.067,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.064,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.095,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.088,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "B-31",
+   "name": "B-31-Long Beach, Long Beach City",
+   "lat": 33.7512,
+   "lon": -118.126,
+   "type": "rain-driven",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.078,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.084,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.152,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.148,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "B-5",
+   "name": "B-5-Long Beach, Long Beach City",
+   "lat": 33.7639,
+   "lon": -118.178,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.092,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.104,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.121,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.133,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "B-56",
+   "name": "B-56-Long Beach, Long Beach City",
+   "lat": 33.7634,
+   "lon": -118.174,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.082,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.087,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.099,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.094,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "B-60",
+   "name": "B-60-Long Beach, Long Beach City",
+   "lat": 33.7614,
+   "lon": -118.162,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.099,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.087,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.117,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.128,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "B-64",
+   "name": "B-64-Long Beach, Long Beach City",
+   "lat": 33.755,
+   "lon": -118.14,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 20.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.116,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.179,
+     "level": "caution",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.24,
+     "level": "caution",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.247,
+     "level": "caution",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "B-67",
+   "name": "B-67-Long Beach, Long Beach City",
+   "lat": 33.7581,
+   "lon": -118.13,
+   "type": "rain-driven",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.065,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.074,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.11,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.107,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "B-7",
+   "name": "B-7-Long Beach, Long Beach City",
+   "lat": 33.7596,
+   "lon": -118.155,
+   "type": "rain-driven",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.091,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.099,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.136,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.149,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "B-8",
+   "name": "B-8-Long Beach, Long Beach City",
+   "lat": 33.7579,
+   "lon": -118.149,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 42.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.122,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.187,
+     "level": "caution",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.195,
+     "level": "caution",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.197,
+     "level": "caution",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "B-9",
+   "name": "B-9-Long Beach, Long Beach City",
+   "lat": 33.7564,
+   "lon": -118.144,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.091,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.111,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.181,
+     "level": "caution",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.197,
+     "level": "caution",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "CB-01",
+   "name": "CB-01",
+   "lat": 33.71333,
+   "lon": -118.283,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-21",
+    "value": 31.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.124,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.263,
+     "level": "caution",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.247,
+     "level": "caution",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.272,
+     "level": "caution",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "CB-02",
+   "name": "CB-02",
+   "lat": 33.71138,
+   "lon": -118.2831,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-21",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.149,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.252,
+     "level": "caution",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.294,
+     "level": "caution",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.338,
+     "level": "caution",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS002",
+   "name": "DHS002-Malibu Beach, Los Angeles",
+   "lat": 34.0376,
+   "lon": -118.676,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.06,
+     "level": "low",
+     "reasons": [
+      "0.27 in of rain in the 3 days before",
+      "history: unsafe on 19% of past tests"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.077,
+     "level": "low",
+     "reasons": [
+      "history: unsafe on 19% of past tests"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.093,
+     "level": "low",
+     "reasons": [
+      "history: unsafe on 19% of past tests"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.089,
+     "level": "low",
+     "reasons": [
+      "history: unsafe on 19% of past tests"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS003",
+   "name": "DHS003-Malibu Beach, Los Angeles",
+   "lat": 34.0314,
+   "lon": -118.682,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.034,
+     "level": "low",
+     "reasons": [
+      "0.27 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.053,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.178,
+     "level": "caution",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.074,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS004",
+   "name": "DHS004-Malibu Beach, Los Angeles",
+   "lat": 34.0333,
+   "lon": -118.734,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.04,
+     "level": "low",
+     "reasons": [
+      "0.27 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.045,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.15,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.067,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS004B",
+   "name": "DHS004B-Malibu Beach, Los Angeles",
+   "lat": 34.0331,
+   "lon": -118.734,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.033,
+     "level": "low",
+     "reasons": [
+      "0.27 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.062,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.177,
+     "level": "caution",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.074,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS005",
+   "name": "DHS005-Malibu Beach, Los Angeles",
+   "lat": 34.0291,
+   "lon": -118.754,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-13",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.048,
+     "level": "low",
+     "reasons": [
+      "0.27 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.056,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.116,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.04,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS005B",
+   "name": "DHS005B-Malibu Beach, Los Angeles",
+   "lat": 34.029,
+   "lon": -118.753,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-13",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.041,
+     "level": "low",
+     "reasons": [
+      "0.27 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.071,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.132,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.053,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS006",
+   "name": "DHS006-Malibu Beach, Los Angeles",
+   "lat": 34.0207,
+   "lon": -118.786,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-13",
+    "value": 75.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.125,
+     "level": "low",
+     "reasons": [
+      "0.27 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.201,
+     "level": "caution",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.149,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.122,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS007",
+   "name": "DHS007-Malibu Beach, Los Angeles",
+   "lat": 34.0139,
+   "lon": -118.819,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.044,
+     "level": "low",
+     "reasons": [
+      "0.27 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.05,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.163,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.069,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS007B",
+   "name": "DHS007B-Malibu Beach, Los Angeles",
+   "lat": 34.0132,
+   "lon": -118.821,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.046,
+     "level": "low",
+     "reasons": [
+      "0.27 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.058,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.19,
+     "level": "caution",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.08,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS008",
+   "name": "DHS008-Malibu Beach, Los Angeles",
+   "lat": 34.0296,
+   "lon": -118.842,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.044,
+     "level": "low",
+     "reasons": [
+      "0.27 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.044,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.154,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.069,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS008B",
+   "name": "DHS008B-Malibu Beach, Los Angeles",
+   "lat": 34.0286,
+   "lon": -118.842,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.041,
+     "level": "low",
+     "reasons": [
+      "0.27 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.054,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.177,
+     "level": "caution",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.074,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS009",
+   "name": "DHS009-Malibu Beach, Los Angeles",
+   "lat": 34.0424,
+   "lon": -118.916,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-13",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.062,
+     "level": "low",
+     "reasons": [
+      "1.53 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.076,
+     "level": "low",
+     "reasons": [
+      "0.33 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.233,
+     "level": "caution",
+     "reasons": [
+      "1.53 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.215,
+     "level": "caution",
+     "reasons": [
+      "1.53 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS009B",
+   "name": "DHS009B-Malibu Beach, Los Angeles",
+   "lat": 34.0423,
+   "lon": -118.916,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-13",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.071,
+     "level": "low",
+     "reasons": [
+      "1.53 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.116,
+     "level": "low",
+     "reasons": [
+      "0.33 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.337,
+     "level": "caution",
+     "reasons": [
+      "1.53 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.315,
+     "level": "caution",
+     "reasons": [
+      "1.53 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS010",
+   "name": "DHS010-Malibu Beach, Los Angeles",
+   "lat": 34.0456,
+   "lon": -118.933,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.185,
+     "level": "caution",
+     "reasons": [
+      "1.53 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.143,
+     "level": "low",
+     "reasons": [
+      "0.33 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.256,
+     "level": "caution",
+     "reasons": [
+      "1.53 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.223,
+     "level": "caution",
+     "reasons": [
+      "1.53 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS010B",
+   "name": "DHS010B-Malibu Beach, Los Angeles",
+   "lat": 34.0448,
+   "lon": -118.933,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.278,
+     "level": "caution",
+     "reasons": [
+      "1.53 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.16,
+     "level": "low",
+     "reasons": [
+      "0.33 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.21,
+     "level": "caution",
+     "reasons": [
+      "1.53 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.213,
+     "level": "caution",
+     "reasons": [
+      "1.53 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS101",
+   "name": "DHS101-Will Rogers State Beach, Los Angeles",
+   "lat": 34.0393,
+   "lon": -118.551,
+   "type": null,
+   "last_test": {
+    "date": "2026-01-27",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.042,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.074,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.199,
+     "level": "caution",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.07,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS102",
+   "name": "DHS102-Will Rogers State Beach, Los Angeles",
+   "lat": 34.0383,
+   "lon": -118.544,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.072,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.069,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.151,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.063,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS102B",
+   "name": "DHS102B-Will Rogers State Beach, Los Angeles",
+   "lat": 34.0385,
+   "lon": -118.545,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.048,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.065,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.209,
+     "level": "caution",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.082,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS103",
+   "name": "DHS103-Will Rogers State Beach, Los Angeles",
+   "lat": 34.0348,
+   "lon": -118.536,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.044,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.054,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.173,
+     "level": "caution",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.074,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS103B",
+   "name": "DHS103B-Will Rogers State Beach, Los Angeles",
+   "lat": 34.0343,
+   "lon": -118.536,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.048,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.061,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.194,
+     "level": "caution",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.078,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS104",
+   "name": "DHS104-Santa Monica State Beach, Los Angeles",
+   "lat": 34.02,
+   "lon": -118.51,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.063,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.069,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.148,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.063,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS104B",
+   "name": "DHS104B-Santa Monica State Beach, Los Angeles",
+   "lat": 34.0193,
+   "lon": -118.51,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.046,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.056,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.177,
+     "level": "caution",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.077,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS105",
+   "name": "DHS105-Santa Monica State Beach, Los Angeles",
+   "lat": 34.0147,
+   "lon": -118.504,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.081,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.083,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.112,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.115,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS105B",
+   "name": "DHS105B-Santa Monica State Beach, Los Angeles",
+   "lat": 34.0144,
+   "lon": -118.504,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.069,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.07,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.107,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.082,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS106",
+   "name": "DHS106-Santa Monica State Beach, Los Angeles",
+   "lat": 34.002,
+   "lon": -118.49,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.055,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.062,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.206,
+     "level": "caution",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.091,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS107",
+   "name": "DHS107-Venice City Beach, Los Angeles",
+   "lat": 33.9893,
+   "lon": -118.479,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.076,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.072,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.224,
+     "level": "caution",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.093,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS107B",
+   "name": "DHS107B-Venice City Beach, Los Angeles",
+   "lat": 33.9886,
+   "lon": -118.478,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 20.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.082,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.08,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.218,
+     "level": "caution",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.122,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS108",
+   "name": "DHS108-Venice City Beach, Los Angeles",
+   "lat": 33.9783,
+   "lon": -118.467,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.061,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.064,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.248,
+     "level": "caution",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.097,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS109",
+   "name": "DHS109-Venice City Beach, Los Angeles",
+   "lat": 33.9677,
+   "lon": -118.46,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.085,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.069,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.201,
+     "level": "caution",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.082,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS110",
+   "name": "DHS110-Dockweiler State Beach, Los Angeles",
+   "lat": 33.9406,
+   "lon": -118.442,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.069,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.073,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.201,
+     "level": "caution",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.081,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS111",
+   "name": "DHS111-Dockweiler State Beach, Los Angeles",
+   "lat": 33.9233,
+   "lon": -118.433,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 20.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.049,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.066,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.195,
+     "level": "caution",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.097,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS112",
+   "name": "DHS112-Dockweiler State Beach, Los Angeles",
+   "lat": 33.9159,
+   "lon": -118.429,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.057,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.073,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.201,
+     "level": "caution",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.081,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS112B",
+   "name": "DHS112B-Dockweiler State Beach, Los Angeles",
+   "lat": 33.9153,
+   "lon": -118.43,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.04,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.064,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.227,
+     "level": "caution",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.091,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS113",
+   "name": "DHS113-Manhattan Beach, Los Angeles",
+   "lat": 33.8945,
+   "lon": -118.418,
+   "type": "rain-driven",
+   "last_test": {
+    "date": "2026-10-21",
+    "value": 640.0,
+    "unsafe": true
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.202,
+     "level": "caution",
+     "reasons": [
+      "0.10 in of rain in the 3 days before",
+      "last test (Oct 21) was over the limit"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.171,
+     "level": "caution",
+     "reasons": [
+      "last test (Oct 21) was over the limit"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.213,
+     "level": "caution",
+     "reasons": [
+      "last test (Oct 21) was over the limit"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.179,
+     "level": "caution",
+     "reasons": [
+      "last test (Oct 21) was over the limit"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS113B",
+   "name": "DHS113B-Manhattan Beach, Los Angeles",
+   "lat": 33.894,
+   "lon": -118.418,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.047,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.064,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.227,
+     "level": "caution",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.089,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS114",
+   "name": "DHS114-Hermosa Beach, Los Angeles",
+   "lat": 33.8715,
+   "lon": -118.407,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 20.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.052,
+     "level": "low",
+     "reasons": [
+      "0.16 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.065,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.189,
+     "level": "caution",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.097,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS115",
+   "name": "DHS115-Hermosa Beach, Los Angeles",
+   "lat": 33.8522,
+   "lon": -118.399,
+   "type": "rain-driven",
+   "last_test": {
+    "date": "2026-10-21",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.15,
+     "level": "low",
+     "reasons": [
+      "0.16 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.139,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.126,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.056,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS115B",
+   "name": "DHS113B-Hermosa Beach, Los Angeles",
+   "lat": 33.8523,
+   "lon": -118.4,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.153,
+     "level": "low",
+     "reasons": [
+      "0.16 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.139,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.15,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.065,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS116",
+   "name": "DHS116-Redondo Beach, Los Angeles",
+   "lat": 33.8321,
+   "lon": -118.391,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.147,
+     "level": "low",
+     "reasons": [
+      "0.16 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.127,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.185,
+     "level": "caution",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.08,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS117",
+   "name": "DHS117-Avalon Beach, Los Angeles",
+   "lat": 33.343,
+   "lon": -118.324,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.241,
+     "level": "caution",
+     "reasons": [
+      "1.69 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.349,
+     "level": "caution",
+     "reasons": [
+      "1.69 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.431,
+     "level": "caution",
+     "reasons": [
+      "1.69 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.242,
+     "level": "caution",
+     "reasons": [
+      "1.69 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS118",
+   "name": "DHS118-Avalon Beach, Los Angeles",
+   "lat": 33.3433,
+   "lon": -118.325,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.257,
+     "level": "caution",
+     "reasons": [
+      "1.69 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.138,
+     "level": "low",
+     "reasons": [
+      "1.69 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.15,
+     "level": "low",
+     "reasons": [
+      "1.69 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.149,
+     "level": "low",
+     "reasons": [
+      "1.69 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS119",
+   "name": "DHS119-Avalon Beach, Los Angeles",
+   "lat": 33.3438,
+   "lon": -118.326,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.286,
+     "level": "caution",
+     "reasons": [
+      "1.69 in of rain in the 3 days before",
+      "history: unsafe on 22% of past tests"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.14,
+     "level": "low",
+     "reasons": [
+      "1.69 in of rain in the past week",
+      "history: unsafe on 22% of past tests"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.19,
+     "level": "caution",
+     "reasons": [
+      "1.69 in of rain in the past week",
+      "history: unsafe on 22% of past tests"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.202,
+     "level": "caution",
+     "reasons": [
+      "1.69 in of rain in the past week",
+      "history: unsafe on 22% of past tests"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS120",
+   "name": "DHS120-Avalon Beach, Los Angeles",
+   "lat": 33.3442,
+   "lon": -118.326,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.234,
+     "level": "caution",
+     "reasons": [
+      "1.69 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.17,
+     "level": "caution",
+     "reasons": [
+      "1.69 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.217,
+     "level": "caution",
+     "reasons": [
+      "1.69 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.231,
+     "level": "caution",
+     "reasons": [
+      "1.69 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS121",
+   "name": "DHS121-Avalon Beach, Los Angeles",
+   "lat": 33.345,
+   "lon": -118.327,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.207,
+     "level": "caution",
+     "reasons": [
+      "1.69 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.132,
+     "level": "low",
+     "reasons": [
+      "1.69 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.16,
+     "level": "low",
+     "reasons": [
+      "1.69 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.152,
+     "level": "low",
+     "reasons": [
+      "1.69 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DPH 002B",
+   "name": "DPH 002B",
+   "lat": 34.0368898,
+   "lon": -118.676899,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.057,
+     "level": "low",
+     "reasons": [
+      "0.27 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.058,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.133,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.054,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DPH 122",
+   "name": "DPH 122",
+   "lat": 33.9611547,
+   "lon": -118.4562179,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.06,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.065,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.174,
+     "level": "caution",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.076,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DPH 123",
+   "name": "DPH 123",
+   "lat": 33.35074,
+   "lon": -118.3284295,
+   "type": null,
+   "last_test": {
+    "date": "2026-10-06",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.168,
+     "level": "low",
+     "reasons": [
+      "1.69 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.272,
+     "level": "caution",
+     "reasons": [
+      "1.69 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.346,
+     "level": "caution",
+     "reasons": [
+      "1.69 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.204,
+     "level": "caution",
+     "reasons": [
+      "1.69 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DPH 124",
+   "name": "DPH 124",
+   "lat": 33.3512183,
+   "lon": -118.3286159,
+   "type": null,
+   "last_test": {
+    "date": "2026-10-06",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.076,
+     "level": "low",
+     "reasons": [
+      "1.69 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.17,
+     "level": "caution",
+     "reasons": [
+      "1.69 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.208,
+     "level": "caution",
+     "reasons": [
+      "1.69 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.117,
+     "level": "low",
+     "reasons": [
+      "1.69 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DPH 125",
+   "name": "DPH 125",
+   "lat": 33.844285,
+   "lon": -118.395041,
+   "type": null,
+   "last_test": {
+    "date": "2026-08-26",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.143,
+     "level": "low",
+     "reasons": [
+      "0.16 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.062,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.062,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.045,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DPH 126",
+   "name": "DPH 126",
+   "lat": 33.8441,
+   "lon": -118.3939,
+   "type": null,
+   "last_test": {
+    "date": "2026-08-26",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.143,
+     "level": "low",
+     "reasons": [
+      "0.16 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.062,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.062,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.045,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "MDRH-1",
+   "name": "MDRH-1",
+   "lat": 33.979889,
+   "lon": -118.4577173,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-21",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.164,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.22,
+     "level": "caution",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.186,
+     "level": "caution",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.192,
+     "level": "caution",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "MDRH-2",
+   "name": "MDRH-2",
+   "lat": 33.98084,
+   "lon": -118.45802,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.171,
+     "level": "caution",
+     "reasons": [
+      "0.10 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.14,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.139,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.141,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "MDRH-3",
+   "name": "MDRH-3",
+   "lat": 33.9819795,
+   "lon": -118.4569488,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.293,
+     "level": "caution",
+     "reasons": [
+      "0.10 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.225,
+     "level": "caution",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.255,
+     "level": "caution",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.259,
+     "level": "caution",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-1-02",
+   "name": "SMB-1-02",
+   "lat": 34.039,
+   "lon": -118.8929,
+   "type": null,
+   "last_test": {
+    "date": "2026-06-24",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.202,
+     "level": "caution",
+     "reasons": [
+      "1.53 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.159,
+     "level": "low",
+     "reasons": [
+      "0.33 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.259,
+     "level": "caution",
+     "reasons": [
+      "1.53 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.204,
+     "level": "caution",
+     "reasons": [
+      "1.53 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-1-10",
+   "name": "SMB-1-10",
+   "lat": 34.0329,
+   "lon": -118.741,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.043,
+     "level": "low",
+     "reasons": [
+      "0.27 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.061,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.093,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.052,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-1-12",
+   "name": "SMB-1-12",
+   "lat": 34.0306,
+   "lon": -118.7111,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.05,
+     "level": "low",
+     "reasons": [
+      "0.27 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.06,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.073,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.063,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-1-13",
+   "name": "SMB-1-13",
+   "lat": 34.0383,
+   "lon": -118.6731,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.032,
+     "level": "low",
+     "reasons": [
+      "0.27 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.051,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.176,
+     "level": "caution",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.073,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-1-14",
+   "name": "SMB-1-14",
+   "lat": 34.0362,
+   "lon": -118.6364,
+   "type": "rain-driven",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.016,
+     "level": "low",
+     "reasons": [
+      "0.27 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.019,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.07,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.031,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-1-16",
+   "name": "SMB-1-16",
+   "lat": 34.0253392,
+   "lon": -118.5977,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-06",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.009,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.008,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.023,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.01,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-1-17",
+   "name": "SMB-1-17",
+   "lat": 34.02530393,
+   "lon": -118.5962,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-07-21",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.019,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.022,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.074,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.028,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-1-18",
+   "name": "SMB-1-18",
+   "lat": 34.0385,
+   "lon": -118.58196,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-21",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.053,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.063,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.099,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.1,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-1-3",
+   "name": "SMB-1-3",
+   "lat": 34.0378,
+   "lon": -118.8747,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.015,
+     "level": "low",
+     "reasons": [
+      "0.27 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.02,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.064,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.028,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-1-6",
+   "name": "SMB-1-6",
+   "lat": 34.0171,
+   "lon": -118.7897,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.029,
+     "level": "low",
+     "reasons": [
+      "0.27 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.056,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.155,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.064,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-1-8",
+   "name": "SMB-1-8",
+   "lat": 34.0253,
+   "lon": -118.7656,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.052,
+     "level": "low",
+     "reasons": [
+      "0.27 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.056,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.121,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.051,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-2-1",
+   "name": "SMB-2-1",
+   "lat": 34.02530412,
+   "lon": -118.566,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-21",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.055,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.063,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.144,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.065,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-2-10",
+   "name": "SMB-2-10",
+   "lat": 33.95702,
+   "lon": -118.45196,
+   "type": "rain-driven",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 31.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.114,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.103,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.222,
+     "level": "caution",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.143,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-2-11",
+   "name": "SMB-2-11",
+   "lat": 33.9444,
+   "lon": -118.4442,
+   "type": "rain-driven",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.09,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.065,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.179,
+     "level": "caution",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.077,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-2-13",
+   "name": "SMB-2-13",
+   "lat": 33.93071,
+   "lon": -118.43711,
+   "type": "rain-driven",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.081,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.069,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.188,
+     "level": "caution",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.077,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-2-4",
+   "name": "SMB-2-4",
+   "lat": 34.03744,
+   "lon": -118.54191,
+   "type": "rain-driven",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.041,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.059,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.231,
+     "level": "caution",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.091,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-2-7",
+   "name": "SMB-2-7",
+   "lat": 34.02645,
+   "lon": -118.51955,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-21",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.062,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.06,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.104,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.075,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-3-3",
+   "name": "Santa Monica Pier",
+   "lat": 34.0082,
+   "lon": -118.4976,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-21",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.098,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.101,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.153,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.139,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-3-4",
+   "name": "Pico Kenter Outfall",
+   "lat": 34.005094,
+   "lon": -118.493752,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-21",
+    "value": 20.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.123,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.126,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.213,
+     "level": "caution",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.188,
+     "level": "caution",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-3-5",
+   "name": "SMB-3-5",
+   "lat": 33.99662,
+   "lon": -118.48488,
+   "type": "rain-driven",
+   "last_test": {
+    "date": "2026-10-21",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.056,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.078,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.223,
+     "level": "caution",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.091,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-3-6",
+   "name": "SMB-3-6",
+   "lat": 33.9935842,
+   "lon": -118.4824055,
+   "type": "rain-driven",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 97.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.05,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.109,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.246,
+     "level": "caution",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.171,
+     "level": "caution",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-3-8",
+   "name": "SMB-3-8",
+   "lat": 33.98625,
+   "lon": -118.47635,
+   "type": "rain-driven",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.083,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.073,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.162,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.071,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-7-6",
+   "name": "SMB-7-6",
+   "lat": 33.71773,
+   "lon": -118.32182,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.098,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.15,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.244,
+     "level": "caution",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.115,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-7-9",
+   "name": "SMB-7-9",
+   "lat": 33.70936,
+   "lon": -118.28302,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 41.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.046,
+     "level": "low",
+     "reasons": [
+      "0.10 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.051,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.079,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.066,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-MC-2",
+   "name": "SMB-MC-2",
+   "lat": 34.0351,
+   "lon": -118.67853,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-21",
+    "value": 20.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.092,
+     "level": "low",
+     "reasons": [
+      "0.27 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.081,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.143,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.126,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  }
+ ]
+}

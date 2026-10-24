@@ -1,0 +1,50 @@
+{
+  "rows": {
+    "train": 94871,
+    "test": 29859,
+    "test_unsafe_share": 0.141
+  },
+  "sign": {
+    "warning_day_share": 0.138,
+    "unsafe_days_caught": 0.404,
+    "warnings_that_were_right": 0.414
+  },
+  "model_same_budget_as_sign": {
+    "warning_day_share": 0.138,
+    "unsafe_days_caught": 0.508,
+    "warnings_that_were_right": 0.52
+  },
+  "sign_plus_rain": {
+    "warning_day_share": 0.216,
+    "unsafe_days_caught": 0.589,
+    "warnings_that_were_right": 0.384
+  },
+  "model_same_budget": {
+    "warning_day_share": 0.216,
+    "unsafe_days_caught": 0.64,
+    "warnings_that_were_right": 0.417
+  },
+  "model_roc_auc": 0.846,
+  "model_avg_precision": 0.561,
+  "risk_threshold": 0.1663,
+  "feature_importance": {
+    "station_rate": 0.1343,
+    "last_log_value": 0.036,
+    "rain_1d": 0.0187,
+    "rain_30d": 0.0075,
+    "tide_high": 0.0053,
+    "rain_3d": 0.0048,
+    "lon": 0.0043,
+    "rain_7d": 0.0041,
+    "days_dry": 0.0041,
+    "tide_low": 0.0035,
+    "wet_season": 0.0035,
+    "lat": 0.0029,
+    "month": 0.0027,
+    "days_since_last": 0.0019,
+    "tide_range": 0.0015,
+    "spill_count_7d": -0.0,
+    "last_exceeds": -0.0001,
+    "spill_log_gal_7d": -0.0001
+  }
+}

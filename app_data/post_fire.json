@@ -1,0 +1,350 @@
+{
+ "method": "difference-in-differences on model residuals (observed minus predicted), burn-adjacent vs. far beaches, before vs. after 2025-01-07",
+ "burn_stations": [
+  {
+   "station": "DHS001",
+   "name": "DHS001-Malibu Beach, Los Angeles",
+   "km_from_burn": 0.03
+  },
+  {
+   "station": "DHS002",
+   "name": "DHS002-Malibu Beach, Los Angeles",
+   "km_from_burn": 0.93
+  },
+  {
+   "station": "DHS101",
+   "name": "DHS101-Will Rogers State Beach, Los Angeles",
+   "km_from_burn": 0.08
+  },
+  {
+   "station": "DHS102",
+   "name": "DHS102-Will Rogers State Beach, Los Angeles",
+   "km_from_burn": 0.11
+  },
+  {
+   "station": "DHS102B",
+   "name": "DHS102B-Will Rogers State Beach, Los Angeles",
+   "km_from_burn": 0.12
+  },
+  {
+   "station": "DHS103",
+   "name": "DHS103-Will Rogers State Beach, Los Angeles",
+   "km_from_burn": 0.12
+  },
+  {
+   "station": "DHS103B",
+   "name": "DHS103B-Will Rogers State Beach, Los Angeles",
+   "km_from_burn": 0.16
+  },
+  {
+   "station": "SMB-1-13",
+   "name": "SMB-1-13",
+   "km_from_burn": 0.65
+  },
+  {
+   "station": "SMB-1-14",
+   "name": "SMB-1-14",
+   "km_from_burn": 0.09
+  },
+  {
+   "station": "SMB-1-18",
+   "name": "SMB-1-18",
+   "km_from_burn": 0.1
+  },
+  {
+   "station": "SMB-2-4",
+   "name": "SMB-2-4",
+   "km_from_burn": 0.13
+  },
+  {
+   "station": "SMB-2-7",
+   "name": "SMB-2-7",
+   "km_from_burn": 0.39
+  }
+ ],
+ "control_station_count": 112,
+ "cells": {
+  "burn_before": {
+   "samples": 1799,
+   "observed_unsafe_rate": 0.193,
+   "predicted_unsafe_rate": 0.143,
+   "mean_residual": 0.049
+  },
+  "burn_after": {
+   "samples": 1543,
+   "observed_unsafe_rate": 0.181,
+   "predicted_unsafe_rate": 0.125,
+   "mean_residual": 0.056
+  },
+  "control_before": {
+   "samples": 9057,
+   "observed_unsafe_rate": 0.112,
+   "predicted_unsafe_rate": 0.117,
+   "mean_residual": -0.004
+  },
+  "control_after": {
+   "samples": 7823,
+   "observed_unsafe_rate": 0.09,
+   "predicted_unsafe_rate": 0.085,
+   "mean_residual": 0.005
+  }
+ },
+ "result": {
+  "overall": {
+   "estimate": -0.002,
+   "ci95": [
+    -0.04,
+    0.054
+   ]
+  },
+  "wet_days": {
+   "estimate": 0.079,
+   "ci95": [
+    -0.049,
+    0.2
+   ],
+   "samples": 2301
+  },
+  "dry_days": {
+   "estimate": -0.011,
+   "ci95": [
+    -0.047,
+    0.051
+   ],
+   "samples": 17921
+  }
+ },
+ "eaton_note": "No monitoring station lies within 5 km of the Eaton burn area; its runoff reaches the ocean via the LA River, so it is not analyzed here.",
+ "monthly": [
+  {
+   "month": "2023-01",
+   "burn_residual": 0.077,
+   "control_residual": 0.024
+  },
+  {
+   "month": "2023-02",
+   "burn_residual": 0.02,
+   "control_residual": -0.004
+  },
+  {
+   "month": "2023-03",
+   "burn_residual": -0.034,
+   "control_residual": -0.037
+  },
+  {
+   "month": "2023-04",
+   "burn_residual": 0.035,
+   "control_residual": -0.01
+  },
+  {
+   "month": "2023-05",
+   "burn_residual": 0.199,
+   "control_residual": 0.027
+  },
+  {
+   "month": "2023-06",
+   "burn_residual": 0.065,
+   "control_residual": -0.033
+  },
+  {
+   "month": "2023-07",
+   "burn_residual": 0.112,
+   "control_residual": -0.023
+  },
+  {
+   "month": "2023-08",
+   "burn_residual": 0.092,
+   "control_residual": 0.049
+  },
+  {
+   "month": "2023-09",
+   "burn_residual": 0.002,
+   "control_residual": -0.036
+  },
+  {
+   "month": "2023-10",
+   "burn_residual": -0.002,
+   "control_residual": -0.018
+  },
+  {
+   "month": "2023-11",
+   "burn_residual": -0.032,
+   "control_residual": -0.007
+  },
+  {
+   "month": "2023-12",
+   "burn_residual": -0.014,
+   "control_residual": 0.046
+  },
+  {
+   "month": "2024-01",
+   "burn_residual": 0.033,
+   "control_residual": 0.008
+  },
+  {
+   "month": "2024-02",
+   "burn_residual": 0.072,
+   "control_residual": -0.032
+  },
+  {
+   "month": "2024-03",
+   "burn_residual": 0.138,
+   "control_residual": -0.039
+  },
+  {
+   "month": "2024-04",
+   "burn_residual": 0.103,
+   "control_residual": 0.006
+  },
+  {
+   "month": "2024-05",
+   "burn_residual": 0.119,
+   "control_residual": 0.026
+  },
+  {
+   "month": "2024-06",
+   "burn_residual": 0.111,
+   "control_residual": 0.009
+  },
+  {
+   "month": "2024-07",
+   "burn_residual": 0.058,
+   "control_residual": -0.01
+  },
+  {
+   "month": "2024-08",
+   "burn_residual": 0.071,
+   "control_residual": -0.01
+  },
+  {
+   "month": "2024-09",
+   "burn_residual": 0.014,
+   "control_residual": 0.005
+  },
+  {
+   "month": "2024-10",
+   "burn_residual": 0.043,
+   "control_residual": -0.004
+  },
+  {
+   "month": "2024-11",
+   "burn_residual": -0.066,
+   "control_residual": -0.049
+  },
+  {
+   "month": "2024-12",
+   "burn_residual": -0.064,
+   "control_residual": -0.012
+  },
+  {
+   "month": "2025-01",
+   "burn_residual": 0.171,
+   "control_residual": 0.008
+  },
+  {
+   "month": "2025-02",
+   "burn_residual": 0.537,
+   "control_residual": 0.018
+  },
+  {
+   "month": "2025-03",
+   "burn_residual": 0.164,
+   "control_residual": 0.02
+  },
+  {
+   "month": "2025-04",
+   "burn_residual": -0.039,
+   "control_residual": -0.017
+  },
+  {
+   "month": "2025-05",
+   "burn_residual": -0.043,
+   "control_residual": -0.003
+  },
+  {
+   "month": "2025-06",
+   "burn_residual": -0.018,
+   "control_residual": -0.002
+  },
+  {
+   "month": "2025-07",
+   "burn_residual": 0.039,
+   "control_residual": -0.009
+  },
+  {
+   "month": "2025-08",
+   "burn_residual": 0.002,
+   "control_residual": -0.015
+  },
+  {
+   "month": "2025-09",
+   "burn_residual": -0.014,
+   "control_residual": 0.006
+  },
+  {
+   "month": "2025-10",
+   "burn_residual": 0.032,
+   "control_residual": 0.025
+  },
+  {
+   "month": "2025-11",
+   "burn_residual": 0.124,
+   "control_residual": 0.022
+  },
+  {
+   "month": "2025-12",
+   "burn_residual": 0.005,
+   "control_residual": 0.061
+  },
+  {
+   "month": "2026-01",
+   "burn_residual": 0.085,
+   "control_residual": -0.004
+  },
+  {
+   "month": "2026-02",
+   "burn_residual": 0.172,
+   "control_residual": 0.011
+  },
+  {
+   "month": "2026-03",
+   "burn_residual": 0.116,
+   "control_residual": 0.005
+  },
+  {
+   "month": "2026-04",
+   "burn_residual": 0.044,
+   "control_residual": 0.017
+  },
+  {
+   "month": "2026-05",
+   "burn_residual": -0.045,
+   "control_residual": -0.011
+  },
+  {
+   "month": "2026-06",
+   "burn_residual": 0.038,
+   "control_residual": 0.006
+  },
+  {
+   "month": "2026-07",
+   "burn_residual": -0.024,
+   "control_residual": -0.018
+  },
+  {
+   "month": "2026-08",
+   "burn_residual": -0.017,
+   "control_residual": -0.006
+  },
+  {
+   "month": "2026-09",
+   "burn_residual": -0.008,
+   "control_residual": 0.031
+  },
+  {
+   "month": "2026-10",
+   "burn_residual": -0.028,
+   "control_residual": -0.025
+  }
+ ]
+}
