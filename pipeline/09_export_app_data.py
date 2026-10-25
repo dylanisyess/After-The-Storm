@@ -1,7 +1,7 @@
 """Step 9: station list, recent history and map layers for the app -> app_data/
 
   Every file carries "model_id" (from model/metrics.json), like the files from 07, 08 and 10.
-  stations.json         {model_id, stations: [...]}, every station: location, beach or inland, record, last test, hotspot type,
+  stations.json         {model_id, stations: [...]}, every station: location, beach or inland, record, last test, type (diagnosis pattern from 11),
                         in_model, and on_map: false for stormwater devices (BMPs, catch basins,
                         Oxford Basin) and inland stations with fewer than 20 samples.
                         Every beach stays on the map.
@@ -30,7 +30,8 @@ OCEAN_STUDY_SITES = [
 st = pd.read_csv(P / "stations.csv", parse_dates=["first", "last"])
 st["in_model"] = st["water"] == "ocean"  # decided before relabeling: the study sites stay out
 lab = pd.read_csv(P / "labels.csv", parse_dates=["SampleDate"])[["StationCode", "SampleDate", "value", "exceeds"]]
-hot = {h["station"]: h["type"] for h in json.loads((OUT / "hotspots.json").read_text())["stations"]}
+# Each beach's pattern from 11_beach_diagnosis.py: chronic | slow | typical | fast | clean (or None)
+diag = {d["station"]: d["fix_category"] for d in json.loads((OUT / "diagnosis.json").read_text())["stations"]}
 cut = lab["SampleDate"].max() - pd.Timedelta(days=730)
 
 # ---- Study sites: swap their results for enterococcus results, show them as beaches ----
@@ -54,7 +55,7 @@ st["on_map"] = (st["water"] == "ocean") | (
 stations = [{"station": r.StationCode, "name": r.name, "lat": round(r.lat, 5), "lon": round(r.lon, 5),
              "water": r.water, "standard": "enterococcus > 104" if r.analyte == "Enterococcus" else "E. coli > 320",
              "samples": int(r.n), "first": f"{r.first:%Y-%m-%d}", "last": f"{r.last:%Y-%m-%d}",
-             "unsafe_rate": round(r.exceed_rate, 3), "type": hot.get(r.StationCode),
+             "unsafe_rate": round(r.exceed_rate, 3), "type": diag.get(r.StationCode),
              "in_model": bool(r.in_model), "on_map": bool(r.on_map),
              "note": (f"short-term study site ({r.first:%Y}-{r.last:%Y}); no forecast"
                       if r.StationCode in OCEAN_STUDY_SITES else None),

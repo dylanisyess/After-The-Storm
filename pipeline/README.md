@@ -10,16 +10,16 @@ Run in order from the `waterapp` folder (pip install pandas scikit-learn):
 | 4 | `04_fetch_weather.py` | your computer (needs internet, no installs) | `rain_daily.csv`, `tides_hilo.csv`, `rain_forecast_model.csv`, `rain_scale.json` (live-rain correction) |
 | 5 | `05_build_table.py` | anywhere with pandas | `training_table.csv` (one row per sample, all features) |
 | 6 | `06_train.py` | needs scikit-learn | `model/beach_model.joblib`, `model/metrics.json`, `model/test_predictions.csv` |
-| 7 | `07_analysis.py` | anywhere | `app_data/hotspots.json`, `spills.json`, `post_fire.json` |
+| 7 | `07_analysis.py` | anywhere | `app_data/spills.json`, `post_fire.json` (the old `hotspots.json` was retired; 11 replaces it) |
 | 8 | `08_forecast.py` | your computer (needs internet) | `app_data/forecast.json`; `--as-of YYYY-MM-DD` writes `app_data/replay_<date>.json` from saved data |
 | 9 | `09_export_app_data.py` | anywhere | `app_data/stations.json`, `history.json`, map layer, metrics |
 | 10 | `10_final_metrics.py` | needs scikit-learn | `review/final_metrics.md` (numbers to quote, with 95% ranges) and `app_data/final_metrics.json` (same numbers, read by app.py) |
-| 11 | `11_beach_diagnosis.py` | anywhere | `app_data/diagnosis.json`: per beach dry/after-rain rates, rain trigger, recovery vs. the 72-hour advisory, fix category |
-| 12 | `12_intervention.py` | needs scikit-learn | `--demo`: `app_data/interventions.json`; `STATION START END`: before/after change beyond weather. Caches `processed/weather_expected.csv` and `evaluator_calibration.json` (`--rebuild` after new data) |
+| 11 | `11_beach_diagnosis.py` | anywhere | `app_data/diagnosis.json`: per beach dry/after-rain rates and chronic label (last 5 years), rain trigger, recovery vs. the 72-hour advisory (all years), fix category. 08 and 09 read it, so it runs before 08 |
+| 12 | `12_intervention.py` | needs scikit-learn | `--demo`: `app_data/interventions.json` and `evaluator_data.json` (for the app); `STATION START END`: before/after change beyond weather. Caches `processed/weather_expected.csv` and `evaluator_calibration.json` (`--rebuild` after new data). The comparison itself is in `evaluator.py`, which app.py also uses |
 
 Steps 1-5 write to `processed/`. `bacteria_la.csv` (76 MB) is not in git; steps 5 onward only need the committed files.
 
-**After changing the model, run `bash pipeline/rebuild.sh`** (steps 6-10 including every replay, then
+**After changing the model, run `bash pipeline/rebuild.sh`** (steps 6, 7, 11, 8 including every replay, 9, 10, 12, then
 `check_model_ids.py`), so every app file carries the same model ID. 08 and 10 never retrain on their own.
 
 Standards: enterococcus > 104 MPN/100 mL at beaches (BeachWatch stations);

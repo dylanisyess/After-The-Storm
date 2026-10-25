@@ -2,11 +2,11 @@
 [theme]
 base = "light"
 primaryColor = "#0e6ba8"              # ocean blue: buttons, toggles, links
-backgroundColor = "#f7f9fb"           # off-white page
+backgroundColor = "#ffffff"           # white page, so thin card borders read clearly
 secondaryBackgroundColor = "#e9f1f7"  # pale blue for inputs and sidebars
 textColor = "#0b2545"                 # deep navy text
 borderColor = "#d6e2ec"               # soft card borders
-baseRadius = "0.75rem"                # rounded corners
+baseRadius = "0.5rem"                 # small, quiet corners on the bordered cards
 font = "sans-serif"
 
 [client]

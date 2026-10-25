@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Retrain the model and rebuild EVERY file made from it (steps 06-10), so all app
+# Retrain the model and rebuild EVERY file made from it (steps 06-12), so all app
 # files share one model ID. Run inside WSL from the waterapp folder:
 #   source ~/waterenv/bin/activate && bash pipeline/rebuild.sh
 # Needs internet (the live forecast). Takes a few minutes.
@@ -8,6 +8,7 @@ cd "$(dirname "$0")/.."  # run from the waterapp folder wherever it's called fro
 
 echo "06 train";            python3 pipeline/06_train.py > /dev/null   # prints a lot; results are in model/metrics.json
 echo "07 analysis";         python3 pipeline/07_analysis.py > /dev/null
+echo "11 diagnosis";        python3 pipeline/11_beach_diagnosis.py > /dev/null   # 08 and 09 read diagnosis.json
 echo "08 live forecast";    python3 pipeline/08_forecast.py
 for f in app_data/replay_*.json; do   # redo every replay that exists, e.g. replay_2023-01-09.json
     day="${f#app_data/replay_}"; day="${day%.json}"
@@ -15,6 +16,5 @@ for f in app_data/replay_*.json; do   # redo every replay that exists, e.g. repl
 done
 echo "09 export";           python3 pipeline/09_export_app_data.py
 echo "10 final metrics";    python3 pipeline/10_final_metrics.py
-echo "11 diagnosis";        python3 pipeline/11_beach_diagnosis.py > /dev/null
 echo "12 interventions";    python3 pipeline/12_intervention.py --demo > /dev/null   # uses cached weather-only risk
 python3 pipeline/check_model_ids.py

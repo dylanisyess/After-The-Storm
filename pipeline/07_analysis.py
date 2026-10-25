@@ -1,6 +1,7 @@
-"""Step 7: the three "why" analyses behind the app's Causes view.
+"""Step 7: two "why" analyses that use the model's predictions.
 
-A. Hotspots: is each beach chronically dirty, or only after rain?
+(The old part A, hotspots.json, was retired on Oct 24, 2026: 11_beach_diagnosis.py
+now labels chronic beaches, with finer after-rain groups.)
 B. Sewage spills: were beaches near big spills dirtier than the model expected?
 C. Post-fire: did beaches below the 2025 Palisades burn area get dirtier than
    the model expected, compared with beaches far away?
@@ -9,7 +10,7 @@ B and C use the model's predictions for 2023 onward (it was trained only on
 2010-2022, so it never saw these spills or the fire). "Residual" = what
 happened (1 unsafe / 0 safe) minus the predicted risk. A positive residual means
 dirtier than rain, tide, season and station history explain.
-Outputs: app_data/hotspots.json, app_data/spills.json, app_data/post_fire.json
+Outputs: app_data/spills.json, app_data/post_fire.json
 """
 import json
 from pathlib import Path
@@ -32,41 +33,9 @@ def r3(x):
 
 st = pd.read_csv(P / "stations.csv")
 beach = st[st["water"] == "ocean"].set_index("StationCode")
-tt = pd.read_csv(P / "training_table.csv", parse_dates=["date"])
-tt = tt[tt["water"] == "ocean"]
 pred = pd.read_csv(ROOT / "model" / "test_predictions.csv", parse_dates=["date"])
 MODEL_ID = json.loads((ROOT / "model" / "metrics.json").read_text())["model_id"]  # stamped on every output
 pred["resid"] = pred["exceeds"] - pred["risk"]
-
-# ---------------- A. Hotspots (last 5 years) ----------------
-recent = tt[tt["date"] >= "2021-10-01"].copy()
-recent["wet"] = recent["rain_3d"] >= RAIN_MM
-recent["dry"] = (recent["rain_3d"] < RAIN_MM) & (recent["days_dry"] >= 3)
-rows = []
-for code, g in recent.groupby("StationCode"):
-    if len(g) < 50:
-        continue
-    dry, wet = g[g["dry"]], g[g["wet"]]
-    dr = dry["exceeds"].mean() if len(dry) >= 20 else np.nan
-    wr = wet["exceeds"].mean() if len(wet) >= 10 else np.nan
-    if pd.notna(dr) and dr >= 0.10:
-        kind = "chronic"        # unsafe 1 in 10 dry days or more: a persistent source
-    elif pd.notna(wr) and wr >= 0.30:
-        kind = "rain-driven"    # mostly fine when dry, often unsafe after rain: runoff
-    else:
-        kind = "usually clean"
-    s = beach.loc[code]
-    rows.append({"station": code, "name": s["name"], "lat": s["lat"], "lon": s["lon"],
-                 "samples": int(len(g)), "unsafe_rate": r3(g["exceeds"].mean()),
-                 "dry_unsafe_rate": r3(dr), "wet_unsafe_rate": r3(wr), "type": kind})
-hot = pd.DataFrame(rows).sort_values("unsafe_rate", ascending=False)
-(OUT / "hotspots.json").write_text(json.dumps({
-    "model_id": MODEL_ID, "period": "2021-10-01 to latest", "dry_definition": "under 0.1 in of rain in the past 3 days and 3+ dry days",
-    "wet_definition": "0.1 in or more of rain in the past 3 days",
-    "rules": {"chronic": "unsafe on 10%+ of dry days", "rain-driven": "under 10% when dry, 30%+ after rain"},
-    "stations": hot.to_dict("records")}, indent=1))
-print("A. Hotspots:", hot["type"].value_counts().to_dict())
-print(hot.head(6)[["station", "name", "unsafe_rate", "dry_unsafe_rate", "wet_unsafe_rate", "type"]].to_string(index=False))
 
 # ---------------- B. Sewage spills, 2023 onward ----------------
 sp = pd.read_csv(P / "spills_la.csv", parse_dates=["start"])

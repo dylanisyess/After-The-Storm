@@ -15,7 +15,7 @@
    "name": "10000-Solimar Beach, Ventura",
    "lat": 34.3108,
    "lon": -119.359,
-   "type": "usually clean",
+   "type": "slow",
    "last_test": {
     "date": "2023-01-03",
     "value": 124.0,
@@ -69,7 +69,7 @@
    "name": "11000-Emma Woods State Beach, Ventura",
    "lat": 34.2918,
    "lon": -119.338,
-   "type": "usually clean",
+   "type": "clean",
    "last_test": {
     "date": "2023-01-03",
     "value": 10.0,
@@ -115,7 +115,7 @@
    "name": "13000-Surfers Point at Seaside, Ventura",
    "lat": 34.273,
    "lon": -119.305,
-   "type": "rain-driven",
+   "type": "fast",
    "last_test": {
     "date": "2023-01-03",
     "value": 111.0,
@@ -169,7 +169,7 @@
    "name": "14000-Promenade Park Beach, Ventura",
    "lat": 34.2742,
    "lon": -119.297,
-   "type": "rain-driven",
+   "type": "slow",
    "last_test": {
     "date": "2023-01-03",
     "value": 64.0,
@@ -219,7 +219,7 @@
    "name": "15000-Promenade Park Beach, Ventura",
    "lat": 34.2751,
    "lon": -119.296,
-   "type": "rain-driven",
+   "type": null,
    "last_test": {
     "date": "2022-10-24",
     "value": 10.0,
@@ -269,7 +269,7 @@
    "name": "17000-Promenade Park Beach, Ventura",
    "lat": 34.2752,
    "lon": -119.293,
-   "type": "rain-driven",
+   "type": null,
    "last_test": {
     "date": "2022-10-24",
     "value": 10.0,
@@ -319,7 +319,7 @@
    "name": "18000-San Buenaventura State Beach, Ventura",
    "lat": 34.2736,
    "lon": -119.289,
-   "type": "rain-driven",
+   "type": null,
    "last_test": {
     "date": "2022-10-24",
     "value": 10.0,
@@ -369,7 +369,7 @@
    "name": "19000-San Buenaventura State Beach, Ventura",
    "lat": 34.272,
    "lon": -119.286,
-   "type": "rain-driven",
+   "type": "slow",
    "last_test": {
     "date": "2023-01-03",
     "value": 124.0,
@@ -423,7 +423,7 @@
    "name": "20000-San Buenaventura State Beach, Ventura",
    "lat": 34.2659,
    "lon": -119.278,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-10-24",
     "value": 10.0,
@@ -473,7 +473,7 @@
    "name": "21000-San Buenaventura State Beach, Ventura",
    "lat": 34.2569,
    "lon": -119.272,
-   "type": "rain-driven",
+   "type": null,
    "last_test": {
     "date": "2022-10-24",
     "value": 10.0,
@@ -523,7 +523,7 @@
    "name": "22000-Marina Park Beach, Ventura",
    "lat": 34.2538,
    "lon": -119.27,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-10-24",
     "value": 42.0,
@@ -573,7 +573,7 @@
    "name": "23000-Penninsula Beach, Ventura",
    "lat": 34.2464,
    "lon": -119.268,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-10-24",
     "value": 10.0,
@@ -623,7 +623,7 @@
    "name": "2500",
    "lat": 34.364201,
    "lon": -119.450103,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-10-24",
     "value": 10.0,
@@ -669,7 +669,7 @@
    "name": "25000-Surfers Knoll Beach, Ventura",
    "lat": 34.2397,
    "lon": -119.267,
-   "type": "usually clean",
+   "type": "fast",
    "last_test": {
     "date": "2023-01-03",
     "value": 31.0,
@@ -719,7 +719,7 @@
    "name": "29000-Oxnard Beach, Ventura",
    "lat": 34.1979,
    "lon": -119.249,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-10-11",
     "value": 10.0,
@@ -765,7 +765,7 @@
    "name": "30000-Oxnard Beach, Ventura",
    "lat": 34.1904,
    "lon": -119.245,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-10-25",
     "value": 10.0,
@@ -811,7 +811,7 @@
    "name": "32000-Oxnard Beach Park, Ventura",
    "lat": 34.1787,
    "lon": -119.238,
-   "type": "usually clean",
+   "type": "clean",
    "last_test": {
     "date": "2022-10-25",
     "value": 10.0,
@@ -857,7 +857,7 @@
    "name": "33000-Oxnard Beach Park, Ventura",
    "lat": 34.1765,
    "lon": -119.237,
-   "type": "usually clean",
+   "type": "clean",
    "last_test": {
     "date": "2022-10-25",
     "value": 10.0,
@@ -903,7 +903,7 @@
    "name": "34000-Hollywood Beach, Ventura",
    "lat": 34.1686,
    "lon": -119.233,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-10-25",
     "value": 10.0,
@@ -949,7 +949,7 @@
    "name": "35000-Hollywood Beach, Ventura",
    "lat": 34.1633,
    "lon": -119.23,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-11-21",
     "value": 0.5,
@@ -995,7 +995,7 @@
    "name": "36000-Hobie Beach, Ventura",
    "lat": 34.1601,
    "lon": -119.222,
-   "type": "usually clean",
+   "type": "fast",
    "last_test": {
     "date": "2022-11-21",
     "value": 1.0,
@@ -1041,7 +1041,7 @@
    "name": "37000-Kiddie Beach, Ventura",
    "lat": 34.1612,
    "lon": -119.222,
-   "type": "rain-driven",
+   "type": null,
    "last_test": {
     "date": "2023-01-03",
     "value": 87.0,
@@ -1087,7 +1087,7 @@
    "name": "38000-Silverstrand Beach, Ventura",
    "lat": 34.1573,
    "lon": -119.225,
-   "type": "usually clean",
+   "type": "fast",
    "last_test": {
     "date": "2022-11-01",
     "value": 10.0,
@@ -1133,7 +1133,7 @@
    "name": "39000-Silverstrand Beach, Ventura",
    "lat": 34.1524,
    "lon": -119.22,
-   "type": "usually clean",
+   "type": "fast",
    "last_test": {
     "date": "2022-11-01",
     "value": 10.0,
@@ -1179,7 +1179,7 @@
    "name": "4000-Oil Piers Beach, Ventura",
    "lat": 34.3522,
    "lon": -119.428,
-   "type": "usually clean",
+   "type": "clean",
    "last_test": {
     "date": "2023-01-03",
     "value": 20.0,
@@ -1225,7 +1225,7 @@
    "name": "40000-Silverstrand Beach, Ventura",
    "lat": 34.1474,
    "lon": -119.217,
-   "type": "usually clean",
+   "type": "fast",
    "last_test": {
     "date": "2022-11-01",
     "value": 10.0,
@@ -1271,7 +1271,7 @@
    "name": "41000-Port Hueneme Beach Park, Ventura",
    "lat": 34.1413,
    "lon": -119.195,
-   "type": "usually clean",
+   "type": "fast",
    "last_test": {
     "date": "2022-11-01",
     "value": 10.0,
@@ -1317,7 +1317,7 @@
    "name": "42000-Ormond Beach, Ventura",
    "lat": 34.139,
    "lon": -119.189,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2023-01-03",
     "value": 137.0,
@@ -1367,7 +1367,7 @@
    "name": "43000-Ormond Beach, Ventura",
    "lat": 34.1358,
    "lon": -119.184,
-   "type": "usually clean",
+   "type": "fast",
    "last_test": {
     "date": "2022-12-27",
     "value": 10.0,
@@ -1413,7 +1413,7 @@
    "name": "44000-Ormond Beach, Ventura",
    "lat": 34.1195,
    "lon": -119.16,
-   "type": "usually clean",
+   "type": "clean",
    "last_test": {
     "date": "2022-10-25",
     "value": 10.0,
@@ -1459,7 +1459,7 @@
    "name": "45000-Point Mugu Beach, Ventura",
    "lat": 34.0878,
    "lon": -119.065,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-10-25",
     "value": 10.0,
@@ -1505,7 +1505,7 @@
    "name": "46000-Thornhill Broome Beach, Ventura",
    "lat": 34.0752,
    "lon": -119.024,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-10-25",
     "value": 10.0,
@@ -1551,7 +1551,7 @@
    "name": "47000-Sycamore Cove Beach, Ventura",
    "lat": 34.0698,
    "lon": -119.015,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-10-25",
     "value": 10.0,
@@ -1597,7 +1597,7 @@
    "name": "49500",
    "lat": 34.051551,
    "lon": -118.959972,
-   "type": "usually clean",
+   "type": "clean",
    "last_test": {
     "date": "2022-11-21",
     "value": 0.5,
@@ -1643,7 +1643,7 @@
    "name": "5000-Hobson County Park Beach, Ventura",
    "lat": 34.3378,
    "lon": -119.412,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-10-24",
     "value": 10.0,
@@ -1689,7 +1689,7 @@
    "name": "50000-Staircase Beach, Ventura",
    "lat": 34.0461,
    "lon": -118.951,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-10-25",
     "value": 10.0,
@@ -1735,7 +1735,7 @@
    "name": "7000-Faria County Park Beach, Ventura",
    "lat": 34.319,
    "lon": -119.392,
-   "type": "rain-driven",
+   "type": "fast",
    "last_test": {
     "date": "2023-01-03",
     "value": 10.0,
@@ -1781,7 +1781,7 @@
    "name": "8100",
    "lat": 34.321022,
    "lon": -119.375788,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-10-24",
     "value": 20.0,
@@ -1831,7 +1831,7 @@
    "name": "B-10-Long Beach, Long Beach City",
    "lat": 33.7501,
    "lon": -118.13,
-   "type": "rain-driven",
+   "type": "typical",
    "last_test": {
     "date": "2022-11-28",
     "value": 31.0,
@@ -1935,7 +1935,7 @@
    "name": "B-14-Long Beach, Long Beach City",
    "lat": 33.7545,
    "lon": -118.132,
-   "type": "rain-driven",
+   "type": "typical",
    "last_test": {
     "date": "2022-11-28",
     "value": 10.0,
@@ -1985,7 +1985,7 @@
    "name": "B-22-Long Beach, Long Beach City",
    "lat": 33.7597,
    "lon": -118.119,
-   "type": "rain-driven",
+   "type": "typical",
    "last_test": {
     "date": "2022-11-28",
     "value": 10.0,
@@ -2035,7 +2035,7 @@
    "name": "B-24-Long Beach, Long Beach City",
    "lat": 33.7706,
    "lon": -118.135,
-   "type": "rain-driven",
+   "type": "typical",
    "last_test": {
     "date": "2022-11-29",
     "value": 10.0,
@@ -2085,7 +2085,7 @@
    "name": "B-25-Long Beach, Long Beach City",
    "lat": 33.7712,
    "lon": -118.134,
-   "type": "rain-driven",
+   "type": "typical",
    "last_test": {
     "date": "2022-11-28",
     "value": 10.0,
@@ -2135,7 +2135,7 @@
    "name": "B-31-Long Beach, Long Beach City",
    "lat": 33.7512,
    "lon": -118.126,
-   "type": "rain-driven",
+   "type": "typical",
    "last_test": {
     "date": "2022-11-28",
     "value": 10.0,
@@ -2185,7 +2185,7 @@
    "name": "B-5-Long Beach, Long Beach City",
    "lat": 33.7639,
    "lon": -118.178,
-   "type": "chronic",
+   "type": "typical",
    "last_test": {
     "date": "2023-01-05",
     "value": 2005.0,
@@ -2198,8 +2198,7 @@
      "level": "caution",
      "reasons": [
       "1.62 in of rain in the past week",
-      "last test (Jan 05) was over the limit",
-      "this beach is often unsafe even in dry weather"
+      "last test (Jan 05) was over the limit"
      ],
      "actual": {
       "value": 178.0,
@@ -2212,8 +2211,7 @@
      "level": "high",
      "reasons": [
       "0.58 in of rain in the 3 days before",
-      "last test (Jan 05) was over the limit",
-      "this beach is often unsafe even in dry weather"
+      "last test (Jan 05) was over the limit"
      ],
      "actual": {
       "value": 2005.0,
@@ -2226,8 +2224,7 @@
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before",
-      "last test (Jan 05) was over the limit",
-      "this beach is often unsafe even in dry weather"
+      "last test (Jan 05) was over the limit"
      ]
     },
     {
@@ -2236,8 +2233,7 @@
      "level": "high",
      "reasons": [
       "1.80 in of rain in the 3 days before",
-      "last test (Jan 05) was over the limit",
-      "this beach is often unsafe even in dry weather"
+      "last test (Jan 05) was over the limit"
      ]
     }
    ]
@@ -2309,7 +2305,7 @@
    "name": "B-60-Long Beach, Long Beach City",
    "lat": 33.7614,
    "lon": -118.162,
-   "type": "chronic",
+   "type": "typical",
    "last_test": {
     "date": "2023-01-05",
     "value": 2005.0,
@@ -2323,7 +2319,7 @@
      "reasons": [
       "1.62 in of rain in the past week",
       "last test (Jan 05) was over the limit",
-      "this beach is often unsafe even in dry weather"
+      "history: unsafe on 15% of 1037 past tests"
      ],
      "actual": {
       "value": 150.0,
@@ -2337,7 +2333,7 @@
      "reasons": [
       "0.58 in of rain in the 3 days before",
       "last test (Jan 05) was over the limit",
-      "this beach is often unsafe even in dry weather"
+      "history: unsafe on 15% of 1037 past tests"
      ],
      "actual": {
       "value": 2005.0,
@@ -2351,7 +2347,7 @@
      "reasons": [
       "1.81 in of rain in the 3 days before",
       "last test (Jan 05) was over the limit",
-      "this beach is often unsafe even in dry weather"
+      "history: unsafe on 15% of 1037 past tests"
      ]
     },
     {
@@ -2361,7 +2357,7 @@
      "reasons": [
       "1.80 in of rain in the 3 days before",
       "last test (Jan 05) was over the limit",
-      "this beach is often unsafe even in dry weather"
+      "history: unsafe on 15% of 1037 past tests"
      ]
     }
    ]
@@ -2425,7 +2421,7 @@
    "name": "B-67-Long Beach, Long Beach City",
    "lat": 33.7581,
    "lon": -118.13,
-   "type": "rain-driven",
+   "type": "typical",
    "last_test": {
     "date": "2022-11-28",
     "value": 10.0,
@@ -2475,7 +2471,7 @@
    "name": "B-7-Long Beach, Long Beach City",
    "lat": 33.7596,
    "lon": -118.155,
-   "type": "rain-driven",
+   "type": "typical",
    "last_test": {
     "date": "2023-01-05",
     "value": 2005.0,
@@ -2533,7 +2529,7 @@
    "name": "B-8-Long Beach, Long Beach City",
    "lat": 33.7579,
    "lon": -118.149,
-   "type": "chronic",
+   "type": "typical",
    "last_test": {
     "date": "2023-01-05",
     "value": 2005.0,
@@ -2546,8 +2542,7 @@
      "level": "caution",
      "reasons": [
       "1.62 in of rain in the past week",
-      "last test (Jan 05) was over the limit",
-      "this beach is often unsafe even in dry weather"
+      "last test (Jan 05) was over the limit"
      ],
      "actual": {
       "value": 87.0,
@@ -2560,8 +2555,7 @@
      "level": "high",
      "reasons": [
       "0.58 in of rain in the 3 days before",
-      "last test (Jan 05) was over the limit",
-      "this beach is often unsafe even in dry weather"
+      "last test (Jan 05) was over the limit"
      ],
      "actual": {
       "value": 2005.0,
@@ -2574,8 +2568,7 @@
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before",
-      "last test (Jan 05) was over the limit",
-      "this beach is often unsafe even in dry weather"
+      "last test (Jan 05) was over the limit"
      ]
     },
     {
@@ -2584,8 +2577,7 @@
      "level": "caution",
      "reasons": [
       "1.80 in of rain in the 3 days before",
-      "last test (Jan 05) was over the limit",
-      "this beach is often unsafe even in dry weather"
+      "last test (Jan 05) was over the limit"
      ]
     }
    ]
@@ -2781,7 +2773,7 @@
    "name": "DHS001-Malibu Beach, Los Angeles",
    "lat": 34.0367,
    "lon": -118.61,
-   "type": "usually clean",
+   "type": "clean",
    "last_test": {
     "date": "2022-11-29",
     "value": 10.0,
@@ -2827,7 +2819,7 @@
    "name": "DHS002-Malibu Beach, Los Angeles",
    "lat": 34.0376,
    "lon": -118.676,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-12-06",
     "value": 10.0,
@@ -2877,7 +2869,7 @@
    "name": "DHS003-Malibu Beach, Los Angeles",
    "lat": 34.0314,
    "lon": -118.682,
-   "type": "usually clean",
+   "type": "clean",
    "last_test": {
     "date": "2022-12-06",
     "value": 10.0,
@@ -2923,7 +2915,7 @@
    "name": "DHS004-Malibu Beach, Los Angeles",
    "lat": 34.0333,
    "lon": -118.734,
-   "type": "usually clean",
+   "type": "fast",
    "last_test": {
     "date": "2022-12-06",
     "value": 10.0,
@@ -2969,7 +2961,7 @@
    "name": "DHS004B-Malibu Beach, Los Angeles",
    "lat": 34.0331,
    "lon": -118.734,
-   "type": "usually clean",
+   "type": "fast",
    "last_test": {
     "date": "2022-12-06",
     "value": 10.0,
@@ -3015,7 +3007,7 @@
    "name": "DHS005-Malibu Beach, Los Angeles",
    "lat": 34.0291,
    "lon": -118.754,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-12-06",
     "value": 10.0,
@@ -3061,7 +3053,7 @@
    "name": "DHS005B-Malibu Beach, Los Angeles",
    "lat": 34.029,
    "lon": -118.753,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-12-06",
     "value": 10.0,
@@ -3157,7 +3149,7 @@
    "name": "DHS007-Malibu Beach, Los Angeles",
    "lat": 34.0139,
    "lon": -118.819,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-12-06",
     "value": 52.0,
@@ -3203,7 +3195,7 @@
    "name": "DHS007B-Malibu Beach, Los Angeles",
    "lat": 34.0132,
    "lon": -118.821,
-   "type": "usually clean",
+   "type": "slow",
    "last_test": {
     "date": "2022-12-06",
     "value": 109.0,
@@ -3253,7 +3245,7 @@
    "name": "DHS008-Malibu Beach, Los Angeles",
    "lat": 34.0296,
    "lon": -118.842,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-12-06",
     "value": 10.0,
@@ -3299,7 +3291,7 @@
    "name": "DHS008B-Malibu Beach, Los Angeles",
    "lat": 34.0286,
    "lon": -118.842,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-12-06",
     "value": 10.0,
@@ -3345,7 +3337,7 @@
    "name": "DHS009-Malibu Beach, Los Angeles",
    "lat": 34.0424,
    "lon": -118.916,
-   "type": "usually clean",
+   "type": "fast",
    "last_test": {
     "date": "2022-11-29",
     "value": 10.0,
@@ -3391,7 +3383,7 @@
    "name": "DHS009B-Malibu Beach, Los Angeles",
    "lat": 34.0423,
    "lon": -118.916,
-   "type": "usually clean",
+   "type": "fast",
    "last_test": {
     "date": "2022-11-29",
     "value": 10.0,
@@ -3437,7 +3429,7 @@
    "name": "DHS010-Malibu Beach, Los Angeles",
    "lat": 34.0456,
    "lon": -118.933,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-12-06",
     "value": 31.0,
@@ -3483,7 +3475,7 @@
    "name": "DHS010B-Malibu Beach, Los Angeles",
    "lat": 34.0448,
    "lon": -118.933,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-12-06",
     "value": 10.0,
@@ -3575,7 +3567,7 @@
    "name": "DHS102-Will Rogers State Beach, Los Angeles",
    "lat": 34.0383,
    "lon": -118.544,
-   "type": "usually clean",
+   "type": "fast",
    "last_test": {
     "date": "2022-12-12",
     "value": 41.0,
@@ -3621,7 +3613,7 @@
    "name": "DHS102B-Will Rogers State Beach, Los Angeles",
    "lat": 34.0385,
    "lon": -118.545,
-   "type": "usually clean",
+   "type": "fast",
    "last_test": {
     "date": "2022-12-12",
     "value": 41.0,
@@ -3667,7 +3659,7 @@
    "name": "DHS103-Will Rogers State Beach, Los Angeles",
    "lat": 34.0348,
    "lon": -118.536,
-   "type": "usually clean",
+   "type": "typical",
    "last_test": {
     "date": "2022-12-05",
     "value": 63.0,
@@ -3713,7 +3705,7 @@
    "name": "DHS103B-Will Rogers State Beach, Los Angeles",
    "lat": 34.0343,
    "lon": -118.536,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-12-05",
     "value": 31.0,
@@ -3759,7 +3751,7 @@
    "name": "DHS104-Santa Monica State Beach, Los Angeles",
    "lat": 34.02,
    "lon": -118.51,
-   "type": "usually clean",
+   "type": "fast",
    "last_test": {
     "date": "2022-12-12",
     "value": 473.0,
@@ -3809,7 +3801,7 @@
    "name": "DHS104B-Santa Monica State Beach, Los Angeles",
    "lat": 34.0193,
    "lon": -118.51,
-   "type": "usually clean",
+   "type": "fast",
    "last_test": {
     "date": "2022-12-12",
     "value": 408.0,
@@ -3859,7 +3851,7 @@
    "name": "DHS105-Santa Monica State Beach, Los Angeles",
    "lat": 34.0147,
    "lon": -118.504,
-   "type": "usually clean",
+   "type": "fast",
    "last_test": {
     "date": "2022-12-12",
     "value": 1679.0,
@@ -3909,7 +3901,7 @@
    "name": "DHS105B-Santa Monica State Beach, Los Angeles",
    "lat": 34.0144,
    "lon": -118.504,
-   "type": "usually clean",
+   "type": "fast",
    "last_test": {
     "date": "2022-12-12",
     "value": 1354.0,
@@ -3959,7 +3951,7 @@
    "name": "DHS106-Santa Monica State Beach, Los Angeles",
    "lat": 34.002,
    "lon": -118.49,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-12-12",
     "value": 323.0,
@@ -4009,7 +4001,7 @@
    "name": "DHS107-Venice City Beach, Los Angeles",
    "lat": 33.9893,
    "lon": -118.479,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-12-05",
     "value": 52.0,
@@ -4055,7 +4047,7 @@
    "name": "DHS107B-Venice City Beach, Los Angeles",
    "lat": 33.9886,
    "lon": -118.478,
-   "type": "usually clean",
+   "type": "fast",
    "last_test": {
     "date": "2022-12-05",
     "value": 148.0,
@@ -4105,7 +4097,7 @@
    "name": "DHS108-Venice City Beach, Los Angeles",
    "lat": 33.9783,
    "lon": -118.467,
-   "type": "usually clean",
+   "type": "fast",
    "last_test": {
     "date": "2022-12-12",
     "value": 292.0,
@@ -4155,7 +4147,7 @@
    "name": "DHS109-Venice City Beach, Los Angeles",
    "lat": 33.9677,
    "lon": -118.46,
-   "type": "usually clean",
+   "type": "typical",
    "last_test": {
     "date": "2022-12-12",
     "value": 749.0,
@@ -4205,7 +4197,7 @@
    "name": "DHS110-Dockweiler State Beach, Los Angeles",
    "lat": 33.9406,
    "lon": -118.442,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-12-05",
     "value": 10.0,
@@ -4251,7 +4243,7 @@
    "name": "DHS111-Dockweiler State Beach, Los Angeles",
    "lat": 33.9233,
    "lon": -118.433,
-   "type": "usually clean",
+   "type": "fast",
    "last_test": {
     "date": "2022-12-12",
     "value": 185.0,
@@ -4301,7 +4293,7 @@
    "name": "DHS112-Dockweiler State Beach, Los Angeles",
    "lat": 33.9159,
    "lon": -118.429,
-   "type": "usually clean",
+   "type": "fast",
    "last_test": {
     "date": "2022-12-12",
     "value": 2909.0,
@@ -4351,7 +4343,7 @@
    "name": "DHS112B-Dockweiler State Beach, Los Angeles",
    "lat": 33.9153,
    "lon": -118.43,
-   "type": "usually clean",
+   "type": "fast",
    "last_test": {
     "date": "2022-12-12",
     "value": 1483.0,
@@ -4401,7 +4393,7 @@
    "name": "DHS113-Manhattan Beach, Los Angeles",
    "lat": 33.8945,
    "lon": -118.418,
-   "type": "rain-driven",
+   "type": "typical",
    "last_test": {
     "date": "2023-01-07",
     "value": 72.0,
@@ -4459,7 +4451,7 @@
    "name": "DHS113B-Manhattan Beach, Los Angeles",
    "lat": 33.894,
    "lon": -118.418,
-   "type": "usually clean",
+   "type": "typical",
    "last_test": {
     "date": "2022-12-12",
     "value": 9804.0,
@@ -4509,7 +4501,7 @@
    "name": "DHS114-Hermosa Beach, Los Angeles",
    "lat": 33.8715,
    "lon": -118.407,
-   "type": "usually clean",
+   "type": "fast",
    "last_test": {
     "date": "2022-12-12",
     "value": 52.0,
@@ -4555,7 +4547,7 @@
    "name": "DHS115-Hermosa Beach, Los Angeles",
    "lat": 33.8522,
    "lon": -118.399,
-   "type": "rain-driven",
+   "type": "typical",
    "last_test": {
     "date": "2023-01-07",
     "value": 30.0,
@@ -4613,7 +4605,7 @@
    "name": "DHS113B-Hermosa Beach, Los Angeles",
    "lat": 33.8523,
    "lon": -118.4,
-   "type": "usually clean",
+   "type": "fast",
    "last_test": {
     "date": "2022-12-05",
     "value": 30.0,
@@ -4659,7 +4651,7 @@
    "name": "DHS116-Redondo Beach, Los Angeles",
    "lat": 33.8321,
    "lon": -118.391,
-   "type": "usually clean",
+   "type": "fast",
    "last_test": {
     "date": "2022-12-12",
     "value": 201.0,
@@ -4709,7 +4701,7 @@
    "name": "DHS117-Avalon Beach, Los Angeles",
    "lat": 33.343,
    "lon": -118.324,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-10-25",
     "value": 10.0,
@@ -4755,7 +4747,7 @@
    "name": "DHS118-Avalon Beach, Los Angeles",
    "lat": 33.3433,
    "lon": -118.325,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-10-25",
     "value": 10.0,
@@ -4801,7 +4793,7 @@
    "name": "DHS119-Avalon Beach, Los Angeles",
    "lat": 33.3438,
    "lon": -118.326,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-10-25",
     "value": 10.0,
@@ -4851,7 +4843,7 @@
    "name": "DHS120-Avalon Beach, Los Angeles",
    "lat": 33.3442,
    "lon": -118.326,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-10-25",
     "value": 10.0,
@@ -4897,7 +4889,7 @@
    "name": "DHS121-Avalon Beach, Los Angeles",
    "lat": 33.345,
    "lon": -118.327,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-10-25",
     "value": 10.0,
@@ -4943,7 +4935,7 @@
    "name": "DPH 002B",
    "lat": 34.0368898,
    "lon": -118.676899,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-12-06",
     "value": 10.0,
@@ -4989,7 +4981,7 @@
    "name": "DPH 122",
    "lat": 33.9611547,
    "lon": -118.4562179,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-12-12",
     "value": 209.0,
@@ -5413,7 +5405,7 @@
    "name": "SMB-1-13",
    "lat": 34.0383,
    "lon": -118.6731,
-   "type": "chronic",
+   "type": null,
    "last_test": {
     "date": "2022-12-28",
     "value": 170.0,
@@ -5426,8 +5418,7 @@
      "level": "caution",
      "reasons": [
       "0.19 in of rain in the 3 days before",
-      "last test (Dec 28) was over the limit",
-      "this beach is often unsafe even in dry weather"
+      "last test (Dec 28) was over the limit"
      ]
     },
     {
@@ -5436,8 +5427,7 @@
      "level": "high",
      "reasons": [
       "1.93 in of rain in the 3 days before",
-      "last test (Dec 28) was over the limit",
-      "this beach is often unsafe even in dry weather"
+      "last test (Dec 28) was over the limit"
      ],
      "actual": {
       "value": 2700.0,
@@ -5450,8 +5440,7 @@
      "level": "high",
      "reasons": [
       "3.07 in of rain in the 3 days before",
-      "last test (Dec 28) was over the limit",
-      "this beach is often unsafe even in dry weather"
+      "last test (Dec 28) was over the limit"
      ]
     },
     {
@@ -5460,8 +5449,7 @@
      "level": "caution",
      "reasons": [
       "2.88 in of rain in the 3 days before",
-      "last test (Dec 28) was over the limit",
-      "this beach is often unsafe even in dry weather"
+      "last test (Dec 28) was over the limit"
      ]
     }
    ]
@@ -5471,7 +5459,7 @@
    "name": "SMB-1-14",
    "lat": 34.0362,
    "lon": -118.6364,
-   "type": "chronic",
+   "type": null,
    "last_test": {
     "date": "2022-12-27",
     "value": 10.0,
@@ -5483,8 +5471,7 @@
      "risk": 0.064,
      "level": "low",
      "reasons": [
-      "0.19 in of rain in the 3 days before",
-      "this beach is often unsafe even in dry weather"
+      "0.19 in of rain in the 3 days before"
      ]
     },
     {
@@ -5492,8 +5479,7 @@
      "risk": 0.357,
      "level": "caution",
      "reasons": [
-      "1.93 in of rain in the 3 days before",
-      "this beach is often unsafe even in dry weather"
+      "1.93 in of rain in the 3 days before"
      ],
      "actual": {
       "value": 3400.0,
@@ -5505,8 +5491,7 @@
      "risk": 0.3,
      "level": "caution",
      "reasons": [
-      "3.07 in of rain in the 3 days before",
-      "this beach is often unsafe even in dry weather"
+      "3.07 in of rain in the 3 days before"
      ]
     },
     {
@@ -5514,8 +5499,7 @@
      "risk": 0.037,
      "level": "low",
      "reasons": [
-      "2.88 in of rain in the 3 days before",
-      "this beach is often unsafe even in dry weather"
+      "2.88 in of rain in the 3 days before"
      ]
     }
    ]
@@ -5525,7 +5509,7 @@
    "name": "SMB-1-16",
    "lat": 34.0253392,
    "lon": -118.5977,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-12-27",
     "value": 10.0,
@@ -5575,7 +5559,7 @@
    "name": "SMB-1-17",
    "lat": 34.02530393,
    "lon": -118.5962,
-   "type": "usually clean",
+   "type": null,
    "last_test": {
     "date": "2022-12-02",
     "value": 20.0,
@@ -5849,7 +5833,7 @@
    "name": "SMB-2-10",
    "lat": 33.95702,
    "lon": -118.45196,
-   "type": "rain-driven",
+   "type": "slow",
    "last_test": {
     "date": "2022-12-27",
     "value": 10.0,
@@ -5899,7 +5883,7 @@
    "name": "SMB-2-11",
    "lat": 33.9444,
    "lon": -118.4442,
-   "type": "rain-driven",
+   "type": null,
    "last_test": {
     "date": "2022-12-27",
     "value": 10.0,
@@ -5949,7 +5933,7 @@
    "name": "SMB-2-13",
    "lat": 33.93071,
    "lon": -118.43711,
-   "type": "rain-driven",
+   "type": null,
    "last_test": {
     "date": "2022-12-27",
     "value": 10.0,
@@ -5999,7 +5983,7 @@
    "name": "SMB-2-4",
    "lat": 34.03744,
    "lon": -118.54191,
-   "type": "rain-driven",
+   "type": null,
    "last_test": {
     "date": "2022-12-27",
     "value": 10.0,
@@ -6247,7 +6231,7 @@
    "name": "SMB-3-5",
    "lat": 33.99662,
    "lon": -118.48488,
-   "type": "rain-driven",
+   "type": "typical",
    "last_test": {
     "date": "2023-01-07",
     "value": 62.0,
@@ -6305,7 +6289,7 @@
    "name": "SMB-3-6",
    "lat": 33.9935842,
    "lon": -118.4824055,
-   "type": "rain-driven",
+   "type": null,
    "last_test": {
     "date": "2022-12-27",
     "value": 31.0,
@@ -6355,7 +6339,7 @@
    "name": "SMB-3-8",
    "lat": 33.98625,
    "lon": -118.47635,
-   "type": "rain-driven",
+   "type": null,
    "last_test": {
     "date": "2022-12-27",
     "value": 20.0,
@@ -6405,7 +6389,7 @@
    "name": "SMB-7-6",
    "lat": 33.71773,
    "lon": -118.32182,
-   "type": "usually clean",
+   "type": "clean",
    "last_test": {
     "date": "2022-12-27",
     "value": 10.0,
@@ -6455,7 +6439,7 @@
    "name": "SMB-7-9",
    "lat": 33.70936,
    "lon": -118.28302,
-   "type": "usually clean",
+   "type": "fast",
    "last_test": {
     "date": "2022-12-27",
     "value": 10.0,

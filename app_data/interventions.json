@@ -1,12 +1,14 @@
 {
  "model_id": "40ebd86751",
- "method": "(same idea as the post-fire analysis in 07):\n  1. Expected risk from WEATHER ONLY: a model that knows the beach, rain (including\n     the sample day, since this looks back in time), days since rain, tides and\n     season, but NOT recent test results or the date. The forecast model can't be\n     used here: its \"last test\" and past_rate inputs follow the beach's own recent\n     results, so after a real improvement its expected risk drops too and the\n     improvement disappears from the residuals.\n     Each year's expected risk comes from a model trained on the other years, so\n     no test is scored by a model that saw it.\n  2. Residual = what happened (1 unsafe / 0 safe) minus expected risk.\n  3. Change = (beach's residual after - before) minus (the same change at control\n     beaches 5+ km away), which removes region-wide swings like drought years.\n  4. 95% range: resample whole calendar months (1,000 times), keeping each month's\n     target and control tests together, then WIDEN it. On random beaches and\n     dates with no known project, the plain range called 26% of them a real\n     change instead of about 5%: beaches drift from year to year for reasons we\n     don't measure (sand, berms, birds, sampling). So we widen every range by\n     the factor that makes only 5% of random dates look like a change\n     (calibrate()), and check that on a second, separate set of random dates.\nThe years during the work itself (start to end) are left out.",
+ "method": "(same idea as the post-fire analysis in 07; the comparison itself is in\npipeline/evaluator.py, which app.py also uses):\n  1. Expected risk from WEATHER ONLY: a model that knows the beach, rain (including\n     the sample day, since this looks back in time), days since rain, tides and\n     season, but NOT recent test results or the date. The forecast model can't be\n     used here: its \"last test\" and past_rate inputs follow the beach's own recent\n     results, so after a real improvement its expected risk drops too and the\n     improvement disappears from the residuals.\n     Each year's expected risk comes from a model trained on the other years, so\n     no test is scored by a model that saw it.\n  2. Residual = what happened (1 unsafe / 0 safe) minus expected risk.\n  3. Change = (beach's residual after - before) minus (the same change at control\n     beaches 5+ km away), which removes region-wide swings like drought years.\n  4. 95% range: resample whole calendar months (1,000 times), keeping each month's\n     target and control tests together, then WIDEN it. On random beaches and\n     dates with no known project, the plain range called about a quarter of them\n     a real change instead of about 5%: beaches drift from year to year for\n     reasons we don't measure (sand, berms, birds, sampling). So we widen every\n     range by the factor that makes only 5% of random dates look like a change\n     (calibrate()), and check that on a second, separate set of random dates.\nThe years during the work itself (start to end) are left out. Results say\n\"cleaner after\" or \"no clear change after\", never \"because of\": one beach and\none date can't rule out something else changing at the same time.",
  "demos": [
   {
-   "label": "Malibu Lagoon restoration (Surfrider Beach)",
+   "label": "Malibu Lagoon restoration",
+   "beach": "Surfrider Beach",
    "station": "SMB-MC-2",
    "start": "2012-06-01",
    "end": "2013-03-31",
+   "short": "the Malibu Lagoon restoration (2012-13)",
    "years": 2,
    "before_window": [
     "2010-06-01",
@@ -35,13 +37,353 @@
    ],
    "se": 0.04844361795455661,
    "widen": 1.74,
-   "verdict": "cleaner than before"
+   "verdict": "cleaner after",
+   "monthly": [
+    {
+     "month": "2010-06",
+     "period": "before",
+     "beach": 0.126,
+     "beach_tests": 22,
+     "others": 0.029
+    },
+    {
+     "month": "2010-07",
+     "period": "before",
+     "beach": -0.054,
+     "beach_tests": 7,
+     "others": 0.045
+    },
+    {
+     "month": "2010-08",
+     "period": "before",
+     "beach": null,
+     "beach_tests": 0,
+     "others": 0.013
+    },
+    {
+     "month": "2010-09",
+     "period": "before",
+     "beach": null,
+     "beach_tests": 0,
+     "others": 0.032
+    },
+    {
+     "month": "2010-10",
+     "period": "before",
+     "beach": null,
+     "beach_tests": 0,
+     "others": 0.061
+    },
+    {
+     "month": "2010-11",
+     "period": "before",
+     "beach": 0.171,
+     "beach_tests": 8,
+     "others": 0.041
+    },
+    {
+     "month": "2010-12",
+     "period": "before",
+     "beach": 0.228,
+     "beach_tests": 21,
+     "others": 0.022
+    },
+    {
+     "month": "2011-01",
+     "period": "before",
+     "beach": 0.184,
+     "beach_tests": 21,
+     "others": 0.046
+    },
+    {
+     "month": "2011-02",
+     "period": "before",
+     "beach": 0.407,
+     "beach_tests": 19,
+     "others": 0.032
+    },
+    {
+     "month": "2011-03",
+     "period": "before",
+     "beach": 0.297,
+     "beach_tests": 22,
+     "others": 0.016
+    },
+    {
+     "month": "2011-04",
+     "period": "before",
+     "beach": -0.0,
+     "beach_tests": 22,
+     "others": -0.006
+    },
+    {
+     "month": "2011-05",
+     "period": "before",
+     "beach": 0.208,
+     "beach_tests": 11,
+     "others": 0.013
+    },
+    {
+     "month": "2011-06",
+     "period": "before",
+     "beach": 0.2,
+     "beach_tests": 22,
+     "others": 0.027
+    },
+    {
+     "month": "2011-07",
+     "period": "before",
+     "beach": 0.158,
+     "beach_tests": 20,
+     "others": 0.014
+    },
+    {
+     "month": "2011-08",
+     "period": "before",
+     "beach": 0.204,
+     "beach_tests": 21,
+     "others": 0.021
+    },
+    {
+     "month": "2011-09",
+     "period": "before",
+     "beach": 0.019,
+     "beach_tests": 20,
+     "others": 0.045
+    },
+    {
+     "month": "2011-10",
+     "period": "before",
+     "beach": 0.415,
+     "beach_tests": 20,
+     "others": 0.092
+    },
+    {
+     "month": "2011-11",
+     "period": "before",
+     "beach": 0.37,
+     "beach_tests": 22,
+     "others": 0.073
+    },
+    {
+     "month": "2011-12",
+     "period": "before",
+     "beach": 0.605,
+     "beach_tests": 23,
+     "others": -0.015
+    },
+    {
+     "month": "2012-01",
+     "period": "before",
+     "beach": 0.668,
+     "beach_tests": 20,
+     "others": 0.022
+    },
+    {
+     "month": "2012-02",
+     "period": "before",
+     "beach": 0.589,
+     "beach_tests": 17,
+     "others": 0.009
+    },
+    {
+     "month": "2012-03",
+     "period": "before",
+     "beach": 0.291,
+     "beach_tests": 23,
+     "others": 0.003
+    },
+    {
+     "month": "2012-04",
+     "period": "before",
+     "beach": 0.048,
+     "beach_tests": 18,
+     "others": -0.021
+    },
+    {
+     "month": "2012-05",
+     "period": "before",
+     "beach": 0.081,
+     "beach_tests": 23,
+     "others": -0.002
+    },
+    {
+     "month": "2013-04",
+     "period": "after",
+     "beach": 0.006,
+     "beach_tests": 20,
+     "others": -0.011
+    },
+    {
+     "month": "2013-05",
+     "period": "after",
+     "beach": -0.054,
+     "beach_tests": 21,
+     "others": 0.052
+    },
+    {
+     "month": "2013-06",
+     "period": "after",
+     "beach": 0.079,
+     "beach_tests": 20,
+     "others": 0.005
+    },
+    {
+     "month": "2013-07",
+     "period": "after",
+     "beach": 0.042,
+     "beach_tests": 22,
+     "others": -0.019
+    },
+    {
+     "month": "2013-08",
+     "period": "after",
+     "beach": -0.042,
+     "beach_tests": 22,
+     "others": -0.002
+    },
+    {
+     "month": "2013-09",
+     "period": "after",
+     "beach": 0.021,
+     "beach_tests": 19,
+     "others": 0.005
+    },
+    {
+     "month": "2013-10",
+     "period": "after",
+     "beach": -0.071,
+     "beach_tests": 20,
+     "others": 0.047
+    },
+    {
+     "month": "2013-11",
+     "period": "after",
+     "beach": 0.124,
+     "beach_tests": 22,
+     "others": 0.072
+    },
+    {
+     "month": "2013-12",
+     "period": "after",
+     "beach": -0.183,
+     "beach_tests": 21,
+     "others": 0.024
+    },
+    {
+     "month": "2014-01",
+     "period": "after",
+     "beach": 0.204,
+     "beach_tests": 23,
+     "others": 0.038
+    },
+    {
+     "month": "2014-02",
+     "period": "after",
+     "beach": 0.051,
+     "beach_tests": 20,
+     "others": -0.003
+    },
+    {
+     "month": "2014-03",
+     "period": "after",
+     "beach": -0.03,
+     "beach_tests": 21,
+     "others": -0.007
+    },
+    {
+     "month": "2014-04",
+     "period": "after",
+     "beach": -0.066,
+     "beach_tests": 22,
+     "others": -0.01
+    },
+    {
+     "month": "2014-05",
+     "period": "after",
+     "beach": -0.074,
+     "beach_tests": 23,
+     "others": -0.022
+    },
+    {
+     "month": "2014-06",
+     "period": "after",
+     "beach": 0.059,
+     "beach_tests": 18,
+     "others": -0.01
+    },
+    {
+     "month": "2014-07",
+     "period": "after",
+     "beach": -0.182,
+     "beach_tests": 21,
+     "others": -0.083
+    },
+    {
+     "month": "2014-08",
+     "period": "after",
+     "beach": -0.136,
+     "beach_tests": 22,
+     "others": -0.043
+    },
+    {
+     "month": "2014-09",
+     "period": "after",
+     "beach": -0.005,
+     "beach_tests": 21,
+     "others": -0.02
+    },
+    {
+     "month": "2014-10",
+     "period": "after",
+     "beach": -0.007,
+     "beach_tests": 22,
+     "others": 0.007
+    },
+    {
+     "month": "2014-11",
+     "period": "after",
+     "beach": -0.27,
+     "beach_tests": 19,
+     "others": 0.007
+    },
+    {
+     "month": "2014-12",
+     "period": "after",
+     "beach": 0.118,
+     "beach_tests": 21,
+     "others": 0.004
+    },
+    {
+     "month": "2015-01",
+     "period": "after",
+     "beach": 0.259,
+     "beach_tests": 23,
+     "others": 0.065
+    },
+    {
+     "month": "2015-02",
+     "period": "after",
+     "beach": 0.231,
+     "beach_tests": 20,
+     "others": 0.029
+    },
+    {
+     "month": "2015-03",
+     "period": "after",
+     "beach": 0.028,
+     "beach_tests": 21,
+     "others": 0.004
+    }
+   ]
   },
   {
-   "label": "Santa Monica Pier Clean Beaches Project (1.6-million-gallon stormwater tank, completed 2018)",
+   "label": "Santa Monica Pier stormwater tank (Clean Beaches Project, completed 2018)",
+   "beach": "Santa Monica Pier",
    "station": "SMB-3-3",
    "start": "2018-01-01",
    "end": "2018-12-31",
+   "short": "the 2018 stormwater tank",
    "years": 2,
    "before_window": [
     "2016-01-01",
@@ -70,13 +412,353 @@
    ],
    "se": 0.027240188392749807,
    "widen": 1.74,
-   "verdict": "no clear change (the 95% range includes zero)"
+   "verdict": "no clear change after",
+   "monthly": [
+    {
+     "month": "2016-01",
+     "period": "before",
+     "beach": -0.213,
+     "beach_tests": 21,
+     "others": -0.049
+    },
+    {
+     "month": "2016-02",
+     "period": "before",
+     "beach": -0.159,
+     "beach_tests": 20,
+     "others": -0.025
+    },
+    {
+     "month": "2016-03",
+     "period": "before",
+     "beach": -0.073,
+     "beach_tests": 23,
+     "others": 0.001
+    },
+    {
+     "month": "2016-04",
+     "period": "before",
+     "beach": -0.194,
+     "beach_tests": 17,
+     "others": -0.041
+    },
+    {
+     "month": "2016-05",
+     "period": "before",
+     "beach": -0.172,
+     "beach_tests": 21,
+     "others": -0.031
+    },
+    {
+     "month": "2016-06",
+     "period": "before",
+     "beach": -0.081,
+     "beach_tests": 22,
+     "others": -0.029
+    },
+    {
+     "month": "2016-07",
+     "period": "before",
+     "beach": -0.114,
+     "beach_tests": 22,
+     "others": -0.027
+    },
+    {
+     "month": "2016-08",
+     "period": "before",
+     "beach": -0.132,
+     "beach_tests": 21,
+     "others": -0.028
+    },
+    {
+     "month": "2016-09",
+     "period": "before",
+     "beach": -0.122,
+     "beach_tests": 22,
+     "others": -0.041
+    },
+    {
+     "month": "2016-10",
+     "period": "before",
+     "beach": 0.058,
+     "beach_tests": 21,
+     "others": 0.005
+    },
+    {
+     "month": "2016-11",
+     "period": "before",
+     "beach": -0.295,
+     "beach_tests": 22,
+     "others": -0.055
+    },
+    {
+     "month": "2016-12",
+     "period": "before",
+     "beach": -0.284,
+     "beach_tests": 23,
+     "others": -0.057
+    },
+    {
+     "month": "2017-01",
+     "period": "before",
+     "beach": -0.196,
+     "beach_tests": 21,
+     "others": -0.013
+    },
+    {
+     "month": "2017-02",
+     "period": "before",
+     "beach": -0.283,
+     "beach_tests": 20,
+     "others": 0.103
+    },
+    {
+     "month": "2017-03",
+     "period": "before",
+     "beach": -0.199,
+     "beach_tests": 23,
+     "others": -0.029
+    },
+    {
+     "month": "2017-04",
+     "period": "before",
+     "beach": -0.167,
+     "beach_tests": 21,
+     "others": -0.022
+    },
+    {
+     "month": "2017-05",
+     "period": "before",
+     "beach": -0.081,
+     "beach_tests": 22,
+     "others": -0.021
+    },
+    {
+     "month": "2017-06",
+     "period": "before",
+     "beach": -0.172,
+     "beach_tests": 22,
+     "others": -0.034
+    },
+    {
+     "month": "2017-07",
+     "period": "before",
+     "beach": -0.157,
+     "beach_tests": 21,
+     "others": -0.031
+    },
+    {
+     "month": "2017-08",
+     "period": "before",
+     "beach": -0.16,
+     "beach_tests": 22,
+     "others": -0.016
+    },
+    {
+     "month": "2017-09",
+     "period": "before",
+     "beach": -0.139,
+     "beach_tests": 22,
+     "others": -0.013
+    },
+    {
+     "month": "2017-10",
+     "period": "before",
+     "beach": -0.117,
+     "beach_tests": 21,
+     "others": 0.005
+    },
+    {
+     "month": "2017-11",
+     "period": "before",
+     "beach": -0.171,
+     "beach_tests": 22,
+     "others": 0.048
+    },
+    {
+     "month": "2017-12",
+     "period": "before",
+     "beach": -0.21,
+     "beach_tests": 22,
+     "others": -0.035
+    },
+    {
+     "month": "2019-01",
+     "period": "after",
+     "beach": -0.237,
+     "beach_tests": 23,
+     "others": 0.025
+    },
+    {
+     "month": "2019-02",
+     "period": "after",
+     "beach": -0.214,
+     "beach_tests": 19,
+     "others": -0.038
+    },
+    {
+     "month": "2019-03",
+     "period": "after",
+     "beach": -0.131,
+     "beach_tests": 22,
+     "others": -0.0
+    },
+    {
+     "month": "2019-04",
+     "period": "after",
+     "beach": -0.159,
+     "beach_tests": 21,
+     "others": 0.028
+    },
+    {
+     "month": "2019-05",
+     "period": "after",
+     "beach": -0.131,
+     "beach_tests": 22,
+     "others": 0.042
+    },
+    {
+     "month": "2019-06",
+     "period": "after",
+     "beach": -0.174,
+     "beach_tests": 21,
+     "others": -0.014
+    },
+    {
+     "month": "2019-07",
+     "period": "after",
+     "beach": -0.179,
+     "beach_tests": 22,
+     "others": -0.0
+    },
+    {
+     "month": "2019-08",
+     "period": "after",
+     "beach": -0.098,
+     "beach_tests": 23,
+     "others": -0.01
+    },
+    {
+     "month": "2019-09",
+     "period": "after",
+     "beach": -0.207,
+     "beach_tests": 19,
+     "others": -0.021
+    },
+    {
+     "month": "2019-10",
+     "period": "after",
+     "beach": -0.137,
+     "beach_tests": 23,
+     "others": -0.017
+    },
+    {
+     "month": "2019-11",
+     "period": "after",
+     "beach": 0.061,
+     "beach_tests": 22,
+     "others": -0.014
+    },
+    {
+     "month": "2019-12",
+     "period": "after",
+     "beach": -0.024,
+     "beach_tests": 20,
+     "others": -0.076
+    },
+    {
+     "month": "2020-01",
+     "period": "after",
+     "beach": -0.15,
+     "beach_tests": 23,
+     "others": -0.033
+    },
+    {
+     "month": "2020-02",
+     "period": "after",
+     "beach": 0.044,
+     "beach_tests": 21,
+     "others": -0.071
+    },
+    {
+     "month": "2020-03",
+     "period": "after",
+     "beach": -0.03,
+     "beach_tests": 19,
+     "others": -0.063
+    },
+    {
+     "month": "2020-04",
+     "period": "after",
+     "beach": -0.02,
+     "beach_tests": 21,
+     "others": -0.005
+    },
+    {
+     "month": "2020-05",
+     "period": "after",
+     "beach": -0.147,
+     "beach_tests": 22,
+     "others": 0.023
+    },
+    {
+     "month": "2020-06",
+     "period": "after",
+     "beach": -0.059,
+     "beach_tests": 21,
+     "others": -0.017
+    },
+    {
+     "month": "2020-07",
+     "period": "after",
+     "beach": -0.056,
+     "beach_tests": 23,
+     "others": -0.016
+    },
+    {
+     "month": "2020-08",
+     "period": "after",
+     "beach": -0.079,
+     "beach_tests": 20,
+     "others": 0.008
+    },
+    {
+     "month": "2020-09",
+     "period": "after",
+     "beach": 0.005,
+     "beach_tests": 22,
+     "others": -0.023
+    },
+    {
+     "month": "2020-10",
+     "period": "after",
+     "beach": 0.138,
+     "beach_tests": 23,
+     "others": 0.008
+    },
+    {
+     "month": "2020-11",
+     "period": "after",
+     "beach": 0.124,
+     "beach_tests": 20,
+     "others": 0.032
+    },
+    {
+     "month": "2020-12",
+     "period": "after",
+     "beach": -0.15,
+     "beach_tests": 23,
+     "others": 0.015
+    }
+   ]
   },
   {
    "label": "Santa Monica Pier new bird netting (August 2023)",
+   "beach": "Santa Monica Pier",
    "station": "SMB-3-3",
    "start": "2023-08-01",
    "end": "2023-08-31",
+   "short": "the new bird netting (August 2023)",
    "years": 2,
    "before_window": [
     "2021-08-01",
@@ -105,7 +787,345 @@
    ],
    "se": 0.04354014083688576,
    "widen": 1.74,
-   "verdict": "no clear change (the 95% range includes zero)"
+   "verdict": "no clear change after",
+   "monthly": [
+    {
+     "month": "2021-08",
+     "period": "before",
+     "beach": 0.186,
+     "beach_tests": 20,
+     "others": -0.025
+    },
+    {
+     "month": "2021-09",
+     "period": "before",
+     "beach": -0.004,
+     "beach_tests": 20,
+     "others": -0.026
+    },
+    {
+     "month": "2021-10",
+     "period": "before",
+     "beach": 0.077,
+     "beach_tests": 22,
+     "others": -0.027
+    },
+    {
+     "month": "2021-11",
+     "period": "before",
+     "beach": 0.244,
+     "beach_tests": 17,
+     "others": -0.002
+    },
+    {
+     "month": "2021-12",
+     "period": "before",
+     "beach": 0.147,
+     "beach_tests": 23,
+     "others": -0.039
+    },
+    {
+     "month": "2022-01",
+     "period": "before",
+     "beach": 0.267,
+     "beach_tests": 21,
+     "others": -0.044
+    },
+    {
+     "month": "2022-02",
+     "period": "before",
+     "beach": 0.123,
+     "beach_tests": 18,
+     "others": -0.013
+    },
+    {
+     "month": "2022-03",
+     "period": "before",
+     "beach": 0.108,
+     "beach_tests": 17,
+     "others": -0.015
+    },
+    {
+     "month": "2022-04",
+     "period": "before",
+     "beach": -0.043,
+     "beach_tests": 21,
+     "others": -0.019
+    },
+    {
+     "month": "2022-05",
+     "period": "before",
+     "beach": -0.047,
+     "beach_tests": 17,
+     "others": 0.007
+    },
+    {
+     "month": "2022-06",
+     "period": "before",
+     "beach": 0.234,
+     "beach_tests": 20,
+     "others": -0.035
+    },
+    {
+     "month": "2022-07",
+     "period": "before",
+     "beach": 0.177,
+     "beach_tests": 18,
+     "others": -0.031
+    },
+    {
+     "month": "2022-08",
+     "period": "before",
+     "beach": 0.427,
+     "beach_tests": 2,
+     "others": -0.007
+    },
+    {
+     "month": "2022-09",
+     "period": "before",
+     "beach": 0.198,
+     "beach_tests": 13,
+     "others": -0.052
+    },
+    {
+     "month": "2022-10",
+     "period": "before",
+     "beach": 0.061,
+     "beach_tests": 18,
+     "others": -0.041
+    },
+    {
+     "month": "2022-11",
+     "period": "before",
+     "beach": 0.234,
+     "beach_tests": 20,
+     "others": -0.02
+    },
+    {
+     "month": "2022-12",
+     "period": "before",
+     "beach": 0.379,
+     "beach_tests": 21,
+     "others": 0.021
+    },
+    {
+     "month": "2023-01",
+     "period": "before",
+     "beach": 0.258,
+     "beach_tests": 18,
+     "others": -0.035
+    },
+    {
+     "month": "2023-02",
+     "period": "before",
+     "beach": 0.008,
+     "beach_tests": 20,
+     "others": -0.032
+    },
+    {
+     "month": "2023-03",
+     "period": "before",
+     "beach": 0.117,
+     "beach_tests": 21,
+     "others": -0.083
+    },
+    {
+     "month": "2023-04",
+     "period": "before",
+     "beach": -0.12,
+     "beach_tests": 20,
+     "others": -0.03
+    },
+    {
+     "month": "2023-05",
+     "period": "before",
+     "beach": -0.012,
+     "beach_tests": 15,
+     "others": 0.045
+    },
+    {
+     "month": "2023-06",
+     "period": "before",
+     "beach": -0.04,
+     "beach_tests": 16,
+     "others": -0.008
+    },
+    {
+     "month": "2023-07",
+     "period": "before",
+     "beach": 0.27,
+     "beach_tests": 18,
+     "others": 0.008
+    },
+    {
+     "month": "2023-09",
+     "period": "after",
+     "beach": 0.312,
+     "beach_tests": 13,
+     "others": -0.031
+    },
+    {
+     "month": "2023-10",
+     "period": "after",
+     "beach": 0.312,
+     "beach_tests": 18,
+     "others": 0.001
+    },
+    {
+     "month": "2023-11",
+     "period": "after",
+     "beach": 0.36,
+     "beach_tests": 18,
+     "others": -0.012
+    },
+    {
+     "month": "2023-12",
+     "period": "after",
+     "beach": 0.204,
+     "beach_tests": 19,
+     "others": 0.017
+    },
+    {
+     "month": "2024-01",
+     "period": "after",
+     "beach": 0.308,
+     "beach_tests": 22,
+     "others": -0.002
+    },
+    {
+     "month": "2024-02",
+     "period": "after",
+     "beach": -0.075,
+     "beach_tests": 20,
+     "others": 0.03
+    },
+    {
+     "month": "2024-03",
+     "period": "after",
+     "beach": 0.383,
+     "beach_tests": 20,
+     "others": -0.016
+    },
+    {
+     "month": "2024-04",
+     "period": "after",
+     "beach": 0.147,
+     "beach_tests": 18,
+     "others": 0.003
+    },
+    {
+     "month": "2024-05",
+     "period": "after",
+     "beach": 0.342,
+     "beach_tests": 22,
+     "others": 0.036
+    },
+    {
+     "month": "2024-06",
+     "period": "after",
+     "beach": 0.382,
+     "beach_tests": 21,
+     "others": 0.037
+    },
+    {
+     "month": "2024-07",
+     "period": "after",
+     "beach": 0.322,
+     "beach_tests": 22,
+     "others": 0.03
+    },
+    {
+     "month": "2024-08",
+     "period": "after",
+     "beach": 0.467,
+     "beach_tests": 23,
+     "others": 0.021
+    },
+    {
+     "month": "2024-09",
+     "period": "after",
+     "beach": 0.727,
+     "beach_tests": 20,
+     "others": 0.008
+    },
+    {
+     "month": "2024-10",
+     "period": "after",
+     "beach": 0.216,
+     "beach_tests": 23,
+     "others": 0.007
+    },
+    {
+     "month": "2024-11",
+     "period": "after",
+     "beach": 0.16,
+     "beach_tests": 22,
+     "others": 0.004
+    },
+    {
+     "month": "2024-12",
+     "period": "after",
+     "beach": 0.059,
+     "beach_tests": 21,
+     "others": 0.027
+    },
+    {
+     "month": "2025-01",
+     "period": "after",
+     "beach": 0.442,
+     "beach_tests": 19,
+     "others": 0.036
+    },
+    {
+     "month": "2025-02",
+     "period": "after",
+     "beach": 0.55,
+     "beach_tests": 18,
+     "others": 0.102
+    },
+    {
+     "month": "2025-03",
+     "period": "after",
+     "beach": 0.153,
+     "beach_tests": 18,
+     "others": 0.026
+    },
+    {
+     "month": "2025-04",
+     "period": "after",
+     "beach": 0.282,
+     "beach_tests": 21,
+     "others": -0.03
+    },
+    {
+     "month": "2025-05",
+     "period": "after",
+     "beach": 0.138,
+     "beach_tests": 23,
+     "others": -0.004
+    },
+    {
+     "month": "2025-06",
+     "period": "after",
+     "beach": 0.291,
+     "beach_tests": 20,
+     "others": -0.011
+    },
+    {
+     "month": "2025-07",
+     "period": "after",
+     "beach": 0.215,
+     "beach_tests": 23,
+     "others": 0.001
+    },
+    {
+     "month": "2025-08",
+     "period": "after",
+     "beach": 0.344,
+     "beach_tests": 22,
+     "others": -0.024
+    }
+   ]
   }
  ],
  "placebo": {

@@ -1,11 +1,12 @@
-"""Step 12: intervention evaluator. Did a beach get cleaner (or dirtier) after a
+"""Step 12: intervention evaluator. Was a beach cleaner (or dirtier) after a
 given date, beyond what the weather explains?
 
   python3 pipeline/12_intervention.py SMB-MC-2 2012-06-01 2013-03-31   (station, work start, work end)
   python3 pipeline/12_intervention.py SMB-3-3 2018-01-01 2018-12-31 --years 3
-  python3 pipeline/12_intervention.py --demo    (known cases + placebo check -> app_data/interventions.json)
+  python3 pipeline/12_intervention.py --demo    (known cases + placebo check -> app_data/)
 
-Method (same idea as the post-fire analysis in 07):
+Method (same idea as the post-fire analysis in 07; the comparison itself is in
+pipeline/evaluator.py, which app.py also uses):
   1. Expected risk from WEATHER ONLY: a model that knows the beach, rain (including
      the sample day, since this looks back in time), days since rain, tides and
      season, but NOT recent test results or the date. The forecast model can't be
@@ -19,20 +20,25 @@ Method (same idea as the post-fire analysis in 07):
      beaches 5+ km away), which removes region-wide swings like drought years.
   4. 95% range: resample whole calendar months (1,000 times), keeping each month's
      target and control tests together, then WIDEN it. On random beaches and
-     dates with no known project, the plain range called 26% of them a real
-     change instead of about 5%: beaches drift from year to year for reasons we
-     don't measure (sand, berms, birds, sampling). So we widen every range by
-     the factor that makes only 5% of random dates look like a change
+     dates with no known project, the plain range called about a quarter of them
+     a real change instead of about 5%: beaches drift from year to year for
+     reasons we don't measure (sand, berms, birds, sampling). So we widen every
+     range by the factor that makes only 5% of random dates look like a change
      (calibrate()), and check that on a second, separate set of random dates.
-The years during the work itself (start to end) are left out.
-Outputs: processed/weather_expected.csv and evaluator_calibration.json (cached),
-         app_data/interventions.json (--demo)
+The years during the work itself (start to end) are left out. Results say
+"cleaner after" or "no clear change after", never "because of": one beach and
+one date can't rule out something else changing at the same time.
+Outputs: processed/weather_expected.csv and evaluator_calibration.json (cached);
+         with --demo, app_data/interventions.json and app_data/evaluator_data.json
+         (every beach test with its weather-only risk, so the app can run evaluate())
 """
 import argparse, json
 from pathlib import Path
 import numpy as np
 import pandas as pd
 from sklearn.ensemble import HistGradientBoostingClassifier
+import evaluator as ev           # pipeline/evaluator.py: the comparison itself
+from evaluator import r3, km, N_BOOT
 
 ROOT = Path(__file__).resolve().parent.parent
 P, OUT = ROOT / "processed", ROOT / "app_data"
@@ -43,19 +49,8 @@ FEATURES = ["station_id", "rain_today", "rain_1d", "rain_3d", "rain_7d", "rain_3
 # Same settings as the forecast model (06), so every rule rests on 100+ tests.
 PARAMS = dict(learning_rate=0.05, max_iter=400, max_leaf_nodes=31, min_samples_leaf=100,
               l2_regularization=1.0, random_state=0)
-CONTROL_KM = 5
-N_BOOT = 1000
 MODEL_ID = json.loads((ROOT / "model" / "metrics.json").read_text())["model_id"]
-
-
-def r3(x):
-    return None if pd.isna(x) else round(float(x), 3)
-
-
-def km(lat1, lon1, lat2, lon2):
-    lat1, lon1, lat2, lon2 = map(np.radians, (lat1, lon1, lat2, lon2))
-    a = np.sin((lat2 - lat1) / 2) ** 2 + np.cos(lat1) * np.cos(lat2) * np.sin((lon2 - lon1) / 2) ** 2
-    return 6371 * 2 * np.arcsin(np.sqrt(a))
+DAY0 = pd.Timestamp("2010-01-01")   # evaluator_data.json stores dates as days since this
 
 
 def build_expected():
@@ -86,71 +81,10 @@ def load_expected(rebuild=False):
 
 
 def evaluate(ex, station, start, end=None, years=2, widen=None, seed=0):
-    """Before = `years` before `start`; after = `years` after `end` (default: start).
-    widen: how much to widen the bootstrap range (default: the calibrated factor).
-    Returns a dict of plain numbers, or {"error": ...} when there isn't enough data."""
+    """evaluator.evaluate() with the calibrated widening factor filled in."""
     if widen is None:
         widen = json.loads(CALIB.read_text())["widen"]
-    start = pd.Timestamp(start)
-    end = pd.Timestamp(end) if end else start
-    before = (start - pd.DateOffset(years=years), start)
-    after = (end, end + pd.DateOffset(years=years))
-    ex = ex[((ex["date"] >= before[0]) & (ex["date"] < before[1]))
-            | ((ex["date"] > after[0]) & (ex["date"] <= after[1]))].copy()
-    ex["period"] = np.where(ex["date"] < start, "before", "after")
-    ex["resid"] = ex["exceeds"] - ex["expected"]
-
-    here = ex.groupby("StationCode")[["lat", "lon"]].median()
-    if station not in here.index:
-        return {"error": f"no tests at {station} in these years"}
-    dist = km(*here.loc[station], here["lat"], here["lon"])
-    tgt = ex[ex["StationCode"] == station]
-    ctl = ex[ex["StationCode"].isin(dist[dist >= CONTROL_KM].index)]
-    n = tgt["period"].value_counts()
-    if n.get("before", 0) < 30 or n.get("after", 0) < 30:
-        return {"error": f"too few tests at {station}: {n.get('before', 0)} before, {n.get('after', 0)} after (need 30 each)"}
-
-    # Per calendar month and period: sum of residuals and number of tests, target and control.
-    def by_month(d):
-        return d.groupby([d["date"].dt.to_period("M"), "period"])["resid"].agg(["sum", "size"])
-    m = (by_month(tgt).add_suffix("_t")
-         .join(by_month(ctl).add_suffix("_c"), how="outer").fillna(0))
-
-    def change(mm):
-        """(target after - before) - (control after - before), from monthly sums."""
-        s = mm.groupby(level="period").sum()
-        t = s["sum_t"] / s["size_t"]
-        c = s["sum_c"] / s["size_c"]
-        return (t["after"] - t["before"]) - (c["after"] - c["before"])
-
-    rng = np.random.default_rng(seed)
-    arrs = {p: m.xs(p, level="period")[["sum_t", "size_t", "sum_c", "size_c"]].to_numpy() for p in ["before", "after"]}
-    boot = {}
-    for p, a in arrs.items():   # resample months within each period
-        pick = rng.integers(0, len(a), size=(N_BOOT, len(a)))
-        boot[p] = a[pick].sum(1)
-    with np.errstate(invalid="ignore", divide="ignore"):
-        t = boot["after"][:, 0] / boot["after"][:, 1] - boot["before"][:, 0] / boot["before"][:, 1]
-        c = boot["after"][:, 2] / boot["after"][:, 3] - boot["before"][:, 2] / boot["before"][:, 3]
-    draws = (t - c)[~np.isnan(t - c)]
-
-    def cell(d):
-        return {"tests": int(len(d)), "unsafe_rate": r3(d["exceeds"].mean()),
-                "expected_from_weather": r3(d["expected"].mean())}
-    est = change(m)
-    se = draws.std()                    # spread of the month-resampled estimates
-    lo, hi = est - 1.96 * widen * se, est + 1.96 * widen * se
-    return {
-        "station": station, "start": str(start.date()), "end": str(end.date()), "years": years,
-        "before_window": [str(before[0].date()), str(before[1].date())],
-        "after_window": [str(after[0].date()), str(after[1].date())],
-        "before": cell(tgt[tgt["period"] == "before"]), "after": cell(tgt[tgt["period"] == "after"]),
-        "control_beaches": int(ctl["StationCode"].nunique()),
-        "control_change": r3(ctl.loc[ctl.period == "after", "resid"].mean() - ctl.loc[ctl.period == "before", "resid"].mean()),
-        "change_beyond_weather": r3(est), "ci95": [r3(lo), r3(hi)], "se": float(se), "widen": widen,
-        "verdict": ("cleaner than before" if hi < 0 else "dirtier than before" if lo > 0
-                    else "no clear change (the 95% range includes zero)"),
-    }
+    return ev.evaluate(ex, station, start, end, years, widen, seed)
 
 
 def show(r):
@@ -169,13 +103,15 @@ def show(r):
 
 # Known projects (sources in review/causes_results.md). Dates are the work period,
 # which is left out of the comparison.
+# "short" finishes the app's sentence "<beach> was cleaner after ...".
 DEMOS = [
-    {"label": "Malibu Lagoon restoration (Surfrider Beach)", "station": "SMB-MC-2",
-     "start": "2012-06-01", "end": "2013-03-31"},
-    {"label": "Santa Monica Pier Clean Beaches Project (1.6-million-gallon stormwater tank, completed 2018)",
-     "station": "SMB-3-3", "start": "2018-01-01", "end": "2018-12-31"},
-    {"label": "Santa Monica Pier new bird netting (August 2023)", "station": "SMB-3-3",
-     "start": "2023-08-01", "end": "2023-08-31"},
+    {"label": "Malibu Lagoon restoration", "beach": "Surfrider Beach", "station": "SMB-MC-2",
+     "start": "2012-06-01", "end": "2013-03-31", "short": "the Malibu Lagoon restoration (2012-13)"},
+    {"label": "Santa Monica Pier stormwater tank (Clean Beaches Project, completed 2018)",
+     "beach": "Santa Monica Pier", "station": "SMB-3-3", "start": "2018-01-01", "end": "2018-12-31",
+     "short": "the 2018 stormwater tank"},
+    {"label": "Santa Monica Pier new bird netting (August 2023)", "beach": "Santa Monica Pier",
+     "station": "SMB-3-3", "start": "2023-08-01", "end": "2023-08-31", "short": "the new bird netting (August 2023)"},
 ]
 
 
@@ -246,6 +182,23 @@ def post_fire_check(ex):
             for k, x in [("overall", d), ("wet_days", d[d.wet]), ("dry_days", d[~d.wet])]}
 
 
+def export_for_app(ex, calib):
+    """Every beach test with its weather-only risk, in a compact form for app.py:
+    parallel lists (station number, day number, unsafe 0/1, risk in thousandths)."""
+    codes = sorted(ex["StationCode"].unique())
+    idx = {c: i for i, c in enumerate(codes)}
+    where = ex.groupby("StationCode")[["lat", "lon"]].median().round(5)
+    data = {
+        "model_id": MODEL_ID, "day0": str(DAY0.date()), "widen": calib["widen"], "calibration": calib,
+        "stations": [{"station": c, "lat": float(where.at[c, "lat"]), "lon": float(where.at[c, "lon"])} for c in codes],
+        "s": [idx[c] for c in ex["StationCode"]],
+        "d": ((ex["date"] - DAY0).dt.days).astype(int).tolist(),
+        "y": ex["exceeds"].astype(int).tolist(),
+        "e": (ex["expected"] * 1000).round().astype(int).tolist(),
+    }
+    (OUT / "evaluator_data.json").write_text(json.dumps(data, separators=(",", ":")))
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("station", nargs="?")
@@ -267,7 +220,7 @@ if __name__ == "__main__":
             print(dm["label"])
             r = evaluate(ex, dm["station"], dm["start"], dm["end"])
             show(r)
-            results.append({"label": dm["label"], **r})
+            results.append({**dm, **r})
         pl = json.loads(CALIB.read_text())
         print(f"\nPlacebo check: plain ranges {pl['plain_range_share_excluding_zero']:.0%} of random dates "
               f"looked like a change; widened x{pl['widen']}: {pl['check_share_excluding_zero']:.0%} (target 5%)")
@@ -279,3 +232,4 @@ if __name__ == "__main__":
         (OUT / "interventions.json").write_text(json.dumps(
             {"model_id": MODEL_ID, "method": __doc__.split("Method")[1].split("Outputs")[0].strip(),
              "demos": results, "placebo": pl, "post_fire_weather_only": pfc}, indent=1, default=str))
+        export_for_app(ex, pl)

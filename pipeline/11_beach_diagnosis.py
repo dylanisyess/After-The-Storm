@@ -1,7 +1,9 @@
 """Step 11: beach diagnosis and the 72-hour advisory check (no model needed).
 
-Uses every beach test from 2010 on, plus the daily rain record. For each beach:
-  A. Dry vs. after-rain unsafe rates.
+Uses beach tests from 2010 on, plus the daily rain record. For each beach:
+  A. Dry vs. after-rain unsafe rates, and the "chronic" label, from the LAST 5
+     YEARS only, so a beach that was fixed isn't still called chronic. Everything
+     about recovery after rain uses all years, because it needs many storms.
   B. Trigger: the smallest storm that makes 1 in 4 tests unsafe in the first
      day or so after rain.
   C. Recovery: unsafe rate by days since the last day with 0.1 in or more of
@@ -36,6 +38,7 @@ STORM_LABELS = ["0.1-0.25 in", "0.25-0.5 in", "0.5-1 in", "1 in or more"]
 # Groups of days after rain used to classify each beach (see classify()).
 BINS = {"days 0-1": (0, 1), "days 2-3": (2, 3), "days 4-6": (4, 6), "days 7-10": (7, 10)}
 MIN_N = 15             # a group needs 15+ tests before we draw a conclusion from it
+RECENT_YEARS = 5       # dry/after-rain rates and the chronic label use the last 5 years
 N_BOOT = 1000
 # MODEL_ID is stamped so check_model_ids.py treats this like every other app file;
 # this step itself uses only test results and rain, not the model.
@@ -71,6 +74,10 @@ d = tt["days_since_rain"]
 tt["normal"] = (d >= NORMAL_DAYS) & (tt["wet_season"] == 1)  # dry weather, Nov-Apr
 tt["dry"] = d >= NORMAL_DAYS                                 # dry weather, any month
 tt["advisory"] = d <= 3                                      # during the rain advisory
+RECENT_START = tt["date"].max() - pd.DateOffset(years=RECENT_YEARS)
+recent = tt["date"] >= RECENT_START
+tt["dry"] &= recent           # the dry rate and chronic label: last 5 years only
+tt["advisory"] &= recent      # same years, so dry vs. after-rain compares like with like
 # Cluster for the bootstrap: tests after the same storm move together; dry-day
 # tests are grouped by calendar week.
 tt["cluster"] = np.where(d <= 10, "storm " + tt["storm_date"].dt.strftime("%Y-%m-%d"),
@@ -131,7 +138,7 @@ FIXES = {
             "capturing or soaking in stormwater upstream, and a longer advisory at this beach.",
     "fast": "Unsafe right after rain, then clears quickly. That points to the first rush of "
             "runoff from nearby storm drains. Fixes that match include capturing or diverting "
-            "that first flush near the beach. The 72-hour advisory may be longer than needed here.",
+            "that first flush near the beach. This beach recovers faster than most after rain.",
     "typical": "Unsafe after rain and back to normal within the 72-hour advisory. That points to "
                "storm runoff; fixes that match include capturing or soaking in stormwater before "
                "it reaches the beach.",
@@ -152,7 +159,8 @@ for code, g in tt.groupby("StationCode"):
     groups |= {b: d.between(a, z) for b, (a, z) in BINS.items()}
     groups |= {f"day {k}": d == k for k in range(11)}
     rates, n, boot = boot_rates(g, groups, seed=len(rows))
-    rate, nn = dict(zip(groups, rates)), dict(zip(groups, n))
+    # int(): plain Python numbers, so the JSON file stores counts as numbers, not text
+    rate, nn = dict(zip(groups, rates)), {k: int(v) for k, v in zip(groups, n)}
     bt = dict(zip(groups, boot.T))
     excess = {b: bt[b] - bt["normal"] for b in BINS}           # rate above normal, per group
     lo = {b: np.nanpercentile(x, 2.5) if nn[b] else np.nan for b, x in excess.items()}
@@ -221,6 +229,25 @@ region = {
                       for lab, grp in by_storm.groupby("storm_in", observed=True)},
 }
 
+# Recovery groups pooled (for the app's headline chart). Chronic beaches are left out
+# of "fast" and "typical" (back to normal = back to bad there) but kept in "slow".
+rec = diag.set_index("station")
+members = {
+    "fast": rec.index[(rec["recovery"] == "back to normal in about a day") & ~rec["chronic"]],
+    "typical": rec.index[(rec["recovery"] == "back to normal within 72 hours") & ~rec["chronic"]],
+    "slow": rec.index[rec["recovery"] == "still unsafe after 72 hours"],
+}
+region["recovery_groups"] = {}
+for grp, codes in members.items():
+    w = ws[ws["StationCode"].isin(codes)]
+    curves = {}
+    for size, sub in [("all storms", w), ("1 in or more", w[w["storm_in"] >= 1])]:
+        c = sub[sub["days_since_rain"] <= 10].groupby("days_since_rain")["exceeds"].agg(["mean", "size"])
+        curves[size] = [{"day": int(k), "unsafe_rate": r3(r["mean"]), "tests": int(r["size"])} for k, r in c.iterrows()]
+    region["recovery_groups"][grp] = {"beaches": len(codes), "stations": list(codes),
+                                      "normal_wet_season_rate": r3(w.loc[w["normal"], "exceeds"].mean()),
+                                      "curves": curves}
+
 late = ws[ws["days_since_rain"].between(3, 7)]
 region["after_rain_tides"] = late.groupby(late["tide_range"] >= BIG_TIDE_FT)["exceeds"].agg(["mean", "size"]) \
     .rename(index={True: "big_tide", False: "other"}).round(3).to_dict("index")
@@ -231,21 +258,23 @@ counts["chronic (counted separately)"] = int(diag["chronic"].sum())
 out = {
     "model_id": MODEL_ID,
     "period": f"{tt['date'].min().date()} to {tt['date'].max().date()}",
+    "recent_period": f"{RECENT_START.date()} to {tt['date'].max().date()}",
     "definitions": {
         "day": "days since the last day with 0.1 in or more of rain (day 0 = rain on the sample day)",
-        "dry": f"{NORMAL_DAYS}+ days since 0.1 in of rain, any month",
+        "dry": f"{NORMAL_DAYS}+ days since 0.1 in of rain, any month, last {RECENT_YEARS} years",
         "normal": f"{NORMAL_DAYS}+ days since 0.1 in of rain, November-April (the comparison for recovery)",
-        "advisory": "days 0-3 (LA County advises staying out for 72 hours after 0.1 in of rain)",
+        "advisory": f"days 0-3 (LA County advises staying out for 72 hours after 0.1 in of rain), last {RECENT_YEARS} years",
         "clearly_above": "the 95% range of (rate - normal rate) is entirely above zero; bootstrap over whole storms",
         "trigger": "smallest storm size where 1 in 4 tests on days 0-1 were unsafe (8+ tests), and every bigger size too",
-        "chronic": "unsafe on 10%+ of dry-weather tests",
+        "chronic": f"unsafe on 10%+ of dry-weather tests in the last {RECENT_YEARS} years (30+ dry tests)",
         "big_tide": f"daily tide range of {BIG_TIDE_FT} ft or more (Boehm & Weisberg 2005)",
         "near_normal": "within 5 points of normal and not clearly above it",
         "min_tests": MIN_N,
     },
     "recovery_counts": counts,
     "region": region,
-    "stations": diag.to_dict("records"),
+    # blanks become null, not NaN (NaN isn't valid JSON, and 08/09 copy fix_category on)
+    "stations": diag.astype(object).where(diag.notna(), None).to_dict("records"),
 }
 (OUT / "diagnosis.json").write_text(json.dumps(out, indent=1, default=str))
 

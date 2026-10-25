@@ -123,8 +123,9 @@ else:
 tides["date"] = pd.to_datetime(tides["time"]).dt.normalize()
 tide_day = tides.groupby(["tide_station", "date"])["height_ft"].agg(["max", "min"])
 
-hot = {h["station"]: h["type"] for h in json.loads((OUT / "hotspots.json").read_text())["stations"]} \
-    if (OUT / "hotspots.json").exists() else {}
+# Each beach's pattern from 11_beach_diagnosis.py: chronic | slow | typical | fast | clean (or None).
+# rebuild.sh runs 11 before this step.
+diag = {d["station"]: d["fix_category"] for d in json.loads((OUT / "diagnosis.json").read_text())["stations"]}
 inch = lambda mm: f"{mm / 25.4:.2f} in"
 
 # ---- Predict ----
@@ -172,7 +173,7 @@ for code, s in st.iterrows():
                            "during spring tides")
         if r.last_exceeds == 1:
             reasons.append(f"last test ({lk['SampleDate']:%b %d}) was over the limit")
-        if hot.get(code) == "chronic":
+        if diag.get(code) == "chronic":
             reasons.append("this beach is often unsafe even in dry weather")
         elif r.past_rate >= 0.15:
             reasons.append(f"history: unsafe on {r.past_share:.0%} of {int(r.past_n)} past tests")
@@ -185,7 +186,7 @@ for code, s in st.iterrows():
             item["actual"] = {"value": float(a["value"]), "unsafe": bool(a["exceeds"])}
         fc.append(item)
     out_st.append({"station": code, "name": s["name"], "lat": s.lat, "lon": s.lon,
-                   "type": hot.get(code), "last_test": {"date": f"{lk['SampleDate']:%Y-%m-%d}",
+                   "type": diag.get(code), "last_test": {"date": f"{lk['SampleDate']:%Y-%m-%d}",
                    "value": float(lk["value"]), "unsafe": bool(lk["exceeds"])}, "forecast": fc})
 
 res = {"model_id": bundle["model_id"], "issued": f"{d0:%Y-%m-%d}", "mode": "live" if live else "replay",
