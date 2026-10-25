@@ -5,7 +5,7 @@ Run in order from the `waterapp` folder (pip install pandas scikit-learn):
 | Step | Script | Where it runs | Output |
 | --- | --- | --- | --- |
 | 1 | `01_filter_bacteria.py` | anywhere with pandas | `bacteria_la.csv` (LA-region enterococcus, E. coli, fecal and total coliform results, 2010+) |
-| 2 | `02_stations.py` | anywhere with pandas | `stations.csv`, `labels.csv` (one standard per station, `exceeds` = 0/1) |
+| 2 | `02_stations.py` | anywhere with pandas | `stations.csv`, `labels.csv` (one standard per station, `exceeds` = 0/1), `bacteria_extra.csv` (coliforms and study-site enterococcus for 05 and 09) |
 | 3 | `03_spills_fires.py` | anywhere with pandas | `spills_la.csv`, `burn_areas_2025.geojson` |
 | 4 | `04_fetch_weather.py` | your computer (needs internet, no installs) | `rain_daily.csv`, `tides_hilo.csv`, `rain_forecast_model.csv`, `rain_scale.json` (live-rain correction) |
 | 5 | `05_build_table.py` | anywhere with pandas | `training_table.csv` (one row per sample, all features) |
@@ -13,9 +13,12 @@ Run in order from the `waterapp` folder (pip install pandas scikit-learn):
 | 7 | `07_analysis.py` | anywhere | `app_data/hotspots.json`, `spills.json`, `post_fire.json` |
 | 8 | `08_forecast.py` | your computer (needs internet) | `app_data/forecast.json`; `--as-of YYYY-MM-DD` writes `app_data/replay_<date>.json` from saved data |
 | 9 | `09_export_app_data.py` | anywhere | `app_data/stations.json`, `history.json`, map layer, metrics |
-| 10 | `10_final_metrics.py` | needs scikit-learn | `review/final_metrics.md` (numbers to quote, with 95% ranges) |
+| 10 | `10_final_metrics.py` | needs scikit-learn | `review/final_metrics.md` (numbers to quote, with 95% ranges) and `app_data/final_metrics.json` (same numbers, read by app.py) |
 
-Steps 1-5 write to `processed/`.
+Steps 1-5 write to `processed/`. `bacteria_la.csv` (76 MB) is not in git; steps 5 onward only need the committed files.
+
+**After changing the model, run `bash pipeline/rebuild.sh`** (steps 6-10 including every replay, then
+`check_model_ids.py`), so every app file carries the same model ID. 08 and 10 never retrain on their own.
 
 Standards: enterococcus > 104 MPN/100 mL at beaches (BeachWatch stations);
 E. coli > 320 cfu/100 mL at inland stations.

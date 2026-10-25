@@ -1,4 +1,5 @@
 {
+  "model_id": "40ebd86751",
   "rows": {
     "train": 95477,
     "test": 30262,
@@ -14,8 +15,8 @@
       },
       "model_same_budget": {
         "warning_day_share": 0.141,
-        "unsafe_days_caught": 0.529,
-        "warnings_that_were_right": 0.527
+        "unsafe_days_caught": 0.526,
+        "warnings_that_were_right": 0.523
       }
     },
     "sign_plus_rain": {
@@ -26,8 +27,8 @@
       },
       "model_same_budget": {
         "warning_day_share": 0.215,
-        "unsafe_days_caught": 0.662,
-        "warnings_that_were_right": 0.431
+        "unsafe_days_caught": 0.659,
+        "warnings_that_were_right": 0.429
       }
     },
     "sign3": {
@@ -38,8 +39,8 @@
       },
       "model_same_budget": {
         "warning_day_share": 0.154,
-        "unsafe_days_caught": 0.557,
-        "warnings_that_were_right": 0.506
+        "unsafe_days_caught": 0.553,
+        "warnings_that_were_right": 0.502
       }
     },
     "sign3_plus_rain": {
@@ -50,41 +51,40 @@
       },
       "model_same_budget": {
         "warning_day_share": 0.226,
-        "unsafe_days_caught": 0.677,
-        "warnings_that_were_right": 0.42
+        "unsafe_days_caught": 0.674,
+        "warnings_that_were_right": 0.418
       }
     }
   },
   "model_roc_auc": 0.859,
-  "model_avg_precision": 0.573,
-  "risk_threshold": 0.1594,
+  "model_avg_precision": 0.575,
+  "risk_threshold": 0.1605,
   "model_at_threshold": {
     "warning_day_share": 0.215,
-    "unsafe_days_caught": 0.662,
-    "warnings_that_were_right": 0.431
+    "unsafe_days_caught": 0.659,
+    "warnings_that_were_right": 0.429
   },
   "threshold_set_on_2022": {
-    "threshold": 0.1643,
-    "warning_day_share": 0.208,
-    "unsafe_days_caught": 0.651,
-    "warnings_that_were_right": 0.437
+    "threshold": 0.1633,
+    "warning_day_share": 0.212,
+    "unsafe_days_caught": 0.655,
+    "warnings_that_were_right": 0.433
   },
   "feature_importance": {
-    "past_rate": 0.1051,
-    "last_log_value": 0.0287,
-    "rain_1d": 0.019,
-    "lat": 0.0112,
-    "rain_7d": 0.0096,
-    "days_since_last": 0.0073,
-    "tide_low": 0.0069,
-    "tide_high": 0.0068,
-    "rain_30d": 0.0065,
-    "lon": 0.006,
-    "month": 0.0046,
-    "rain_3d": 0.0041,
-    "days_dry": 0.0025,
-    "wet_season": 0.0019,
-    "tide_range": 0.0009,
-    "last_exceeds": 0.0002
+    "past_rate": 0.0988,
+    "last_log_value": 0.031,
+    "rain_1d": 0.022,
+    "lat": 0.0119,
+    "rain_7d": 0.0099,
+    "lon": 0.0088,
+    "tide_high": 0.0086,
+    "days_since_last": 0.0082,
+    "wet_season": 0.0072,
+    "rain_30d": 0.0071,
+    "tide_low": 0.0063,
+    "rain_3d": 0.0036,
+    "days_dry": 0.0036,
+    "last_exceeds": 0.0002,
+    "tide_range": -0.0006
   }
 }

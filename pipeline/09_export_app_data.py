@@ -1,6 +1,7 @@
 """Step 9: station list, recent history and map layers for the app -> app_data/
 
-  stations.json         every station: location, beach or inland, record, last test, hotspot type,
+  Every file carries "model_id" (from model/metrics.json), like the files from 07, 08 and 10.
+  stations.json         {model_id, stations: [...]}, every station: location, beach or inland, record, last test, hotspot type,
                         in_model, and on_map: false for stormwater devices (BMPs, catch basins,
                         Oxford Basin) and inland stations with fewer than 20 samples.
                         Every beach stays on the map.
@@ -13,7 +14,7 @@ non-beach programs, so 02 files them as freshwater and grades some on E. coli.
 Here, for the app only, they are shown as beaches graded on enterococcus. They
 stay out of the model (in_model false, no forecast); nothing upstream changes.
 """
-import json, shutil
+import json, shutil  # shutil: copies model_metrics.json
 from pathlib import Path
 import pandas as pd
 
@@ -33,7 +34,8 @@ hot = {h["station"]: h["type"] for h in json.loads((OUT / "hotspots.json").read_
 cut = lab["SampleDate"].max() - pd.Timedelta(days=730)
 
 # ---- Study sites: swap their results for enterococcus results, show them as beaches ----
-b = pd.read_csv(P / "bacteria_la.csv", usecols=["StationCode", "SampleDate", "Analyte", "value"],
+b = pd.read_csv(P / "bacteria_extra.csv",  # written by 02
+                usecols=["StationCode", "SampleDate", "Analyte", "value"],
                 parse_dates=["SampleDate"])
 ent = b[b["StationCode"].isin(OCEAN_STUDY_SITES) & (b["Analyte"] == "Enterococcus")].drop(columns="Analyte")
 ent = ent.assign(exceeds=(ent["value"] > 104).astype(int))
@@ -60,14 +62,17 @@ stations = [{"station": r.StationCode, "name": r.name, "lat": round(r.lat, 5), "
                            "value": float(last.loc[r.StationCode, "value"]),
                            "unsafe": bool(last.loc[r.StationCode, "exceeds"])}}
             for r in st.itertuples()]
-(OUT / "stations.json").write_text(json.dumps(stations))
+MODEL_ID = json.loads((ROOT / "model" / "metrics.json").read_text())["model_id"]  # stamped on every output
+(OUT / "stations.json").write_text(json.dumps({"model_id": MODEL_ID, "stations": stations}))
 
 recent = lab[(lab["SampleDate"] >= cut) | lab["StationCode"].isin(OCEAN_STUDY_SITES)]
 history = {code: [[f"{d:%Y-%m-%d}", float(v), int(e)] for d, v, e in zip(g.SampleDate, g.value, g.exceeds)]
            for code, g in recent.groupby("StationCode")}
-(OUT / "history.json").write_text(json.dumps({"columns": ["date", "value", "unsafe"], "stations": history}))
+(OUT / "history.json").write_text(json.dumps({"model_id": MODEL_ID, "columns": ["date", "value", "unsafe"], "stations": history}))
 
-shutil.copy(P / "burn_areas_2025.geojson", OUT / "burn_areas_2025.geojson")
+burn = json.loads((P / "burn_areas_2025.geojson").read_text())
+burn["model_id"] = MODEL_ID  # extra top-level keys are allowed in GeoJSON
+(OUT / "burn_areas_2025.geojson").write_text(json.dumps(burn))
 shutil.copy(ROOT / "model" / "metrics.json", OUT / "model_metrics.json")
 print(f"{len(stations)} stations ({int(st.on_map.sum())} on the map, {int(site.sum())} ocean study sites "
       f"shown as beaches), history for {len(history)} stations since {cut:%Y-%m-%d}")

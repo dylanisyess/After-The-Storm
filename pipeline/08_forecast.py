@@ -13,7 +13,7 @@ so you can check the app against reality or demo a past storm.
 Features are built exactly as in training (05_build_table.py). The last test
 result counts only if it would have been back from the lab by the issue date.
 """
-import argparse, json, subprocess, sys, urllib.request
+import argparse, json, sys, urllib.request
 from datetime import date, timedelta
 from pathlib import Path
 import warnings
@@ -27,6 +27,10 @@ ROOT = Path(__file__).resolve().parent.parent
 P, OUT = ROOT / "processed", ROOT / "app_data"
 OUT.mkdir(exist_ok=True)
 LAB_LAG_DAYS, DAYS_AHEAD, WET_MM = 2, 3, 2.5
+# A daily tide range this big is a spring tide (new or full moon). Boehm & Weisberg (2005,
+# Environmental Science & Technology 39: 5575-5583) found Southern California beaches about
+# twice as likely to fail water standards during spring tides.
+SPRING_TIDE_FT = 6.5
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--as-of", help="replay this past date (YYYY-MM-DD) from saved data")
@@ -35,17 +39,18 @@ live = args.as_of is None
 d0 = pd.Timestamp(date.today() if live else args.as_of)
 days = [d0 + pd.Timedelta(days=k) for k in range(DAYS_AHEAD + 1)]
 
-# ---- Model (retrain once if this computer has a different scikit-learn) ----
+# ---- Model ----
+# Never retrain here: a retrain must also redo 07-10 so every app file uses the same
+# model. If the saved model doesn't fit this computer, stop and say what to do.
 bundle_path = ROOT / "model" / "beach_model.joblib"
 try:
     bundle = joblib.load(bundle_path)
-except Exception:  # missing, or saved by a different scikit-learn that can't read it
+except Exception:  # missing, or saved by a scikit-learn that can't read it
     bundle = {}
-if bundle.get("sklearn_version") != sklearn.__version__:
-    print("Training the model for this computer's scikit-learn version (about 15 s)...")
-    subprocess.run([sys.executable, str(ROOT / "pipeline" / "06_train.py")], check=True,
-                   stdout=subprocess.DEVNULL)
-    bundle = joblib.load(bundle_path)
+if bundle.get("sklearn_version") != sklearn.__version__ or "model_id" not in bundle:
+    sys.exit(f"The saved model was made with scikit-learn {bundle.get('sklearn_version', '?')}, but this "
+             f"computer has {sklearn.__version__} (or the model is missing/old). Either install the matching "
+             "version (pip install -r requirements.txt) or rebuild everything: bash pipeline/rebuild.sh")
 model, FEATURES, thr = bundle["model"], bundle["features"], bundle["threshold"]
 
 def get_json(url):
@@ -92,13 +97,16 @@ else:
         series[c] = s[s.index <= days[-1]]
 
 def rain_feats(s, d):
-    s = s.asfreq("D")  # a missing day stays blank, as in 05
-    before = s[s.index < d]
-    wet = before[before >= WET_MM]
+    """Rain features for day d, built like 05: only days BEFORE d count."""
+    # The exact 30 calendar days before d. A day missing from the data becomes blank,
+    # including days past the end of the data, so a window can't silently slide back in time.
+    month = s.reindex(pd.date_range(d - pd.Timedelta(days=30), d - pd.Timedelta(days=1)))
     # skipna=False: a window with a missing day gives a blank, never a guessed 0
-    return {"rain_1d": before.iloc[-1:].sum(skipna=False), "rain_3d": before.iloc[-3:].sum(skipna=False),
-            "rain_7d": before.iloc[-7:].sum(skipna=False), "rain_30d": before.iloc[-30:].sum(skipna=False),
-            "days_dry": min((d - wet.index.max()).days, 365) if len(wet) else 365}
+    sums = {f"rain_{n}d": month.iloc[-n:].sum(skipna=False) for n in (1, 3, 7, 30)}
+    wet = s[(s.index < d) & (s >= WET_MM)]
+    # no known wet day at all: unknown (blank), as in 05, not "a year of dry weather"
+    sums["days_dry"] = min((d - wet.index.max()).days, 365) if len(wet) else np.nan
+    return sums
 
 # ---- Tides ----
 if live:
@@ -137,6 +145,12 @@ for code, s in st.iterrows():
                   "lat": s.lat, "lon": s.lon})
         X_rows.append(f); keys.append((code, d))
 X = pd.DataFrame(X_rows)
+# The model never trained on blank rain, so stop rather than forecast from a gap.
+missing = X[["rain_1d", "rain_3d", "rain_7d", "rain_30d", "days_dry"]].isna().any(axis=1)
+if missing.any():
+    gaps = sorted({f"{k[1]:%Y-%m-%d}" for k, m in zip(keys, missing) if m})
+    sys.exit(f"Rain data is missing for {missing.sum()} station-days ({', '.join(gaps)}). For a replay, "
+             "check that processed/rain_daily.csv covers the 30 days before each forecast day.")
 X["risk"] = model.predict_proba(X[FEATURES])[:, 1]
 
 actual = lab.set_index(["StationCode", "SampleDate"])
@@ -145,11 +159,17 @@ for code, s in st.iterrows():
     fc = []
     for i in [i for i, k in enumerate(keys) if k[0] == code]:
         r, d = X.iloc[i], keys[i][1]
+        level = "high" if r.risk >= 0.5 else "caution" if r.risk >= thr else "low"
         reasons = []
         if r.rain_3d >= 2.54:
             reasons.append(f"{inch(r.rain_3d)} of rain in the 3 days before")
         elif r.rain_7d >= 12.7:
             reasons.append(f"{inch(r.rain_7d)} of rain in the past week")
+        # Boehm & Weisberg 2005: ~2x more failures at spring tides. Only on caution/high days,
+        # so a low-risk day doesn't read like a warning.
+        if r.tide_range >= SPRING_TIDE_FT and level != "low":
+            reasons.append(f"big spring tide ({r.tide_range:.1f} ft range); beaches fail about twice as often "
+                           "during spring tides")
         if r.last_exceeds == 1:
             reasons.append(f"last test ({lk['SampleDate']:%b %d}) was over the limit")
         if hot.get(code) == "chronic":
@@ -158,7 +178,6 @@ for code, s in st.iterrows():
             reasons.append(f"history: unsafe on {r.past_share:.0%} of {int(r.past_n)} past tests")
         if not reasons:
             reasons.append("dry weather and a clean recent record")
-        level = "high" if r.risk >= 0.5 else "caution" if r.risk >= thr else "low"
         item = {"date": f"{d:%Y-%m-%d}", "risk": round(float(r.risk), 3), "level": level, "reasons": reasons}
         if not live and (code, d) in actual.index:  # replay: what the water actually showed
             a = actual.loc[(code, d)]
@@ -169,7 +188,8 @@ for code, s in st.iterrows():
                    "type": hot.get(code), "last_test": {"date": f"{lk['SampleDate']:%Y-%m-%d}",
                    "value": float(lk["value"]), "unsafe": bool(lk["exceeds"])}, "forecast": fc})
 
-res = {"issued": f"{d0:%Y-%m-%d}", "mode": "live" if live else "replay", "rain_source": source,
+res = {"model_id": bundle["model_id"], "issued": f"{d0:%Y-%m-%d}", "mode": "live" if live else "replay",
+       "rain_source": source,
        "levels": {"low": f"risk under {thr:.2f}", "caution": f"{thr:.2f} to 0.50 (the warning threshold "
                   "tested on 2023-2026)", "high": "0.50 or more: unsafe more likely than not"},
        "standard": "enterococcus over 104 MPN/100 mL", "stations": out_st}

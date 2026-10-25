@@ -35,6 +35,7 @@ beach = st[st["water"] == "ocean"].set_index("StationCode")
 tt = pd.read_csv(P / "training_table.csv", parse_dates=["date"])
 tt = tt[tt["water"] == "ocean"]
 pred = pd.read_csv(ROOT / "model" / "test_predictions.csv", parse_dates=["date"])
+MODEL_ID = json.loads((ROOT / "model" / "metrics.json").read_text())["model_id"]  # stamped on every output
 pred["resid"] = pred["exceeds"] - pred["risk"]
 
 # ---------------- A. Hotspots (last 5 years) ----------------
@@ -60,7 +61,7 @@ for code, g in recent.groupby("StationCode"):
                  "dry_unsafe_rate": r3(dr), "wet_unsafe_rate": r3(wr), "type": kind})
 hot = pd.DataFrame(rows).sort_values("unsafe_rate", ascending=False)
 (OUT / "hotspots.json").write_text(json.dumps({
-    "period": "2021-10-01 to latest", "dry_definition": "under 0.1 in of rain in the past 3 days and 3+ dry days",
+    "model_id": MODEL_ID, "period": "2021-10-01 to latest", "dry_definition": "under 0.1 in of rain in the past 3 days and 3+ dry days",
     "wet_definition": "0.1 in or more of rain in the past 3 days",
     "rules": {"chronic": "unsafe on 10%+ of dry days", "rain-driven": "under 10% when dry, 30%+ after rain"},
     "stations": hot.to_dict("records")}, indent=1))
@@ -93,7 +94,7 @@ aa = pd.concat(all_after).drop_duplicates(["StationCode", "date"])
 summary = {"spills_with_beach_samples": int(len(ev)), "beach_samples_after_spills": int(len(aa)),
            "observed_unsafe_rate": r3(aa["exceeds"].mean()), "predicted_unsafe_rate": r3(aa["risk"].mean()),
            "average_excess_vs_usual": r3(aa["excess"].mean())}
-(OUT / "spills.json").write_text(json.dumps({"rule": "spills since 2023 sending 10,000+ gallons to surface water; beach samples within 10 km over the next 7 days",
+(OUT / "spills.json").write_text(json.dumps({"model_id": MODEL_ID, "rule": "spills since 2023 sending 10,000+ gallons to surface water; beach samples within 10 km over the next 7 days",
                                              "summary": summary, "events": ev.to_dict("records")}, indent=1))
 print("\nB. Spills:", summary)
 print(ev.head(6)[["date", "location", "surface_gallons", "beach_samples_next_7_days",
@@ -138,6 +139,7 @@ pf["month"] = pf["date"].dt.to_period("M").astype(str)
 monthly = (pf.groupby(["month", "group"])["resid"].mean().unstack().round(3).reset_index()
              .rename(columns={"burn": "burn_residual", "control": "control_residual"}))
 post = {
+    "model_id": MODEL_ID,
     "method": "difference-in-differences on model residuals (observed minus predicted), burn-adjacent vs. far beaches, before vs. after 2025-01-07",
     "burn_stations": [{"station": c, "name": beach.loc[c, "name"], "km_from_burn": round(float(dist[c]), 2)} for c in burn_st],
     "control_station_count": int(len(ctrl_st)),

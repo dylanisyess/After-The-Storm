@@ -96,7 +96,8 @@ lab["last_log_value"] = np.log10(lab["last_value"].clip(lower=1))
 lab["days_since_last"] = (lab["date"] - lab["last_sample_date"]).dt.days
 
 # ---- What today's warning signs showed (for comparison only) ----
-b = pd.read_csv(P / "bacteria_la.csv", usecols=["StationCode", "SampleDate", "Analyte", "value"],
+b = pd.read_csv(P / "bacteria_extra.csv",  # written by 02
+                usecols=["StationCode", "SampleDate", "Analyte", "value"],
                 parse_dates=["SampleDate"])
 coli = (b[b["Analyte"].str.startswith("Coliform")]
         .pivot_table(index=["StationCode", "SampleDate"], columns="Analyte", values="value")

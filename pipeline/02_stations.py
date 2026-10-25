@@ -2,6 +2,11 @@
 
 Thresholds: enterococcus single-sample 104 MPN/100 mL (CA ocean beach posting
 standard); E. coli statistical threshold value 320 cfu/100 mL (CA freshwater).
+
+Also writes bacteria_extra.csv: the few results later steps need that aren't in
+labels.csv, so steps 05 onward run without the big bacteria_la.csv (76 MB, not in git):
+  coliform results at beaches        05 uses them to score three-indicator signs
+  enterococcus at non-beach stations 09 shows 13 shoreline study sites as beaches
 """
 from pathlib import Path
 import pandas as pd
@@ -9,8 +14,8 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parent.parent
 THRESH = {"Enterococcus": 104, "E. coli": 320}
 
-b = pd.read_csv(ROOT / "processed" / "bacteria_la.csv", parse_dates=["SampleDate"])
-b = b[b["Analyte"].isin(THRESH)]  # coliforms are only used to score warning signs (05)
+b_all = pd.read_csv(ROOT / "processed" / "bacteria_la.csv", parse_dates=["SampleDate"])
+b = b_all[b_all["Analyte"].isin(THRESH)]  # coliforms are only used to score warning signs (05)
 # Grade each station on ONE standard: beaches report both bacteria, but the
 # E. coli 320 limit is a freshwater standard. Keep each station's main analyte.
 # BeachWatch stations are ocean beaches (enterococcus); others are inland (E. coli when sampled).
@@ -35,6 +40,12 @@ TIDE = {"9410840": (34.0083, -118.5), "9410660": (33.72, -118.272)}
 st["tide_station"] = st.apply(lambda r: min(TIDE, key=lambda k: (r.lat - TIDE[k][0])**2 + (r.lon - TIDE[k][1])**2), axis=1)
 st.to_csv(ROOT / "processed" / "stations.csv", index=False)
 b.to_csv(ROOT / "processed" / "labels.csv", index=False)
+
+is_beach = b_all["StationCode"].map(beach).fillna(False).astype(bool)  # coliform-only stations: not beaches
+extra = b_all[(b_all["Analyte"].str.startswith("Coliform") & is_beach)
+              | ((b_all["Analyte"] == "Enterococcus") & ~is_beach)]
+extra[["StationCode", "SampleDate", "Analyte", "value"]].to_csv(ROOT / "processed" / "bacteria_extra.csv", index=False)
+print(f"bacteria_extra.csv: {len(extra):,} rows")
 
 print(st.groupby("water").agg(stations=("n", "size"), samples=("n", "sum"),
                               exceed=("exceed_rate", "mean")).round(3).to_string())

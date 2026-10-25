@@ -61,17 +61,6 @@ TYPE_TEXT = {
     "usually clean": "Usually clean",
 }
 
-# Numbers quoted on the How It Works page, copied from review/final_metrics.md
-# (made by pipeline/10_final_metrics.py on Oct 24, 2026). Update these if the model is retrained.
-QUOTED = {
-    "test_days": "30,262",
-    "test_beaches": 134,
-    "auc": "0.86",
-    "vs_signs_rain": "+5.0 points (95% range +1.9 to +8.6)",
-    "vs_signs": "+7.1 points (95% range +3.7 to +12.2)",
-    "live": "66% vs 61% (+4.7 points, 95% range +1.5 to +8.4)",
-    "day3": "63% vs 61% (+1.4 points, 95% range −2.8 to +6.7)",
-}
 
 # A little CSS for the things the theme can't do: the colored status cards and chips.
 st.html("""
@@ -125,7 +114,7 @@ def station_table():
     e.g. 'Near Malibu Beach', if it is within 2 km. (Ocean only, so we never
     borrow the name of a storm basin or a river study site.)
     """
-    df = pd.DataFrame(load_json("stations.json"))
+    df = pd.DataFrame(load_json("stations.json")["stations"])
     df["place"] = [clean_name(c, n) for c, n in zip(df["station"], df["name"])]
     has_place = df["place"].str.contains("[a-z]")  # real names have lower-case letters; codes don't
     named = df[has_place & (df["water"] == "ocean")]
@@ -141,6 +130,15 @@ def station_table():
 
 
 STATIONS = station_table()
+
+
+def check_model_ids():
+    """Warn if some app_data files came from a different model run than others.
+    Every pipeline step stamps "model_id"; pipeline/rebuild.sh remakes them all together."""
+    ids = {f.name: json.loads(f.read_text(encoding="utf-8")).get("model_id") for f in DATA.glob("*.*json")}
+    if len(set(ids.values())) > 1:
+        st.warning("Some data files came from different model runs, so numbers may not match. "
+                   "Run `bash pipeline/rebuild.sh`. " + ", ".join(f"{n}: {i}" for n, i in sorted(ids.items())))
 
 
 def place(code):
@@ -370,9 +368,10 @@ def forecast_tab():
             st.caption("History shows recent years, not the replay date.")
         history_chart(code)
 
-    st.caption("Low risk: under 16% · Caution: 16% to 50% (the level where this app would post a warning) · "
-               "High risk: 50% or more, unsafe more likely than not. Safe limit: 104 enterococcus bacteria "
-               "per 100 mL of ocean water (California standard).")
+    caution = f"{load_json('final_metrics.json')['threshold'] * 100:.0f}%"  # the warning level, set in 06
+    st.caption(f"Low risk: under {caution} · Caution: {caution} to 50% (the level where this app would post a "
+               "warning) · High risk: 50% or more, unsafe more likely than not. Safe limit: 104 enterococcus "
+               "bacteria per 100 mL of ocean water (California standard).")
 
 
 # ---------------------------------------------------------------------------
@@ -525,9 +524,11 @@ def fires_tab():
         "you'd expect if ash washed in, but the range runs from a drop to a big rise, so it could just be chance. "
         "There were few rainy days after the fire to learn from.")
     st.markdown(
-        f"One thing that did *not* change: beaches near the burn were already failing more than the model "
-        f"expected before the fire ({pts(cells['burn_before']['mean_residual'])} points), and about the same "
-        f"after ({pts(cells['burn_after']['mean_residual'])}).")
+        f"Beaches near the burn were already failing more than the model expected before the fire "
+        f"({pts(cells['burn_before']['mean_residual'])} points), and {pts(cells['burn_after']['mean_residual'])} "
+        f"after. But other beaches also moved, from {pts(cells['control_before']['mean_residual'])} to "
+        f"{pts(cells['control_after']['mean_residual'])}, so only the difference between the two changes "
+        f"({pts(res['overall']['estimate'])} points) could be due to the fire.")
 
     # Monthly surprise chart, burn-area beaches vs. all other beaches.
     m = pd.DataFrame(pf["monthly"])
@@ -585,9 +586,18 @@ def fires_tab():
 # How It Works tab
 # ---------------------------------------------------------------------------
 
+def gain(v):
+    """[0.05, 0.019, 0.086] -> '+5.0 points (95% range +1.9 to +8.6)'."""
+    return f"{v[0] * 100:+.1f} points (95% range {v[1] * 100:+.1f} to {v[2] * 100:+.1f})"
+
+
 def how_tab():
-    mm = load_json("model_metrics.json")
-    b = mm["baselines"]
+    # All numbers on this page come from app_data/final_metrics.json, written by
+    # pipeline/10_final_metrics.py together with review/final_metrics.md, so they always match.
+    # Each number is [value, low, high]: the result and its 95% range.
+    fm = load_json("final_metrics.json")
+    test, live, day3 = fm["scenarios"]["test"], fm["scenarios"]["live"], fm["scenarios"]["day3"]
+    start, end = (pd.Timestamp(d) for d in fm["test_period"])
 
     st.subheader("Better warnings with the same number of warnings")
     st.markdown(
@@ -596,24 +606,24 @@ def how_tab():
 
     c1, c2 = st.columns(2)
     with c1.container(border=True):
-        st.metric("This app's forecast", pct(b["sign_plus_rain"]["model_same_budget"]["unsafe_days_caught"]))
+        st.metric("This app's forecast", pct(test["sign_plus_rain.model_caught"][0]))
         st.caption("of unsafe days caught")
     with c2.container(border=True):
-        st.metric("Signs + rain advisory", pct(b["sign_plus_rain"]["rule"]["unsafe_days_caught"]))
+        st.metric("Signs + rain advisory", pct(test["sign_plus_rain.caught"][0]))
         st.caption("of unsafe days caught")
     st.markdown(
-        f"Both warn on the same number of days ({b['sign_plus_rain']['rule']['warning_day_share'] * 100:.1f}% of "
-        f"tested days), so the forecast isn't winning by just warning more. Difference: **{QUOTED['vs_signs_rain']}**. "
-        f"These are {QUOTED['test_days']} tested beach-days at {QUOTED['test_beaches']} beaches from January 2023 "
-        "to October 2026 that the model never saw while learning.")
+        f"Both warn on the same number of days ({test['sign_plus_rain.share'][0] * 100:.1f}% of tested days), so "
+        f"the forecast isn't winning by just warning more. Difference: **{gain(test['sign_plus_rain.gain'])}**. "
+        f"These are {fm['tested_beach_days']:,} tested beach-days at {fm['beaches']} beaches from {start:%B %Y} "
+        f"to {end:%B %Y} that the model never saw while learning.")
 
     # Bar chart: each of today's rules vs. the model at the same number of warnings.
     names = {"sign": "Signs", "sign_plus_rain": "Signs + rain advisory",
              "sign3": "Signs (3 tests)", "sign3_plus_rain": "Signs (3 tests) + rain"}
     rows = []
     for key, label in names.items():
-        rows.append({"rule": label, "who": "Today's rule", "caught": b[key]["rule"]["unsafe_days_caught"] * 100})
-        rows.append({"rule": label, "who": "This app's forecast", "caught": b[key]["model_same_budget"]["unsafe_days_caught"] * 100})
+        rows.append({"rule": label, "who": "Today's rule", "caught": test[f"{key}.caught"][0] * 100})
+        rows.append({"rule": label, "who": "This app's forecast", "caught": test[f"{key}.model_caught"][0] * 100})
     bars_df = pd.DataFrame(rows)
     with st.container(border=True):
         st.markdown("**Unsafe days caught, with the same number of warnings**")
@@ -634,32 +644,42 @@ def how_tab():
         st.altair_chart((bars + labels).properties(height=300), width="stretch")
         st.caption("\"3 tests\" = signs posted when any of the three state ocean tests fails (enterococcus, "
                    f"fecal coliform, total coliform), which is what counties post on. Against signs alone: "
-                   f"{QUOTED['vs_signs']}.")
+                   f"{gain(test['sign.gain'])}.")
 
     st.markdown("#### What the forecast looks at")
     st.markdown(
         "- **The beach's track record**: how often its past tests failed. This matters most.\n"
         "- **The last test result**, counted only once it would really be public (2 days after sampling).\n"
         "- **Rain** in the day, 3 days, week and month before, and how many days since it last rained.\n"
-        "- **Tides**, the **month**, and **where** the beach is.\n\n"
-        "It learned from 95,477 beach tests from 2010 to 2022 (a machine-learning method called gradient "
-        "boosting, from scikit-learn), then was graded only on 2023 to 2026.")
+        "- **Tides**: beaches fail about twice as often during big spring tides (Boehm & Weisberg, 2005).\n"
+        "- The **season** (wet or dry) and **where** the beach is.\n\n"
+        f"It learned from {fm['train_samples']:,} beach tests from 2010 to 2022 (a machine-learning method called "
+        f"gradient boosting, from scikit-learn), then was graded only on {start.year} to {end.year}.")
 
+    caution = f"{fm['threshold'] * 100:.0f}%"
     st.markdown("#### What the colors mean")
     st.html(chips([(LEVELS[k]["hex"], f"{LEVELS[k]['word']}: {t}") for k, t in
-                   [("low", "under 16%"), ("caution", "16% to 50%"), ("high", "50% or more")]]))
+                   [("low", f"under {caution}"), ("caution", f"{caution} to 50%"), ("high", "50% or more")]]))
     st.markdown(
         "The percent is the chance that a water test would come back over the safe limit (104 enterococcus "
-        "bacteria per 100 mL). **Caution** starts at 16%, the level that gives the same number of warnings as "
-        "today's signs plus rain advisory. Setting that level using only 2022 data gives almost the same results.")
+        f"bacteria per 100 mL). **Caution** starts at {caution}, the level that gives the same number of warnings "
+        "as today's signs plus rain advisory. Setting that level using only 2022 data gives almost the same results.")
 
+    # Say "better" only if the whole 95% range is above zero; otherwise "about as good as".
+    d3 = day3["sign_plus_rain.gain"]
+    d3_verdict = ("The whole range is above zero, so it does **better** than today's signs."
+                  if d3[1] > 0 else
+                  "The range includes zero, so the 3-day forecast is **about as good as** today's signs, not better.")
     st.markdown("#### How sure are we?")
     st.markdown(
-        f"- **Ranking:** a score of {QUOTED['auc']} for telling unsafe days from safe ones (1.0 is perfect, 0.5 is "
-        "a coin flip).\n"
-        f"- **Live forecast (today):** the live app uses forecast rain, not measured rain. Estimated: {QUOTED['live']}.\n"
-        f"- **3 days ahead:** {QUOTED['day3']} for signs and rain advisory posted on the day itself. The range "
-        "includes zero, so the 3-day forecast is **about as good as** today's signs, not better.\n"
+        f"- **Ranking:** a score of {test['auc'][0]:.2f} for telling unsafe days from safe ones (1.0 is perfect, "
+        "0.5 is a coin flip).\n"
+        f"- **Live forecast (today):** the live app uses forecast rain, not measured rain. Estimated: "
+        f"{pct(live['sign_plus_rain.model_caught'][0])} vs {pct(live['sign_plus_rain.caught'][0])} of unsafe days "
+        f"caught: {gain(live['sign_plus_rain.gain'])}.\n"
+        f"- **3 days ahead:** {pct(day3['sign_plus_rain.model_caught'][0])} vs "
+        f"{pct(day3['sign_plus_rain.caught'][0])} for signs and rain advisory posted on the day itself: "
+        f"{gain(d3)}. {d3_verdict}\n"
         "- The 95% ranges come from resampling whole beaches 1,000 times.")
 
     st.markdown("#### Limits")
@@ -681,6 +701,7 @@ def how_tab():
 st.title("🌊 Beach Water Forecast")
 st.caption("Will the ocean be safe to swim at LA-area beaches? A forecast for today and the next 3 days.")
 
+check_model_ids()
 tabs = st.tabs(["Forecast", "Causes", "After the Fires", "How It Works"])
 with tabs[0]:
     forecast_tab()

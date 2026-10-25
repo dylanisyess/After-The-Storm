@@ -1,4 +1,5 @@
 {
+ "model_id": "40ebd86751",
  "issued": "2025-07-15",
  "mode": "replay",
  "rain_source": "observed rain (replay)",
@@ -23,7 +24,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.005,
+     "risk": 0.004,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -43,7 +44,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.005,
+     "risk": 0.007,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -93,7 +94,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.005,
+     "risk": 0.007,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -123,7 +124,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.005,
+     "risk": 0.006,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -143,7 +144,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.006,
+     "risk": 0.009,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -151,7 +152,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.006,
+     "risk": 0.008,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -185,7 +186,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.004,
+     "risk": 0.005,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -193,7 +194,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.005,
+     "risk": 0.008,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -201,7 +202,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.005,
+     "risk": 0.006,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -243,7 +244,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.005,
+     "risk": 0.008,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -251,7 +252,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.005,
+     "risk": 0.006,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -293,7 +294,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.005,
+     "risk": 0.008,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -301,7 +302,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.005,
+     "risk": 0.006,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -343,7 +344,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.005,
+     "risk": 0.008,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -351,7 +352,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.005,
+     "risk": 0.006,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -373,7 +374,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.006,
+     "risk": 0.007,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -385,7 +386,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.005,
+     "risk": 0.006,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -393,7 +394,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.008,
+     "risk": 0.01,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -401,7 +402,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.007,
+     "risk": 0.01,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -443,7 +444,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.002,
+     "risk": 0.003,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -489,7 +490,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.002,
+     "risk": 0.004,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -497,7 +498,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.002,
+     "risk": 0.003,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -539,7 +540,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.002,
+     "risk": 0.003,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -547,7 +548,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.002,
+     "risk": 0.003,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -581,7 +582,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.005,
+     "risk": 0.007,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -589,7 +590,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.008,
+     "risk": 0.01,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -597,7 +598,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.008,
+     "risk": 0.01,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -619,7 +620,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.002,
+     "risk": 0.001,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -631,7 +632,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.002,
+     "risk": 0.001,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -639,7 +640,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.004,
+     "risk": 0.008,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -647,7 +648,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.003,
+     "risk": 0.004,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -669,7 +670,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.004,
+     "risk": 0.005,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -689,7 +690,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.004,
+     "risk": 0.006,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -697,7 +698,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.005,
+     "risk": 0.006,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -719,7 +720,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.002,
+     "risk": 0.001,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -727,7 +728,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.002,
+     "risk": 0.001,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -765,7 +766,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.002,
+     "risk": 0.001,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -773,7 +774,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.002,
+     "risk": 0.001,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -811,7 +812,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.002,
+     "risk": 0.001,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -819,7 +820,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.002,
+     "risk": 0.001,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -857,7 +858,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.002,
+     "risk": 0.001,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -865,7 +866,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.002,
+     "risk": 0.001,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -881,7 +882,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.002,
+     "risk": 0.001,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -903,7 +904,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.002,
+     "risk": 0.001,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -911,7 +912,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.002,
+     "risk": 0.001,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -927,7 +928,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.002,
+     "risk": 0.001,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -957,7 +958,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.002,
+     "risk": 0.001,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -995,7 +996,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.007,
+     "risk": 0.01,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1003,7 +1004,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.01,
+     "risk": 0.015,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1015,7 +1016,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.014,
+     "risk": 0.021,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1023,7 +1024,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.013,
+     "risk": 0.015,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1045,7 +1046,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.029,
+     "risk": 0.045,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1053,7 +1054,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.027,
+     "risk": 0.044,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1061,7 +1062,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.036,
+     "risk": 0.067,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1069,7 +1070,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.034,
+     "risk": 0.053,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1107,7 +1108,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.002,
+     "risk": 0.003,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1153,7 +1154,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.003,
+     "risk": 0.004,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1183,7 +1184,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.002,
+     "risk": 0.001,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1203,7 +1204,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.004,
+     "risk": 0.006,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1233,7 +1234,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.002,
+     "risk": 0.003,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1249,7 +1250,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.002,
+     "risk": 0.003,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1257,7 +1258,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.003,
+     "risk": 0.002,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1279,7 +1280,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.006,
+     "risk": 0.007,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1295,7 +1296,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.006,
+     "risk": 0.009,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1303,7 +1304,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.007,
+     "risk": 0.006,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1325,7 +1326,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.008,
+     "risk": 0.01,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1341,7 +1342,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.009,
+     "risk": 0.013,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1379,7 +1380,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.003,
+     "risk": 0.002,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1395,7 +1396,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.003,
+     "risk": 0.002,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1433,7 +1434,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.002,
+     "risk": 0.003,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1471,7 +1472,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.002,
+     "risk": 0.001,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1517,7 +1518,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.002,
+     "risk": 0.001,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1563,7 +1564,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.002,
+     "risk": 0.001,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1609,7 +1610,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.002,
+     "risk": 0.001,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1647,7 +1648,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.002,
+     "risk": 0.001,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1659,7 +1660,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.002,
+     "risk": 0.001,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1667,7 +1668,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.004,
+     "risk": 0.008,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1675,7 +1676,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.003,
+     "risk": 0.004,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1705,7 +1706,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.002,
+     "risk": 0.001,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1771,7 +1772,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.005,
+     "risk": 0.004,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1793,14 +1794,6 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.003,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2025-07-16",
      "risk": 0.002,
      "level": "low",
      "reasons": [
@@ -1808,8 +1801,16 @@
      ]
     },
     {
+     "date": "2025-07-16",
+     "risk": 0.004,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
      "date": "2025-07-17",
-     "risk": 0.005,
+     "risk": 0.009,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1839,7 +1840,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.009,
+     "risk": 0.012,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1847,7 +1848,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.023,
+     "risk": 0.018,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1855,7 +1856,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.04,
+     "risk": 0.032,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1863,7 +1864,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.026,
+     "risk": 0.037,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1885,7 +1886,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.013,
+     "risk": 0.019,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -1893,7 +1894,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.029,
+     "risk": 0.025,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -1901,7 +1902,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.057,
+     "risk": 0.044,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -1909,7 +1910,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.034,
+     "risk": 0.057,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -1931,7 +1932,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.016,
+     "risk": 0.015,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1939,7 +1940,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.017,
+     "risk": 0.013,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1947,7 +1948,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.022,
+     "risk": 0.02,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1955,7 +1956,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.016,
+     "risk": 0.024,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1977,7 +1978,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.029,
+     "risk": 0.022,
      "level": "low",
      "reasons": [
       "history: unsafe on 15% of 686 past tests"
@@ -1985,7 +1986,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.029,
+     "risk": 0.022,
      "level": "low",
      "reasons": [
       "history: unsafe on 15% of 686 past tests"
@@ -1993,7 +1994,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.029,
+     "risk": 0.022,
      "level": "low",
      "reasons": [
       "history: unsafe on 15% of 686 past tests"
@@ -2001,7 +2002,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.026,
+     "risk": 0.034,
      "level": "low",
      "reasons": [
       "history: unsafe on 15% of 686 past tests"
@@ -2023,7 +2024,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.013,
+     "risk": 0.012,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2031,7 +2032,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.014,
+     "risk": 0.012,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2039,7 +2040,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.017,
+     "risk": 0.011,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2047,7 +2048,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.014,
+     "risk": 0.018,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2069,14 +2070,6 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.01,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2025-07-16",
      "risk": 0.011,
      "level": "low",
      "reasons": [
@@ -2084,8 +2077,16 @@
      ]
     },
     {
+     "date": "2025-07-16",
+     "risk": 0.012,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
      "date": "2025-07-17",
-     "risk": 0.014,
+     "risk": 0.011,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2093,7 +2094,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.01,
+     "risk": 0.017,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2115,7 +2116,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.032,
+     "risk": 0.042,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2123,7 +2124,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.025,
+     "risk": 0.024,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2131,7 +2132,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.046,
+     "risk": 0.047,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2139,7 +2140,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.042,
+     "risk": 0.057,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2161,7 +2162,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.041,
+     "risk": 0.06,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2173,7 +2174,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.036,
+     "risk": 0.048,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2185,7 +2186,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.042,
+     "risk": 0.057,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2193,7 +2194,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.043,
+     "risk": 0.058,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2215,7 +2216,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.021,
+     "risk": 0.023,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2227,7 +2228,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.018,
+     "risk": 0.019,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2239,7 +2240,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.018,
+     "risk": 0.022,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2247,7 +2248,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.022,
+     "risk": 0.028,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2269,7 +2270,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.028,
+     "risk": 0.032,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2293,7 +2294,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.027,
+     "risk": 0.03,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2301,7 +2302,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.032,
+     "risk": 0.038,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2323,7 +2324,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.039,
+     "risk": 0.04,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2335,7 +2336,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.032,
+     "risk": 0.035,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2343,7 +2344,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.048,
+     "risk": 0.042,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2351,7 +2352,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.037,
+     "risk": 0.04,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2373,7 +2374,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.016,
+     "risk": 0.022,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2389,7 +2390,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.022,
+     "risk": 0.024,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2397,7 +2398,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.018,
+     "risk": 0.033,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2419,7 +2420,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.029,
+     "risk": 0.033,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2443,7 +2444,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.028,
+     "risk": 0.03,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2451,7 +2452,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.034,
+     "risk": 0.039,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2473,7 +2474,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.029,
+     "risk": 0.03,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2497,7 +2498,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.025,
+     "risk": 0.027,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2505,7 +2506,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.031,
+     "risk": 0.035,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2527,7 +2528,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.023,
+     "risk": 0.018,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2539,7 +2540,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.021,
+     "risk": 0.017,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2547,7 +2548,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.029,
+     "risk": 0.018,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2555,7 +2556,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.026,
+     "risk": 0.022,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2577,7 +2578,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.048,
+     "risk": 0.064,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2589,7 +2590,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.043,
+     "risk": 0.054,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2601,7 +2602,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.053,
+     "risk": 0.058,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2613,7 +2614,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.046,
+     "risk": 0.065,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2639,7 +2640,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.23,
+     "risk": 0.199,
      "level": "caution",
      "reasons": [
       "last test (Jul 11) was over the limit",
@@ -2652,7 +2653,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.2,
+     "risk": 0.192,
      "level": "caution",
      "reasons": [
       "last test (Jul 11) was over the limit",
@@ -2665,7 +2666,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.19,
+     "risk": 0.23,
      "level": "caution",
      "reasons": [
       "last test (Jul 11) was over the limit",
@@ -2678,7 +2679,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.239,
+     "risk": 0.24,
      "level": "caution",
      "reasons": [
       "last test (Jul 11) was over the limit",
@@ -2705,7 +2706,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.012,
+     "risk": 0.016,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2713,7 +2714,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.012,
+     "risk": 0.016,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2721,7 +2722,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.02,
+     "risk": 0.017,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2729,7 +2730,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.014,
+     "risk": 0.016,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2751,7 +2752,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.035,
+     "risk": 0.038,
      "level": "low",
      "reasons": [
       "history: unsafe on 16% of 668 past tests"
@@ -2763,7 +2764,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.032,
+     "risk": 0.034,
      "level": "low",
      "reasons": [
       "history: unsafe on 16% of 668 past tests"
@@ -2771,7 +2772,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.043,
+     "risk": 0.037,
      "level": "low",
      "reasons": [
       "history: unsafe on 16% of 668 past tests"
@@ -2779,7 +2780,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.033,
+     "risk": 0.036,
      "level": "low",
      "reasons": [
       "history: unsafe on 16% of 668 past tests"
@@ -2829,7 +2830,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.007,
+     "risk": 0.008,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2863,7 +2864,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.009,
+     "risk": 0.008,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2929,7 +2930,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.007,
+     "risk": 0.008,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2951,7 +2952,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.008,
+     "risk": 0.009,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2963,14 +2964,6 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.008,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2025-07-17",
      "risk": 0.009,
      "level": "low",
      "reasons": [
@@ -2978,8 +2971,16 @@
      ]
     },
     {
+     "date": "2025-07-17",
+     "risk": 0.01,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
      "date": "2025-07-18",
-     "risk": 0.008,
+     "risk": 0.009,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3001,7 +3002,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.007,
+     "risk": 0.008,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3021,7 +3022,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.008,
+     "risk": 0.009,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3029,7 +3030,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.007,
+     "risk": 0.008,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3051,7 +3052,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.027,
+     "risk": 0.03,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -3063,7 +3064,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.025,
+     "risk": 0.026,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -3071,7 +3072,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.029,
+     "risk": 0.033,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -3079,7 +3080,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.027,
+     "risk": 0.03,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -3101,7 +3102,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.008,
+     "risk": 0.01,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3113,7 +3114,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.008,
+     "risk": 0.01,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3121,7 +3122,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.009,
+     "risk": 0.011,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3129,7 +3130,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.008,
+     "risk": 0.01,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3151,7 +3152,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.007,
+     "risk": 0.008,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3163,7 +3164,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.007,
+     "risk": 0.008,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3171,7 +3172,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.007,
+     "risk": 0.01,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3179,7 +3180,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.007,
+     "risk": 0.009,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3191,6 +3192,56 @@
    "station": "DHS008",
    "name": "DHS008-Malibu Beach, Los Angeles",
    "lat": 34.0296,
+   "lon": -118.842,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2025-07-08",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2025-07-15",
+     "risk": 0.009,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ],
+     "actual": {
+      "value": 10.0,
+      "unsafe": false
+     }
+    },
+    {
+     "date": "2025-07-16",
+     "risk": 0.009,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2025-07-17",
+     "risk": 0.01,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2025-07-18",
+     "risk": 0.009,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS008B",
+   "name": "DHS008B-Malibu Beach, Los Angeles",
+   "lat": 34.0286,
    "lon": -118.842,
    "type": "usually clean",
    "last_test": {
@@ -3229,57 +3280,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.008,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "DHS008B",
-   "name": "DHS008B-Malibu Beach, Los Angeles",
-   "lat": 34.0286,
-   "lon": -118.842,
-   "type": "usually clean",
-   "last_test": {
-    "date": "2025-07-08",
-    "value": 10.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2025-07-15",
-     "risk": 0.007,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ],
-     "actual": {
-      "value": 10.0,
-      "unsafe": false
-     }
-    },
-    {
-     "date": "2025-07-16",
-     "risk": 0.007,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2025-07-17",
-     "risk": 0.008,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2025-07-18",
-     "risk": 0.007,
+     "risk": 0.009,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3301,7 +3302,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.003,
+     "risk": 0.002,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3313,7 +3314,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.003,
+     "risk": 0.002,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3329,7 +3330,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.003,
+     "risk": 0.002,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3351,7 +3352,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.005,
+     "risk": 0.006,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3363,7 +3364,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.006,
+     "risk": 0.005,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3371,7 +3372,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.005,
+     "risk": 0.006,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3401,7 +3402,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.011,
+     "risk": 0.016,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3413,7 +3414,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.011,
+     "risk": 0.012,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3429,7 +3430,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.011,
+     "risk": 0.014,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3451,7 +3452,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.013,
+     "risk": 0.017,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3463,7 +3464,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.012,
+     "risk": 0.013,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3479,7 +3480,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.012,
+     "risk": 0.015,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3501,7 +3502,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.01,
+     "risk": 0.012,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3509,7 +3510,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.01,
+     "risk": 0.011,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3517,7 +3518,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.013,
+     "risk": 0.012,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3547,7 +3548,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.018,
+     "risk": 0.022,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3555,7 +3556,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.019,
+     "risk": 0.017,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3563,7 +3564,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.028,
+     "risk": 0.022,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3571,7 +3572,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.018,
+     "risk": 0.02,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3593,7 +3594,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.017,
+     "risk": 0.02,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3609,7 +3610,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.023,
+     "risk": 0.021,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3617,7 +3618,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.021,
+     "risk": 0.019,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3639,7 +3640,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.01,
+     "risk": 0.012,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3647,7 +3648,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.01,
+     "risk": 0.009,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3655,7 +3656,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.014,
+     "risk": 0.012,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3685,7 +3686,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.01,
+     "risk": 0.012,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3701,7 +3702,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.014,
+     "risk": 0.013,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3709,7 +3710,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.012,
+     "risk": 0.013,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3731,7 +3732,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.018,
+     "risk": 0.019,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3739,7 +3740,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.015,
+     "risk": 0.012,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3747,7 +3748,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.016,
+     "risk": 0.019,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3755,7 +3756,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.013,
+     "risk": 0.021,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3785,7 +3786,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.014,
+     "risk": 0.011,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3793,7 +3794,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.016,
+     "risk": 0.017,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3801,7 +3802,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.014,
+     "risk": 0.019,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3823,7 +3824,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.025,
+     "risk": 0.028,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3831,7 +3832,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.021,
+     "risk": 0.023,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3839,7 +3840,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.025,
+     "risk": 0.029,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3847,7 +3848,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.024,
+     "risk": 0.034,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3869,7 +3870,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.023,
+     "risk": 0.021,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3877,7 +3878,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.019,
+     "risk": 0.014,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3885,7 +3886,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.02,
+     "risk": 0.021,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3893,7 +3894,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.017,
+     "risk": 0.024,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3915,7 +3916,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.007,
+     "risk": 0.009,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3923,7 +3924,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.007,
+     "risk": 0.008,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3931,7 +3932,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.008,
+     "risk": 0.009,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3939,7 +3940,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.008,
+     "risk": 0.009,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3961,7 +3962,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.01,
+     "risk": 0.011,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3969,7 +3970,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.009,
+     "risk": 0.011,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3977,7 +3978,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.011,
+     "risk": 0.012,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3985,7 +3986,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.011,
+     "risk": 0.013,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3998,52 +3999,6 @@
    "name": "DHS107B-Venice City Beach, Los Angeles",
    "lat": 33.9886,
    "lon": -118.478,
-   "type": "usually clean",
-   "last_test": {
-    "date": "2025-07-07",
-    "value": 10.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2025-07-15",
-     "risk": 0.007,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2025-07-16",
-     "risk": 0.006,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2025-07-17",
-     "risk": 0.007,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2025-07-18",
-     "risk": 0.007,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "DHS108",
-   "name": "DHS108-Venice City Beach, Los Angeles",
-   "lat": 33.9783,
-   "lon": -118.467,
    "type": "usually clean",
    "last_test": {
     "date": "2025-07-07",
@@ -4069,7 +4024,53 @@
     },
     {
      "date": "2025-07-17",
+     "risk": 0.008,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2025-07-18",
+     "risk": 0.01,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS108",
+   "name": "DHS108-Venice City Beach, Los Angeles",
+   "lat": 33.9783,
+   "lon": -118.467,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2025-07-07",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2025-07-15",
+     "risk": 0.009,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2025-07-16",
      "risk": 0.007,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2025-07-17",
+     "risk": 0.009,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4099,7 +4100,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.008,
+     "risk": 0.009,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4115,7 +4116,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.008,
+     "risk": 0.009,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4123,7 +4124,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.008,
+     "risk": 0.009,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4145,7 +4146,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.007,
+     "risk": 0.009,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4161,7 +4162,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.007,
+     "risk": 0.009,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4169,7 +4170,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.008,
+     "risk": 0.01,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4191,7 +4192,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.006,
+     "risk": 0.007,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4207,7 +4208,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.006,
+     "risk": 0.007,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4237,7 +4238,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.007,
+     "risk": 0.008,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4253,7 +4254,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.007,
+     "risk": 0.008,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4261,7 +4262,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.008,
+     "risk": 0.009,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4283,7 +4284,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.006,
+     "risk": 0.007,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4299,7 +4300,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.006,
+     "risk": 0.007,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4329,7 +4330,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.01,
+     "risk": 0.009,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4341,7 +4342,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.009,
+     "risk": 0.008,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4353,7 +4354,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.011,
+     "risk": 0.01,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4365,7 +4366,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.009,
+     "risk": 0.011,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4399,7 +4400,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.007,
+     "risk": 0.006,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4415,7 +4416,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.008,
+     "risk": 0.007,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4437,7 +4438,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.006,
+     "risk": 0.008,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4445,7 +4446,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.006,
+     "risk": 0.008,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4461,7 +4462,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.007,
+     "risk": 0.006,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4483,7 +4484,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.015,
+     "risk": 0.014,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4495,7 +4496,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.013,
+     "risk": 0.012,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4507,7 +4508,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.016,
+     "risk": 0.015,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4519,7 +4520,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.014,
+     "risk": 0.015,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4545,7 +4546,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.007,
+     "risk": 0.008,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4591,7 +4592,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.012,
+     "risk": 0.014,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4599,7 +4600,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.011,
+     "risk": 0.012,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4607,7 +4608,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.013,
+     "risk": 0.014,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4637,7 +4638,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.01,
+     "risk": 0.013,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4649,7 +4650,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.01,
+     "risk": 0.015,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4657,7 +4658,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.012,
+     "risk": 0.018,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4665,7 +4666,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.009,
+     "risk": 0.014,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4687,7 +4688,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.015,
+     "risk": 0.011,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4699,7 +4700,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.015,
+     "risk": 0.013,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4707,7 +4708,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.017,
+     "risk": 0.015,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4715,7 +4716,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.012,
+     "risk": 0.016,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4737,7 +4738,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.041,
+     "risk": 0.034,
      "level": "low",
      "reasons": [
       "history: unsafe on 19% of 422 past tests"
@@ -4749,7 +4750,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.04,
+     "risk": 0.052,
      "level": "low",
      "reasons": [
       "history: unsafe on 19% of 422 past tests"
@@ -4757,7 +4758,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.041,
+     "risk": 0.052,
      "level": "low",
      "reasons": [
       "history: unsafe on 19% of 422 past tests"
@@ -4765,7 +4766,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.034,
+     "risk": 0.046,
      "level": "low",
      "reasons": [
       "history: unsafe on 19% of 422 past tests"
@@ -4787,7 +4788,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.052,
+     "risk": 0.049,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4799,7 +4800,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.056,
+     "risk": 0.058,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4807,7 +4808,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.062,
+     "risk": 0.067,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4815,7 +4816,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.042,
+     "risk": 0.068,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4837,7 +4838,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.017,
+     "risk": 0.013,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4857,7 +4858,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.02,
+     "risk": 0.022,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4865,7 +4866,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.015,
+     "risk": 0.028,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4899,7 +4900,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.011,
+     "risk": 0.01,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4907,7 +4908,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.014,
+     "risk": 0.011,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4915,7 +4916,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.012,
+     "risk": 0.013,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4937,7 +4938,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.008,
+     "risk": 0.009,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4953,7 +4954,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.009,
+     "risk": 0.01,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4961,7 +4962,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.009,
+     "risk": 0.01,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4991,7 +4992,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.008,
+     "risk": 0.012,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -5007,7 +5008,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.008,
+     "risk": 0.01,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -5029,7 +5030,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.01,
+     "risk": 0.012,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -5037,7 +5038,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.008,
+     "risk": 0.019,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -5045,7 +5046,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.009,
+     "risk": 0.012,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -5053,7 +5054,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.012,
+     "risk": 0.013,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -5083,7 +5084,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.008,
+     "risk": 0.007,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -5095,7 +5096,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.009,
+     "risk": 0.008,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -5103,7 +5104,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.008,
+     "risk": 0.009,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -5125,7 +5126,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.012,
+     "risk": 0.011,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -5133,7 +5134,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.011,
+     "risk": 0.009,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -5145,7 +5146,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.013,
+     "risk": 0.011,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -5153,7 +5154,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.011,
+     "risk": 0.012,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -5175,7 +5176,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.086,
+     "risk": 0.103,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5187,7 +5188,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.113,
+     "risk": 0.16,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5199,7 +5200,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.165,
+     "risk": 0.244,
      "level": "caution",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5211,8 +5212,8 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.155,
-     "level": "low",
+     "risk": 0.243,
+     "level": "caution",
      "reasons": [
       "this beach is often unsafe even in dry weather"
      ],
@@ -5237,7 +5238,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.063,
+     "risk": 0.081,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5245,7 +5246,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.087,
+     "risk": 0.107,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5253,7 +5254,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.115,
+     "risk": 0.157,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5261,8 +5262,8 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.106,
-     "level": "low",
+     "risk": 0.162,
+     "level": "caution",
      "reasons": [
       "this beach is often unsafe even in dry weather"
      ]
@@ -5283,15 +5284,15 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.143,
-     "level": "low",
+     "risk": 0.186,
+     "level": "caution",
      "reasons": [
       "this beach is often unsafe even in dry weather"
      ]
     },
     {
      "date": "2025-07-16",
-     "risk": 0.18,
+     "risk": 0.325,
      "level": "caution",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5303,7 +5304,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.207,
+     "risk": 0.368,
      "level": "caution",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5311,7 +5312,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.197,
+     "risk": 0.338,
      "level": "caution",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5333,7 +5334,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.024,
+     "risk": 0.027,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5345,7 +5346,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.023,
+     "risk": 0.021,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5353,7 +5354,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.025,
+     "risk": 0.026,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5365,7 +5366,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.024,
+     "risk": 0.025,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5387,7 +5388,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.036,
+     "risk": 0.04,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5399,7 +5400,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.035,
+     "risk": 0.036,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5407,7 +5408,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.037,
+     "risk": 0.043,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5415,7 +5416,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.035,
+     "risk": 0.041,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5437,7 +5438,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.021,
+     "risk": 0.022,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5457,7 +5458,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.024,
+     "risk": 0.021,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5469,7 +5470,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.02,
+     "risk": 0.022,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5491,7 +5492,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.014,
+     "risk": 0.016,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5503,7 +5504,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.014,
+     "risk": 0.013,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5511,7 +5512,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.019,
+     "risk": 0.014,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5519,7 +5520,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.015,
+     "risk": 0.017,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5541,7 +5542,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.011,
+     "risk": 0.023,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -5549,7 +5550,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.011,
+     "risk": 0.023,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -5557,7 +5558,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.016,
+     "risk": 0.022,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -5565,7 +5566,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.012,
+     "risk": 0.018,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -5587,7 +5588,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.011,
+     "risk": 0.014,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -5595,7 +5596,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.011,
+     "risk": 0.015,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -5603,7 +5604,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.011,
+     "risk": 0.016,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -5611,7 +5612,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.01,
+     "risk": 0.013,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -5633,7 +5634,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.074,
+     "risk": 0.069,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5645,7 +5646,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.091,
+     "risk": 0.066,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5657,7 +5658,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.087,
+     "risk": 0.068,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5669,7 +5670,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.065,
+     "risk": 0.061,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5715,7 +5716,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.002,
+     "risk": 0.003,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -5745,7 +5746,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.015,
+     "risk": 0.018,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5757,7 +5758,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.014,
+     "risk": 0.015,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5765,7 +5766,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.017,
+     "risk": 0.019,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5773,7 +5774,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.015,
+     "risk": 0.019,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5795,7 +5796,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.031,
+     "risk": 0.033,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5815,7 +5816,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.033,
+     "risk": 0.036,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5823,7 +5824,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.031,
+     "risk": 0.03,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5845,8 +5846,8 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.119,
-     "level": "low",
+     "risk": 0.18,
+     "level": "caution",
      "reasons": [
       "this beach is often unsafe even in dry weather"
      ],
@@ -5857,16 +5858,16 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.125,
-     "level": "low",
+     "risk": 0.168,
+     "level": "caution",
      "reasons": [
       "this beach is often unsafe even in dry weather"
      ]
     },
     {
      "date": "2025-07-17",
-     "risk": 0.143,
-     "level": "low",
+     "risk": 0.168,
+     "level": "caution",
      "reasons": [
       "this beach is often unsafe even in dry weather"
      ],
@@ -5877,7 +5878,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.118,
+     "risk": 0.156,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5911,7 +5912,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.009,
+     "risk": 0.008,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -5919,7 +5920,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.011,
+     "risk": 0.01,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -5927,7 +5928,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.009,
+     "risk": 0.01,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -5949,7 +5950,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.008,
+     "risk": 0.009,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -5999,7 +6000,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.007,
+     "risk": 0.008,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -6027,7 +6028,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.008,
+     "risk": 0.009,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -6049,7 +6050,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.014,
+     "risk": 0.017,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -6061,7 +6062,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.014,
+     "risk": 0.013,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -6069,7 +6070,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.021,
+     "risk": 0.018,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -6099,7 +6100,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.037,
+     "risk": 0.043,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -6111,7 +6112,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.041,
+     "risk": 0.037,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -6123,7 +6124,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.055,
+     "risk": 0.043,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -6135,7 +6136,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.036,
+     "risk": 0.042,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -6161,7 +6162,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.046,
+     "risk": 0.051,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -6173,7 +6174,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.04,
+     "risk": 0.044,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -6185,7 +6186,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.044,
+     "risk": 0.053,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -6197,7 +6198,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.045,
+     "risk": 0.058,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -6223,7 +6224,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.036,
+     "risk": 0.044,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -6247,7 +6248,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.051,
+     "risk": 0.047,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -6259,7 +6260,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.036,
+     "risk": 0.049,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -6297,7 +6298,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.006,
+     "risk": 0.005,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -6309,7 +6310,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.006,
+     "risk": 0.007,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -6321,7 +6322,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.007,
+     "risk": 0.009,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -6347,7 +6348,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.006,
+     "risk": 0.007,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -6359,7 +6360,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.006,
+     "risk": 0.007,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -6367,7 +6368,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.007,
+     "risk": 0.008,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -6375,7 +6376,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.007,
+     "risk": 0.01,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -6397,7 +6398,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.011,
+     "risk": 0.017,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -6409,7 +6410,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.014,
+     "risk": 0.018,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -6417,7 +6418,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.018,
+     "risk": 0.023,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -6429,7 +6430,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.015,
+     "risk": 0.025,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -6451,7 +6452,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.007,
+     "risk": 0.009,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -6471,7 +6472,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.007,
+     "risk": 0.009,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -6479,7 +6480,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.009,
+     "risk": 0.01,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -6501,7 +6502,7 @@
    "forecast": [
     {
      "date": "2025-07-15",
-     "risk": 0.004,
+     "risk": 0.006,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -6513,7 +6514,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.005,
+     "risk": 0.008,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -6563,7 +6564,7 @@
     },
     {
      "date": "2025-07-16",
-     "risk": 0.049,
+     "risk": 0.04,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -6575,7 +6576,7 @@
     },
     {
      "date": "2025-07-17",
-     "risk": 0.044,
+     "risk": 0.049,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -6587,7 +6588,7 @@
     },
     {
      "date": "2025-07-18",
-     "risk": 0.042,
+     "risk": 0.04,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"

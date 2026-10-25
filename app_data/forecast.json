@@ -1,4 +1,5 @@
 {
+ "model_id": "40ebd86751",
  "issued": "2026-10-24",
  "mode": "live",
  "rain_source": "Open-Meteo forecast, scaled to match ERA5",
@@ -23,7 +24,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.04,
+     "risk": 0.021,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the 3 days before"
@@ -31,24 +32,25 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.163,
-     "level": "caution",
+     "risk": 0.102,
+     "level": "low",
      "reasons": [
       "0.48 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2026-10-26",
-     "risk": 0.435,
+     "risk": 0.294,
      "level": "caution",
      "reasons": [
-      "1.12 in of rain in the past week"
+      "1.12 in of rain in the past week",
+      "big spring tide (7.3 ft range); beaches fail about twice as often during spring tides"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.245,
-     "level": "caution",
+     "risk": 0.094,
+     "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
      ]
@@ -69,7 +71,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.047,
+     "risk": 0.026,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the 3 days before"
@@ -77,24 +79,25 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.185,
-     "level": "caution",
+     "risk": 0.124,
+     "level": "low",
      "reasons": [
       "0.48 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2026-10-26",
-     "risk": 0.399,
+     "risk": 0.286,
      "level": "caution",
      "reasons": [
-      "1.12 in of rain in the past week"
+      "1.12 in of rain in the past week",
+      "big spring tide (7.3 ft range); beaches fail about twice as often during spring tides"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.232,
-     "level": "caution",
+     "risk": 0.092,
+     "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
      ]
@@ -115,7 +118,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.047,
+     "risk": 0.028,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the 3 days before"
@@ -123,24 +126,25 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.195,
-     "level": "caution",
+     "risk": 0.139,
+     "level": "low",
      "reasons": [
       "0.48 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2026-10-26",
-     "risk": 0.562,
-     "level": "high",
+     "risk": 0.33,
+     "level": "caution",
      "reasons": [
-      "1.12 in of rain in the past week"
+      "1.12 in of rain in the past week",
+      "big spring tide (7.3 ft range); beaches fail about twice as often during spring tides"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.284,
-     "level": "caution",
+     "risk": 0.096,
+     "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
      ]
@@ -161,7 +165,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.031,
+     "risk": 0.019,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the 3 days before"
@@ -169,7 +173,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.131,
+     "risk": 0.108,
      "level": "low",
      "reasons": [
       "0.48 in of rain in the 3 days before"
@@ -177,16 +181,17 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.435,
+     "risk": 0.333,
      "level": "caution",
      "reasons": [
-      "1.12 in of rain in the past week"
+      "1.12 in of rain in the past week",
+      "big spring tide (7.3 ft range); beaches fail about twice as often during spring tides"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.192,
-     "level": "caution",
+     "risk": 0.098,
+     "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
      ]
@@ -207,7 +212,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.048,
+     "risk": 0.027,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the 3 days before"
@@ -215,24 +220,25 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.213,
-     "level": "caution",
+     "risk": 0.149,
+     "level": "low",
      "reasons": [
       "0.48 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2026-10-26",
-     "risk": 0.536,
-     "level": "high",
+     "risk": 0.372,
+     "level": "caution",
      "reasons": [
-      "1.12 in of rain in the past week"
+      "1.12 in of rain in the past week",
+      "big spring tide (7.3 ft range); beaches fail about twice as often during spring tides"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.288,
-     "level": "caution",
+     "risk": 0.118,
+     "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
      ]
@@ -253,7 +259,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.043,
+     "risk": 0.031,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the 3 days before"
@@ -261,24 +267,26 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.193,
+     "risk": 0.164,
      "level": "caution",
      "reasons": [
-      "0.48 in of rain in the 3 days before"
+      "0.48 in of rain in the 3 days before",
+      "big spring tide (6.6 ft range); beaches fail about twice as often during spring tides"
      ]
     },
     {
      "date": "2026-10-26",
-     "risk": 0.515,
-     "level": "high",
+     "risk": 0.385,
+     "level": "caution",
      "reasons": [
-      "1.12 in of rain in the past week"
+      "1.12 in of rain in the past week",
+      "big spring tide (7.3 ft range); beaches fail about twice as often during spring tides"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.248,
-     "level": "caution",
+     "risk": 0.091,
+     "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
      ]
@@ -299,7 +307,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.072,
+     "risk": 0.031,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the 3 days before"
@@ -307,24 +315,25 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.224,
-     "level": "caution",
+     "risk": 0.13,
+     "level": "low",
      "reasons": [
       "0.48 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2026-10-26",
-     "risk": 0.45,
+     "risk": 0.275,
      "level": "caution",
      "reasons": [
-      "1.12 in of rain in the past week"
+      "1.12 in of rain in the past week",
+      "big spring tide (7.3 ft range); beaches fail about twice as often during spring tides"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.268,
-     "level": "caution",
+     "risk": 0.083,
+     "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
      ]
@@ -345,7 +354,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.019,
+     "risk": 0.016,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the 3 days before"
@@ -353,7 +362,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.09,
+     "risk": 0.077,
      "level": "low",
      "reasons": [
       "0.48 in of rain in the 3 days before"
@@ -361,15 +370,16 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.213,
+     "risk": 0.226,
      "level": "caution",
      "reasons": [
-      "1.12 in of rain in the past week"
+      "1.12 in of rain in the past week",
+      "big spring tide (7.3 ft range); beaches fail about twice as often during spring tides"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.109,
+     "risk": 0.054,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
@@ -391,7 +401,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.01,
+     "risk": 0.009,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the 3 days before"
@@ -399,7 +409,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.036,
+     "risk": 0.034,
      "level": "low",
      "reasons": [
       "0.48 in of rain in the 3 days before"
@@ -407,7 +417,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.09,
+     "risk": 0.106,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
@@ -415,7 +425,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.043,
+     "risk": 0.03,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
@@ -437,7 +447,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.008,
+     "risk": 0.007,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the 3 days before"
@@ -445,7 +455,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.021,
+     "risk": 0.025,
      "level": "low",
      "reasons": [
       "0.48 in of rain in the 3 days before"
@@ -453,7 +463,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.048,
+     "risk": 0.088,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
@@ -483,7 +493,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.059,
+     "risk": 0.035,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the 3 days before"
@@ -491,24 +501,26 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.223,
+     "risk": 0.168,
      "level": "caution",
      "reasons": [
-      "0.48 in of rain in the 3 days before"
+      "0.48 in of rain in the 3 days before",
+      "big spring tide (6.6 ft range); beaches fail about twice as often during spring tides"
      ]
     },
     {
      "date": "2026-10-26",
-     "risk": 0.367,
+     "risk": 0.33,
      "level": "caution",
      "reasons": [
-      "1.12 in of rain in the past week"
+      "1.12 in of rain in the past week",
+      "big spring tide (7.3 ft range); beaches fail about twice as often during spring tides"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.21,
-     "level": "caution",
+     "risk": 0.083,
+     "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
      ]
@@ -529,7 +541,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.023,
+     "risk": 0.012,
      "level": "low",
      "reasons": [
       "2.28 in of rain in the 3 days before"
@@ -537,7 +549,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.022,
+     "risk": 0.029,
      "level": "low",
      "reasons": [
       "0.19 in of rain in the 3 days before"
@@ -545,15 +557,16 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.143,
-     "level": "low",
+     "risk": 0.202,
+     "level": "caution",
      "reasons": [
-      "2.28 in of rain in the past week"
+      "2.28 in of rain in the past week",
+      "big spring tide (7.3 ft range); beaches fail about twice as often during spring tides"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.102,
+     "risk": 0.094,
      "level": "low",
      "reasons": [
       "2.28 in of rain in the past week"
@@ -575,7 +588,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.041,
+     "risk": 0.024,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the 3 days before"
@@ -583,23 +596,24 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.169,
-     "level": "caution",
+     "risk": 0.106,
+     "level": "low",
      "reasons": [
       "0.48 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2026-10-26",
-     "risk": 0.25,
+     "risk": 0.184,
      "level": "caution",
      "reasons": [
-      "1.12 in of rain in the past week"
+      "1.12 in of rain in the past week",
+      "big spring tide (7.3 ft range); beaches fail about twice as often during spring tides"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.142,
+     "risk": 0.052,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
@@ -621,7 +635,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.006,
+     "risk": 0.01,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the 3 days before"
@@ -629,7 +643,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.016,
+     "risk": 0.031,
      "level": "low",
      "reasons": [
       "0.48 in of rain in the 3 days before"
@@ -637,7 +651,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.037,
+     "risk": 0.089,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
@@ -645,7 +659,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.023,
+     "risk": 0.033,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
@@ -675,7 +689,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.015,
+     "risk": 0.017,
      "level": "low",
      "reasons": [
       "0.48 in of rain in the 3 days before"
@@ -683,7 +697,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.04,
+     "risk": 0.075,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
@@ -691,7 +705,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.025,
+     "risk": 0.028,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
@@ -721,7 +735,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.015,
+     "risk": 0.017,
      "level": "low",
      "reasons": [
       "0.48 in of rain in the 3 days before"
@@ -729,7 +743,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.04,
+     "risk": 0.075,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
@@ -737,7 +751,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.025,
+     "risk": 0.028,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
@@ -759,7 +773,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.006,
+     "risk": 0.004,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the 3 days before"
@@ -767,7 +781,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.015,
+     "risk": 0.013,
      "level": "low",
      "reasons": [
       "0.48 in of rain in the 3 days before"
@@ -775,7 +789,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.04,
+     "risk": 0.055,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
@@ -783,7 +797,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.025,
+     "risk": 0.02,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
@@ -805,7 +819,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.006,
+     "risk": 0.004,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the 3 days before"
@@ -813,7 +827,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.015,
+     "risk": 0.012,
      "level": "low",
      "reasons": [
       "0.48 in of rain in the 3 days before"
@@ -821,7 +835,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.04,
+     "risk": 0.051,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
@@ -829,7 +843,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.025,
+     "risk": 0.019,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
@@ -851,7 +865,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.007,
+     "risk": 0.009,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the 3 days before"
@@ -859,7 +873,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.018,
+     "risk": 0.025,
      "level": "low",
      "reasons": [
       "0.48 in of rain in the 3 days before"
@@ -867,7 +881,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.041,
+     "risk": 0.072,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
@@ -875,7 +889,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.018,
+     "risk": 0.019,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
@@ -897,7 +911,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.064,
+     "risk": 0.033,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the 3 days before"
@@ -905,24 +919,25 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.183,
-     "level": "caution",
+     "risk": 0.115,
+     "level": "low",
      "reasons": [
       "0.48 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2026-10-26",
-     "risk": 0.368,
+     "risk": 0.232,
      "level": "caution",
      "reasons": [
-      "1.12 in of rain in the past week"
+      "1.12 in of rain in the past week",
+      "big spring tide (7.3 ft range); beaches fail about twice as often during spring tides"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.243,
-     "level": "caution",
+     "risk": 0.086,
+     "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
      ]
@@ -943,34 +958,36 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.225,
-     "level": "caution",
+     "risk": 0.136,
+     "level": "low",
      "reasons": [
       "1.12 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2026-10-25",
-     "risk": 0.26,
-     "level": "caution",
+     "risk": 0.159,
+     "level": "low",
      "reasons": [
       "0.48 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2026-10-26",
-     "risk": 0.451,
+     "risk": 0.296,
      "level": "caution",
      "reasons": [
-      "1.12 in of rain in the past week"
+      "1.12 in of rain in the past week",
+      "big spring tide (7.3 ft range); beaches fail about twice as often during spring tides"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.354,
+     "risk": 0.179,
      "level": "caution",
      "reasons": [
-      "1.12 in of rain in the past week"
+      "1.12 in of rain in the past week",
+      "big spring tide (7.6 ft range); beaches fail about twice as often during spring tides"
      ]
     }
    ]
@@ -989,7 +1006,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.01,
+     "risk": 0.012,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the 3 days before"
@@ -997,7 +1014,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.024,
+     "risk": 0.034,
      "level": "low",
      "reasons": [
       "0.48 in of rain in the 3 days before"
@@ -1005,7 +1022,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.037,
+     "risk": 0.059,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
@@ -1013,7 +1030,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.03,
+     "risk": 0.031,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
@@ -1035,7 +1052,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.009,
+     "risk": 0.007,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the 3 days before"
@@ -1043,7 +1060,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.02,
+     "risk": 0.017,
      "level": "low",
      "reasons": [
       "0.48 in of rain in the 3 days before"
@@ -1051,7 +1068,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.042,
+     "risk": 0.061,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
@@ -1059,7 +1076,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.02,
+     "risk": 0.016,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
@@ -1081,7 +1098,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.026,
+     "risk": 0.009,
      "level": "low",
      "reasons": [
       "2.28 in of rain in the 3 days before"
@@ -1089,7 +1106,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.026,
+     "risk": 0.023,
      "level": "low",
      "reasons": [
       "0.19 in of rain in the 3 days before"
@@ -1100,12 +1117,13 @@
      "risk": 0.162,
      "level": "caution",
      "reasons": [
-      "2.28 in of rain in the past week"
+      "2.28 in of rain in the past week",
+      "big spring tide (7.3 ft range); beaches fail about twice as often during spring tides"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.084,
+     "risk": 0.054,
      "level": "low",
      "reasons": [
       "2.28 in of rain in the past week"
@@ -1127,7 +1145,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.008,
+     "risk": 0.01,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the 3 days before"
@@ -1135,7 +1153,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.019,
+     "risk": 0.024,
      "level": "low",
      "reasons": [
       "0.48 in of rain in the 3 days before"
@@ -1143,7 +1161,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.037,
+     "risk": 0.081,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
@@ -1151,7 +1169,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.025,
+     "risk": 0.029,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
@@ -1173,7 +1191,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.037,
+     "risk": 0.021,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the 3 days before"
@@ -1181,7 +1199,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.114,
+     "risk": 0.076,
      "level": "low",
      "reasons": [
       "0.48 in of rain in the 3 days before"
@@ -1189,15 +1207,16 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.22,
+     "risk": 0.207,
      "level": "caution",
      "reasons": [
-      "1.12 in of rain in the past week"
+      "1.12 in of rain in the past week",
+      "big spring tide (7.3 ft range); beaches fail about twice as often during spring tides"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.101,
+     "risk": 0.05,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
@@ -1219,7 +1238,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.07,
+     "risk": 0.028,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the 3 days before"
@@ -1227,24 +1246,25 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.202,
-     "level": "caution",
+     "risk": 0.099,
+     "level": "low",
      "reasons": [
       "0.48 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2026-10-26",
-     "risk": 0.385,
+     "risk": 0.23,
      "level": "caution",
      "reasons": [
-      "1.12 in of rain in the past week"
+      "1.12 in of rain in the past week",
+      "big spring tide (7.3 ft range); beaches fail about twice as often during spring tides"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.2,
-     "level": "caution",
+     "risk": 0.068,
+     "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
      ]
@@ -1265,7 +1285,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.009,
+     "risk": 0.005,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the 3 days before"
@@ -1273,7 +1293,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.02,
+     "risk": 0.012,
      "level": "low",
      "reasons": [
       "0.48 in of rain in the 3 days before"
@@ -1289,7 +1309,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.02,
+     "risk": 0.016,
      "level": "low",
      "reasons": [
       "1.12 in of rain in the past week"
@@ -1311,7 +1331,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.009,
+     "risk": 0.005,
      "level": "low",
      "reasons": [
       "1.15 in of rain in the 3 days before"
@@ -1319,7 +1339,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.018,
+     "risk": 0.012,
      "level": "low",
      "reasons": [
       "0.37 in of rain in the 3 days before"
@@ -1335,7 +1355,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.02,
+     "risk": 0.016,
      "level": "low",
      "reasons": [
       "1.15 in of rain in the past week"
@@ -1357,7 +1377,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.02,
+     "risk": 0.006,
      "level": "low",
      "reasons": [
       "2.93 in of rain in the 3 days before"
@@ -1365,7 +1385,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.026,
+     "risk": 0.011,
      "level": "low",
      "reasons": [
       "0.63 in of rain in the 3 days before"
@@ -1373,7 +1393,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.06,
+     "risk": 0.063,
      "level": "low",
      "reasons": [
       "2.93 in of rain in the past week"
@@ -1381,7 +1401,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.028,
+     "risk": 0.03,
      "level": "low",
      "reasons": [
       "2.93 in of rain in the past week"
@@ -1403,7 +1423,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.021,
+     "risk": 0.006,
      "level": "low",
      "reasons": [
       "2.93 in of rain in the 3 days before"
@@ -1411,7 +1431,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.018,
+     "risk": 0.006,
      "level": "low",
      "reasons": [
       "0.63 in of rain in the 3 days before"
@@ -1419,7 +1439,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.054,
+     "risk": 0.044,
      "level": "low",
      "reasons": [
       "2.93 in of rain in the past week"
@@ -1427,7 +1447,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.03,
+     "risk": 0.025,
      "level": "low",
      "reasons": [
       "2.93 in of rain in the past week"
@@ -1449,7 +1469,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.02,
+     "risk": 0.006,
      "level": "low",
      "reasons": [
       "2.93 in of rain in the 3 days before"
@@ -1457,7 +1477,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.026,
+     "risk": 0.011,
      "level": "low",
      "reasons": [
       "0.63 in of rain in the 3 days before"
@@ -1465,7 +1485,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.06,
+     "risk": 0.063,
      "level": "low",
      "reasons": [
       "2.93 in of rain in the past week"
@@ -1473,7 +1493,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.028,
+     "risk": 0.03,
      "level": "low",
      "reasons": [
       "2.93 in of rain in the past week"
@@ -1495,7 +1515,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.02,
+     "risk": 0.006,
      "level": "low",
      "reasons": [
       "2.93 in of rain in the 3 days before"
@@ -1503,7 +1523,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.026,
+     "risk": 0.011,
      "level": "low",
      "reasons": [
       "0.63 in of rain in the 3 days before"
@@ -1511,7 +1531,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.06,
+     "risk": 0.063,
      "level": "low",
      "reasons": [
       "2.93 in of rain in the past week"
@@ -1519,7 +1539,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.028,
+     "risk": 0.03,
      "level": "low",
      "reasons": [
       "2.93 in of rain in the past week"
@@ -1541,7 +1561,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.021,
+     "risk": 0.008,
      "level": "low",
      "reasons": [
       "2.28 in of rain in the 3 days before"
@@ -1549,7 +1569,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.021,
+     "risk": 0.019,
      "level": "low",
      "reasons": [
       "0.19 in of rain in the 3 days before"
@@ -1557,10 +1577,11 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.13,
-     "level": "low",
+     "risk": 0.198,
+     "level": "caution",
      "reasons": [
-      "2.28 in of rain in the past week"
+      "2.28 in of rain in the past week",
+      "big spring tide (7.3 ft range); beaches fail about twice as often during spring tides"
      ]
     },
     {
@@ -1587,7 +1608,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.02,
+     "risk": 0.006,
      "level": "low",
      "reasons": [
       "2.93 in of rain in the 3 days before"
@@ -1595,7 +1616,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.026,
+     "risk": 0.011,
      "level": "low",
      "reasons": [
       "0.63 in of rain in the 3 days before"
@@ -1603,7 +1624,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.06,
+     "risk": 0.063,
      "level": "low",
      "reasons": [
       "2.93 in of rain in the past week"
@@ -1611,7 +1632,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.028,
+     "risk": 0.03,
      "level": "low",
      "reasons": [
       "2.93 in of rain in the past week"
@@ -1633,7 +1654,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.075,
+     "risk": 0.039,
      "level": "low",
      "reasons": [
       "2.28 in of rain in the 3 days before"
@@ -1641,24 +1662,25 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.165,
-     "level": "caution",
+     "risk": 0.152,
+     "level": "low",
      "reasons": [
       "0.19 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2026-10-26",
-     "risk": 0.543,
-     "level": "high",
+     "risk": 0.372,
+     "level": "caution",
      "reasons": [
-      "2.28 in of rain in the past week"
+      "2.28 in of rain in the past week",
+      "big spring tide (7.3 ft range); beaches fail about twice as often during spring tides"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.317,
-     "level": "caution",
+     "risk": 0.117,
+     "level": "low",
      "reasons": [
       "2.28 in of rain in the past week"
      ]
@@ -1679,7 +1701,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.021,
+     "risk": 0.012,
      "level": "low",
      "reasons": [
       "2.28 in of rain in the 3 days before"
@@ -1687,7 +1709,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.02,
+     "risk": 0.029,
      "level": "low",
      "reasons": [
       "0.19 in of rain in the 3 days before"
@@ -1695,15 +1717,16 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.111,
-     "level": "low",
+     "risk": 0.173,
+     "level": "caution",
      "reasons": [
-      "2.28 in of rain in the past week"
+      "2.28 in of rain in the past week",
+      "big spring tide (7.3 ft range); beaches fail about twice as often during spring tides"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.078,
+     "risk": 0.079,
      "level": "low",
      "reasons": [
       "2.28 in of rain in the past week"
@@ -1725,7 +1748,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.061,
+     "risk": 0.062,
      "level": "low",
      "reasons": [
       "0.14 in of rain in the 3 days before"
@@ -1733,7 +1756,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.096,
+     "risk": 0.148,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1741,7 +1764,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.121,
+     "risk": 0.124,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1749,7 +1772,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.081,
+     "risk": 0.071,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1771,7 +1794,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.44,
+     "risk": 0.447,
      "level": "caution",
      "reasons": [
       "0.20 in of rain in the 3 days before",
@@ -1780,26 +1803,28 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.47,
+     "risk": 0.412,
      "level": "caution",
      "reasons": [
       "0.17 in of rain in the 3 days before",
+      "big spring tide (6.7 ft range); beaches fail about twice as often during spring tides",
       "this beach is often unsafe even in dry weather"
      ]
     },
     {
      "date": "2026-10-26",
-     "risk": 0.264,
+     "risk": 0.196,
      "level": "caution",
      "reasons": [
       "0.15 in of rain in the 3 days before",
+      "big spring tide (7.4 ft range); beaches fail about twice as often during spring tides",
       "this beach is often unsafe even in dry weather"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.239,
-     "level": "caution",
+     "risk": 0.151,
+     "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
      ]
@@ -1820,7 +1845,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.061,
+     "risk": 0.075,
      "level": "low",
      "reasons": [
       "0.14 in of rain in the 3 days before",
@@ -1829,7 +1854,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.105,
+     "risk": 0.158,
      "level": "low",
      "reasons": [
       "last test (Oct 12) was over the limit"
@@ -1837,7 +1862,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.131,
+     "risk": 0.118,
      "level": "low",
      "reasons": [
       "last test (Oct 12) was over the limit"
@@ -1845,7 +1870,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.13,
+     "risk": 0.086,
      "level": "low",
      "reasons": [
       "last test (Oct 12) was over the limit"
@@ -1867,8 +1892,8 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.425,
-     "level": "caution",
+     "risk": 0.515,
+     "level": "high",
      "reasons": [
       "0.20 in of rain in the 3 days before",
       "history: unsafe on 16% of 735 past tests"
@@ -1876,26 +1901,28 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.465,
+     "risk": 0.423,
      "level": "caution",
      "reasons": [
       "0.17 in of rain in the 3 days before",
+      "big spring tide (6.7 ft range); beaches fail about twice as often during spring tides",
       "history: unsafe on 16% of 735 past tests"
      ]
     },
     {
      "date": "2026-10-26",
-     "risk": 0.21,
+     "risk": 0.221,
      "level": "caution",
      "reasons": [
       "0.15 in of rain in the 3 days before",
+      "big spring tide (7.4 ft range); beaches fail about twice as often during spring tides",
       "history: unsafe on 16% of 735 past tests"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.177,
-     "level": "caution",
+     "risk": 0.11,
+     "level": "low",
      "reasons": [
       "history: unsafe on 16% of 735 past tests"
      ]
@@ -1916,7 +1943,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.081,
+     "risk": 0.06,
      "level": "low",
      "reasons": [
       "0.14 in of rain in the 3 days before"
@@ -1924,7 +1951,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.069,
+     "risk": 0.043,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1932,7 +1959,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.09,
+     "risk": 0.06,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1940,7 +1967,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.091,
+     "risk": 0.055,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1962,7 +1989,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.081,
+     "risk": 0.056,
      "level": "low",
      "reasons": [
       "0.14 in of rain in the 3 days before"
@@ -1970,7 +1997,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.069,
+     "risk": 0.043,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1978,7 +2005,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.09,
+     "risk": 0.06,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -1986,7 +2013,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.091,
+     "risk": 0.054,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2008,7 +2035,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.083,
+     "risk": 0.058,
      "level": "low",
      "reasons": [
       "0.14 in of rain in the 3 days before"
@@ -2016,7 +2043,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.066,
+     "risk": 0.062,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2024,7 +2051,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.111,
+     "risk": 0.099,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2032,7 +2059,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.113,
+     "risk": 0.089,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2054,7 +2081,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.092,
+     "risk": 0.07,
      "level": "low",
      "reasons": [
       "0.14 in of rain in the 3 days before",
@@ -2063,7 +2090,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.082,
+     "risk": 0.084,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2071,7 +2098,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.123,
+     "risk": 0.106,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2079,7 +2106,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.126,
+     "risk": 0.107,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2101,7 +2128,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.096,
+     "risk": 0.079,
      "level": "low",
      "reasons": [
       "0.14 in of rain in the 3 days before",
@@ -2110,7 +2137,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.083,
+     "risk": 0.084,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2118,7 +2145,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.13,
+     "risk": 0.108,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2126,7 +2153,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.133,
+     "risk": 0.097,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2148,7 +2175,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.092,
+     "risk": 0.078,
      "level": "low",
      "reasons": [
       "0.14 in of rain in the 3 days before",
@@ -2157,7 +2184,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.082,
+     "risk": 0.095,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2165,7 +2192,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.121,
+     "risk": 0.125,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2173,7 +2200,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.124,
+     "risk": 0.126,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2195,7 +2222,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.099,
+     "risk": 0.097,
      "level": "low",
      "reasons": [
       "0.14 in of rain in the 3 days before",
@@ -2204,25 +2231,28 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.129,
-     "level": "low",
+     "risk": 0.202,
+     "level": "caution",
      "reasons": [
+      "big spring tide (6.7 ft range); beaches fail about twice as often during spring tides",
       "this beach is often unsafe even in dry weather"
      ]
     },
     {
      "date": "2026-10-26",
-     "risk": 0.173,
+     "risk": 0.204,
      "level": "caution",
      "reasons": [
+      "big spring tide (7.4 ft range); beaches fail about twice as often during spring tides",
       "this beach is often unsafe even in dry weather"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.172,
+     "risk": 0.197,
      "level": "caution",
      "reasons": [
+      "big spring tide (7.6 ft range); beaches fail about twice as often during spring tides",
       "this beach is often unsafe even in dry weather"
      ]
     }
@@ -2242,7 +2272,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.071,
+     "risk": 0.09,
      "level": "low",
      "reasons": [
       "0.14 in of rain in the 3 days before"
@@ -2250,7 +2280,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.065,
+     "risk": 0.098,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2258,7 +2288,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.105,
+     "risk": 0.115,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2266,7 +2296,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.107,
+     "risk": 0.104,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2288,7 +2318,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.088,
+     "risk": 0.08,
      "level": "low",
      "reasons": [
       "0.14 in of rain in the 3 days before"
@@ -2296,7 +2326,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.079,
+     "risk": 0.114,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2304,18 +2334,18 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.14,
-     "level": "low",
+     "risk": 0.166,
+     "level": "caution",
      "reasons": [
-      "dry weather and a clean recent record"
+      "big spring tide (7.4 ft range); beaches fail about twice as often during spring tides"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.143,
-     "level": "low",
+     "risk": 0.167,
+     "level": "caution",
      "reasons": [
-      "dry weather and a clean recent record"
+      "big spring tide (7.6 ft range); beaches fail about twice as often during spring tides"
      ]
     }
    ]
@@ -2334,7 +2364,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.134,
+     "risk": 0.124,
      "level": "low",
      "reasons": [
       "0.14 in of rain in the 3 days before",
@@ -2343,25 +2373,28 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.187,
+     "risk": 0.247,
      "level": "caution",
      "reasons": [
+      "big spring tide (6.7 ft range); beaches fail about twice as often during spring tides",
       "this beach is often unsafe even in dry weather"
      ]
     },
     {
      "date": "2026-10-26",
-     "risk": 0.195,
+     "risk": 0.204,
      "level": "caution",
      "reasons": [
+      "big spring tide (7.4 ft range); beaches fail about twice as often during spring tides",
       "this beach is often unsafe even in dry weather"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.194,
+     "risk": 0.188,
      "level": "caution",
      "reasons": [
+      "big spring tide (7.6 ft range); beaches fail about twice as often during spring tides",
       "this beach is often unsafe even in dry weather"
      ]
     }
@@ -2381,7 +2414,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.08,
+     "risk": 0.061,
      "level": "low",
      "reasons": [
       "0.14 in of rain in the 3 days before",
@@ -2390,7 +2423,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.073,
+     "risk": 0.086,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2398,7 +2431,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.155,
+     "risk": 0.142,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2406,7 +2439,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.159,
+     "risk": 0.144,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2428,8 +2461,8 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.17,
-     "level": "caution",
+     "risk": 0.064,
+     "level": "low",
      "reasons": [
       "0.14 in of rain in the 3 days before",
       "this beach is often unsafe even in dry weather"
@@ -2437,25 +2470,28 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.228,
+     "risk": 0.208,
      "level": "caution",
      "reasons": [
+      "big spring tide (6.7 ft range); beaches fail about twice as often during spring tides",
       "this beach is often unsafe even in dry weather"
      ]
     },
     {
      "date": "2026-10-26",
-     "risk": 0.22,
+     "risk": 0.213,
      "level": "caution",
      "reasons": [
+      "big spring tide (7.4 ft range); beaches fail about twice as often during spring tides",
       "this beach is often unsafe even in dry weather"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.233,
+     "risk": 0.202,
      "level": "caution",
      "reasons": [
+      "big spring tide (7.6 ft range); beaches fail about twice as often during spring tides",
       "this beach is often unsafe even in dry weather"
      ]
     }
@@ -2475,7 +2511,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.155,
+     "risk": 0.052,
      "level": "low",
      "reasons": [
       "0.14 in of rain in the 3 days before",
@@ -2484,7 +2520,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.126,
+     "risk": 0.116,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -2492,17 +2528,19 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.255,
+     "risk": 0.251,
      "level": "caution",
      "reasons": [
+      "big spring tide (7.4 ft range); beaches fail about twice as often during spring tides",
       "this beach is often unsafe even in dry weather"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.286,
+     "risk": 0.274,
      "level": "caution",
      "reasons": [
+      "big spring tide (7.6 ft range); beaches fail about twice as often during spring tides",
       "this beach is often unsafe even in dry weather"
      ]
     }
@@ -2522,7 +2560,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.081,
+     "risk": 0.077,
      "level": "low",
      "reasons": [
       "0.40 in of rain in the 3 days before",
@@ -2531,7 +2569,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.126,
+     "risk": 0.106,
      "level": "low",
      "reasons": [
       "history: unsafe on 15% of 718 past tests"
@@ -2539,7 +2577,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.143,
+     "risk": 0.114,
      "level": "low",
      "reasons": [
       "history: unsafe on 15% of 718 past tests"
@@ -2547,7 +2585,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.106,
+     "risk": 0.098,
      "level": "low",
      "reasons": [
       "history: unsafe on 15% of 718 past tests"
@@ -2569,7 +2607,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.033,
+     "risk": 0.017,
      "level": "low",
      "reasons": [
       "0.40 in of rain in the 3 days before"
@@ -2577,7 +2615,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.092,
+     "risk": 0.066,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2585,15 +2623,15 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.179,
-     "level": "caution",
+     "risk": 0.102,
+     "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.061,
+     "risk": 0.034,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2615,7 +2653,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.043,
+     "risk": 0.023,
      "level": "low",
      "reasons": [
       "0.40 in of rain in the 3 days before"
@@ -2623,7 +2661,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.104,
+     "risk": 0.077,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2631,15 +2669,15 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.231,
-     "level": "caution",
+     "risk": 0.144,
+     "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.082,
+     "risk": 0.043,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2661,7 +2699,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.033,
+     "risk": 0.017,
      "level": "low",
      "reasons": [
       "0.40 in of rain in the 3 days before"
@@ -2669,7 +2707,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.092,
+     "risk": 0.067,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2677,15 +2715,15 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.179,
-     "level": "caution",
+     "risk": 0.117,
+     "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.061,
+     "risk": 0.035,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2707,7 +2745,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.038,
+     "risk": 0.02,
      "level": "low",
      "reasons": [
       "0.40 in of rain in the 3 days before"
@@ -2715,7 +2753,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.084,
+     "risk": 0.055,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2723,15 +2761,15 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.203,
-     "level": "caution",
+     "risk": 0.092,
+     "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.083,
+     "risk": 0.035,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2753,7 +2791,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.032,
+     "risk": 0.015,
      "level": "low",
      "reasons": [
       "0.40 in of rain in the 3 days before"
@@ -2761,7 +2799,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.076,
+     "risk": 0.049,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2769,7 +2807,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.156,
+     "risk": 0.074,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2777,7 +2815,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.062,
+     "risk": 0.028,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2799,7 +2837,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.108,
+     "risk": 0.064,
      "level": "low",
      "reasons": [
       "0.40 in of rain in the 3 days before",
@@ -2808,24 +2846,26 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.22,
+     "risk": 0.183,
      "level": "caution",
      "reasons": [
+      "big spring tide (6.6 ft range); beaches fail about twice as often during spring tides",
       "this beach is often unsafe even in dry weather"
      ]
     },
     {
      "date": "2026-10-26",
-     "risk": 0.284,
+     "risk": 0.187,
      "level": "caution",
      "reasons": [
+      "big spring tide (7.3 ft range); beaches fail about twice as often during spring tides",
       "this beach is often unsafe even in dry weather"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.211,
-     "level": "caution",
+     "risk": 0.15,
+     "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
      ]
@@ -2846,7 +2886,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.042,
+     "risk": 0.023,
      "level": "low",
      "reasons": [
       "0.40 in of rain in the 3 days before"
@@ -2854,7 +2894,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.119,
+     "risk": 0.086,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2862,15 +2902,15 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.243,
-     "level": "caution",
+     "risk": 0.128,
+     "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.081,
+     "risk": 0.037,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2892,7 +2932,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.039,
+     "risk": 0.02,
      "level": "low",
      "reasons": [
       "0.40 in of rain in the 3 days before"
@@ -2900,7 +2940,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.112,
+     "risk": 0.079,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2908,15 +2948,15 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.21,
-     "level": "caution",
+     "risk": 0.114,
+     "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.068,
+     "risk": 0.033,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2938,7 +2978,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.046,
+     "risk": 0.023,
      "level": "low",
      "reasons": [
       "0.40 in of rain in the 3 days before"
@@ -2946,7 +2986,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.113,
+     "risk": 0.092,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2954,15 +2994,15 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.236,
-     "level": "caution",
+     "risk": 0.135,
+     "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.084,
+     "risk": 0.043,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -2984,7 +3024,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.037,
+     "risk": 0.018,
      "level": "low",
      "reasons": [
       "0.40 in of rain in the 3 days before"
@@ -2992,7 +3032,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.103,
+     "risk": 0.083,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3000,15 +3040,15 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.2,
-     "level": "caution",
+     "risk": 0.115,
+     "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.069,
+     "risk": 0.036,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3030,7 +3070,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.022,
+     "risk": 0.01,
      "level": "low",
      "reasons": [
       "2.93 in of rain in the 3 days before"
@@ -3038,7 +3078,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.023,
+     "risk": 0.01,
      "level": "low",
      "reasons": [
       "0.63 in of rain in the 3 days before"
@@ -3046,7 +3086,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.061,
+     "risk": 0.046,
      "level": "low",
      "reasons": [
       "2.93 in of rain in the past week"
@@ -3054,7 +3094,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.025,
+     "risk": 0.019,
      "level": "low",
      "reasons": [
       "2.93 in of rain in the past week"
@@ -3076,7 +3116,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.061,
+     "risk": 0.028,
      "level": "low",
      "reasons": [
       "2.93 in of rain in the 3 days before"
@@ -3084,7 +3124,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.128,
+     "risk": 0.039,
      "level": "low",
      "reasons": [
       "0.63 in of rain in the 3 days before"
@@ -3092,15 +3132,15 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.229,
-     "level": "caution",
+     "risk": 0.144,
+     "level": "low",
      "reasons": [
       "2.93 in of rain in the past week"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.086,
+     "risk": 0.054,
      "level": "low",
      "reasons": [
       "2.93 in of rain in the past week"
@@ -3122,7 +3162,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.148,
+     "risk": 0.099,
      "level": "low",
      "reasons": [
       "2.93 in of rain in the 3 days before"
@@ -3130,24 +3170,26 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.234,
+     "risk": 0.187,
      "level": "caution",
      "reasons": [
-      "0.63 in of rain in the 3 days before"
+      "0.63 in of rain in the 3 days before",
+      "big spring tide (6.6 ft range); beaches fail about twice as often during spring tides"
      ]
     },
     {
      "date": "2026-10-26",
-     "risk": 0.437,
+     "risk": 0.329,
      "level": "caution",
      "reasons": [
-      "2.93 in of rain in the past week"
+      "2.93 in of rain in the past week",
+      "big spring tide (7.3 ft range); beaches fail about twice as often during spring tides"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.183,
-     "level": "caution",
+     "risk": 0.107,
+     "level": "low",
      "reasons": [
       "2.93 in of rain in the past week"
      ]
@@ -3168,7 +3210,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.154,
+     "risk": 0.101,
      "level": "low",
      "reasons": [
       "2.93 in of rain in the 3 days before"
@@ -3176,24 +3218,26 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.23,
+     "risk": 0.182,
      "level": "caution",
      "reasons": [
-      "0.63 in of rain in the 3 days before"
+      "0.63 in of rain in the 3 days before",
+      "big spring tide (6.6 ft range); beaches fail about twice as often during spring tides"
      ]
     },
     {
      "date": "2026-10-26",
-     "risk": 0.412,
+     "risk": 0.301,
      "level": "caution",
      "reasons": [
-      "2.93 in of rain in the past week"
+      "2.93 in of rain in the past week",
+      "big spring tide (7.3 ft range); beaches fail about twice as often during spring tides"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.168,
-     "level": "caution",
+     "risk": 0.101,
+     "level": "low",
      "reasons": [
       "2.93 in of rain in the past week"
      ]
@@ -3214,7 +3258,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.031,
+     "risk": 0.012,
      "level": "low",
      "reasons": [
       "0.11 in of rain in the 3 days before"
@@ -3222,7 +3266,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.051,
+     "risk": 0.018,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3230,7 +3274,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.103,
+     "risk": 0.033,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3238,7 +3282,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.041,
+     "risk": 0.014,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3260,7 +3304,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.053,
+     "risk": 0.036,
      "level": "low",
      "reasons": [
       "0.11 in of rain in the 3 days before"
@@ -3268,7 +3312,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.11,
+     "risk": 0.062,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3276,15 +3320,15 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.215,
-     "level": "caution",
+     "risk": 0.107,
+     "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.091,
+     "risk": 0.047,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3306,7 +3350,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.042,
+     "risk": 0.023,
      "level": "low",
      "reasons": [
       "0.11 in of rain in the 3 days before"
@@ -3314,7 +3358,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.077,
+     "risk": 0.042,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3322,7 +3366,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.14,
+     "risk": 0.074,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3330,7 +3374,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.057,
+     "risk": 0.032,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3352,7 +3396,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.051,
+     "risk": 0.027,
      "level": "low",
      "reasons": [
       "0.11 in of rain in the 3 days before"
@@ -3360,7 +3404,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.092,
+     "risk": 0.049,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3368,15 +3412,15 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.178,
-     "level": "caution",
+     "risk": 0.093,
+     "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.074,
+     "risk": 0.041,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3398,7 +3442,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.047,
+     "risk": 0.026,
      "level": "low",
      "reasons": [
       "0.11 in of rain in the 3 days before"
@@ -3406,7 +3450,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.087,
+     "risk": 0.049,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3414,15 +3458,15 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.168,
-     "level": "caution",
+     "risk": 0.092,
+     "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.07,
+     "risk": 0.04,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3444,7 +3488,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.059,
+     "risk": 0.039,
      "level": "low",
      "reasons": [
       "0.11 in of rain in the 3 days before"
@@ -3452,7 +3496,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.112,
+     "risk": 0.064,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3460,15 +3504,15 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.243,
-     "level": "caution",
+     "risk": 0.111,
+     "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.098,
+     "risk": 0.053,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3490,7 +3534,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.06,
+     "risk": 0.037,
      "level": "low",
      "reasons": [
       "0.11 in of rain in the 3 days before"
@@ -3498,7 +3542,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.101,
+     "risk": 0.065,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3506,15 +3550,15 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.216,
-     "level": "caution",
+     "risk": 0.118,
+     "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.085,
+     "risk": 0.056,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3536,7 +3580,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.096,
+     "risk": 0.061,
      "level": "low",
      "reasons": [
       "0.11 in of rain in the 3 days before"
@@ -3544,7 +3588,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.13,
+     "risk": 0.066,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3552,15 +3596,15 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.168,
-     "level": "caution",
+     "risk": 0.074,
+     "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.127,
+     "risk": 0.062,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3582,7 +3626,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.076,
+     "risk": 0.05,
      "level": "low",
      "reasons": [
       "0.11 in of rain in the 3 days before"
@@ -3590,7 +3634,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.117,
+     "risk": 0.077,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3598,15 +3642,15 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.192,
-     "level": "caution",
+     "risk": 0.103,
+     "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.097,
+     "risk": 0.052,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3628,7 +3672,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.074,
+     "risk": 0.036,
      "level": "low",
      "reasons": [
       "0.11 in of rain in the 3 days before"
@@ -3636,7 +3680,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.094,
+     "risk": 0.047,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3644,15 +3688,15 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.213,
-     "level": "caution",
+     "risk": 0.092,
+     "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.084,
+     "risk": 0.04,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3674,7 +3718,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.065,
+     "risk": 0.033,
      "level": "low",
      "reasons": [
       "0.11 in of rain in the 3 days before"
@@ -3682,7 +3726,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.083,
+     "risk": 0.044,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3690,15 +3734,15 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.212,
-     "level": "caution",
+     "risk": 0.094,
+     "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.084,
+     "risk": 0.041,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3720,7 +3764,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.065,
+     "risk": 0.033,
      "level": "low",
      "reasons": [
       "0.11 in of rain in the 3 days before"
@@ -3728,7 +3772,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.09,
+     "risk": 0.055,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3736,15 +3780,15 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.218,
-     "level": "caution",
+     "risk": 0.097,
+     "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.095,
+     "risk": 0.048,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3766,7 +3810,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.052,
+     "risk": 0.044,
      "level": "low",
      "reasons": [
       "0.11 in of rain in the 3 days before"
@@ -3774,7 +3818,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.065,
+     "risk": 0.034,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3782,7 +3826,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.147,
+     "risk": 0.066,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3790,7 +3834,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.056,
+     "risk": 0.03,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3812,7 +3856,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.082,
+     "risk": 0.074,
      "level": "low",
      "reasons": [
       "0.11 in of rain in the 3 days before"
@@ -3820,7 +3864,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.084,
+     "risk": 0.043,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3828,15 +3872,15 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.187,
-     "level": "caution",
+     "risk": 0.083,
+     "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.078,
+     "risk": 0.042,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3866,7 +3910,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.067,
+     "risk": 0.038,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3874,7 +3918,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.121,
+     "risk": 0.072,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3882,7 +3926,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.049,
+     "risk": 0.034,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3904,7 +3948,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.043,
+     "risk": 0.028,
      "level": "low",
      "reasons": [
       "0.11 in of rain in the 3 days before"
@@ -3912,7 +3956,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.063,
+     "risk": 0.037,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3920,7 +3964,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.106,
+     "risk": 0.063,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3928,7 +3972,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.046,
+     "risk": 0.033,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3950,7 +3994,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.052,
+     "risk": 0.035,
      "level": "low",
      "reasons": [
       "0.11 in of rain in the 3 days before"
@@ -3958,7 +4002,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.067,
+     "risk": 0.035,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3966,7 +4010,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.121,
+     "risk": 0.067,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3974,7 +4018,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.049,
+     "risk": 0.031,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -3996,7 +4040,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.045,
+     "risk": 0.03,
      "level": "low",
      "reasons": [
       "0.11 in of rain in the 3 days before"
@@ -4004,7 +4048,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.06,
+     "risk": 0.033,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4012,7 +4056,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.104,
+     "risk": 0.062,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4020,7 +4064,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.041,
+     "risk": 0.029,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4042,7 +4086,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.133,
+     "risk": 0.107,
      "level": "low",
      "reasons": [
       "0.11 in of rain in the 3 days before",
@@ -4051,23 +4095,23 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.175,
-     "level": "caution",
+     "risk": 0.123,
+     "level": "low",
      "reasons": [
       "last test (Oct 21) was over the limit"
      ]
     },
     {
      "date": "2026-10-26",
-     "risk": 0.177,
-     "level": "caution",
+     "risk": 0.125,
+     "level": "low",
      "reasons": [
       "last test (Oct 21) was over the limit"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.138,
+     "risk": 0.092,
      "level": "low",
      "reasons": [
       "last test (Oct 21) was over the limit"
@@ -4089,7 +4133,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.048,
+     "risk": 0.029,
      "level": "low",
      "reasons": [
       "0.11 in of rain in the 3 days before"
@@ -4097,7 +4141,1589 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.062,
+     "risk": 0.032,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.063,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.029,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS114",
+   "name": "DHS114-Hermosa Beach, Los Angeles",
+   "lat": 33.8715,
+   "lon": -118.407,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 20.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.037,
+     "level": "low",
+     "reasons": [
+      "0.28 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.059,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.071,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.041,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS115",
+   "name": "DHS115-Hermosa Beach, Los Angeles",
+   "lat": 33.8522,
+   "lon": -118.399,
+   "type": "rain-driven",
+   "last_test": {
+    "date": "2026-10-21",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.068,
+     "level": "low",
+     "reasons": [
+      "0.28 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.127,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.086,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.047,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS115B",
+   "name": "DHS113B-Hermosa Beach, Los Angeles",
+   "lat": 33.8523,
+   "lon": -118.4,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.063,
+     "level": "low",
+     "reasons": [
+      "0.28 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.147,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.09,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.047,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS116",
+   "name": "DHS116-Redondo Beach, Los Angeles",
+   "lat": 33.8321,
+   "lon": -118.391,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.069,
+     "level": "low",
+     "reasons": [
+      "0.28 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.172,
+     "level": "caution",
+     "reasons": [
+      "big spring tide (6.7 ft range); beaches fail about twice as often during spring tides"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.107,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.054,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS117",
+   "name": "DHS117-Avalon Beach, Los Angeles",
+   "lat": 33.343,
+   "lon": -118.324,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.049,
+     "level": "low",
+     "reasons": [
+      "1.90 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.161,
+     "level": "caution",
+     "reasons": [
+      "1.90 in of rain in the past week",
+      "big spring tide (6.7 ft range); beaches fail about twice as often during spring tides"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.142,
+     "level": "low",
+     "reasons": [
+      "1.90 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.06,
+     "level": "low",
+     "reasons": [
+      "1.90 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS118",
+   "name": "DHS118-Avalon Beach, Los Angeles",
+   "lat": 33.3433,
+   "lon": -118.325,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.045,
+     "level": "low",
+     "reasons": [
+      "1.90 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.111,
+     "level": "low",
+     "reasons": [
+      "1.90 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.095,
+     "level": "low",
+     "reasons": [
+      "1.90 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.042,
+     "level": "low",
+     "reasons": [
+      "1.90 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS119",
+   "name": "DHS119-Avalon Beach, Los Angeles",
+   "lat": 33.3438,
+   "lon": -118.326,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.05,
+     "level": "low",
+     "reasons": [
+      "1.90 in of rain in the 3 days before",
+      "history: unsafe on 18% of 467 past tests"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.073,
+     "level": "low",
+     "reasons": [
+      "1.90 in of rain in the past week",
+      "history: unsafe on 18% of 467 past tests"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.074,
+     "level": "low",
+     "reasons": [
+      "1.90 in of rain in the past week",
+      "history: unsafe on 18% of 467 past tests"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.071,
+     "level": "low",
+     "reasons": [
+      "1.90 in of rain in the past week",
+      "history: unsafe on 18% of 467 past tests"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS120",
+   "name": "DHS120-Avalon Beach, Los Angeles",
+   "lat": 33.3442,
+   "lon": -118.326,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.054,
+     "level": "low",
+     "reasons": [
+      "1.90 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.091,
+     "level": "low",
+     "reasons": [
+      "1.90 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.083,
+     "level": "low",
+     "reasons": [
+      "1.90 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.071,
+     "level": "low",
+     "reasons": [
+      "1.90 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DHS121",
+   "name": "DHS121-Avalon Beach, Los Angeles",
+   "lat": 33.345,
+   "lon": -118.327,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.058,
+     "level": "low",
+     "reasons": [
+      "1.90 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.144,
+     "level": "low",
+     "reasons": [
+      "1.90 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.123,
+     "level": "low",
+     "reasons": [
+      "1.90 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.057,
+     "level": "low",
+     "reasons": [
+      "1.90 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DPH 002B",
+   "name": "DPH 002B",
+   "lat": 34.0368898,
+   "lon": -118.676899,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.028,
+     "level": "low",
+     "reasons": [
+      "0.40 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.088,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.137,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.051,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DPH 122",
+   "name": "DPH 122",
+   "lat": 33.9611547,
+   "lon": -118.4562179,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.081,
+     "level": "low",
+     "reasons": [
+      "0.11 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.047,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.087,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.041,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DPH 123",
+   "name": "DPH 123",
+   "lat": 33.35074,
+   "lon": -118.3284295,
+   "type": null,
+   "last_test": {
+    "date": "2026-10-06",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.031,
+     "level": "low",
+     "reasons": [
+      "1.90 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.076,
+     "level": "low",
+     "reasons": [
+      "1.90 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.081,
+     "level": "low",
+     "reasons": [
+      "1.90 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.044,
+     "level": "low",
+     "reasons": [
+      "1.90 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DPH 124",
+   "name": "DPH 124",
+   "lat": 33.3512183,
+   "lon": -118.3286159,
+   "type": null,
+   "last_test": {
+    "date": "2026-10-06",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.031,
+     "level": "low",
+     "reasons": [
+      "1.90 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.076,
+     "level": "low",
+     "reasons": [
+      "1.90 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.081,
+     "level": "low",
+     "reasons": [
+      "1.90 in of rain in the past week"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.044,
+     "level": "low",
+     "reasons": [
+      "1.90 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DPH 125",
+   "name": "DPH 125",
+   "lat": 33.844285,
+   "lon": -118.395041,
+   "type": null,
+   "last_test": {
+    "date": "2026-08-26",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.061,
+     "level": "low",
+     "reasons": [
+      "0.28 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.096,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.069,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.035,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "DPH 126",
+   "name": "DPH 126",
+   "lat": 33.8441,
+   "lon": -118.3939,
+   "type": null,
+   "last_test": {
+    "date": "2026-08-26",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.061,
+     "level": "low",
+     "reasons": [
+      "0.28 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.096,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.069,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.035,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "MDRH-1",
+   "name": "MDRH-1",
+   "lat": 33.979889,
+   "lon": -118.4577173,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-21",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.11,
+     "level": "low",
+     "reasons": [
+      "0.11 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.098,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.077,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.079,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "MDRH-2",
+   "name": "MDRH-2",
+   "lat": 33.98084,
+   "lon": -118.45802,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.092,
+     "level": "low",
+     "reasons": [
+      "0.11 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.093,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.07,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.071,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "MDRH-3",
+   "name": "MDRH-3",
+   "lat": 33.9819795,
+   "lon": -118.4569488,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-19",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.105,
+     "level": "low",
+     "reasons": [
+      "0.11 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.118,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.1,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.106,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-1-02",
+   "name": "SMB-1-02",
+   "lat": 34.039,
+   "lon": -118.8929,
+   "type": null,
+   "last_test": {
+    "date": "2026-06-24",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.078,
+     "level": "low",
+     "reasons": [
+      "2.93 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.088,
+     "level": "low",
+     "reasons": [
+      "0.63 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.251,
+     "level": "caution",
+     "reasons": [
+      "2.93 in of rain in the past week",
+      "big spring tide (7.3 ft range); beaches fail about twice as often during spring tides"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.098,
+     "level": "low",
+     "reasons": [
+      "2.93 in of rain in the past week"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-1-10",
+   "name": "SMB-1-10",
+   "lat": 34.0329,
+   "lon": -118.741,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.04,
+     "level": "low",
+     "reasons": [
+      "0.40 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.064,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.084,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.058,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-1-12",
+   "name": "SMB-1-12",
+   "lat": 34.0306,
+   "lon": -118.7111,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.047,
+     "level": "low",
+     "reasons": [
+      "0.40 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.07,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.081,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.061,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-1-13",
+   "name": "SMB-1-13",
+   "lat": 34.0383,
+   "lon": -118.6731,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.055,
+     "level": "low",
+     "reasons": [
+      "0.40 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.092,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.113,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.071,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-1-14",
+   "name": "SMB-1-14",
+   "lat": 34.0362,
+   "lon": -118.6364,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.046,
+     "level": "low",
+     "reasons": [
+      "0.40 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.124,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.176,
+     "level": "caution",
+     "reasons": [
+      "big spring tide (7.3 ft range); beaches fail about twice as often during spring tides",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.073,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-1-16",
+   "name": "SMB-1-16",
+   "lat": 34.0253392,
+   "lon": -118.5977,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-06",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.027,
+     "level": "low",
+     "reasons": [
+      "0.11 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.045,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.085,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.038,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-1-17",
+   "name": "SMB-1-17",
+   "lat": 34.02530393,
+   "lon": -118.5962,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-07-21",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.018,
+     "level": "low",
+     "reasons": [
+      "0.11 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.035,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.066,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.031,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-1-18",
+   "name": "SMB-1-18",
+   "lat": 34.0385,
+   "lon": -118.58196,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-21",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.06,
+     "level": "low",
+     "reasons": [
+      "0.11 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.074,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.093,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.09,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-1-3",
+   "name": "SMB-1-3",
+   "lat": 34.0378,
+   "lon": -118.8747,
+   "type": "usually clean",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.006,
+     "level": "low",
+     "reasons": [
+      "0.40 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.018,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.028,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.015,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-1-6",
+   "name": "SMB-1-6",
+   "lat": 34.0171,
+   "lon": -118.7897,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.034,
+     "level": "low",
+     "reasons": [
+      "0.40 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.07,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.083,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.044,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-1-8",
+   "name": "SMB-1-8",
+   "lat": 34.0253,
+   "lon": -118.7656,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.045,
+     "level": "low",
+     "reasons": [
+      "0.40 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.071,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.083,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.059,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-2-1",
+   "name": "SMB-2-1",
+   "lat": 34.02530412,
+   "lon": -118.566,
+   "type": "chronic",
+   "last_test": {
+    "date": "2026-10-21",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.068,
+     "level": "low",
+     "reasons": [
+      "0.11 in of rain in the 3 days before",
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.061,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.077,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.081,
+     "level": "low",
+     "reasons": [
+      "this beach is often unsafe even in dry weather"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-2-10",
+   "name": "SMB-2-10",
+   "lat": 33.95702,
+   "lon": -118.45196,
+   "type": "rain-driven",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 31.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.076,
+     "level": "low",
+     "reasons": [
+      "0.11 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.07,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.112,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.06,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-2-11",
+   "name": "SMB-2-11",
+   "lat": 33.9444,
+   "lon": -118.4442,
+   "type": "rain-driven",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.083,
+     "level": "low",
+     "reasons": [
+      "0.11 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.05,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.107,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.042,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-2-13",
+   "name": "SMB-2-13",
+   "lat": 33.93071,
+   "lon": -118.43711,
+   "type": "rain-driven",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.053,
+     "level": "low",
+     "reasons": [
+      "0.11 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.045,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-26",
+     "risk": 0.098,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    },
+    {
+     "date": "2026-10-27",
+     "risk": 0.04,
+     "level": "low",
+     "reasons": [
+      "dry weather and a clean recent record"
+     ]
+    }
+   ]
+  },
+  {
+   "station": "SMB-2-4",
+   "name": "SMB-2-4",
+   "lat": 34.03744,
+   "lon": -118.54191,
+   "type": "rain-driven",
+   "last_test": {
+    "date": "2026-10-20",
+    "value": 10.0,
+    "unsafe": false
+   },
+   "forecast": [
+    {
+     "date": "2026-10-24",
+     "risk": 0.027,
+     "level": "low",
+     "reasons": [
+      "0.11 in of rain in the 3 days before"
+     ]
+    },
+    {
+     "date": "2026-10-25",
+     "risk": 0.053,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -4122,1585 +5748,6 @@
    ]
   },
   {
-   "station": "DHS114",
-   "name": "DHS114-Hermosa Beach, Los Angeles",
-   "lat": 33.8715,
-   "lon": -118.407,
-   "type": "usually clean",
-   "last_test": {
-    "date": "2026-10-19",
-    "value": 20.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2026-10-24",
-     "risk": 0.043,
-     "level": "low",
-     "reasons": [
-      "0.28 in of rain in the 3 days before"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "risk": 0.103,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2026-10-26",
-     "risk": 0.151,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "risk": 0.066,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "DHS115",
-   "name": "DHS115-Hermosa Beach, Los Angeles",
-   "lat": 33.8522,
-   "lon": -118.399,
-   "type": "rain-driven",
-   "last_test": {
-    "date": "2026-10-21",
-    "value": 10.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2026-10-24",
-     "risk": 0.099,
-     "level": "low",
-     "reasons": [
-      "0.28 in of rain in the 3 days before"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "risk": 0.182,
-     "level": "caution",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2026-10-26",
-     "risk": 0.152,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "risk": 0.104,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "DHS115B",
-   "name": "DHS113B-Hermosa Beach, Los Angeles",
-   "lat": 33.8523,
-   "lon": -118.4,
-   "type": "usually clean",
-   "last_test": {
-    "date": "2026-10-19",
-    "value": 10.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2026-10-24",
-     "risk": 0.09,
-     "level": "low",
-     "reasons": [
-      "0.28 in of rain in the 3 days before"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "risk": 0.217,
-     "level": "caution",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2026-10-26",
-     "risk": 0.19,
-     "level": "caution",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "risk": 0.099,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "DHS116",
-   "name": "DHS116-Redondo Beach, Los Angeles",
-   "lat": 33.8321,
-   "lon": -118.391,
-   "type": "usually clean",
-   "last_test": {
-    "date": "2026-10-19",
-    "value": 10.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2026-10-24",
-     "risk": 0.092,
-     "level": "low",
-     "reasons": [
-      "0.28 in of rain in the 3 days before"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "risk": 0.244,
-     "level": "caution",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2026-10-26",
-     "risk": 0.214,
-     "level": "caution",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "risk": 0.113,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "DHS117",
-   "name": "DHS117-Avalon Beach, Los Angeles",
-   "lat": 33.343,
-   "lon": -118.324,
-   "type": "usually clean",
-   "last_test": {
-    "date": "2026-10-20",
-    "value": 10.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2026-10-24",
-     "risk": 0.11,
-     "level": "low",
-     "reasons": [
-      "1.90 in of rain in the 3 days before"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "risk": 0.186,
-     "level": "caution",
-     "reasons": [
-      "1.90 in of rain in the past week"
-     ]
-    },
-    {
-     "date": "2026-10-26",
-     "risk": 0.261,
-     "level": "caution",
-     "reasons": [
-      "1.90 in of rain in the past week"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "risk": 0.125,
-     "level": "low",
-     "reasons": [
-      "1.90 in of rain in the past week"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "DHS118",
-   "name": "DHS118-Avalon Beach, Los Angeles",
-   "lat": 33.3433,
-   "lon": -118.325,
-   "type": "usually clean",
-   "last_test": {
-    "date": "2026-10-20",
-    "value": 10.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2026-10-24",
-     "risk": 0.119,
-     "level": "low",
-     "reasons": [
-      "1.90 in of rain in the 3 days before"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "risk": 0.151,
-     "level": "low",
-     "reasons": [
-      "1.90 in of rain in the past week"
-     ]
-    },
-    {
-     "date": "2026-10-26",
-     "risk": 0.226,
-     "level": "caution",
-     "reasons": [
-      "1.90 in of rain in the past week"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "risk": 0.129,
-     "level": "low",
-     "reasons": [
-      "1.90 in of rain in the past week"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "DHS119",
-   "name": "DHS119-Avalon Beach, Los Angeles",
-   "lat": 33.3438,
-   "lon": -118.326,
-   "type": "usually clean",
-   "last_test": {
-    "date": "2026-10-20",
-    "value": 10.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2026-10-24",
-     "risk": 0.159,
-     "level": "low",
-     "reasons": [
-      "1.90 in of rain in the 3 days before",
-      "history: unsafe on 18% of 467 past tests"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "risk": 0.121,
-     "level": "low",
-     "reasons": [
-      "1.90 in of rain in the past week",
-      "history: unsafe on 18% of 467 past tests"
-     ]
-    },
-    {
-     "date": "2026-10-26",
-     "risk": 0.176,
-     "level": "caution",
-     "reasons": [
-      "1.90 in of rain in the past week",
-      "history: unsafe on 18% of 467 past tests"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "risk": 0.175,
-     "level": "caution",
-     "reasons": [
-      "1.90 in of rain in the past week",
-      "history: unsafe on 18% of 467 past tests"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "DHS120",
-   "name": "DHS120-Avalon Beach, Los Angeles",
-   "lat": 33.3442,
-   "lon": -118.326,
-   "type": "usually clean",
-   "last_test": {
-    "date": "2026-10-20",
-    "value": 10.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2026-10-24",
-     "risk": 0.167,
-     "level": "caution",
-     "reasons": [
-      "1.90 in of rain in the 3 days before"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "risk": 0.137,
-     "level": "low",
-     "reasons": [
-      "1.90 in of rain in the past week"
-     ]
-    },
-    {
-     "date": "2026-10-26",
-     "risk": 0.202,
-     "level": "caution",
-     "reasons": [
-      "1.90 in of rain in the past week"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "risk": 0.175,
-     "level": "caution",
-     "reasons": [
-      "1.90 in of rain in the past week"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "DHS121",
-   "name": "DHS121-Avalon Beach, Los Angeles",
-   "lat": 33.345,
-   "lon": -118.327,
-   "type": "usually clean",
-   "last_test": {
-    "date": "2026-10-20",
-    "value": 10.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2026-10-24",
-     "risk": 0.16,
-     "level": "caution",
-     "reasons": [
-      "1.90 in of rain in the 3 days before"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "risk": 0.19,
-     "level": "caution",
-     "reasons": [
-      "1.90 in of rain in the past week"
-     ]
-    },
-    {
-     "date": "2026-10-26",
-     "risk": 0.289,
-     "level": "caution",
-     "reasons": [
-      "1.90 in of rain in the past week"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "risk": 0.172,
-     "level": "caution",
-     "reasons": [
-      "1.90 in of rain in the past week"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "DPH 002B",
-   "name": "DPH 002B",
-   "lat": 34.0368898,
-   "lon": -118.676899,
-   "type": "usually clean",
-   "last_test": {
-    "date": "2026-10-20",
-    "value": 10.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2026-10-24",
-     "risk": 0.049,
-     "level": "low",
-     "reasons": [
-      "0.40 in of rain in the 3 days before"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "risk": 0.131,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2026-10-26",
-     "risk": 0.28,
-     "level": "caution",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "risk": 0.104,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "DPH 122",
-   "name": "DPH 122",
-   "lat": 33.9611547,
-   "lon": -118.4562179,
-   "type": "usually clean",
-   "last_test": {
-    "date": "2026-10-19",
-    "value": 10.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2026-10-24",
-     "risk": 0.11,
-     "level": "low",
-     "reasons": [
-      "0.11 in of rain in the 3 days before"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "risk": 0.1,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2026-10-26",
-     "risk": 0.163,
-     "level": "caution",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "risk": 0.067,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "DPH 123",
-   "name": "DPH 123",
-   "lat": 33.35074,
-   "lon": -118.3284295,
-   "type": null,
-   "last_test": {
-    "date": "2026-10-06",
-    "value": 10.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2026-10-24",
-     "risk": 0.041,
-     "level": "low",
-     "reasons": [
-      "1.90 in of rain in the 3 days before"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "risk": 0.142,
-     "level": "low",
-     "reasons": [
-      "1.90 in of rain in the past week"
-     ]
-    },
-    {
-     "date": "2026-10-26",
-     "risk": 0.181,
-     "level": "caution",
-     "reasons": [
-      "1.90 in of rain in the past week"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "risk": 0.1,
-     "level": "low",
-     "reasons": [
-      "1.90 in of rain in the past week"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "DPH 124",
-   "name": "DPH 124",
-   "lat": 33.3512183,
-   "lon": -118.3286159,
-   "type": null,
-   "last_test": {
-    "date": "2026-10-06",
-    "value": 10.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2026-10-24",
-     "risk": 0.041,
-     "level": "low",
-     "reasons": [
-      "1.90 in of rain in the 3 days before"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "risk": 0.142,
-     "level": "low",
-     "reasons": [
-      "1.90 in of rain in the past week"
-     ]
-    },
-    {
-     "date": "2026-10-26",
-     "risk": 0.181,
-     "level": "caution",
-     "reasons": [
-      "1.90 in of rain in the past week"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "risk": 0.1,
-     "level": "low",
-     "reasons": [
-      "1.90 in of rain in the past week"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "DPH 125",
-   "name": "DPH 125",
-   "lat": 33.844285,
-   "lon": -118.395041,
-   "type": null,
-   "last_test": {
-    "date": "2026-08-26",
-    "value": 10.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2026-10-24",
-     "risk": 0.103,
-     "level": "low",
-     "reasons": [
-      "0.28 in of rain in the 3 days before"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "risk": 0.231,
-     "level": "caution",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2026-10-26",
-     "risk": 0.234,
-     "level": "caution",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "risk": 0.125,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "DPH 126",
-   "name": "DPH 126",
-   "lat": 33.8441,
-   "lon": -118.3939,
-   "type": null,
-   "last_test": {
-    "date": "2026-08-26",
-    "value": 10.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2026-10-24",
-     "risk": 0.103,
-     "level": "low",
-     "reasons": [
-      "0.28 in of rain in the 3 days before"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "risk": 0.231,
-     "level": "caution",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2026-10-26",
-     "risk": 0.234,
-     "level": "caution",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "risk": 0.125,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "MDRH-1",
-   "name": "MDRH-1",
-   "lat": 33.979889,
-   "lon": -118.4577173,
-   "type": "chronic",
-   "last_test": {
-    "date": "2026-10-21",
-    "value": 10.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2026-10-24",
-     "risk": 0.286,
-     "level": "caution",
-     "reasons": [
-      "0.11 in of rain in the 3 days before",
-      "this beach is often unsafe even in dry weather"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "risk": 0.271,
-     "level": "caution",
-     "reasons": [
-      "this beach is often unsafe even in dry weather"
-     ]
-    },
-    {
-     "date": "2026-10-26",
-     "risk": 0.178,
-     "level": "caution",
-     "reasons": [
-      "this beach is often unsafe even in dry weather"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "risk": 0.143,
-     "level": "low",
-     "reasons": [
-      "this beach is often unsafe even in dry weather"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "MDRH-2",
-   "name": "MDRH-2",
-   "lat": 33.98084,
-   "lon": -118.45802,
-   "type": "chronic",
-   "last_test": {
-    "date": "2026-10-19",
-    "value": 10.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2026-10-24",
-     "risk": 0.292,
-     "level": "caution",
-     "reasons": [
-      "0.11 in of rain in the 3 days before",
-      "this beach is often unsafe even in dry weather"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "risk": 0.266,
-     "level": "caution",
-     "reasons": [
-      "this beach is often unsafe even in dry weather"
-     ]
-    },
-    {
-     "date": "2026-10-26",
-     "risk": 0.163,
-     "level": "caution",
-     "reasons": [
-      "this beach is often unsafe even in dry weather"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "risk": 0.133,
-     "level": "low",
-     "reasons": [
-      "this beach is often unsafe even in dry weather"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "MDRH-3",
-   "name": "MDRH-3",
-   "lat": 33.9819795,
-   "lon": -118.4569488,
-   "type": "chronic",
-   "last_test": {
-    "date": "2026-10-19",
-    "value": 10.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2026-10-24",
-     "risk": 0.275,
-     "level": "caution",
-     "reasons": [
-      "0.11 in of rain in the 3 days before",
-      "this beach is often unsafe even in dry weather"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "risk": 0.258,
-     "level": "caution",
-     "reasons": [
-      "this beach is often unsafe even in dry weather"
-     ]
-    },
-    {
-     "date": "2026-10-26",
-     "risk": 0.182,
-     "level": "caution",
-     "reasons": [
-      "this beach is often unsafe even in dry weather"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "risk": 0.149,
-     "level": "low",
-     "reasons": [
-      "this beach is often unsafe even in dry weather"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "SMB-1-02",
-   "name": "SMB-1-02",
-   "lat": 34.039,
-   "lon": -118.8929,
-   "type": null,
-   "last_test": {
-    "date": "2026-06-24",
-    "value": 10.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2026-10-24",
-     "risk": 0.199,
-     "level": "caution",
-     "reasons": [
-      "2.93 in of rain in the 3 days before"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "risk": 0.258,
-     "level": "caution",
-     "reasons": [
-      "0.63 in of rain in the 3 days before"
-     ]
-    },
-    {
-     "date": "2026-10-26",
-     "risk": 0.461,
-     "level": "caution",
-     "reasons": [
-      "2.93 in of rain in the past week"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "risk": 0.213,
-     "level": "caution",
-     "reasons": [
-      "2.93 in of rain in the past week"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "SMB-1-10",
-   "name": "SMB-1-10",
-   "lat": 34.0329,
-   "lon": -118.741,
-   "type": "chronic",
-   "last_test": {
-    "date": "2026-10-20",
-    "value": 10.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2026-10-24",
-     "risk": 0.076,
-     "level": "low",
-     "reasons": [
-      "0.40 in of rain in the 3 days before",
-      "this beach is often unsafe even in dry weather"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "risk": 0.114,
-     "level": "low",
-     "reasons": [
-      "this beach is often unsafe even in dry weather"
-     ]
-    },
-    {
-     "date": "2026-10-26",
-     "risk": 0.13,
-     "level": "low",
-     "reasons": [
-      "this beach is often unsafe even in dry weather"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "risk": 0.096,
-     "level": "low",
-     "reasons": [
-      "this beach is often unsafe even in dry weather"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "SMB-1-12",
-   "name": "SMB-1-12",
-   "lat": 34.0306,
-   "lon": -118.7111,
-   "type": "chronic",
-   "last_test": {
-    "date": "2026-10-20",
-    "value": 10.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2026-10-24",
-     "risk": 0.081,
-     "level": "low",
-     "reasons": [
-      "0.40 in of rain in the 3 days before",
-      "this beach is often unsafe even in dry weather"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "risk": 0.11,
-     "level": "low",
-     "reasons": [
-      "this beach is often unsafe even in dry weather"
-     ]
-    },
-    {
-     "date": "2026-10-26",
-     "risk": 0.121,
-     "level": "low",
-     "reasons": [
-      "this beach is often unsafe even in dry weather"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "risk": 0.099,
-     "level": "low",
-     "reasons": [
-      "this beach is often unsafe even in dry weather"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "SMB-1-13",
-   "name": "SMB-1-13",
-   "lat": 34.0383,
-   "lon": -118.6731,
-   "type": "chronic",
-   "last_test": {
-    "date": "2026-10-20",
-    "value": 10.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2026-10-24",
-     "risk": 0.064,
-     "level": "low",
-     "reasons": [
-      "0.40 in of rain in the 3 days before",
-      "this beach is often unsafe even in dry weather"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "risk": 0.127,
-     "level": "low",
-     "reasons": [
-      "this beach is often unsafe even in dry weather"
-     ]
-    },
-    {
-     "date": "2026-10-26",
-     "risk": 0.208,
-     "level": "caution",
-     "reasons": [
-      "this beach is often unsafe even in dry weather"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "risk": 0.117,
-     "level": "low",
-     "reasons": [
-      "this beach is often unsafe even in dry weather"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "SMB-1-14",
-   "name": "SMB-1-14",
-   "lat": 34.0362,
-   "lon": -118.6364,
-   "type": "chronic",
-   "last_test": {
-    "date": "2026-10-20",
-    "value": 10.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2026-10-24",
-     "risk": 0.059,
-     "level": "low",
-     "reasons": [
-      "0.40 in of rain in the 3 days before",
-      "this beach is often unsafe even in dry weather"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "risk": 0.145,
-     "level": "low",
-     "reasons": [
-      "this beach is often unsafe even in dry weather"
-     ]
-    },
-    {
-     "date": "2026-10-26",
-     "risk": 0.252,
-     "level": "caution",
-     "reasons": [
-      "this beach is often unsafe even in dry weather"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "risk": 0.105,
-     "level": "low",
-     "reasons": [
-      "this beach is often unsafe even in dry weather"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "SMB-1-16",
-   "name": "SMB-1-16",
-   "lat": 34.0253392,
-   "lon": -118.5977,
-   "type": "usually clean",
-   "last_test": {
-    "date": "2026-10-06",
-    "value": 10.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2026-10-24",
-     "risk": 0.037,
-     "level": "low",
-     "reasons": [
-      "0.11 in of rain in the 3 days before"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "risk": 0.074,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2026-10-26",
-     "risk": 0.182,
-     "level": "caution",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "risk": 0.076,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "SMB-1-17",
-   "name": "SMB-1-17",
-   "lat": 34.02530393,
-   "lon": -118.5962,
-   "type": "usually clean",
-   "last_test": {
-    "date": "2026-07-21",
-    "value": 10.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2026-10-24",
-     "risk": 0.023,
-     "level": "low",
-     "reasons": [
-      "0.11 in of rain in the 3 days before"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "risk": 0.047,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2026-10-26",
-     "risk": 0.106,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "risk": 0.042,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "SMB-1-18",
-   "name": "SMB-1-18",
-   "lat": 34.0385,
-   "lon": -118.58196,
-   "type": "chronic",
-   "last_test": {
-    "date": "2026-10-21",
-    "value": 10.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2026-10-24",
-     "risk": 0.065,
-     "level": "low",
-     "reasons": [
-      "0.11 in of rain in the 3 days before",
-      "this beach is often unsafe even in dry weather"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "risk": 0.101,
-     "level": "low",
-     "reasons": [
-      "this beach is often unsafe even in dry weather"
-     ]
-    },
-    {
-     "date": "2026-10-26",
-     "risk": 0.1,
-     "level": "low",
-     "reasons": [
-      "this beach is often unsafe even in dry weather"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "risk": 0.081,
-     "level": "low",
-     "reasons": [
-      "this beach is often unsafe even in dry weather"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "SMB-1-3",
-   "name": "SMB-1-3",
-   "lat": 34.0378,
-   "lon": -118.8747,
-   "type": "usually clean",
-   "last_test": {
-    "date": "2026-10-20",
-    "value": 10.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2026-10-24",
-     "risk": 0.007,
-     "level": "low",
-     "reasons": [
-      "0.40 in of rain in the 3 days before"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "risk": 0.015,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2026-10-26",
-     "risk": 0.041,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "risk": 0.025,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "SMB-1-6",
-   "name": "SMB-1-6",
-   "lat": 34.0171,
-   "lon": -118.7897,
-   "type": "chronic",
-   "last_test": {
-    "date": "2026-10-20",
-    "value": 10.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2026-10-24",
-     "risk": 0.062,
-     "level": "low",
-     "reasons": [
-      "0.40 in of rain in the 3 days before",
-      "this beach is often unsafe even in dry weather"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "risk": 0.119,
-     "level": "low",
-     "reasons": [
-      "this beach is often unsafe even in dry weather"
-     ]
-    },
-    {
-     "date": "2026-10-26",
-     "risk": 0.202,
-     "level": "caution",
-     "reasons": [
-      "this beach is often unsafe even in dry weather"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "risk": 0.106,
-     "level": "low",
-     "reasons": [
-      "this beach is often unsafe even in dry weather"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "SMB-1-8",
-   "name": "SMB-1-8",
-   "lat": 34.0253,
-   "lon": -118.7656,
-   "type": "chronic",
-   "last_test": {
-    "date": "2026-10-20",
-    "value": 10.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2026-10-24",
-     "risk": 0.081,
-     "level": "low",
-     "reasons": [
-      "0.40 in of rain in the 3 days before",
-      "this beach is often unsafe even in dry weather"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "risk": 0.118,
-     "level": "low",
-     "reasons": [
-      "this beach is often unsafe even in dry weather"
-     ]
-    },
-    {
-     "date": "2026-10-26",
-     "risk": 0.129,
-     "level": "low",
-     "reasons": [
-      "this beach is often unsafe even in dry weather"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "risk": 0.098,
-     "level": "low",
-     "reasons": [
-      "this beach is often unsafe even in dry weather"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "SMB-2-1",
-   "name": "SMB-2-1",
-   "lat": 34.02530412,
-   "lon": -118.566,
-   "type": "chronic",
-   "last_test": {
-    "date": "2026-10-21",
-    "value": 10.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2026-10-24",
-     "risk": 0.082,
-     "level": "low",
-     "reasons": [
-      "0.11 in of rain in the 3 days before",
-      "this beach is often unsafe even in dry weather"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "risk": 0.108,
-     "level": "low",
-     "reasons": [
-      "this beach is often unsafe even in dry weather"
-     ]
-    },
-    {
-     "date": "2026-10-26",
-     "risk": 0.109,
-     "level": "low",
-     "reasons": [
-      "this beach is often unsafe even in dry weather"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "risk": 0.095,
-     "level": "low",
-     "reasons": [
-      "this beach is often unsafe even in dry weather"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "SMB-2-10",
-   "name": "SMB-2-10",
-   "lat": 33.95702,
-   "lon": -118.45196,
-   "type": "rain-driven",
-   "last_test": {
-    "date": "2026-10-20",
-    "value": 31.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2026-10-24",
-     "risk": 0.092,
-     "level": "low",
-     "reasons": [
-      "0.11 in of rain in the 3 days before"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "risk": 0.123,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2026-10-26",
-     "risk": 0.209,
-     "level": "caution",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "risk": 0.096,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "SMB-2-11",
-   "name": "SMB-2-11",
-   "lat": 33.9444,
-   "lon": -118.4442,
-   "type": "rain-driven",
-   "last_test": {
-    "date": "2026-10-20",
-    "value": 10.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2026-10-24",
-     "risk": 0.1,
-     "level": "low",
-     "reasons": [
-      "0.11 in of rain in the 3 days before"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "risk": 0.101,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2026-10-26",
-     "risk": 0.182,
-     "level": "caution",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "risk": 0.066,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "SMB-2-13",
-   "name": "SMB-2-13",
-   "lat": 33.93071,
-   "lon": -118.43711,
-   "type": "rain-driven",
-   "last_test": {
-    "date": "2026-10-20",
-    "value": 10.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2026-10-24",
-     "risk": 0.062,
-     "level": "low",
-     "reasons": [
-      "0.11 in of rain in the 3 days before"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "risk": 0.083,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2026-10-26",
-     "risk": 0.183,
-     "level": "caution",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "risk": 0.066,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    }
-   ]
-  },
-  {
-   "station": "SMB-2-4",
-   "name": "SMB-2-4",
-   "lat": 34.03744,
-   "lon": -118.54191,
-   "type": "rain-driven",
-   "last_test": {
-    "date": "2026-10-20",
-    "value": 10.0,
-    "unsafe": false
-   },
-   "forecast": [
-    {
-     "date": "2026-10-24",
-     "risk": 0.045,
-     "level": "low",
-     "reasons": [
-      "0.11 in of rain in the 3 days before"
-     ]
-    },
-    {
-     "date": "2026-10-25",
-     "risk": 0.093,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2026-10-26",
-     "risk": 0.209,
-     "level": "caution",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    },
-    {
-     "date": "2026-10-27",
-     "risk": 0.077,
-     "level": "low",
-     "reasons": [
-      "dry weather and a clean recent record"
-     ]
-    }
-   ]
-  },
-  {
    "station": "SMB-2-7",
    "name": "SMB-2-7",
    "lat": 34.02645,
@@ -5714,7 +5761,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.078,
+     "risk": 0.045,
      "level": "low",
      "reasons": [
       "0.11 in of rain in the 3 days before",
@@ -5723,7 +5770,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.099,
+     "risk": 0.042,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5731,7 +5778,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.1,
+     "risk": 0.052,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5739,7 +5786,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.083,
+     "risk": 0.055,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -5761,8 +5808,8 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.165,
-     "level": "caution",
+     "risk": 0.073,
+     "level": "low",
      "reasons": [
       "0.11 in of rain in the 3 days before",
       "this beach is often unsafe even in dry weather"
@@ -5770,24 +5817,24 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.186,
-     "level": "caution",
+     "risk": 0.068,
+     "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
      ]
     },
     {
      "date": "2026-10-26",
-     "risk": 0.208,
-     "level": "caution",
+     "risk": 0.088,
+     "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.164,
-     "level": "caution",
+     "risk": 0.085,
+     "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
      ]
@@ -5808,8 +5855,8 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.164,
-     "level": "caution",
+     "risk": 0.092,
+     "level": "low",
      "reasons": [
       "0.11 in of rain in the 3 days before",
       "this beach is often unsafe even in dry weather"
@@ -5817,24 +5864,24 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.207,
-     "level": "caution",
+     "risk": 0.081,
+     "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
      ]
     },
     {
      "date": "2026-10-26",
-     "risk": 0.234,
-     "level": "caution",
+     "risk": 0.117,
+     "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.17,
-     "level": "caution",
+     "risk": 0.102,
+     "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
      ]
@@ -5855,7 +5902,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.057,
+     "risk": 0.027,
      "level": "low",
      "reasons": [
       "0.11 in of rain in the 3 days before"
@@ -5863,7 +5910,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.083,
+     "risk": 0.037,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -5871,15 +5918,15 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.243,
-     "level": "caution",
+     "risk": 0.106,
+     "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.099,
+     "risk": 0.047,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -5901,7 +5948,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.079,
+     "risk": 0.045,
      "level": "low",
      "reasons": [
       "0.11 in of rain in the 3 days before"
@@ -5909,7 +5956,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.127,
+     "risk": 0.078,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -5917,15 +5964,15 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.236,
-     "level": "caution",
+     "risk": 0.119,
+     "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.121,
+     "risk": 0.074,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -5947,7 +5994,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.081,
+     "risk": 0.04,
      "level": "low",
      "reasons": [
       "0.11 in of rain in the 3 days before"
@@ -5955,7 +6002,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.104,
+     "risk": 0.072,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -5963,15 +6010,15 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.204,
-     "level": "caution",
+     "risk": 0.103,
+     "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.089,
+     "risk": 0.046,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -5993,7 +6040,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.049,
+     "risk": 0.024,
      "level": "low",
      "reasons": [
       "0.14 in of rain in the 3 days before"
@@ -6001,7 +6048,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.126,
+     "risk": 0.11,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -6009,15 +6056,15 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.178,
-     "level": "caution",
+     "risk": 0.141,
+     "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.078,
+     "risk": 0.055,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -6039,7 +6086,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.023,
+     "risk": 0.018,
      "level": "low",
      "reasons": [
       "0.14 in of rain in the 3 days before"
@@ -6047,7 +6094,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.059,
+     "risk": 0.048,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -6055,7 +6102,7 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.087,
+     "risk": 0.079,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -6063,7 +6110,7 @@
     },
     {
      "date": "2026-10-27",
-     "risk": 0.073,
+     "risk": 0.06,
      "level": "low",
      "reasons": [
       "dry weather and a clean recent record"
@@ -6085,7 +6132,7 @@
    "forecast": [
     {
      "date": "2026-10-24",
-     "risk": 0.107,
+     "risk": 0.053,
      "level": "low",
      "reasons": [
       "0.40 in of rain in the 3 days before",
@@ -6094,7 +6141,7 @@
     },
     {
      "date": "2026-10-25",
-     "risk": 0.148,
+     "risk": 0.085,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
@@ -6102,15 +6149,15 @@
     },
     {
      "date": "2026-10-26",
-     "risk": 0.17,
-     "level": "caution",
+     "risk": 0.127,
+     "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"
      ]
     },
     {
      "date": "2026-10-27",
-     "risk": 0.135,
+     "risk": 0.094,
      "level": "low",
      "reasons": [
       "this beach is often unsafe even in dry weather"

@@ -1,4 +1,5 @@
 {
+ "model_id": "40ebd86751",
  "issued": "2023-01-09",
  "mode": "replay",
  "rain_source": "observed rain (replay)",
@@ -23,7 +24,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.389,
+     "risk": 0.475,
      "level": "caution",
      "reasons": [
       "0.33 in of rain in the 3 days before",
@@ -32,7 +33,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.888,
+     "risk": 0.862,
      "level": "high",
      "reasons": [
       "3.22 in of rain in the 3 days before",
@@ -41,7 +42,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.851,
+     "risk": 0.811,
      "level": "high",
      "reasons": [
       "4.15 in of rain in the 3 days before",
@@ -54,7 +55,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.452,
+     "risk": 0.281,
      "level": "caution",
      "reasons": [
       "3.82 in of rain in the 3 days before",
@@ -77,7 +78,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.186,
+     "risk": 0.368,
      "level": "caution",
      "reasons": [
       "0.33 in of rain in the 3 days before"
@@ -85,7 +86,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.789,
+     "risk": 0.71,
      "level": "high",
      "reasons": [
       "3.22 in of rain in the 3 days before"
@@ -93,7 +94,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.748,
+     "risk": 0.668,
      "level": "high",
      "reasons": [
       "4.15 in of rain in the 3 days before"
@@ -101,8 +102,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.253,
-     "level": "caution",
+     "risk": 0.106,
+     "level": "low",
      "reasons": [
       "3.82 in of rain in the 3 days before"
      ]
@@ -123,7 +124,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.418,
+     "risk": 0.465,
      "level": "caution",
      "reasons": [
       "0.33 in of rain in the 3 days before",
@@ -132,7 +133,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.9,
+     "risk": 0.886,
      "level": "high",
      "reasons": [
       "3.22 in of rain in the 3 days before",
@@ -141,7 +142,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.885,
+     "risk": 0.836,
      "level": "high",
      "reasons": [
       "4.15 in of rain in the 3 days before",
@@ -154,8 +155,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.54,
-     "level": "high",
+     "risk": 0.235,
+     "level": "caution",
      "reasons": [
       "3.82 in of rain in the 3 days before",
       "last test (Jan 03) was over the limit"
@@ -177,7 +178,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.428,
+     "risk": 0.497,
      "level": "caution",
      "reasons": [
       "0.33 in of rain in the 3 days before"
@@ -185,7 +186,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.901,
+     "risk": 0.861,
      "level": "high",
      "reasons": [
       "3.22 in of rain in the 3 days before"
@@ -193,7 +194,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.882,
+     "risk": 0.813,
      "level": "high",
      "reasons": [
       "4.15 in of rain in the 3 days before"
@@ -205,7 +206,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.41,
+     "risk": 0.223,
      "level": "caution",
      "reasons": [
       "3.82 in of rain in the 3 days before"
@@ -227,7 +228,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.292,
+     "risk": 0.419,
      "level": "caution",
      "reasons": [
       "0.33 in of rain in the 3 days before"
@@ -235,7 +236,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.831,
+     "risk": 0.705,
      "level": "high",
      "reasons": [
       "3.22 in of rain in the 3 days before"
@@ -243,7 +244,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.81,
+     "risk": 0.634,
      "level": "high",
      "reasons": [
       "4.15 in of rain in the 3 days before"
@@ -255,8 +256,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.376,
-     "level": "caution",
+     "risk": 0.122,
+     "level": "low",
      "reasons": [
       "3.82 in of rain in the 3 days before"
      ]
@@ -277,7 +278,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.292,
+     "risk": 0.419,
      "level": "caution",
      "reasons": [
       "0.33 in of rain in the 3 days before"
@@ -285,7 +286,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.831,
+     "risk": 0.705,
      "level": "high",
      "reasons": [
       "3.22 in of rain in the 3 days before"
@@ -293,7 +294,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.796,
+     "risk": 0.634,
      "level": "high",
      "reasons": [
       "4.15 in of rain in the 3 days before"
@@ -305,8 +306,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.376,
-     "level": "caution",
+     "risk": 0.122,
+     "level": "low",
      "reasons": [
       "3.82 in of rain in the 3 days before"
      ]
@@ -327,15 +328,15 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.134,
-     "level": "low",
+     "risk": 0.22,
+     "level": "caution",
      "reasons": [
       "0.33 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-10",
-     "risk": 0.7,
+     "risk": 0.501,
      "level": "high",
      "reasons": [
       "3.22 in of rain in the 3 days before"
@@ -343,8 +344,8 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.67,
-     "level": "high",
+     "risk": 0.437,
+     "level": "caution",
      "reasons": [
       "4.15 in of rain in the 3 days before"
      ],
@@ -355,8 +356,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.175,
-     "level": "caution",
+     "risk": 0.061,
+     "level": "low",
      "reasons": [
       "3.82 in of rain in the 3 days before"
      ]
@@ -377,8 +378,8 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.415,
-     "level": "caution",
+     "risk": 0.505,
+     "level": "high",
      "reasons": [
       "0.33 in of rain in the 3 days before",
       "last test (Jan 03) was over the limit"
@@ -386,7 +387,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.89,
+     "risk": 0.9,
      "level": "high",
      "reasons": [
       "3.22 in of rain in the 3 days before",
@@ -395,7 +396,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.875,
+     "risk": 0.853,
      "level": "high",
      "reasons": [
       "4.15 in of rain in the 3 days before",
@@ -408,8 +409,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.537,
-     "level": "high",
+     "risk": 0.228,
+     "level": "caution",
      "reasons": [
       "3.82 in of rain in the 3 days before",
       "last test (Jan 03) was over the limit"
@@ -431,7 +432,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.07,
+     "risk": 0.081,
      "level": "low",
      "reasons": [
       "0.33 in of rain in the 3 days before"
@@ -439,15 +440,15 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.53,
-     "level": "high",
+     "risk": 0.229,
+     "level": "caution",
      "reasons": [
       "3.22 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-11",
-     "risk": 0.482,
+     "risk": 0.208,
      "level": "caution",
      "reasons": [
       "4.15 in of rain in the 3 days before"
@@ -459,8 +460,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.16,
-     "level": "caution",
+     "risk": 0.027,
+     "level": "low",
      "reasons": [
       "3.82 in of rain in the 3 days before"
      ]
@@ -481,7 +482,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.07,
+     "risk": 0.088,
      "level": "low",
      "reasons": [
       "0.33 in of rain in the 3 days before"
@@ -489,15 +490,15 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.53,
-     "level": "high",
+     "risk": 0.229,
+     "level": "caution",
      "reasons": [
       "3.22 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-11",
-     "risk": 0.482,
+     "risk": 0.208,
      "level": "caution",
      "reasons": [
       "4.15 in of rain in the 3 days before"
@@ -509,8 +510,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.16,
-     "level": "caution",
+     "risk": 0.027,
+     "level": "low",
      "reasons": [
       "3.82 in of rain in the 3 days before"
      ]
@@ -531,7 +532,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.08,
+     "risk": 0.082,
      "level": "low",
      "reasons": [
       "0.33 in of rain in the 3 days before"
@@ -539,15 +540,15 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.518,
-     "level": "high",
+     "risk": 0.242,
+     "level": "caution",
      "reasons": [
       "3.22 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-11",
-     "risk": 0.46,
+     "risk": 0.205,
      "level": "caution",
      "reasons": [
       "4.15 in of rain in the 3 days before"
@@ -559,8 +560,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.229,
-     "level": "caution",
+     "risk": 0.042,
+     "level": "low",
      "reasons": [
       "3.82 in of rain in the 3 days before"
      ]
@@ -581,15 +582,15 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.485,
-     "level": "caution",
+     "risk": 0.512,
+     "level": "high",
      "reasons": [
       "0.33 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-10",
-     "risk": 0.907,
+     "risk": 0.825,
      "level": "high",
      "reasons": [
       "3.22 in of rain in the 3 days before"
@@ -597,7 +598,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.865,
+     "risk": 0.773,
      "level": "high",
      "reasons": [
       "4.15 in of rain in the 3 days before"
@@ -609,8 +610,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.415,
-     "level": "caution",
+     "risk": 0.147,
+     "level": "low",
      "reasons": [
       "3.82 in of rain in the 3 days before"
      ]
@@ -631,23 +632,23 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.137,
-     "level": "low",
+     "risk": 0.167,
+     "level": "caution",
      "reasons": [
       "0.43 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-10",
-     "risk": 0.509,
-     "level": "high",
+     "risk": 0.226,
+     "level": "caution",
      "reasons": [
       "3.31 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-11",
-     "risk": 0.442,
+     "risk": 0.207,
      "level": "caution",
      "reasons": [
       "4.15 in of rain in the 3 days before"
@@ -655,7 +656,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.137,
+     "risk": 0.039,
      "level": "low",
      "reasons": [
       "3.73 in of rain in the 3 days before"
@@ -677,15 +678,15 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.087,
-     "level": "low",
+     "risk": 0.165,
+     "level": "caution",
      "reasons": [
       "0.33 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-10",
-     "risk": 0.589,
+     "risk": 0.506,
      "level": "high",
      "reasons": [
       "3.22 in of rain in the 3 days before"
@@ -693,8 +694,8 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.503,
-     "level": "high",
+     "risk": 0.415,
+     "level": "caution",
      "reasons": [
       "4.15 in of rain in the 3 days before"
      ],
@@ -705,7 +706,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.147,
+     "risk": 0.056,
      "level": "low",
      "reasons": [
       "3.82 in of rain in the 3 days before"
@@ -727,7 +728,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.054,
+     "risk": 0.07,
      "level": "low",
      "reasons": [
       "0.33 in of rain in the 3 days before"
@@ -735,7 +736,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.472,
+     "risk": 0.228,
      "level": "caution",
      "reasons": [
       "3.22 in of rain in the 3 days before"
@@ -743,7 +744,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.381,
+     "risk": 0.209,
      "level": "caution",
      "reasons": [
       "4.15 in of rain in the 3 days before"
@@ -751,7 +752,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.09,
+     "risk": 0.024,
      "level": "low",
      "reasons": [
       "3.82 in of rain in the 3 days before"
@@ -773,7 +774,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.056,
+     "risk": 0.057,
      "level": "low",
      "reasons": [
       "0.33 in of rain in the 3 days before"
@@ -781,7 +782,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.479,
+     "risk": 0.202,
      "level": "caution",
      "reasons": [
       "3.22 in of rain in the 3 days before"
@@ -789,7 +790,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.388,
+     "risk": 0.169,
      "level": "caution",
      "reasons": [
       "4.15 in of rain in the 3 days before"
@@ -797,7 +798,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.089,
+     "risk": 0.021,
      "level": "low",
      "reasons": [
       "3.82 in of rain in the 3 days before"
@@ -819,7 +820,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.056,
+     "risk": 0.057,
      "level": "low",
      "reasons": [
       "0.33 in of rain in the 3 days before"
@@ -827,7 +828,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.479,
+     "risk": 0.202,
      "level": "caution",
      "reasons": [
       "3.22 in of rain in the 3 days before"
@@ -835,7 +836,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.388,
+     "risk": 0.169,
      "level": "caution",
      "reasons": [
       "4.15 in of rain in the 3 days before"
@@ -843,7 +844,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.089,
+     "risk": 0.021,
      "level": "low",
      "reasons": [
       "3.82 in of rain in the 3 days before"
@@ -865,7 +866,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.056,
+     "risk": 0.05,
      "level": "low",
      "reasons": [
       "0.33 in of rain in the 3 days before"
@@ -873,7 +874,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.479,
+     "risk": 0.178,
      "level": "caution",
      "reasons": [
       "3.22 in of rain in the 3 days before"
@@ -881,15 +882,15 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.388,
-     "level": "caution",
+     "risk": 0.148,
+     "level": "low",
      "reasons": [
       "4.15 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-12",
-     "risk": 0.089,
+     "risk": 0.018,
      "level": "low",
      "reasons": [
       "3.82 in of rain in the 3 days before"
@@ -911,7 +912,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.056,
+     "risk": 0.05,
      "level": "low",
      "reasons": [
       "0.33 in of rain in the 3 days before"
@@ -919,7 +920,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.479,
+     "risk": 0.178,
      "level": "caution",
      "reasons": [
       "3.22 in of rain in the 3 days before"
@@ -927,15 +928,15 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.388,
-     "level": "caution",
+     "risk": 0.148,
+     "level": "low",
      "reasons": [
       "4.15 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-12",
-     "risk": 0.089,
+     "risk": 0.018,
      "level": "low",
      "reasons": [
       "3.82 in of rain in the 3 days before"
@@ -957,7 +958,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.059,
+     "risk": 0.053,
      "level": "low",
      "reasons": [
       "0.33 in of rain in the 3 days before"
@@ -965,23 +966,23 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.483,
-     "level": "caution",
+     "risk": 0.149,
+     "level": "low",
      "reasons": [
       "3.22 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-11",
-     "risk": 0.415,
-     "level": "caution",
+     "risk": 0.126,
+     "level": "low",
      "reasons": [
       "4.15 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-12",
-     "risk": 0.069,
+     "risk": 0.013,
      "level": "low",
      "reasons": [
       "3.82 in of rain in the 3 days before"
@@ -1003,7 +1004,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.402,
+     "risk": 0.275,
      "level": "caution",
      "reasons": [
       "0.33 in of rain in the 3 days before"
@@ -1011,7 +1012,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.87,
+     "risk": 0.693,
      "level": "high",
      "reasons": [
       "3.22 in of rain in the 3 days before"
@@ -1019,7 +1020,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.895,
+     "risk": 0.686,
      "level": "high",
      "reasons": [
       "4.15 in of rain in the 3 days before"
@@ -1027,8 +1028,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.198,
-     "level": "caution",
+     "risk": 0.056,
+     "level": "low",
      "reasons": [
       "3.82 in of rain in the 3 days before"
      ]
@@ -1049,7 +1050,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.581,
+     "risk": 0.599,
      "level": "high",
      "reasons": [
       "0.33 in of rain in the 3 days before"
@@ -1057,7 +1058,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.934,
+     "risk": 0.925,
      "level": "high",
      "reasons": [
       "3.22 in of rain in the 3 days before"
@@ -1065,7 +1066,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.917,
+     "risk": 0.912,
      "level": "high",
      "reasons": [
       "4.15 in of rain in the 3 days before"
@@ -1073,8 +1074,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.561,
-     "level": "high",
+     "risk": 0.428,
+     "level": "caution",
      "reasons": [
       "3.82 in of rain in the 3 days before"
      ]
@@ -1095,7 +1096,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.06,
+     "risk": 0.066,
      "level": "low",
      "reasons": [
       "0.33 in of rain in the 3 days before"
@@ -1103,23 +1104,23 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.398,
-     "level": "caution",
+     "risk": 0.159,
+     "level": "low",
      "reasons": [
       "3.22 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-11",
-     "risk": 0.319,
-     "level": "caution",
+     "risk": 0.145,
+     "level": "low",
      "reasons": [
       "4.15 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-12",
-     "risk": 0.085,
+     "risk": 0.028,
      "level": "low",
      "reasons": [
       "3.82 in of rain in the 3 days before"
@@ -1141,7 +1142,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.056,
+     "risk": 0.046,
      "level": "low",
      "reasons": [
       "0.33 in of rain in the 3 days before"
@@ -1149,23 +1150,23 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.353,
-     "level": "caution",
+     "risk": 0.137,
+     "level": "low",
      "reasons": [
       "3.22 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-11",
-     "risk": 0.296,
-     "level": "caution",
+     "risk": 0.15,
+     "level": "low",
      "reasons": [
       "4.15 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-12",
-     "risk": 0.074,
+     "risk": 0.025,
      "level": "low",
      "reasons": [
       "3.82 in of rain in the 3 days before"
@@ -1187,23 +1188,23 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.113,
-     "level": "low",
+     "risk": 0.175,
+     "level": "caution",
      "reasons": [
       "0.43 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-10",
-     "risk": 0.533,
-     "level": "high",
+     "risk": 0.264,
+     "level": "caution",
      "reasons": [
       "3.31 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-11",
-     "risk": 0.451,
+     "risk": 0.228,
      "level": "caution",
      "reasons": [
       "4.15 in of rain in the 3 days before"
@@ -1211,7 +1212,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.128,
+     "risk": 0.048,
      "level": "low",
      "reasons": [
       "3.73 in of rain in the 3 days before"
@@ -1233,7 +1234,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.051,
+     "risk": 0.047,
      "level": "low",
      "reasons": [
       "0.33 in of rain in the 3 days before"
@@ -1241,23 +1242,23 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.294,
-     "level": "caution",
+     "risk": 0.126,
+     "level": "low",
      "reasons": [
       "3.22 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-11",
-     "risk": 0.3,
-     "level": "caution",
+     "risk": 0.138,
+     "level": "low",
      "reasons": [
       "4.15 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-12",
-     "risk": 0.072,
+     "risk": 0.023,
      "level": "low",
      "reasons": [
       "3.82 in of rain in the 3 days before"
@@ -1279,7 +1280,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.202,
+     "risk": 0.243,
      "level": "caution",
      "reasons": [
       "0.33 in of rain in the 3 days before"
@@ -1287,24 +1288,24 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.558,
-     "level": "high",
+     "risk": 0.471,
+     "level": "caution",
      "reasons": [
       "3.22 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-11",
-     "risk": 0.562,
-     "level": "high",
+     "risk": 0.459,
+     "level": "caution",
      "reasons": [
       "4.15 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-12",
-     "risk": 0.196,
-     "level": "caution",
+     "risk": 0.094,
+     "level": "low",
      "reasons": [
       "3.82 in of rain in the 3 days before"
      ]
@@ -1325,7 +1326,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.39,
+     "risk": 0.384,
      "level": "caution",
      "reasons": [
       "0.33 in of rain in the 3 days before",
@@ -1334,7 +1335,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.777,
+     "risk": 0.817,
      "level": "high",
      "reasons": [
       "3.22 in of rain in the 3 days before",
@@ -1343,7 +1344,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.765,
+     "risk": 0.766,
      "level": "high",
      "reasons": [
       "4.15 in of rain in the 3 days before",
@@ -1352,7 +1353,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.288,
+     "risk": 0.197,
      "level": "caution",
      "reasons": [
       "3.82 in of rain in the 3 days before",
@@ -1375,7 +1376,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.04,
+     "risk": 0.061,
      "level": "low",
      "reasons": [
       "0.33 in of rain in the 3 days before"
@@ -1383,23 +1384,23 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.27,
-     "level": "caution",
+     "risk": 0.134,
+     "level": "low",
      "reasons": [
       "3.22 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-11",
-     "risk": 0.275,
-     "level": "caution",
+     "risk": 0.124,
+     "level": "low",
      "reasons": [
       "4.15 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-12",
-     "risk": 0.06,
+     "risk": 0.022,
      "level": "low",
      "reasons": [
       "3.82 in of rain in the 3 days before"
@@ -1421,7 +1422,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.048,
+     "risk": 0.045,
      "level": "low",
      "reasons": [
       "0.41 in of rain in the 3 days before"
@@ -1429,23 +1430,23 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.239,
-     "level": "caution",
+     "risk": 0.109,
+     "level": "low",
      "reasons": [
       "2.02 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-11",
-     "risk": 0.298,
-     "level": "caution",
+     "risk": 0.126,
+     "level": "low",
      "reasons": [
       "2.78 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-12",
-     "risk": 0.067,
+     "risk": 0.02,
      "level": "low",
      "reasons": [
       "2.37 in of rain in the 3 days before"
@@ -1467,7 +1468,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.024,
+     "risk": 0.019,
      "level": "low",
      "reasons": [
       "0.24 in of rain in the 3 days before"
@@ -1475,23 +1476,23 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.246,
-     "level": "caution",
+     "risk": 0.107,
+     "level": "low",
      "reasons": [
       "1.90 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-11",
-     "risk": 0.293,
-     "level": "caution",
+     "risk": 0.1,
+     "level": "low",
      "reasons": [
       "2.87 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-12",
-     "risk": 0.064,
+     "risk": 0.019,
      "level": "low",
      "reasons": [
       "2.63 in of rain in the 3 days before"
@@ -1513,7 +1514,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.024,
+     "risk": 0.016,
      "level": "low",
      "reasons": [
       "0.24 in of rain in the 3 days before"
@@ -1521,23 +1522,23 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.246,
-     "level": "caution",
+     "risk": 0.093,
+     "level": "low",
      "reasons": [
       "1.90 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-11",
-     "risk": 0.293,
-     "level": "caution",
+     "risk": 0.087,
+     "level": "low",
      "reasons": [
       "2.87 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-12",
-     "risk": 0.064,
+     "risk": 0.016,
      "level": "low",
      "reasons": [
       "2.63 in of rain in the 3 days before"
@@ -1559,7 +1560,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.024,
+     "risk": 0.016,
      "level": "low",
      "reasons": [
       "0.24 in of rain in the 3 days before"
@@ -1567,23 +1568,23 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.246,
-     "level": "caution",
+     "risk": 0.093,
+     "level": "low",
      "reasons": [
       "1.90 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-11",
-     "risk": 0.293,
-     "level": "caution",
+     "risk": 0.087,
+     "level": "low",
      "reasons": [
       "2.87 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-12",
-     "risk": 0.064,
+     "risk": 0.016,
      "level": "low",
      "reasons": [
       "2.63 in of rain in the 3 days before"
@@ -1605,7 +1606,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.023,
+     "risk": 0.012,
      "level": "low",
      "reasons": [
       "0.24 in of rain in the 3 days before"
@@ -1613,23 +1614,23 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.236,
-     "level": "caution",
+     "risk": 0.067,
+     "level": "low",
      "reasons": [
       "1.90 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-11",
-     "risk": 0.282,
-     "level": "caution",
+     "risk": 0.065,
+     "level": "low",
      "reasons": [
       "2.87 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-12",
-     "risk": 0.047,
+     "risk": 0.01,
      "level": "low",
      "reasons": [
       "2.63 in of rain in the 3 days before"
@@ -1651,23 +1652,23 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.137,
-     "level": "low",
+     "risk": 0.167,
+     "level": "caution",
      "reasons": [
       "0.43 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-10",
-     "risk": 0.509,
-     "level": "high",
+     "risk": 0.226,
+     "level": "caution",
      "reasons": [
       "3.31 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-11",
-     "risk": 0.442,
+     "risk": 0.207,
      "level": "caution",
      "reasons": [
       "4.15 in of rain in the 3 days before"
@@ -1675,7 +1676,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.137,
+     "risk": 0.039,
      "level": "low",
      "reasons": [
       "3.73 in of rain in the 3 days before"
@@ -1697,7 +1698,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.024,
+     "risk": 0.019,
      "level": "low",
      "reasons": [
       "0.24 in of rain in the 3 days before"
@@ -1705,23 +1706,23 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.246,
-     "level": "caution",
+     "risk": 0.107,
+     "level": "low",
      "reasons": [
       "1.90 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-11",
-     "risk": 0.293,
-     "level": "caution",
+     "risk": 0.1,
+     "level": "low",
      "reasons": [
       "2.87 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-12",
-     "risk": 0.064,
+     "risk": 0.019,
      "level": "low",
      "reasons": [
       "2.63 in of rain in the 3 days before"
@@ -1743,7 +1744,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.545,
+     "risk": 0.705,
      "level": "high",
      "reasons": [
       "0.43 in of rain in the 3 days before"
@@ -1751,7 +1752,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.87,
+     "risk": 0.817,
      "level": "high",
      "reasons": [
       "3.31 in of rain in the 3 days before"
@@ -1759,7 +1760,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.837,
+     "risk": 0.803,
      "level": "high",
      "reasons": [
       "4.15 in of rain in the 3 days before"
@@ -1767,7 +1768,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.295,
+     "risk": 0.176,
      "level": "caution",
      "reasons": [
       "3.73 in of rain in the 3 days before"
@@ -1789,7 +1790,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.149,
+     "risk": 0.141,
      "level": "low",
      "reasons": [
       "0.43 in of rain in the 3 days before"
@@ -1797,16 +1798,16 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.535,
-     "level": "high",
+     "risk": 0.192,
+     "level": "caution",
      "reasons": [
       "3.31 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-11",
-     "risk": 0.466,
-     "level": "caution",
+     "risk": 0.152,
+     "level": "low",
      "reasons": [
       "4.15 in of rain in the 3 days before"
      ],
@@ -1817,7 +1818,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.154,
+     "risk": 0.035,
      "level": "low",
      "reasons": [
       "3.73 in of rain in the 3 days before"
@@ -1839,7 +1840,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.085,
+     "risk": 0.114,
      "level": "low",
      "reasons": [
       "1.62 in of rain in the past week"
@@ -1851,7 +1852,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.751,
+     "risk": 0.638,
      "level": "high",
      "reasons": [
       "0.58 in of rain in the 3 days before"
@@ -1859,7 +1860,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.938,
+     "risk": 0.887,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before"
@@ -1867,7 +1868,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.347,
+     "risk": 0.339,
      "level": "caution",
      "reasons": [
       "1.80 in of rain in the 3 days before"
@@ -1889,7 +1890,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.236,
+     "risk": 0.183,
      "level": "caution",
      "reasons": [
       "1.51 in of rain in the past week",
@@ -1902,7 +1903,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.797,
+     "risk": 0.769,
      "level": "high",
      "reasons": [
       "0.51 in of rain in the 3 days before",
@@ -1911,7 +1912,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.97,
+     "risk": 0.941,
      "level": "high",
      "reasons": [
       "1.99 in of rain in the 3 days before",
@@ -1920,8 +1921,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.507,
-     "level": "high",
+     "risk": 0.403,
+     "level": "caution",
      "reasons": [
       "1.98 in of rain in the 3 days before",
       "this beach is often unsafe even in dry weather"
@@ -1943,7 +1944,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.124,
+     "risk": 0.159,
      "level": "low",
      "reasons": [
       "1.62 in of rain in the past week"
@@ -1955,7 +1956,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.812,
+     "risk": 0.776,
      "level": "high",
      "reasons": [
       "0.58 in of rain in the 3 days before"
@@ -1963,7 +1964,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.97,
+     "risk": 0.966,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before"
@@ -1971,7 +1972,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.328,
+     "risk": 0.356,
      "level": "caution",
      "reasons": [
       "1.80 in of rain in the 3 days before"
@@ -1993,7 +1994,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.109,
+     "risk": 0.124,
      "level": "low",
      "reasons": [
       "1.51 in of rain in the past week"
@@ -2005,7 +2006,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.826,
+     "risk": 0.835,
      "level": "high",
      "reasons": [
       "0.51 in of rain in the 3 days before"
@@ -2013,7 +2014,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.985,
+     "risk": 0.967,
      "level": "high",
      "reasons": [
       "1.99 in of rain in the 3 days before"
@@ -2021,7 +2022,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.731,
+     "risk": 0.635,
      "level": "high",
      "reasons": [
       "1.98 in of rain in the 3 days before"
@@ -2043,7 +2044,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.176,
+     "risk": 0.19,
      "level": "caution",
      "reasons": [
       "1.62 in of rain in the past week"
@@ -2055,7 +2056,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.827,
+     "risk": 0.807,
      "level": "high",
      "reasons": [
       "0.58 in of rain in the 3 days before"
@@ -2063,7 +2064,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.982,
+     "risk": 0.97,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before"
@@ -2071,7 +2072,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.591,
+     "risk": 0.6,
      "level": "high",
      "reasons": [
       "1.80 in of rain in the 3 days before"
@@ -2093,7 +2094,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.164,
+     "risk": 0.192,
      "level": "caution",
      "reasons": [
       "1.62 in of rain in the past week"
@@ -2105,7 +2106,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.85,
+     "risk": 0.802,
      "level": "high",
      "reasons": [
       "0.58 in of rain in the 3 days before"
@@ -2113,7 +2114,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.978,
+     "risk": 0.976,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before"
@@ -2121,7 +2122,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.433,
+     "risk": 0.477,
      "level": "caution",
      "reasons": [
       "1.80 in of rain in the 3 days before"
@@ -2143,7 +2144,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.092,
+     "risk": 0.125,
      "level": "low",
      "reasons": [
       "1.62 in of rain in the past week"
@@ -2155,7 +2156,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.825,
+     "risk": 0.759,
      "level": "high",
      "reasons": [
       "0.58 in of rain in the 3 days before"
@@ -2163,7 +2164,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.971,
+     "risk": 0.953,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before"
@@ -2171,8 +2172,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.501,
-     "level": "high",
+     "risk": 0.478,
+     "level": "caution",
      "reasons": [
       "1.80 in of rain in the 3 days before"
      ]
@@ -2193,7 +2194,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.3,
+     "risk": 0.377,
      "level": "caution",
      "reasons": [
       "1.62 in of rain in the past week",
@@ -2207,7 +2208,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.905,
+     "risk": 0.923,
      "level": "high",
      "reasons": [
       "0.58 in of rain in the 3 days before",
@@ -2221,7 +2222,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.978,
+     "risk": 0.971,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before",
@@ -2231,7 +2232,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.711,
+     "risk": 0.55,
      "level": "high",
      "reasons": [
       "1.80 in of rain in the 3 days before",
@@ -2255,7 +2256,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.212,
+     "risk": 0.273,
      "level": "caution",
      "reasons": [
       "1.62 in of rain in the past week",
@@ -2269,7 +2270,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.897,
+     "risk": 0.901,
      "level": "high",
      "reasons": [
       "0.58 in of rain in the 3 days before",
@@ -2283,7 +2284,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.972,
+     "risk": 0.953,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before",
@@ -2293,8 +2294,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.696,
-     "level": "high",
+     "risk": 0.477,
+     "level": "caution",
      "reasons": [
       "1.80 in of rain in the 3 days before",
       "last test (Jan 05) was over the limit",
@@ -2317,7 +2318,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.288,
+     "risk": 0.371,
      "level": "caution",
      "reasons": [
       "1.62 in of rain in the past week",
@@ -2331,7 +2332,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.887,
+     "risk": 0.927,
      "level": "high",
      "reasons": [
       "0.58 in of rain in the 3 days before",
@@ -2345,7 +2346,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.973,
+     "risk": 0.971,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before",
@@ -2355,7 +2356,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.663,
+     "risk": 0.563,
      "level": "high",
      "reasons": [
       "1.80 in of rain in the 3 days before",
@@ -2379,7 +2380,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.102,
+     "risk": 0.123,
      "level": "low",
      "reasons": [
       "1.62 in of rain in the past week",
@@ -2392,7 +2393,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.821,
+     "risk": 0.744,
      "level": "high",
      "reasons": [
       "0.58 in of rain in the 3 days before",
@@ -2401,7 +2402,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.971,
+     "risk": 0.942,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before",
@@ -2410,8 +2411,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.526,
-     "level": "high",
+     "risk": 0.461,
+     "level": "caution",
      "reasons": [
       "1.80 in of rain in the 3 days before",
       "this beach is often unsafe even in dry weather"
@@ -2433,8 +2434,8 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.115,
-     "level": "low",
+     "risk": 0.177,
+     "level": "caution",
      "reasons": [
       "1.62 in of rain in the past week"
      ],
@@ -2445,7 +2446,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.849,
+     "risk": 0.803,
      "level": "high",
      "reasons": [
       "0.58 in of rain in the 3 days before"
@@ -2453,7 +2454,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.983,
+     "risk": 0.969,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before"
@@ -2461,7 +2462,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.589,
+     "risk": 0.61,
      "level": "high",
      "reasons": [
       "1.80 in of rain in the 3 days before"
@@ -2483,7 +2484,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.289,
+     "risk": 0.343,
      "level": "caution",
      "reasons": [
       "1.62 in of rain in the past week",
@@ -2496,7 +2497,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.898,
+     "risk": 0.916,
      "level": "high",
      "reasons": [
       "0.58 in of rain in the 3 days before",
@@ -2509,7 +2510,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.963,
+     "risk": 0.961,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before",
@@ -2518,8 +2519,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.666,
-     "level": "high",
+     "risk": 0.473,
+     "level": "caution",
      "reasons": [
       "1.80 in of rain in the 3 days before",
       "last test (Jan 05) was over the limit"
@@ -2541,7 +2542,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.19,
+     "risk": 0.245,
      "level": "caution",
      "reasons": [
       "1.62 in of rain in the past week",
@@ -2555,7 +2556,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.886,
+     "risk": 0.895,
      "level": "high",
      "reasons": [
       "0.58 in of rain in the 3 days before",
@@ -2569,7 +2570,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.957,
+     "risk": 0.948,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before",
@@ -2579,8 +2580,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.657,
-     "level": "high",
+     "risk": 0.437,
+     "level": "caution",
      "reasons": [
       "1.80 in of rain in the 3 days before",
       "last test (Jan 05) was over the limit",
@@ -2603,7 +2604,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.102,
+     "risk": 0.123,
      "level": "low",
      "reasons": [
       "1.62 in of rain in the past week",
@@ -2616,7 +2617,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.81,
+     "risk": 0.744,
      "level": "high",
      "reasons": [
       "0.58 in of rain in the 3 days before",
@@ -2625,7 +2626,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.975,
+     "risk": 0.949,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before",
@@ -2634,8 +2635,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.544,
-     "level": "high",
+     "risk": 0.495,
+     "level": "caution",
      "reasons": [
       "1.80 in of rain in the 3 days before",
       "this beach is often unsafe even in dry weather"
@@ -2657,7 +2658,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.233,
+     "risk": 0.27,
      "level": "caution",
      "reasons": [
       "1.62 in of rain in the past week",
@@ -2667,7 +2668,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.824,
+     "risk": 0.772,
      "level": "high",
      "reasons": [
       "0.58 in of rain in the 3 days before",
@@ -2681,7 +2682,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.907,
+     "risk": 0.818,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before",
@@ -2695,7 +2696,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.347,
+     "risk": 0.295,
      "level": "caution",
      "reasons": [
       "1.80 in of rain in the 3 days before",
@@ -2723,7 +2724,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.502,
+     "risk": 0.524,
      "level": "high",
      "reasons": [
       "1.62 in of rain in the past week",
@@ -2733,7 +2734,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.806,
+     "risk": 0.738,
      "level": "high",
      "reasons": [
       "0.58 in of rain in the 3 days before",
@@ -2747,7 +2748,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.86,
+     "risk": 0.762,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before",
@@ -2761,7 +2762,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.37,
+     "risk": 0.312,
      "level": "caution",
      "reasons": [
       "1.80 in of rain in the 3 days before",
@@ -2789,7 +2790,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.095,
+     "risk": 0.159,
      "level": "low",
      "reasons": [
       "1.93 in of rain in the past week"
@@ -2797,7 +2798,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.836,
+     "risk": 0.905,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before"
@@ -2805,7 +2806,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.887,
+     "risk": 0.902,
      "level": "high",
      "reasons": [
       "3.41 in of rain in the 3 days before"
@@ -2813,7 +2814,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.201,
+     "risk": 0.164,
      "level": "caution",
      "reasons": [
       "3.36 in of rain in the 3 days before"
@@ -2835,7 +2836,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.383,
+     "risk": 0.45,
      "level": "caution",
      "reasons": [
       "0.19 in of rain in the 3 days before",
@@ -2844,7 +2845,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.938,
+     "risk": 0.933,
      "level": "high",
      "reasons": [
       "1.93 in of rain in the 3 days before",
@@ -2853,7 +2854,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.917,
+     "risk": 0.897,
      "level": "high",
      "reasons": [
       "3.07 in of rain in the 3 days before",
@@ -2862,7 +2863,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.31,
+     "risk": 0.278,
      "level": "caution",
      "reasons": [
       "2.88 in of rain in the 3 days before",
@@ -2885,7 +2886,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.27,
+     "risk": 0.211,
      "level": "caution",
      "reasons": [
       "0.19 in of rain in the 3 days before"
@@ -2893,7 +2894,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.748,
+     "risk": 0.755,
      "level": "high",
      "reasons": [
       "1.93 in of rain in the 3 days before"
@@ -2901,7 +2902,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.704,
+     "risk": 0.76,
      "level": "high",
      "reasons": [
       "3.07 in of rain in the 3 days before"
@@ -2909,7 +2910,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.146,
+     "risk": 0.128,
      "level": "low",
      "reasons": [
       "2.88 in of rain in the 3 days before"
@@ -2931,7 +2932,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.35,
+     "risk": 0.314,
      "level": "caution",
      "reasons": [
       "0.19 in of rain in the 3 days before"
@@ -2939,7 +2940,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.835,
+     "risk": 0.851,
      "level": "high",
      "reasons": [
       "1.93 in of rain in the 3 days before"
@@ -2947,7 +2948,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.826,
+     "risk": 0.852,
      "level": "high",
      "reasons": [
       "3.07 in of rain in the 3 days before"
@@ -2955,7 +2956,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.156,
+     "risk": 0.13,
      "level": "low",
      "reasons": [
       "2.88 in of rain in the 3 days before"
@@ -2977,7 +2978,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.27,
+     "risk": 0.214,
      "level": "caution",
      "reasons": [
       "0.19 in of rain in the 3 days before"
@@ -2985,7 +2986,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.762,
+     "risk": 0.759,
      "level": "high",
      "reasons": [
       "1.93 in of rain in the 3 days before"
@@ -2993,7 +2994,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.72,
+     "risk": 0.754,
      "level": "high",
      "reasons": [
       "3.07 in of rain in the 3 days before"
@@ -3001,7 +3002,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.145,
+     "risk": 0.126,
      "level": "low",
      "reasons": [
       "2.88 in of rain in the 3 days before"
@@ -3023,7 +3024,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.285,
+     "risk": 0.255,
      "level": "caution",
      "reasons": [
       "0.19 in of rain in the 3 days before"
@@ -3031,7 +3032,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.751,
+     "risk": 0.79,
      "level": "high",
      "reasons": [
       "1.93 in of rain in the 3 days before"
@@ -3039,7 +3040,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.833,
+     "risk": 0.805,
      "level": "high",
      "reasons": [
       "3.07 in of rain in the 3 days before"
@@ -3047,7 +3048,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.161,
+     "risk": 0.163,
      "level": "caution",
      "reasons": [
       "2.88 in of rain in the 3 days before"
@@ -3069,7 +3070,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.263,
+     "risk": 0.221,
      "level": "caution",
      "reasons": [
       "0.19 in of rain in the 3 days before"
@@ -3077,7 +3078,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.768,
+     "risk": 0.766,
      "level": "high",
      "reasons": [
       "1.93 in of rain in the 3 days before"
@@ -3085,7 +3086,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.785,
+     "risk": 0.759,
      "level": "high",
      "reasons": [
       "3.07 in of rain in the 3 days before"
@@ -3093,8 +3094,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.155,
-     "level": "low",
+     "risk": 0.165,
+     "level": "caution",
      "reasons": [
       "2.88 in of rain in the 3 days before"
      ]
@@ -3115,7 +3116,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.419,
+     "risk": 0.45,
      "level": "caution",
      "reasons": [
       "0.19 in of rain in the 3 days before",
@@ -3124,7 +3125,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.834,
+     "risk": 0.844,
      "level": "high",
      "reasons": [
       "1.93 in of rain in the 3 days before",
@@ -3133,7 +3134,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.905,
+     "risk": 0.859,
      "level": "high",
      "reasons": [
       "3.07 in of rain in the 3 days before",
@@ -3142,7 +3143,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.365,
+     "risk": 0.346,
      "level": "caution",
      "reasons": [
       "2.88 in of rain in the 3 days before",
@@ -3165,7 +3166,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.443,
+     "risk": 0.367,
      "level": "caution",
      "reasons": [
       "0.19 in of rain in the 3 days before"
@@ -3173,7 +3174,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.831,
+     "risk": 0.861,
      "level": "high",
      "reasons": [
       "1.93 in of rain in the 3 days before"
@@ -3181,7 +3182,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.883,
+     "risk": 0.873,
      "level": "high",
      "reasons": [
       "3.07 in of rain in the 3 days before"
@@ -3189,7 +3190,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.295,
+     "risk": 0.312,
      "level": "caution",
      "reasons": [
       "2.88 in of rain in the 3 days before"
@@ -3211,7 +3212,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.358,
+     "risk": 0.287,
      "level": "caution",
      "reasons": [
       "0.19 in of rain in the 3 days before",
@@ -3220,7 +3221,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.833,
+     "risk": 0.844,
      "level": "high",
      "reasons": [
       "1.93 in of rain in the 3 days before",
@@ -3229,7 +3230,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.868,
+     "risk": 0.83,
      "level": "high",
      "reasons": [
       "3.07 in of rain in the 3 days before",
@@ -3238,7 +3239,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.321,
+     "risk": 0.279,
      "level": "caution",
      "reasons": [
       "2.88 in of rain in the 3 days before",
@@ -3261,7 +3262,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.401,
+     "risk": 0.337,
      "level": "caution",
      "reasons": [
       "0.19 in of rain in the 3 days before"
@@ -3269,7 +3270,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.818,
+     "risk": 0.828,
      "level": "high",
      "reasons": [
       "1.93 in of rain in the 3 days before"
@@ -3277,7 +3278,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.87,
+     "risk": 0.85,
      "level": "high",
      "reasons": [
       "3.07 in of rain in the 3 days before"
@@ -3285,7 +3286,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.198,
+     "risk": 0.214,
      "level": "caution",
      "reasons": [
       "2.88 in of rain in the 3 days before"
@@ -3307,7 +3308,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.326,
+     "risk": 0.266,
      "level": "caution",
      "reasons": [
       "0.19 in of rain in the 3 days before"
@@ -3315,7 +3316,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.796,
+     "risk": 0.784,
      "level": "high",
      "reasons": [
       "1.93 in of rain in the 3 days before"
@@ -3323,7 +3324,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.839,
+     "risk": 0.795,
      "level": "high",
      "reasons": [
       "3.07 in of rain in the 3 days before"
@@ -3331,8 +3332,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.183,
-     "level": "caution",
+     "risk": 0.145,
+     "level": "low",
      "reasons": [
       "2.88 in of rain in the 3 days before"
      ]
@@ -3353,7 +3354,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.027,
+     "risk": 0.036,
      "level": "low",
      "reasons": [
       "0.24 in of rain in the 3 days before"
@@ -3361,7 +3362,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.193,
+     "risk": 0.231,
      "level": "caution",
      "reasons": [
       "1.90 in of rain in the 3 days before"
@@ -3369,7 +3370,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.26,
+     "risk": 0.217,
      "level": "caution",
      "reasons": [
       "2.87 in of rain in the 3 days before"
@@ -3377,7 +3378,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.061,
+     "risk": 0.035,
      "level": "low",
      "reasons": [
       "2.63 in of rain in the 3 days before"
@@ -3399,7 +3400,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.085,
+     "risk": 0.15,
      "level": "low",
      "reasons": [
       "0.24 in of rain in the 3 days before"
@@ -3407,15 +3408,15 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.453,
-     "level": "caution",
+     "risk": 0.547,
+     "level": "high",
      "reasons": [
       "1.90 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-11",
-     "risk": 0.549,
+     "risk": 0.513,
      "level": "high",
      "reasons": [
       "2.87 in of rain in the 3 days before"
@@ -3423,7 +3424,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.149,
+     "risk": 0.094,
      "level": "low",
      "reasons": [
       "2.63 in of rain in the 3 days before"
@@ -3445,7 +3446,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.252,
+     "risk": 0.356,
      "level": "caution",
      "reasons": [
       "0.24 in of rain in the 3 days before"
@@ -3453,7 +3454,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.838,
+     "risk": 0.859,
      "level": "high",
      "reasons": [
       "1.90 in of rain in the 3 days before"
@@ -3461,7 +3462,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.786,
+     "risk": 0.829,
      "level": "high",
      "reasons": [
       "2.87 in of rain in the 3 days before"
@@ -3469,7 +3470,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.376,
+     "risk": 0.246,
      "level": "caution",
      "reasons": [
       "2.63 in of rain in the 3 days before"
@@ -3491,7 +3492,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.241,
+     "risk": 0.358,
      "level": "caution",
      "reasons": [
       "0.24 in of rain in the 3 days before"
@@ -3499,7 +3500,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.873,
+     "risk": 0.845,
      "level": "high",
      "reasons": [
       "1.90 in of rain in the 3 days before"
@@ -3507,7 +3508,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.84,
+     "risk": 0.832,
      "level": "high",
      "reasons": [
       "2.87 in of rain in the 3 days before"
@@ -3515,7 +3516,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.337,
+     "risk": 0.217,
      "level": "caution",
      "reasons": [
       "2.63 in of rain in the 3 days before"
@@ -3537,7 +3538,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.128,
+     "risk": 0.089,
      "level": "low",
      "reasons": [
       "1.93 in of rain in the past week"
@@ -3545,7 +3546,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.886,
+     "risk": 0.869,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before"
@@ -3553,7 +3554,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.876,
+     "risk": 0.843,
      "level": "high",
      "reasons": [
       "3.41 in of rain in the 3 days before"
@@ -3561,8 +3562,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.184,
-     "level": "caution",
+     "risk": 0.071,
+     "level": "low",
      "reasons": [
       "3.36 in of rain in the 3 days before"
      ]
@@ -3583,7 +3584,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.135,
+     "risk": 0.138,
      "level": "low",
      "reasons": [
       "1.93 in of rain in the past week"
@@ -3591,7 +3592,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.925,
+     "risk": 0.929,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before"
@@ -3599,7 +3600,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.91,
+     "risk": 0.926,
      "level": "high",
      "reasons": [
       "3.41 in of rain in the 3 days before"
@@ -3607,7 +3608,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.316,
+     "risk": 0.258,
      "level": "caution",
      "reasons": [
       "3.36 in of rain in the 3 days before"
@@ -3629,7 +3630,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.136,
+     "risk": 0.129,
      "level": "low",
      "reasons": [
       "1.93 in of rain in the past week"
@@ -3637,7 +3638,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.861,
+     "risk": 0.895,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before"
@@ -3645,7 +3646,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.846,
+     "risk": 0.891,
      "level": "high",
      "reasons": [
       "3.41 in of rain in the 3 days before"
@@ -3653,7 +3654,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.235,
+     "risk": 0.163,
      "level": "caution",
      "reasons": [
       "3.36 in of rain in the 3 days before"
@@ -3675,7 +3676,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.134,
+     "risk": 0.155,
      "level": "low",
      "reasons": [
       "1.93 in of rain in the past week"
@@ -3683,7 +3684,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.87,
+     "risk": 0.927,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before"
@@ -3691,7 +3692,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.899,
+     "risk": 0.928,
      "level": "high",
      "reasons": [
       "3.41 in of rain in the 3 days before"
@@ -3699,7 +3700,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.233,
+     "risk": 0.25,
      "level": "caution",
      "reasons": [
       "3.36 in of rain in the 3 days before"
@@ -3721,7 +3722,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.127,
+     "risk": 0.152,
      "level": "low",
      "reasons": [
       "1.93 in of rain in the past week"
@@ -3729,7 +3730,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.85,
+     "risk": 0.918,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before"
@@ -3737,7 +3738,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.869,
+     "risk": 0.924,
      "level": "high",
      "reasons": [
       "3.41 in of rain in the 3 days before"
@@ -3745,7 +3746,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.203,
+     "risk": 0.222,
      "level": "caution",
      "reasons": [
       "3.36 in of rain in the 3 days before"
@@ -3767,8 +3768,8 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.17,
-     "level": "caution",
+     "risk": 0.155,
+     "level": "low",
      "reasons": [
       "1.93 in of rain in the past week",
       "last test (Dec 12) was over the limit"
@@ -3776,7 +3777,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.892,
+     "risk": 0.945,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before",
@@ -3785,7 +3786,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.935,
+     "risk": 0.934,
      "level": "high",
      "reasons": [
       "3.41 in of rain in the 3 days before",
@@ -3794,7 +3795,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.488,
+     "risk": 0.358,
      "level": "caution",
      "reasons": [
       "3.36 in of rain in the 3 days before",
@@ -3817,7 +3818,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.149,
+     "risk": 0.112,
      "level": "low",
      "reasons": [
       "1.93 in of rain in the past week",
@@ -3826,7 +3827,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.885,
+     "risk": 0.929,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before",
@@ -3835,7 +3836,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.93,
+     "risk": 0.913,
      "level": "high",
      "reasons": [
       "3.41 in of rain in the 3 days before",
@@ -3844,7 +3845,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.405,
+     "risk": 0.278,
      "level": "caution",
      "reasons": [
       "3.36 in of rain in the 3 days before",
@@ -3867,7 +3868,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.223,
+     "risk": 0.229,
      "level": "caution",
      "reasons": [
       "1.93 in of rain in the past week",
@@ -3876,7 +3877,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.929,
+     "risk": 0.962,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before",
@@ -3885,7 +3886,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.963,
+     "risk": 0.954,
      "level": "high",
      "reasons": [
       "3.41 in of rain in the 3 days before",
@@ -3894,8 +3895,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.645,
-     "level": "high",
+     "risk": 0.465,
+     "level": "caution",
      "reasons": [
       "3.36 in of rain in the 3 days before",
       "last test (Dec 12) was over the limit"
@@ -3917,8 +3918,8 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.173,
-     "level": "caution",
+     "risk": 0.159,
+     "level": "low",
      "reasons": [
       "1.93 in of rain in the past week",
       "last test (Dec 12) was over the limit"
@@ -3926,7 +3927,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.934,
+     "risk": 0.952,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before",
@@ -3935,7 +3936,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.961,
+     "risk": 0.945,
      "level": "high",
      "reasons": [
       "3.41 in of rain in the 3 days before",
@@ -3944,8 +3945,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.606,
-     "level": "high",
+     "risk": 0.427,
+     "level": "caution",
      "reasons": [
       "3.36 in of rain in the 3 days before",
       "last test (Dec 12) was over the limit"
@@ -3967,7 +3968,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.133,
+     "risk": 0.112,
      "level": "low",
      "reasons": [
       "1.93 in of rain in the past week",
@@ -3976,7 +3977,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.897,
+     "risk": 0.938,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before",
@@ -3985,7 +3986,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.942,
+     "risk": 0.918,
      "level": "high",
      "reasons": [
       "3.41 in of rain in the 3 days before",
@@ -3994,7 +3995,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.385,
+     "risk": 0.268,
      "level": "caution",
      "reasons": [
       "3.36 in of rain in the 3 days before",
@@ -4017,7 +4018,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.111,
+     "risk": 0.134,
      "level": "low",
      "reasons": [
       "1.93 in of rain in the past week"
@@ -4025,7 +4026,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.852,
+     "risk": 0.901,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before"
@@ -4033,7 +4034,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.871,
+     "risk": 0.892,
      "level": "high",
      "reasons": [
       "3.41 in of rain in the 3 days before"
@@ -4041,7 +4042,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.157,
+     "risk": 0.139,
      "level": "low",
      "reasons": [
       "3.36 in of rain in the 3 days before"
@@ -4063,7 +4064,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.122,
+     "risk": 0.134,
      "level": "low",
      "reasons": [
       "1.93 in of rain in the past week",
@@ -4072,7 +4073,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.841,
+     "risk": 0.912,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before",
@@ -4081,7 +4082,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.857,
+     "risk": 0.891,
      "level": "high",
      "reasons": [
       "3.41 in of rain in the 3 days before",
@@ -4090,8 +4091,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.197,
-     "level": "caution",
+     "risk": 0.148,
+     "level": "low",
      "reasons": [
       "3.36 in of rain in the 3 days before",
       "last test (Dec 05) was over the limit"
@@ -4113,7 +4114,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.132,
+     "risk": 0.101,
      "level": "low",
      "reasons": [
       "1.93 in of rain in the past week",
@@ -4122,7 +4123,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.87,
+     "risk": 0.887,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before",
@@ -4131,7 +4132,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.871,
+     "risk": 0.85,
      "level": "high",
      "reasons": [
       "3.41 in of rain in the 3 days before",
@@ -4140,8 +4141,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.2,
-     "level": "caution",
+     "risk": 0.112,
+     "level": "low",
      "reasons": [
       "3.36 in of rain in the 3 days before",
       "last test (Dec 12) was over the limit"
@@ -4172,7 +4173,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.872,
+     "risk": 0.907,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before",
@@ -4181,7 +4182,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.873,
+     "risk": 0.889,
      "level": "high",
      "reasons": [
       "3.41 in of rain in the 3 days before",
@@ -4190,8 +4191,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.232,
-     "level": "caution",
+     "risk": 0.151,
+     "level": "low",
      "reasons": [
       "3.36 in of rain in the 3 days before",
       "last test (Dec 12) was over the limit"
@@ -4213,7 +4214,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.083,
+     "risk": 0.1,
      "level": "low",
      "reasons": [
       "1.93 in of rain in the past week"
@@ -4221,7 +4222,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.887,
+     "risk": 0.869,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before"
@@ -4229,7 +4230,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.894,
+     "risk": 0.899,
      "level": "high",
      "reasons": [
       "3.41 in of rain in the 3 days before"
@@ -4237,7 +4238,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.136,
+     "risk": 0.096,
      "level": "low",
      "reasons": [
       "3.36 in of rain in the 3 days before"
@@ -4259,7 +4260,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.103,
+     "risk": 0.075,
      "level": "low",
      "reasons": [
       "1.93 in of rain in the past week",
@@ -4268,7 +4269,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.767,
+     "risk": 0.805,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before",
@@ -4277,7 +4278,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.791,
+     "risk": 0.767,
      "level": "high",
      "reasons": [
       "3.41 in of rain in the 3 days before",
@@ -4286,7 +4287,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.14,
+     "risk": 0.113,
      "level": "low",
      "reasons": [
       "3.36 in of rain in the 3 days before",
@@ -4309,7 +4310,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.116,
+     "risk": 0.092,
      "level": "low",
      "reasons": [
       "1.93 in of rain in the past week",
@@ -4318,7 +4319,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.834,
+     "risk": 0.894,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before",
@@ -4327,7 +4328,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.858,
+     "risk": 0.876,
      "level": "high",
      "reasons": [
       "3.41 in of rain in the 3 days before",
@@ -4336,8 +4337,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.265,
-     "level": "caution",
+     "risk": 0.112,
+     "level": "low",
      "reasons": [
       "3.36 in of rain in the 3 days before",
       "last test (Dec 12) was over the limit"
@@ -4359,7 +4360,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.104,
+     "risk": 0.075,
      "level": "low",
      "reasons": [
       "1.93 in of rain in the past week",
@@ -4368,7 +4369,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.801,
+     "risk": 0.819,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before",
@@ -4377,7 +4378,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.81,
+     "risk": 0.784,
      "level": "high",
      "reasons": [
       "3.41 in of rain in the 3 days before",
@@ -4386,8 +4387,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.166,
-     "level": "caution",
+     "risk": 0.099,
+     "level": "low",
      "reasons": [
       "3.36 in of rain in the 3 days before",
       "last test (Dec 12) was over the limit"
@@ -4409,7 +4410,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.187,
+     "risk": 0.22,
      "level": "caution",
      "reasons": [
       "1.93 in of rain in the past week"
@@ -4417,7 +4418,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.887,
+     "risk": 0.927,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before"
@@ -4429,7 +4430,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.902,
+     "risk": 0.943,
      "level": "high",
      "reasons": [
       "3.41 in of rain in the 3 days before"
@@ -4441,7 +4442,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.271,
+     "risk": 0.275,
      "level": "caution",
      "reasons": [
       "3.36 in of rain in the 3 days before"
@@ -4467,7 +4468,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.11,
+     "risk": 0.087,
      "level": "low",
      "reasons": [
       "1.93 in of rain in the past week",
@@ -4476,7 +4477,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.826,
+     "risk": 0.866,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before",
@@ -4485,7 +4486,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.829,
+     "risk": 0.826,
      "level": "high",
      "reasons": [
       "3.41 in of rain in the 3 days before",
@@ -4494,8 +4495,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.21,
-     "level": "caution",
+     "risk": 0.095,
+     "level": "low",
      "reasons": [
       "3.36 in of rain in the 3 days before",
       "last test (Dec 12) was over the limit"
@@ -4517,7 +4518,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.061,
+     "risk": 0.075,
      "level": "low",
      "reasons": [
       "1.62 in of rain in the past week"
@@ -4525,15 +4526,15 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.504,
-     "level": "high",
+     "risk": 0.36,
+     "level": "caution",
      "reasons": [
       "0.58 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-11",
-     "risk": 0.594,
+     "risk": 0.538,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before"
@@ -4541,7 +4542,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.057,
+     "risk": 0.056,
      "level": "low",
      "reasons": [
       "1.80 in of rain in the 3 days before"
@@ -4563,15 +4564,15 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.122,
-     "level": "low",
+     "risk": 0.167,
+     "level": "caution",
      "reasons": [
       "1.62 in of rain in the past week"
      ]
     },
     {
      "date": "2023-01-10",
-     "risk": 0.759,
+     "risk": 0.693,
      "level": "high",
      "reasons": [
       "0.58 in of rain in the 3 days before"
@@ -4583,7 +4584,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.862,
+     "risk": 0.844,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before"
@@ -4595,8 +4596,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.181,
-     "level": "caution",
+     "risk": 0.117,
+     "level": "low",
      "reasons": [
       "1.80 in of rain in the 3 days before"
      ],
@@ -4621,7 +4622,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.059,
+     "risk": 0.086,
      "level": "low",
      "reasons": [
       "1.62 in of rain in the past week"
@@ -4629,7 +4630,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.675,
+     "risk": 0.57,
      "level": "high",
      "reasons": [
       "0.58 in of rain in the 3 days before"
@@ -4637,7 +4638,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.799,
+     "risk": 0.777,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before"
@@ -4645,7 +4646,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.107,
+     "risk": 0.094,
      "level": "low",
      "reasons": [
       "1.80 in of rain in the 3 days before"
@@ -4667,7 +4668,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.071,
+     "risk": 0.08,
      "level": "low",
      "reasons": [
       "1.62 in of rain in the past week",
@@ -4676,7 +4677,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.725,
+     "risk": 0.596,
      "level": "high",
      "reasons": [
       "0.58 in of rain in the 3 days before",
@@ -4685,7 +4686,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.775,
+     "risk": 0.738,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before",
@@ -4694,8 +4695,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.18,
-     "level": "caution",
+     "risk": 0.114,
+     "level": "low",
      "reasons": [
       "1.80 in of rain in the 3 days before",
       "last test (Dec 12) was over the limit"
@@ -4725,7 +4726,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.083,
+     "risk": 0.056,
      "level": "low",
      "reasons": [
       "0.12 in of rain in the 3 days before"
@@ -4733,7 +4734,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.348,
+     "risk": 0.208,
      "level": "caution",
      "reasons": [
       "0.57 in of rain in the 3 days before"
@@ -4741,7 +4742,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.037,
+     "risk": 0.026,
      "level": "low",
      "reasons": [
       "0.57 in of rain in the 3 days before"
@@ -4763,7 +4764,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.05,
+     "risk": 0.045,
      "level": "low",
      "reasons": [
       "1.11 in of rain in the past week"
@@ -4771,23 +4772,23 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.184,
-     "level": "caution",
+     "risk": 0.138,
+     "level": "low",
      "reasons": [
       "0.12 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-11",
-     "risk": 0.557,
-     "level": "high",
+     "risk": 0.363,
+     "level": "caution",
      "reasons": [
       "0.57 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-12",
-     "risk": 0.087,
+     "risk": 0.069,
      "level": "low",
      "reasons": [
       "0.57 in of rain in the 3 days before"
@@ -4809,7 +4810,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.071,
+     "risk": 0.062,
      "level": "low",
      "reasons": [
       "1.11 in of rain in the past week",
@@ -4818,8 +4819,8 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.197,
-     "level": "caution",
+     "risk": 0.152,
+     "level": "low",
      "reasons": [
       "0.12 in of rain in the 3 days before",
       "history: unsafe on 22% of 354 past tests"
@@ -4827,8 +4828,8 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.572,
-     "level": "high",
+     "risk": 0.361,
+     "level": "caution",
      "reasons": [
       "0.57 in of rain in the 3 days before",
       "history: unsafe on 22% of 354 past tests"
@@ -4836,7 +4837,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.103,
+     "risk": 0.078,
      "level": "low",
      "reasons": [
       "0.57 in of rain in the 3 days before",
@@ -4859,7 +4860,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.05,
+     "risk": 0.054,
      "level": "low",
      "reasons": [
       "1.11 in of rain in the past week"
@@ -4867,23 +4868,23 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.191,
-     "level": "caution",
+     "risk": 0.141,
+     "level": "low",
      "reasons": [
       "0.12 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-11",
-     "risk": 0.564,
-     "level": "high",
+     "risk": 0.366,
+     "level": "caution",
      "reasons": [
       "0.57 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-12",
-     "risk": 0.101,
+     "risk": 0.074,
      "level": "low",
      "reasons": [
       "0.57 in of rain in the 3 days before"
@@ -4905,7 +4906,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.056,
+     "risk": 0.046,
      "level": "low",
      "reasons": [
       "1.11 in of rain in the past week"
@@ -4913,23 +4914,23 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.179,
-     "level": "caution",
+     "risk": 0.107,
+     "level": "low",
      "reasons": [
       "0.12 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-11",
-     "risk": 0.555,
-     "level": "high",
+     "risk": 0.351,
+     "level": "caution",
      "reasons": [
       "0.57 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-12",
-     "risk": 0.086,
+     "risk": 0.055,
      "level": "low",
      "reasons": [
       "0.57 in of rain in the 3 days before"
@@ -4951,7 +4952,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.294,
+     "risk": 0.319,
      "level": "caution",
      "reasons": [
       "0.19 in of rain in the 3 days before"
@@ -4959,7 +4960,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.907,
+     "risk": 0.897,
      "level": "high",
      "reasons": [
       "1.93 in of rain in the 3 days before"
@@ -4967,7 +4968,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.873,
+     "risk": 0.876,
      "level": "high",
      "reasons": [
       "3.07 in of rain in the 3 days before"
@@ -4975,8 +4976,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.192,
-     "level": "caution",
+     "risk": 0.152,
+     "level": "low",
      "reasons": [
       "2.88 in of rain in the 3 days before"
      ]
@@ -4997,7 +4998,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.13,
+     "risk": 0.106,
      "level": "low",
      "reasons": [
       "1.93 in of rain in the past week",
@@ -5006,7 +5007,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.886,
+     "risk": 0.918,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before",
@@ -5024,7 +5025,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.327,
+     "risk": 0.19,
      "level": "caution",
      "reasons": [
       "3.36 in of rain in the 3 days before",
@@ -5047,7 +5048,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.038,
+     "risk": 0.034,
      "level": "low",
      "reasons": [
       "1.11 in of rain in the past week"
@@ -5055,7 +5056,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.068,
+     "risk": 0.041,
      "level": "low",
      "reasons": [
       "0.12 in of rain in the 3 days before"
@@ -5063,15 +5064,15 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.298,
-     "level": "caution",
+     "risk": 0.136,
+     "level": "low",
      "reasons": [
       "0.57 in of rain in the 3 days before"
      ]
     },
     {
      "date": "2023-01-12",
-     "risk": 0.042,
+     "risk": 0.023,
      "level": "low",
      "reasons": [
       "0.57 in of rain in the 3 days before"
@@ -5093,7 +5094,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.016,
+     "risk": 0.017,
      "level": "low",
      "reasons": [
       "1.11 in of rain in the past week"
@@ -5101,7 +5102,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.024,
+     "risk": 0.023,
      "level": "low",
      "reasons": [
       "0.12 in of rain in the 3 days before"
@@ -5109,7 +5110,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.081,
+     "risk": 0.055,
      "level": "low",
      "reasons": [
       "0.57 in of rain in the 3 days before"
@@ -5139,7 +5140,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.528,
+     "risk": 0.501,
      "level": "high",
      "reasons": [
       "1.93 in of rain in the past week",
@@ -5149,7 +5150,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.969,
+     "risk": 0.975,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before",
@@ -5163,7 +5164,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.961,
+     "risk": 0.967,
      "level": "high",
      "reasons": [
       "3.41 in of rain in the 3 days before",
@@ -5177,7 +5178,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.657,
+     "risk": 0.562,
      "level": "high",
      "reasons": [
       "3.36 in of rain in the 3 days before",
@@ -5205,7 +5206,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.518,
+     "risk": 0.546,
      "level": "high",
      "reasons": [
       "1.93 in of rain in the past week",
@@ -5215,7 +5216,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.972,
+     "risk": 0.976,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before",
@@ -5225,7 +5226,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.962,
+     "risk": 0.968,
      "level": "high",
      "reasons": [
       "3.41 in of rain in the 3 days before",
@@ -5235,7 +5236,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.656,
+     "risk": 0.547,
      "level": "high",
      "reasons": [
       "3.36 in of rain in the 3 days before",
@@ -5259,7 +5260,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.484,
+     "risk": 0.36,
      "level": "caution",
      "reasons": [
       "1.93 in of rain in the past week",
@@ -5269,7 +5270,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.957,
+     "risk": 0.959,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before",
@@ -5279,7 +5280,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.952,
+     "risk": 0.948,
      "level": "high",
      "reasons": [
       "3.41 in of rain in the 3 days before",
@@ -5289,8 +5290,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.579,
-     "level": "high",
+     "risk": 0.356,
+     "level": "caution",
      "reasons": [
       "3.36 in of rain in the 3 days before",
       "last test (Jan 02) was over the limit",
@@ -5313,7 +5314,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.339,
+     "risk": 0.361,
      "level": "caution",
      "reasons": [
       "0.19 in of rain in the 3 days before",
@@ -5322,7 +5323,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.888,
+     "risk": 0.883,
      "level": "high",
      "reasons": [
       "1.93 in of rain in the 3 days before",
@@ -5335,7 +5336,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.835,
+     "risk": 0.884,
      "level": "high",
      "reasons": [
       "3.07 in of rain in the 3 days before",
@@ -5344,7 +5345,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.217,
+     "risk": 0.185,
      "level": "caution",
      "reasons": [
       "2.88 in of rain in the 3 days before",
@@ -5367,7 +5368,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.388,
+     "risk": 0.402,
      "level": "caution",
      "reasons": [
       "0.19 in of rain in the 3 days before",
@@ -5376,7 +5377,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.905,
+     "risk": 0.891,
      "level": "high",
      "reasons": [
       "1.93 in of rain in the 3 days before",
@@ -5389,7 +5390,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.859,
+     "risk": 0.899,
      "level": "high",
      "reasons": [
       "3.07 in of rain in the 3 days before",
@@ -5398,7 +5399,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.268,
+     "risk": 0.27,
      "level": "caution",
      "reasons": [
       "2.88 in of rain in the 3 days before",
@@ -5421,7 +5422,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.304,
+     "risk": 0.208,
      "level": "caution",
      "reasons": [
       "0.19 in of rain in the 3 days before",
@@ -5431,7 +5432,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.859,
+     "risk": 0.884,
      "level": "high",
      "reasons": [
       "1.93 in of rain in the 3 days before",
@@ -5445,7 +5446,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.797,
+     "risk": 0.78,
      "level": "high",
      "reasons": [
       "3.07 in of rain in the 3 days before",
@@ -5455,7 +5456,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.223,
+     "risk": 0.162,
      "level": "caution",
      "reasons": [
       "2.88 in of rain in the 3 days before",
@@ -5479,7 +5480,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.049,
+     "risk": 0.064,
      "level": "low",
      "reasons": [
       "0.19 in of rain in the 3 days before",
@@ -5488,7 +5489,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.365,
+     "risk": 0.357,
      "level": "caution",
      "reasons": [
       "1.93 in of rain in the 3 days before",
@@ -5501,7 +5502,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.365,
+     "risk": 0.3,
      "level": "caution",
      "reasons": [
       "3.07 in of rain in the 3 days before",
@@ -5510,7 +5511,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.053,
+     "risk": 0.037,
      "level": "low",
      "reasons": [
       "2.88 in of rain in the 3 days before",
@@ -5533,7 +5534,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.019,
+     "risk": 0.028,
      "level": "low",
      "reasons": [
       "1.93 in of rain in the past week"
@@ -5541,7 +5542,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.297,
+     "risk": 0.247,
      "level": "caution",
      "reasons": [
       "1.81 in of rain in the 3 days before"
@@ -5553,7 +5554,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.405,
+     "risk": 0.248,
      "level": "caution",
      "reasons": [
       "3.41 in of rain in the 3 days before"
@@ -5561,7 +5562,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.048,
+     "risk": 0.037,
      "level": "low",
      "reasons": [
       "3.36 in of rain in the 3 days before"
@@ -5583,7 +5584,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.034,
+     "risk": 0.052,
      "level": "low",
      "reasons": [
       "1.93 in of rain in the past week"
@@ -5591,7 +5592,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.359,
+     "risk": 0.426,
      "level": "caution",
      "reasons": [
       "1.81 in of rain in the 3 days before"
@@ -5599,7 +5600,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.465,
+     "risk": 0.389,
      "level": "caution",
      "reasons": [
       "3.41 in of rain in the 3 days before"
@@ -5607,7 +5608,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.062,
+     "risk": 0.077,
      "level": "low",
      "reasons": [
       "3.36 in of rain in the 3 days before"
@@ -5629,7 +5630,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.261,
+     "risk": 0.284,
      "level": "caution",
      "reasons": [
       "1.93 in of rain in the past week",
@@ -5639,7 +5640,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.953,
+     "risk": 0.961,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before",
@@ -5653,7 +5654,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.934,
+     "risk": 0.963,
      "level": "high",
      "reasons": [
       "3.41 in of rain in the 3 days before",
@@ -5667,7 +5668,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.511,
+     "risk": 0.551,
      "level": "high",
      "reasons": [
       "3.36 in of rain in the 3 days before",
@@ -5695,7 +5696,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.291,
+     "risk": 0.202,
      "level": "caution",
      "reasons": [
       "0.19 in of rain in the 3 days before",
@@ -5704,7 +5705,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.735,
+     "risk": 0.72,
      "level": "high",
      "reasons": [
       "1.93 in of rain in the 3 days before",
@@ -5717,7 +5718,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.796,
+     "risk": 0.732,
      "level": "high",
      "reasons": [
       "3.07 in of rain in the 3 days before",
@@ -5726,8 +5727,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.196,
-     "level": "caution",
+     "risk": 0.159,
+     "level": "low",
      "reasons": [
       "2.88 in of rain in the 3 days before",
       "this beach is often unsafe even in dry weather"
@@ -5749,7 +5750,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.361,
+     "risk": 0.347,
      "level": "caution",
      "reasons": [
       "0.19 in of rain in the 3 days before",
@@ -5758,7 +5759,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.806,
+     "risk": 0.852,
      "level": "high",
      "reasons": [
       "1.93 in of rain in the 3 days before",
@@ -5771,7 +5772,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.881,
+     "risk": 0.865,
      "level": "high",
      "reasons": [
       "3.07 in of rain in the 3 days before",
@@ -5780,7 +5781,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.255,
+     "risk": 0.24,
      "level": "caution",
      "reasons": [
       "2.88 in of rain in the 3 days before",
@@ -5803,8 +5804,8 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.11,
-     "level": "low",
+     "risk": 0.182,
+     "level": "caution",
      "reasons": [
       "1.93 in of rain in the past week",
       "this beach is often unsafe even in dry weather"
@@ -5812,7 +5813,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.878,
+     "risk": 0.926,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before",
@@ -5825,7 +5826,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.921,
+     "risk": 0.926,
      "level": "high",
      "reasons": [
       "3.41 in of rain in the 3 days before",
@@ -5834,7 +5835,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.266,
+     "risk": 0.263,
      "level": "caution",
      "reasons": [
       "3.36 in of rain in the 3 days before",
@@ -5857,7 +5858,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.09,
+     "risk": 0.118,
      "level": "low",
      "reasons": [
       "1.93 in of rain in the past week"
@@ -5865,7 +5866,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.882,
+     "risk": 0.881,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before"
@@ -5877,7 +5878,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.891,
+     "risk": 0.898,
      "level": "high",
      "reasons": [
       "3.41 in of rain in the 3 days before"
@@ -5885,8 +5886,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.165,
-     "level": "caution",
+     "risk": 0.085,
+     "level": "low",
      "reasons": [
       "3.36 in of rain in the 3 days before"
      ]
@@ -5907,7 +5908,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.09,
+     "risk": 0.116,
      "level": "low",
      "reasons": [
       "1.93 in of rain in the past week"
@@ -5915,7 +5916,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.89,
+     "risk": 0.881,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before"
@@ -5935,7 +5936,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.154,
+     "risk": 0.085,
      "level": "low",
      "reasons": [
       "3.36 in of rain in the 3 days before"
@@ -5957,7 +5958,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.077,
+     "risk": 0.102,
      "level": "low",
      "reasons": [
       "1.93 in of rain in the past week"
@@ -5965,7 +5966,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.783,
+     "risk": 0.856,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before"
@@ -5977,7 +5978,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.843,
+     "risk": 0.889,
      "level": "high",
      "reasons": [
       "3.41 in of rain in the 3 days before"
@@ -5985,7 +5986,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.109,
+     "risk": 0.079,
      "level": "low",
      "reasons": [
       "3.36 in of rain in the 3 days before"
@@ -6007,7 +6008,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.094,
+     "risk": 0.131,
      "level": "low",
      "reasons": [
       "1.93 in of rain in the past week"
@@ -6015,7 +6016,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.86,
+     "risk": 0.891,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before"
@@ -6027,7 +6028,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.864,
+     "risk": 0.897,
      "level": "high",
      "reasons": [
       "3.41 in of rain in the 3 days before"
@@ -6035,7 +6036,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.147,
+     "risk": 0.104,
      "level": "low",
      "reasons": [
       "3.36 in of rain in the 3 days before"
@@ -6057,7 +6058,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.301,
+     "risk": 0.335,
      "level": "caution",
      "reasons": [
       "1.93 in of rain in the past week",
@@ -6067,7 +6068,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.956,
+     "risk": 0.958,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before",
@@ -6081,7 +6082,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.96,
+     "risk": 0.965,
      "level": "high",
      "reasons": [
       "3.41 in of rain in the 3 days before",
@@ -6095,7 +6096,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.618,
+     "risk": 0.686,
      "level": "high",
      "reasons": [
       "3.36 in of rain in the 3 days before",
@@ -6123,7 +6124,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.335,
+     "risk": 0.317,
      "level": "caution",
      "reasons": [
       "1.93 in of rain in the past week",
@@ -6133,7 +6134,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.951,
+     "risk": 0.962,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before",
@@ -6147,7 +6148,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.965,
+     "risk": 0.954,
      "level": "high",
      "reasons": [
       "3.41 in of rain in the 3 days before",
@@ -6161,7 +6162,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.58,
+     "risk": 0.509,
      "level": "high",
      "reasons": [
       "3.36 in of rain in the 3 days before",
@@ -6189,8 +6190,8 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.419,
-     "level": "caution",
+     "risk": 0.541,
+     "level": "high",
      "reasons": [
       "1.93 in of rain in the past week",
       "last test (Jan 07) was over the limit",
@@ -6199,7 +6200,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.976,
+     "risk": 0.985,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before",
@@ -6227,7 +6228,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.804,
+     "risk": 0.665,
      "level": "high",
      "reasons": [
       "3.36 in of rain in the 3 days before",
@@ -6255,7 +6256,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.168,
+     "risk": 0.199,
      "level": "caution",
      "reasons": [
       "1.93 in of rain in the past week"
@@ -6263,7 +6264,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.891,
+     "risk": 0.933,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before"
@@ -6275,7 +6276,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.917,
+     "risk": 0.927,
      "level": "high",
      "reasons": [
       "3.41 in of rain in the 3 days before"
@@ -6287,7 +6288,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.217,
+     "risk": 0.186,
      "level": "caution",
      "reasons": [
       "3.36 in of rain in the 3 days before"
@@ -6313,7 +6314,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.092,
+     "risk": 0.106,
      "level": "low",
      "reasons": [
       "1.93 in of rain in the past week"
@@ -6321,7 +6322,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.843,
+     "risk": 0.85,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before"
@@ -6333,7 +6334,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.864,
+     "risk": 0.825,
      "level": "high",
      "reasons": [
       "3.41 in of rain in the 3 days before"
@@ -6341,8 +6342,8 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.169,
-     "level": "caution",
+     "risk": 0.104,
+     "level": "low",
      "reasons": [
       "3.36 in of rain in the 3 days before"
      ]
@@ -6363,7 +6364,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.086,
+     "risk": 0.135,
      "level": "low",
      "reasons": [
       "1.93 in of rain in the past week"
@@ -6371,7 +6372,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.88,
+     "risk": 0.923,
      "level": "high",
      "reasons": [
       "1.81 in of rain in the 3 days before"
@@ -6383,7 +6384,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.892,
+     "risk": 0.924,
      "level": "high",
      "reasons": [
       "3.41 in of rain in the 3 days before"
@@ -6391,7 +6392,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.205,
+     "risk": 0.172,
      "level": "caution",
      "reasons": [
       "3.36 in of rain in the 3 days before"
@@ -6413,7 +6414,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.062,
+     "risk": 0.082,
      "level": "low",
      "reasons": [
       "1.62 in of rain in the past week"
@@ -6421,7 +6422,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.276,
+     "risk": 0.227,
      "level": "caution",
      "reasons": [
       "0.58 in of rain in the 3 days before"
@@ -6433,7 +6434,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.455,
+     "risk": 0.38,
      "level": "caution",
      "reasons": [
       "1.81 in of rain in the 3 days before"
@@ -6441,7 +6442,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.021,
+     "risk": 0.023,
      "level": "low",
      "reasons": [
       "1.80 in of rain in the 3 days before"
@@ -6463,7 +6464,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.019,
+     "risk": 0.047,
      "level": "low",
      "reasons": [
       "1.62 in of rain in the past week"
@@ -6471,7 +6472,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.096,
+     "risk": 0.105,
      "level": "low",
      "reasons": [
       "0.58 in of rain in the 3 days before"
@@ -6483,7 +6484,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.314,
+     "risk": 0.171,
      "level": "caution",
      "reasons": [
       "1.81 in of rain in the 3 days before"
@@ -6491,7 +6492,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.014,
+     "risk": 0.009,
      "level": "low",
      "reasons": [
       "1.80 in of rain in the 3 days before"
@@ -6513,7 +6514,7 @@
    "forecast": [
     {
      "date": "2023-01-09",
-     "risk": 0.76,
+     "risk": 0.71,
      "level": "high",
      "reasons": [
       "0.19 in of rain in the 3 days before",
@@ -6523,7 +6524,7 @@
     },
     {
      "date": "2023-01-10",
-     "risk": 0.972,
+     "risk": 0.967,
      "level": "high",
      "reasons": [
       "1.93 in of rain in the 3 days before",
@@ -6537,7 +6538,7 @@
     },
     {
      "date": "2023-01-11",
-     "risk": 0.938,
+     "risk": 0.951,
      "level": "high",
      "reasons": [
       "3.07 in of rain in the 3 days before",
@@ -6551,7 +6552,7 @@
     },
     {
      "date": "2023-01-12",
-     "risk": 0.622,
+     "risk": 0.65,
      "level": "high",
      "reasons": [
       "2.88 in of rain in the 3 days before",

@@ -1,4 +1,5 @@
 {
+ "model_id": "40ebd86751",
  "period": "2021-10-01 to latest",
  "dry_definition": "under 0.1 in of rain in the past 3 days and 3+ dry days",
  "wet_definition": "0.1 in or more of rain in the past 3 days",

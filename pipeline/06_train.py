@@ -12,7 +12,7 @@ The app's warning threshold gives the same number of warnings as sign_plus_rain.
 As a check, we also fix a threshold using 2022 only and apply it unchanged to 2023+.
 Outputs: model/beach_model.joblib, model/metrics.json, model/test_predictions.csv
 """
-import json
+import hashlib, json
 from pathlib import Path
 import joblib
 import numpy as np
@@ -25,9 +25,13 @@ from sklearn.metrics import roc_auc_score, average_precision_score
 ROOT = Path(__file__).resolve().parent.parent
 SPLIT = "2023-01-01"
 RAIN = ["rain_1d", "rain_3d", "rain_7d", "rain_30d", "days_dry"]
-FEATURES = RAIN + ["tide_high", "tide_low", "tide_range", "month", "wet_season",
+# No "month": with only two off-season storms in 2010-2022 it let the model invent an
+# October-storm effect (review/forecast_puzzle.md). wet_season keeps the seasonal signal.
+FEATURES = RAIN + ["tide_high", "tide_low", "tide_range", "wet_season",
                    "last_exceeds", "last_log_value", "days_since_last", "past_rate", "lat", "lon"]
-PARAMS = dict(learning_rate=0.05, max_iter=400, max_leaf_nodes=31, l2_regularization=1.0, random_state=0)
+# min_samples_leaf=100: every rule the model learns must rest on 100+ samples, not a few rare days.
+PARAMS = dict(learning_rate=0.05, max_iter=400, max_leaf_nodes=31, min_samples_leaf=100,
+              l2_regularization=1.0, random_state=0)
 PRIOR_WEIGHT = 10
 
 
@@ -63,7 +67,11 @@ def score(warn):
             "unsafe_days_caught": round(warn[y == 1].mean(), 3),
             "warnings_that_were_right": round(y[warn].mean(), 3)}
 
-res = {"rows": {"train": len(train), "test": len(test), "test_unsafe_share": round(y.mean(), 3)},
+# Model ID: a fingerprint of the model's test predictions. Every file made from this model
+# carries it, so a file left over from an older model is easy to spot.
+model_id = hashlib.sha256(test["risk"].values.tobytes()).hexdigest()[:10]
+res = {"model_id": model_id,
+       "rows": {"train": len(train), "test": len(test), "test_unsafe_share": round(y.mean(), 3)},
        "note": "shares are of TESTED beach-days (2023 onward), not calendar days",
        "baselines": {}}
 for name, warn in baselines(test).items():
@@ -93,7 +101,8 @@ res["feature_importance"] = dict(sorted(zip(FEATURES, imp.importances_mean.round
 
 (ROOT / "model").mkdir(exist_ok=True)
 joblib.dump({"model": model, "features": FEATURES, "global_rate": g, "prior_weight": PRIOR_WEIGHT,
-             "threshold": cut, "sklearn_version": sklearn.__version__}, ROOT / "model" / "beach_model.joblib")
+             "threshold": cut, "sklearn_version": sklearn.__version__, "model_id": model_id},
+            ROOT / "model" / "beach_model.joblib")
 (ROOT / "model" / "metrics.json").write_text(json.dumps(res, indent=2))
 test[["StationCode", "date", "value", "exceeds", "risk", "sign_1d", "sign3_1d", "past_n", "past_unsafe"]
      + FEATURES].to_csv(ROOT / "model" / "test_predictions.csv", index=False)

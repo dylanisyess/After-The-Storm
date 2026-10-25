@@ -5,6 +5,7 @@
 /California_Historic_Fire_Perimeters_*.geojson
 /*.pdf
 # Regenerable intermediates
+processed/bacteria_la.csv
 processed/rain_cells/
 # Scratch
 _to_delete/
