@@ -2,14 +2,27 @@
 
 Every feature uses only information available BEFORE the sample day, except
 tide predictions, which are known in advance:
-  rain_*        rain in the 1, 3, 7 and 30 days before the sample day (mm)
+  rain_*        rain in the 1, 3, 7 and 30 days before the sample day (mm).
+                Left blank if the rain record has a gap (never guessed as 0).
   days_dry      days since the last day with >= 2.5 mm (0.1 in) of rain
   tide_*        predicted high/low/range on the sample day (ft)
   month, wet_season
   last_*        the station's most recent result that was KNOWN by the sample
                 day: taken from samples at least 2 days earlier, because lab
                 culture results take about a day to come back
-  spill_*       sewage reaching surface water within 10 km in the prior 7 days
+  past_n, past_unsafe   how many of the station's results were known by the
+                sample day (same 2-day rule), and how many were unsafe.
+                06 turns these into past_rate.
+Two more columns describe today's warning signs. They are only used to compare
+the model with signs, never as model features:
+  sign_1d       the latest enterococcus result that was back by the sample day
+                was unsafe. LA County posts a sign as soon as the lab result
+                comes back, so signs use a 1-day lag (the app uses 2: public
+                data takes longer to appear online).
+  sign3_1d      the same, but failing ANY of the three state ocean standards
+                (enterococcus 104, fecal coliform 400, total coliform 10,000,
+                or total coliform 1,000 when fecal/total > 0.1), which is what
+                counties actually post on.
 Output: processed/training_table.csv
 """
 from pathlib import Path
@@ -18,8 +31,7 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parent.parent
 P = ROOT / "processed"
-LAB_LAG_DAYS = 2
-SPILL_KM, SPILL_DAYS = 10, 7
+LAB_LAG_DAYS, SIGN_LAG_DAYS = 2, 1
 
 lab = pd.read_csv(P / "labels.csv", parse_dates=["SampleDate"])
 st = pd.read_csv(P / "stations.csv")
@@ -30,16 +42,16 @@ lab = lab[["StationCode", "SampleDate", "water", "cell_lat", "cell_lon", "tide_s
 
 # ---- Rain: rolling sums ending the day BEFORE each date ----
 rain = pd.read_csv(P / "rain_daily.csv", parse_dates=["date"]).sort_values("date")
-rain["precip_mm"] = rain["precip_mm"].fillna(0)
 feats = []
 for (la, lo), g in rain.groupby(["cell_lat", "cell_lon"]):
-    s = g.set_index("date")["precip_mm"].asfreq("D", fill_value=0)
+    s = g.set_index("date")["precip_mm"].asfreq("D")  # a missing day stays blank (NaN)
     prev = s.shift(1)  # yesterday and earlier only
     wet = (s >= 2.5)
     last_wet = s.index.to_series().where(wet).ffill().shift(1)
     feats.append(pd.DataFrame({
         "cell_lat": la, "cell_lon": lo, "date": s.index,
         "rain_1d": prev.values,
+        # a sum over a window with a blank day is blank too (rolling's default)
         "rain_3d": prev.rolling(3).sum().values,
         "rain_7d": prev.rolling(7).sum().values,
         "rain_30d": prev.rolling(30).sum().values,
@@ -59,39 +71,45 @@ lab = lab.merge(tide_f, on=["tide_station", "date"], how="left")
 lab["month"] = lab["date"].dt.month
 lab["wet_season"] = lab["month"].isin([11, 12, 1, 2, 3, 4]).astype(int)
 
-# ---- Last result KNOWN by the sample day (lab lag) ----
-lab = lab.sort_values("date").reset_index(drop=True)
-known = lab[["StationCode", "date", "value", "exceeds"]].copy()
-known["known_date"] = known["date"] + pd.Timedelta(days=LAB_LAG_DAYS)
-known = known.rename(columns={"date": "last_sample_date", "value": "last_value",
-                              "exceeds": "last_exceeds"}).sort_values("known_date")
-lab = pd.merge_asof(lab, known, left_on="date", right_on="known_date", by="StationCode",
-                    direction="backward", allow_exact_matches=True)
+
+def last_known(samples, known, lag_days):
+    """For each sample, attach the station's most recent row of `known` taken at
+    least lag_days before the sample day. merge_asof finds the latest row whose
+    known_date is on or before the sample date, separately for each station."""
+    k = known.assign(known_date=known["date"] + pd.Timedelta(days=lag_days)).drop(columns="date")
+    out = pd.merge_asof(samples.sort_values("date"), k.sort_values("known_date"),
+                        left_on="date", right_on="known_date", by="StationCode",
+                        direction="backward", allow_exact_matches=True)
+    return out.drop(columns="known_date")
+
+
+# ---- Last result and station history KNOWN by the sample day (lab lag) ----
+hist = lab[["StationCode", "date", "value", "exceeds"]].sort_values(["StationCode", "date"])
+hist = hist.assign(
+    last_sample_date=hist["date"],
+    past_n=hist.groupby("StationCode").cumcount() + 1,            # results up to and including this one
+    past_unsafe=hist.groupby("StationCode")["exceeds"].cumsum(),  # how many of them were unsafe
+).rename(columns={"value": "last_value", "exceeds": "last_exceeds"})
+lab = last_known(lab, hist, LAB_LAG_DAYS)
+lab[["past_n", "past_unsafe"]] = lab[["past_n", "past_unsafe"]].fillna(0)  # nothing known yet
 lab["last_log_value"] = np.log10(lab["last_value"].clip(lower=1))
 lab["days_since_last"] = (lab["date"] - lab["last_sample_date"]).dt.days
 
-# ---- Sewage spills near each station in the prior week ----
-sp = pd.read_csv(P / "spills_la.csv", parse_dates=["start"])
-sp = sp[sp["surface_gal"] > 0].copy()
-sp["day"] = sp["start"].dt.normalize()
-def km(lat1, lon1, lat2, lon2):
-    lat1, lon1, lat2, lon2 = map(np.radians, (lat1, lon1, lat2, lon2))
-    a = np.sin((lat2 - lat1) / 2) ** 2 + np.cos(lat1) * np.cos(lat2) * np.sin((lon2 - lon1) / 2) ** 2
-    return 6371 * 2 * np.arcsin(np.sqrt(a))
-days = pd.date_range("2009-12-01", lab["date"].max())
-rows = []
-for _, s_ in st.iterrows():
-    near = sp[km(s_.lat, s_.lon, sp["lat"].values, sp["lon"].values) <= SPILL_KM]
-    gal = near.groupby("day")["surface_gal"].sum().reindex(days, fill_value=0)
-    cnt = near.groupby("day").size().reindex(days, fill_value=0)
-    rows.append(pd.DataFrame({"StationCode": s_.StationCode, "date": days,
-        "spill_gal_7d": gal.shift(1).rolling(SPILL_DAYS).sum().values,
-        "spill_count_7d": cnt.shift(1).rolling(SPILL_DAYS).sum().values}))
-lab = lab.merge(pd.concat(rows), on=["StationCode", "date"], how="left")
-lab["spill_log_gal_7d"] = np.log10(lab["spill_gal_7d"].fillna(0) + 1)
+# ---- What today's warning signs showed (for comparison only) ----
+b = pd.read_csv(P / "bacteria_la.csv", usecols=["StationCode", "SampleDate", "Analyte", "value"],
+                parse_dates=["SampleDate"])
+coli = (b[b["Analyte"].str.startswith("Coliform")]
+        .pivot_table(index=["StationCode", "SampleDate"], columns="Analyte", values="value")
+        .reset_index().rename(columns={"SampleDate": "date", "Coliform, Fecal": "fc", "Coliform, Total": "tc"}))
+post = lab.loc[lab["water"] == "ocean", ["StationCode", "date", "exceeds"]].merge(
+    coli, on=["StationCode", "date"], how="left")
+post["sign3"] = ((post["exceeds"] == 1) | (post["fc"] > 400) | (post["tc"] > 10000)
+                 | ((post["tc"] > 1000) & (post["fc"] / post["tc"] > 0.1))).astype(int)
+post = post.rename(columns={"exceeds": "sign_1d", "sign3": "sign3_1d"})
+lab = last_known(lab, post[["StationCode", "date", "sign_1d", "sign3_1d"]], SIGN_LAG_DAYS)
 
-lab = lab.drop(columns=["known_date", "last_value", "last_sample_date"])
+lab = lab.drop(columns=["last_value", "last_sample_date"]).sort_values(["date", "StationCode"])
 lab.to_csv(P / "training_table.csv", index=False)
 print(f"{len(lab):,} rows x {lab.shape[1]} columns")
-print("missing share per feature:")
+print("missing share per column:")
 print(lab.isna().mean().round(3)[lambda s: s > 0].to_string())

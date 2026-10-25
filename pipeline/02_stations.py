@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parent.parent
 THRESH = {"Enterococcus": 104, "E. coli": 320}
 
 b = pd.read_csv(ROOT / "processed" / "bacteria_la.csv", parse_dates=["SampleDate"])
+b = b[b["Analyte"].isin(THRESH)]  # coliforms are only used to score warning signs (05)
 # Grade each station on ONE standard: beaches report both bacteria, but the
 # E. coli 320 limit is a freshwater standard. Keep each station's main analyte.
 # BeachWatch stations are ocean beaches (enterococcus); others are inland (E. coli when sampled).

@@ -2,6 +2,9 @@
 
 Keeps enterococcus (ocean) and E. coli (freshwater) culture results
 (MPN or CFU per 100 mL) from Regional Board 4 (Los Angeles), 2010 onward.
+Also keeps fecal and total coliform: the model doesn't use them, but beach
+signs are posted when ANY of the three ocean standards fails, so 05 needs them
+to score today's signs fairly.
 Drops rows the Water Boards flagged as needing extensive review or rejected.
 Output: processed/bacteria_la.csv, one row per sample result.
 """
@@ -21,7 +24,7 @@ parts = []
 for name in FILES:
     for ch in pd.read_csv(ROOT / name, usecols=KEEP, dtype=str, chunksize=400_000, low_memory=False):
         m = (ch["RegionNumber"] == "4") \
-            & ch["Analyte"].isin(["Enterococcus", "E. coli"]) \
+            & ch["Analyte"].isin(["Enterococcus", "E. coli", "Coliform, Fecal", "Coliform, Total"]) \
             & ch["Unit"].isin(["MPN/100 mL", "CFU/100 mL"]) \
             & (ch["MatrixName"] == "samplewater") \
             & ~ch["DataQuality"].isin(BAD_QUALITY)
@@ -29,7 +32,9 @@ for name in FILES:
     print("read", name, file=sys.stderr)
 
 df = pd.concat(parts, ignore_index=True)
-df["SampleDate"] = pd.to_datetime(df["SampleDate"], errors="coerce")
+# "mixed": most dates are "2023-01-10" but ~2% are "2023-01-10 08:58:00". Without it,
+# pandas guesses one format from the first row and silently blanks the others.
+df["SampleDate"] = pd.to_datetime(df["SampleDate"], errors="coerce", format="mixed").dt.normalize()
 df = df[df["SampleDate"] >= "2010-01-01"]
 for c in ["Result", "ResultSub", "TargetLatitude", "TargetLongitude"]:
     df[c] = pd.to_numeric(df[c], errors="coerce")

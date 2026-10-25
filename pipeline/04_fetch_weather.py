@@ -6,6 +6,12 @@ Uses only the Python standard library, so no installs are needed.
 Rain: Open-Meteo Historical Weather API (ERA5 reanalysis), one daily series per
 0.25-degree weather cell that contains a monitoring station.
 Tides: NOAA CO-OPS high/low tide predictions for Santa Monica and Los Angeles.
+Forecast-model rain: live forecasts (08) can't use ERA5, which arrives ~5 days
+late, so they use Open-Meteo's forecast models instead. Those models see about
+25% less rain at our coastal grid points than ERA5, which the model was trained
+on. We download the forecast models' archive (from 2021-03-23) and save one
+scale factor per weather cell, ERA5 total / forecast total, measured on
+2021-2022 only (before the test years). 08 multiplies live rain by it.
 
 Open-Meteo's free tier counts a long date range as many calls, so this script
 paces itself and waits when rate-limited. It saves each cell as it finishes:
@@ -90,4 +96,32 @@ with open(OUT / "tides_hilo.csv", "w", newline="") as f:
     w = csv.writer(f)
     w.writerow(["tide_station", "time", "type", "height_ft"])
     w.writerows(rows)
-print("Tides saved to processed/tides_hilo.csv. All done!")
+print("Tides saved to processed/tides_hilo.csv")
+
+# ---- Forecast-model rain archive + scale factors (beach weather cells only) ----
+FC_START, FIT_END = "2021-03-23", "2022-12-31"
+with open(OUT / "stations.csv", newline="") as f:
+    ocean_cells = sorted({(float(r["cell_lat"]), float(r["cell_lon"]))
+                          for r in csv.DictReader(f) if r["water"] == "ocean"})
+fc_rows, scale = [], {}
+for lat, lon in ocean_cells:
+    url = ("https://historical-forecast-api.open-meteo.com/v1/forecast"
+           f"?latitude={lat}&longitude={lon}&start_date={FC_START}&end_date={END}"
+           "&daily=precipitation_sum&timezone=America%2FLos_Angeles")
+    d = get_json(url)["daily"]
+    fc = {day: mm for day, mm in zip(d["time"], d["precipitation_sum"])}
+    fc_rows += [[lat, lon, day, "" if mm is None else mm] for day, mm in fc.items()]
+    # Compare with ERA5 on days both have, 2021-2022 only
+    with open(CACHE / f"{lat}_{lon}.csv", newline="") as f:
+        era = {r["date"]: r["precip_mm"] for r in csv.DictReader(f)}
+    both = [day for day in fc if day <= FIT_END and fc[day] is not None and era.get(day, "") != ""]
+    era_total, fc_total = sum(float(era[day]) for day in both), sum(fc[day] for day in both)
+    scale[f"{lat},{lon}"] = round(era_total / fc_total, 3)
+    print(f"Forecast-model rain {lat},{lon}: scale factor {scale[f'{lat},{lon}']}", flush=True)
+    time.sleep(20)
+with open(OUT / "rain_forecast_model.csv", "w", newline="") as f:
+    w = csv.writer(f)
+    w.writerow(["cell_lat", "cell_lon", "date", "precip_mm"])
+    w.writerows(fc_rows)
+(OUT / "rain_scale.json").write_text(json.dumps(scale, indent=1))
+print("Saved processed/rain_forecast_model.csv and rain_scale.json. All done!")

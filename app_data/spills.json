@@ -2,10 +2,10 @@
  "rule": "spills since 2023 sending 10,000+ gallons to surface water; beach samples within 10 km over the next 7 days",
  "summary": {
   "spills_with_beach_samples": 10,
-  "beach_samples_after_spills": 225,
-  "observed_unsafe_rate": 0.56,
-  "predicted_unsafe_rate": 0.612,
-  "average_excess_vs_usual": -0.063
+  "beach_samples_after_spills": 227,
+  "observed_unsafe_rate": 0.564,
+  "predicted_unsafe_rate": 0.574,
+  "average_excess_vs_usual": -0.027
  },
  "events": [
   {
@@ -15,11 +15,11 @@
    "lat": 34.38845,
    "lon": -119.30771,
    "surface_gallons": 5600000,
-   "beach_samples_next_7_days": 2,
-   "stations": 1,
-   "observed_unsafe_rate": 0.5,
-   "predicted_unsafe_rate": 0.62,
-   "excess_vs_usual": -0.15
+   "beach_samples_next_7_days": 4,
+   "stations": 2,
+   "observed_unsafe_rate": 0.75,
+   "predicted_unsafe_rate": 0.607,
+   "excess_vs_usual": 0.13
   },
   {
    "spill_id": "904534",
@@ -31,8 +31,8 @@
    "beach_samples_next_7_days": 4,
    "stations": 2,
    "observed_unsafe_rate": 0.25,
-   "predicted_unsafe_rate": 0.375,
-   "excess_vs_usual": -0.136
+   "predicted_unsafe_rate": 0.358,
+   "excess_vs_usual": -0.122
   },
   {
    "spill_id": "888100",
@@ -44,8 +44,8 @@
    "beach_samples_next_7_days": 8,
    "stations": 4,
    "observed_unsafe_rate": 0.0,
-   "predicted_unsafe_rate": 0.01,
-   "excess_vs_usual": -0.001
+   "predicted_unsafe_rate": 0.013,
+   "excess_vs_usual": -0.01
   },
   {
    "spill_id": "893346",
@@ -57,8 +57,8 @@
    "beach_samples_next_7_days": 25,
    "stations": 6,
    "observed_unsafe_rate": 0.88,
-   "predicted_unsafe_rate": 0.788,
-   "excess_vs_usual": 0.083
+   "predicted_unsafe_rate": 0.796,
+   "excess_vs_usual": 0.064
   },
   {
    "spill_id": "893375",
@@ -70,8 +70,8 @@
    "beach_samples_next_7_days": 105,
    "stations": 15,
    "observed_unsafe_rate": 0.629,
-   "predicted_unsafe_rate": 0.806,
-   "excess_vs_usual": -0.176
+   "predicted_unsafe_rate": 0.757,
+   "excess_vs_usual": -0.136
   },
   {
    "spill_id": "893330",
@@ -83,8 +83,8 @@
    "beach_samples_next_7_days": 78,
    "stations": 15,
    "observed_unsafe_rate": 1.0,
-   "predicted_unsafe_rate": 0.931,
-   "excess_vs_usual": 0.073
+   "predicted_unsafe_rate": 0.897,
+   "excess_vs_usual": 0.097
   },
   {
    "spill_id": "885837",
@@ -96,8 +96,8 @@
    "beach_samples_next_7_days": 26,
    "stations": 13,
    "observed_unsafe_rate": 0.385,
-   "predicted_unsafe_rate": 0.307,
-   "excess_vs_usual": 0.022
+   "predicted_unsafe_rate": 0.282,
+   "excess_vs_usual": 0.053
   },
   {
    "spill_id": "893333",
@@ -109,8 +109,8 @@
    "beach_samples_next_7_days": 3,
    "stations": 2,
    "observed_unsafe_rate": 1.0,
-   "predicted_unsafe_rate": 0.829,
-   "excess_vs_usual": 0.166
+   "predicted_unsafe_rate": 0.714,
+   "excess_vs_usual": 0.279
   },
   {
    "spill_id": "904538",
@@ -122,8 +122,8 @@
    "beach_samples_next_7_days": 4,
    "stations": 2,
    "observed_unsafe_rate": 0.25,
-   "predicted_unsafe_rate": 0.375,
-   "excess_vs_usual": -0.136
+   "predicted_unsafe_rate": 0.358,
+   "excess_vs_usual": -0.122
   },
   {
    "spill_id": "895735",
@@ -135,8 +135,8 @@
    "beach_samples_next_7_days": 34,
    "stations": 16,
    "observed_unsafe_rate": 0.088,
-   "predicted_unsafe_rate": 0.085,
-   "excess_vs_usual": -0.038
+   "predicted_unsafe_rate": 0.086,
+   "excess_vs_usual": -0.034
   }
  ]
 }

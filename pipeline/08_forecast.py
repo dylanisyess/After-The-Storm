@@ -4,7 +4,9 @@
   python pipeline/08_forecast.py --as-of 2023-01-09 replay a past day from saved data
 
 Live mode pulls rain for the last 92 days and the next 4 from the Open-Meteo
-Forecast API, and tide predictions from NOAA. Replay mode uses the rain that
+Forecast API, and tide predictions from NOAA. The forecast models see less rain
+than ERA5 (what the model was trained on), so live rain is multiplied by each
+weather cell's scale factor from 04_fetch_weather.py. Replay mode uses the rain that
 actually fell (a "perfect forecast") and also records what the samples showed,
 so you can check the app against reality or demo a past storm.
 
@@ -56,15 +58,14 @@ st = pd.read_csv(P / "stations.csv")
 st = st[st["water"] == "ocean"]
 lab = pd.read_csv(P / "labels.csv", parse_dates=["SampleDate"])
 lab = lab[lab["StationCode"].isin(st["StationCode"])]
-known_cut = d0 - pd.Timedelta(days=LAB_LAG_DAYS) if not live else d0 - pd.Timedelta(days=1)
-known = lab[lab["SampleDate"] <= known_cut]
+known = lab[lab["SampleDate"] <= d0 - pd.Timedelta(days=LAB_LAG_DAYS)]  # same lab lag as training
 last = known.sort_values("SampleDate").groupby("StationCode").tail(1).set_index("StationCode")
+past = known.groupby("StationCode")["exceeds"].agg(["count", "sum"])  # results known so far, how many unsafe
 active = last.index[last["SampleDate"] >= d0 - pd.Timedelta(days=365)]
 st = st[st["StationCode"].isin(active)].set_index("StationCode")
 
 # ---- Daily rain per weather cell ----
 rain = pd.read_csv(P / "rain_daily.csv", parse_dates=["date"])
-rain["precip_mm"] = rain["precip_mm"].fillna(0)
 cells = sorted(set(zip(st["cell_lat"], st["cell_lon"])))
 series = {}
 for la, lo in cells:
@@ -78,23 +79,25 @@ if live:
            + "&timezone=America%2FLos_Angeles")
     resp = get_json(url)
     resp = resp if isinstance(resp, list) else [resp]
+    scale = json.loads((P / "rain_scale.json").read_text())
     for c, r in zip(cells, resp):
         recent = pd.Series(r["daily"]["precipitation_sum"], index=pd.to_datetime(r["daily"]["time"]),
-                           dtype=float).fillna(0)
+                           dtype=float) * scale[f"{c[0]},{c[1]}"]
         old = series[c][series[c].index < recent.index.min()]
         series[c] = pd.concat([old, recent])
-    source = "Open-Meteo forecast"
+    source = "Open-Meteo forecast, scaled to match ERA5"
 else:
     for c in cells:  # replay: use what actually fell
         s = rain[(rain.cell_lat == c[0]) & (rain.cell_lon == c[1])].set_index("date")["precip_mm"]
         series[c] = s[s.index <= days[-1]]
 
 def rain_feats(s, d):
-    s = s.asfreq("D", fill_value=0)
+    s = s.asfreq("D")  # a missing day stays blank, as in 05
     before = s[s.index < d]
     wet = before[before >= WET_MM]
-    return {"rain_1d": before.iloc[-1:].sum(), "rain_3d": before.iloc[-3:].sum(),
-            "rain_7d": before.iloc[-7:].sum(), "rain_30d": before.iloc[-30:].sum(),
+    # skipna=False: a window with a missing day gives a blank, never a guessed 0
+    return {"rain_1d": before.iloc[-1:].sum(skipna=False), "rain_3d": before.iloc[-3:].sum(skipna=False),
+            "rain_7d": before.iloc[-7:].sum(skipna=False), "rain_30d": before.iloc[-30:].sum(skipna=False),
             "days_dry": min((d - wet.index.max()).days, 365) if len(wet) else 365}
 
 # ---- Tides ----
@@ -112,14 +115,6 @@ else:
 tides["date"] = pd.to_datetime(tides["time"]).dt.normalize()
 tide_day = tides.groupby(["tide_station", "date"])["height_ft"].agg(["max", "min"])
 
-# ---- Sewage spills reaching water within 10 km in the prior week ----
-sp = pd.read_csv(P / "spills_la.csv", parse_dates=["start"])
-sp = sp[sp["surface_gal"] > 0]
-def km(lat1, lon1, lat2, lon2):
-    lat1, lon1, lat2, lon2 = map(np.radians, (lat1, lon1, lat2, lon2))
-    a = np.sin((lat2 - lat1) / 2) ** 2 + np.cos(lat1) * np.cos(lat2) * np.sin((lon2 - lon1) / 2) ** 2
-    return 6371 * 2 * np.arcsin(np.sqrt(a))
-
 hot = {h["station"]: h["type"] for h in json.loads((OUT / "hotspots.json").read_text())["stations"]} \
     if (OUT / "hotspots.json").exists() else {}
 inch = lambda mm: f"{mm / 25.4:.2f} in"
@@ -128,17 +123,17 @@ inch = lambda mm: f"{mm / 25.4:.2f} in"
 out_st, X_rows, keys = [], [], []
 for code, s in st.iterrows():
     lk = last.loc[code]
+    n, unsafe = past.loc[code, "count"], past.loc[code, "sum"]
+    # same formula as add_past_rate() in 06_train.py
+    past_rate = (unsafe + bundle["prior_weight"] * bundle["global_rate"]) / (n + bundle["prior_weight"])
     for d in days:
         f = rain_feats(series[(s.cell_lat, s.cell_lon)], d)
         hi, lo = tide_day.loc[(s.tide_station, d)] if (s.tide_station, d) in tide_day.index else (np.nan, np.nan)
-        w = sp[(sp["start"] < d) & (sp["start"] >= d - pd.Timedelta(days=7))]
-        w = w[km(s.lat, s.lon, w["lat"].values, w["lon"].values) <= 10] if len(w) else w
         f.update({"tide_high": hi, "tide_low": lo, "tide_range": hi - lo, "month": d.month,
                   "wet_season": int(d.month in [11, 12, 1, 2, 3, 4]),
                   "last_exceeds": lk["exceeds"], "last_log_value": np.log10(max(lk["value"], 1)),
                   "days_since_last": (d - lk["SampleDate"]).days,
-                  "spill_log_gal_7d": np.log10(w["surface_gal"].sum() + 1), "spill_count_7d": len(w),
-                  "station_rate": bundle["station_rate"].get(code, bundle["global_rate"]),
+                  "past_rate": past_rate, "past_share": unsafe / n, "past_n": n,
                   "lat": s.lat, "lon": s.lon})
         X_rows.append(f); keys.append((code, d))
 X = pd.DataFrame(X_rows)
@@ -159,10 +154,8 @@ for code, s in st.iterrows():
             reasons.append(f"last test ({lk['SampleDate']:%b %d}) was over the limit")
         if hot.get(code) == "chronic":
             reasons.append("this beach is often unsafe even in dry weather")
-        elif r.station_rate >= 0.15:
-            reasons.append(f"history: unsafe on {r.station_rate:.0%} of past tests")
-        if r.spill_count_7d > 0:
-            reasons.append("a sewage spill reached water within 10 km this week")
+        elif r.past_rate >= 0.15:
+            reasons.append(f"history: unsafe on {r.past_share:.0%} of {int(r.past_n)} past tests")
         if not reasons:
             reasons.append("dry weather and a clean recent record")
         level = "high" if r.risk >= 0.5 else "caution" if r.risk >= thr else "low"
