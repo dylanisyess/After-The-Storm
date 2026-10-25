@@ -1,0 +1,163 @@
+{
+ "model_id": "40ebd86751",
+ "method": "(same idea as the post-fire analysis in 07):\n  1. Expected risk from WEATHER ONLY: a model that knows the beach, rain (including\n     the sample day, since this looks back in time), days since rain, tides and\n     season, but NOT recent test results or the date. The forecast model can't be\n     used here: its \"last test\" and past_rate inputs follow the beach's own recent\n     results, so after a real improvement its expected risk drops too and the\n     improvement disappears from the residuals.\n     Each year's expected risk comes from a model trained on the other years, so\n     no test is scored by a model that saw it.\n  2. Residual = what happened (1 unsafe / 0 safe) minus expected risk.\n  3. Change = (beach's residual after - before) minus (the same change at control\n     beaches 5+ km away), which removes region-wide swings like drought years.\n  4. 95% range: resample whole calendar months (1,000 times), keeping each month's\n     target and control tests together, then WIDEN it. On random beaches and\n     dates with no known project, the plain range called 26% of them a real\n     change instead of about 5%: beaches drift from year to year for reasons we\n     don't measure (sand, berms, birds, sampling). So we widen every range by\n     the factor that makes only 5% of random dates look like a change\n     (calibrate()), and check that on a second, separate set of random dates.\nThe years during the work itself (start to end) are left out.",
+ "demos": [
+  {
+   "label": "Malibu Lagoon restoration (Surfrider Beach)",
+   "station": "SMB-MC-2",
+   "start": "2012-06-01",
+   "end": "2013-03-31",
+   "years": 2,
+   "before_window": [
+    "2010-06-01",
+    "2012-06-01"
+   ],
+   "after_window": [
+    "2013-03-31",
+    "2015-03-31"
+   ],
+   "before": {
+    "tests": 402,
+    "unsafe_rate": 0.458,
+    "expected_from_weather": 0.198
+   },
+   "after": {
+    "tests": 504,
+    "unsafe_rate": 0.175,
+    "expected_from_weather": 0.169
+   },
+   "control_beaches": 129,
+   "control_change": -0.021,
+   "change_beyond_weather": -0.233,
+   "ci95": [
+    -0.398,
+    -0.068
+   ],
+   "se": 0.04844361795455661,
+   "widen": 1.74,
+   "verdict": "cleaner than before"
+  },
+  {
+   "label": "Santa Monica Pier Clean Beaches Project (1.6-million-gallon stormwater tank, completed 2018)",
+   "station": "SMB-3-3",
+   "start": "2018-01-01",
+   "end": "2018-12-31",
+   "years": 2,
+   "before_window": [
+    "2016-01-01",
+    "2018-01-01"
+   ],
+   "after_window": [
+    "2018-12-31",
+    "2020-12-31"
+   ],
+   "before": {
+    "tests": 514,
+    "unsafe_rate": 0.082,
+    "expected_from_weather": 0.241
+   },
+   "after": {
+    "tests": 515,
+    "unsafe_rate": 0.165,
+    "expected_from_weather": 0.249
+   },
+   "control_beaches": 126,
+   "control_change": 0.011,
+   "change_beyond_weather": 0.065,
+   "ci95": [
+    -0.028,
+    0.158
+   ],
+   "se": 0.027240188392749807,
+   "widen": 1.74,
+   "verdict": "no clear change (the 95% range includes zero)"
+  },
+  {
+   "label": "Santa Monica Pier new bird netting (August 2023)",
+   "station": "SMB-3-3",
+   "start": "2023-08-01",
+   "end": "2023-08-31",
+   "years": 2,
+   "before_window": [
+    "2021-08-01",
+    "2023-08-01"
+   ],
+   "after_window": [
+    "2023-08-31",
+    "2025-08-31"
+   ],
+   "before": {
+    "tests": 436,
+    "unsafe_rate": 0.381,
+    "expected_from_weather": 0.255
+   },
+   "after": {
+    "tests": 486,
+    "unsafe_rate": 0.504,
+    "expected_from_weather": 0.212
+   },
+   "control_beaches": 115,
+   "control_change": 0.03,
+   "change_beyond_weather": 0.136,
+   "ci95": [
+    -0.012,
+    0.285
+   ],
+   "se": 0.04354014083688576,
+   "widen": 1.74,
+   "verdict": "no clear change (the 95% range includes zero)"
+  }
+ ],
+ "placebo": {
+  "widen": 1.74,
+  "plain_range_share_excluding_zero": 0.25,
+  "check_share_excluding_zero": 0.04,
+  "runs": 300
+ },
+ "post_fire_weather_only": {
+  "overall": {
+   "estimate": 0.01,
+   "ci95": [
+    -0.027,
+    0.066
+   ],
+   "forecast_model_result": {
+    "estimate": 0.006,
+    "ci95": [
+     -0.039,
+     0.061
+    ]
+   }
+  },
+  "wet_days": {
+   "estimate": 0.107,
+   "ci95": [
+    -0.046,
+    0.246
+   ],
+   "forecast_model_result": {
+    "estimate": 0.086,
+    "ci95": [
+     -0.057,
+     0.22
+    ],
+    "samples": 2363
+   }
+  },
+  "dry_days": {
+   "estimate": -0.002,
+   "ci95": [
+    -0.041,
+    0.065
+   ],
+   "forecast_model_result": {
+    "estimate": -0.003,
+    "ci95": [
+     -0.041,
+     0.059
+    ],
+    "samples": 18295
+   }
+  }
+ }
+}

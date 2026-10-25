@@ -46,6 +46,11 @@ Data pipeline in `pipeline/` (run order and outputs in `pipeline/README.md`):
   rows use a tiny bit of later information (about 6% of `past_rate` on average;
   1.2% of rows have < 10 known results). No 2023+ data is involved.
 
+- Causes analyses (Oct 24, 2026, AI-assisted; results in `review/causes_results.md`):
+  11 = beach diagnosis + 72-hour advisory check (no model); 12 = intervention
+  evaluator using a weather-only expected risk (leave-one-year-out), DiD vs beaches
+  5+ km away, month bootstrap widened x1.74 by placebo calibration. Not yet in the app.
+
 ## App data contract (`app_data/`, all JSON)
 Every file has a top-level `model_id`; `python3 pipeline/check_model_ids.py`
 checks they all match `model/metrics.json`, and the app warns if they don't.
@@ -73,6 +78,12 @@ checks they all match `model/metrics.json`, and the app warns if they don't.
   rain +8.6 points but the 95% range (-5.7 to +22) includes zero. Eaton: no nearby stations.
 - `final_metrics.json`: from 10; every quoted number as [value, low, high] per scenario
   (`test`, `live`, `day3`), keys as in the report code (e.g. `sign_plus_rain.gain`).
+- `diagnosis.json` (11): `{definitions, recovery_counts, region:{curve, by_storm_size,
+  after_rain_tides}, stations:[{station, dry_unsafe_rate, normal_wet_season_rate,
+  groups{days 0-1|2-3|4-6|7-10}, by_day, by_storm_size, trigger, recovery, chronic,
+  fix_category, fix_text, after_rain_tides}]}`.
+- `interventions.json` (12 `--demo`): `{method, demos:[{label, station, before, after,
+  change_beyond_weather, ci95, verdict}], placebo, post_fire_weather_only}`.
 - `burn_areas_2025.geojson`, `model_metrics.json` (copy of `model/metrics.json`:
   `baselines.{sign, sign_plus_rain, sign3, sign3_plus_rain}` each with `rule`
   and `model_same_budget`; `model_at_threshold`; `threshold_set_on_2022`).

@@ -14,6 +14,8 @@ Run in order from the `waterapp` folder (pip install pandas scikit-learn):
 | 8 | `08_forecast.py` | your computer (needs internet) | `app_data/forecast.json`; `--as-of YYYY-MM-DD` writes `app_data/replay_<date>.json` from saved data |
 | 9 | `09_export_app_data.py` | anywhere | `app_data/stations.json`, `history.json`, map layer, metrics |
 | 10 | `10_final_metrics.py` | needs scikit-learn | `review/final_metrics.md` (numbers to quote, with 95% ranges) and `app_data/final_metrics.json` (same numbers, read by app.py) |
+| 11 | `11_beach_diagnosis.py` | anywhere | `app_data/diagnosis.json`: per beach dry/after-rain rates, rain trigger, recovery vs. the 72-hour advisory, fix category |
+| 12 | `12_intervention.py` | needs scikit-learn | `--demo`: `app_data/interventions.json`; `STATION START END`: before/after change beyond weather. Caches `processed/weather_expected.csv` and `evaluator_calibration.json` (`--rebuild` after new data) |
 
 Steps 1-5 write to `processed/`. `bacteria_la.csv` (76 MB) is not in git; steps 5 onward only need the committed files.
 

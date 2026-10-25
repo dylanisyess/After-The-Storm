@@ -1,0 +1,6 @@
+{
+ "widen": 1.74,
+ "plain_range_share_excluding_zero": 0.25,
+ "check_share_excluding_zero": 0.04,
+ "runs": 300
+}
