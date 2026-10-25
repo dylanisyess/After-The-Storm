@@ -58,9 +58,10 @@ Data pipeline in `pipeline/` (run order and outputs in `pipeline/README.md`):
   `baselines.{sign, sign_plus_rain, sign3, sign3_plus_rain}` each with `rule`
   and `model_same_budget`; `model_at_threshold`; `threshold_set_on_2022`).
 
-## Next: build the app
-Framework: Dylan to choose (Streamlit = fastest; React + Leaflet = his usual
-stack). Views: map of beaches colored by today's level with a 3-day forecast;
+## The app
+`app.py` (Streamlit, built Oct 24, 2026, AI-assisted): `streamlit run app.py`.
+Theme in `.streamlit/config.toml`; quoted numbers in `QUOTED` at the top of app.py
+(copy from review/final_metrics.md after any retrain). Original plan: Views: map of beaches colored by today's level with a 3-day forecast;
 station page with history chart and plain-language reasons; Causes tab
 (hotspots, spills); post-fire case study; "How it works" page with the
 model-vs-signs comparison. Read only from `app_data/`; refresh it by running
