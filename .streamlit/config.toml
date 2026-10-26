@@ -24,4 +24,4 @@ borderColor = "#34476E"
 primaryColor = "#F6C453"
 
 [client]
-toolbarMode = "minimal"               # hide the developer menu from visitors
+toolbarMode = "viewer"                # only the menu items a visitor needs

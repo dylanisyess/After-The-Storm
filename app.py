@@ -152,6 +152,46 @@ st.html("""
   .note    { font-size: .9375rem; line-height: 1.5; color: var(--muted); max-width: 62ch; margin: var(--s3) 0 0; }
   .hero    { margin: 0 0 var(--s6); }
 
+  /* the navy band at the top of every page but Home (finding()); its photo and wave come from band_style() */
+  [data-testid="stMain"] { overflow-x: clip; }      /* the band's background is window-wide: trim it at the edges */
+  .band    { position: relative; isolation: isolate; padding: var(--s4) 0 calc(var(--s7) + 40px); margin: 0 0 var(--s2); }
+  .band::before, .band::after { content: ""; position: absolute; left: 50%; width: 100vw; transform: translateX(-50%);
+                                z-index: -1; }
+  .band::before { top: -100vmax; bottom: 0; }        /* reaches up behind the top bar */
+  .band::after  { bottom: 0; height: 48px; }          /* the wave, ending in the page color */
+  .band .kicker  { color: #8CCBF2; }
+  .band .finding { color: #FFFFFF; }
+  .band .lede    { color: #D5DFEE; }
+  .band .notice  { display: inline-block; font-size: .9375rem; color: var(--ink); background: #FDF1D8;
+                   border-left: 3px solid #B7791F; border-radius: 6px; padding: var(--s2) var(--s3); margin-top: var(--s3); }
+  .stats   { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s3);  /* 2 or 3 tiles, same width */
+             max-width: 48rem; margin: var(--s5) 0 0; }
+  .stat    { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.16); border-radius: 12px;
+             padding: var(--s3) var(--s4); }
+  .stat .sv { font-family: var(--display); font-weight: 800; font-size: clamp(2rem, 1.6rem + 1.2vw, 2.75rem);
+              line-height: 1; letter-spacing: -.02em; color: #FFFFFF; font-variant-numeric: tabular-nums; }
+  .stat.keyed { background: color-mix(in srgb, var(--c) 22%, transparent); border: 2px solid var(--c); }
+  .stat.keyed .sl { color: #FFFFFF; font-weight: 600; }
+  .stat .sv-range { font-size: .62em; letter-spacing: 0; white-space: nowrap; }  /* a range is longer than one number */
+  .stat .sv-words { display: block; white-space: normal; line-height: 1.15; }  /* a group name wraps */
+  .stat .sl { font-size: .875rem; line-height: 1.35; color: #C9D6EA; margin-top: var(--s2); }
+  /* the band covers what sits above it, so the phone wordmark and warnings are lifted over it */
+  .brand-main, [data-testid="stAlert"] { position: relative; z-index: 1; }
+  /* the menu buttons on the top bar: a light pill, readable on the navy band and on the grey page below it */
+  [data-testid="stExpandSidebarButton"], [data-testid="stMainMenu"] button { background: rgba(255,255,255,.92);
+                                                                              border-radius: 8px; }
+  /* the page's notes, moved from the top to one small line under the main chart */
+  .about   { font-size: .8125rem; line-height: 1.5; color: var(--muted); max-width: 80ch; margin: 0; }
+  .about b { color: var(--ink-2); font-weight: 600; }
+  /* one navy takeaway band per page */
+  [class*="st-key-takeaway-"] { background: #1B2A4A; border-radius: 16px; padding: var(--s5) var(--s6); }
+  [class*="st-key-takeaway-"] .ptitle { color: #FFFFFF; }
+  [class*="st-key-takeaway-"] .ptitle::before { background: #F6C453; }
+  [class*="st-key-takeaway-"] p, [class*="st-key-takeaway-"] div { color: #E1E9F5; }
+  [class*="st-key-takeaway-"] strong, [class*="st-key-takeaway-"] b { color: #FFFFFF; }
+  [class*="st-key-takeaway-"] [data-testid="stCaptionContainer"] * { color: #B9C6DC; }
+  [class*="st-key-takeaway-"] p { font-size: 1.05rem; line-height: 1.55; max-width: 66ch; }
+
   /* numbers: quiet tiles, no border; the small colored key matches the chart below */
   /* 4 tiles across on wide pages, 2 x 2 at medium widths, 1 per row on phones */
   .cards   { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s3); margin: 0 0 var(--s5); }
@@ -167,8 +207,9 @@ st.html("""
   /* panels: white, hairline, larger corners than the tiles inside the page */
   [class*="st-key-panel-"] { background: var(--surface); border: 1px solid var(--line) !important;
                               border-radius: 16px !important; padding: var(--s5) !important; }
-  .ptitle { font-family: var(--display); font-weight: 600; font-size: 1.2rem; line-height: 1.25; color: var(--ink);
-            margin: 0 0 var(--s1); }
+  .ptitle { display: flex; gap: var(--s3); font-family: var(--display); font-weight: 600; font-size: 1.2rem;
+            line-height: 1.25; color: var(--ink); margin: 0 0 var(--s1); }
+  .ptitle::before { content: ""; flex: none; width: 4px; border-radius: 2px; background: #2366C7; }  /* accent bar */
   [data-testid="stExpander"] details { border-radius: 12px; border-color: var(--line); background: var(--surface); }
   /* Streamlit draws captions see-through, which made them too faint (2.7:1); solid muted text is 5.9:1 or more */
   [data-testid="stCaptionContainer"], [data-testid="stCaptionContainer"] * { color: var(--muted); opacity: 1 !important; }
@@ -282,11 +323,18 @@ st.html("""
   @media (max-width: 767px) {
     [data-testid="stMainBlockContainer"] { padding: var(--s5) var(--s4) var(--s7); }
     .brand-main { display: flex; align-items: center; gap: var(--s2); font-family: var(--display);
-                  font-weight: 800; font-size: 1.15rem; color: var(--ink); margin: calc(-1 * var(--s2)) 0 var(--s5);
+                  font-weight: 800; font-size: 1.15rem; color: #FFFFFF; margin: calc(-1 * var(--s2)) 0 0;
                   padding-left: 40px; }  /* sits beside the menu button, not under it */
     [class*="st-key-panel-"] { padding: var(--s4) !important; }
     .days { grid-template-columns: repeat(2, 1fr); }
     .box .level { font-size: 1.8rem; }
+    /* the big numbers in the top band: one per row, number beside its label */
+    .stats { grid-template-columns: 1fr; gap: var(--s2); }
+    .stat  { display: grid; grid-template-columns: 6.5rem 1fr; align-items: center; gap: var(--s3); padding: var(--s3); }
+    .stat .sv { font-size: 1.9rem; }
+    .stat .sl { margin-top: 0; }
+    .band { padding-bottom: calc(var(--s6) + 28px); }
+    .band::after { height: 28px; }
   }
 </style>
 """)
@@ -453,14 +501,38 @@ def pts(x, sign=True):
     return f"{x * 100:+.1f}" if sign else f"{abs(x) * 100:.1f}"
 
 
-def finding(kicker, sentence, lede=None, notes=()):
-    """The top of every page: a small label, a SHORT headline with one idea and one
-    number (bold the number with <b>), the details on the line below, and short notes
-    underneath (plain explanations of words like "points", or a caution)."""
-    notes = [notes] if isinstance(notes, str) else [n for n in notes if n]
-    st.html(f'<div class="hero"><div class="kicker">{html.escape(kicker)}</div><div class="finding">{sentence}</div>'
-            + (f'<div class="lede">{lede}</div>' if lede else "")
-            + "".join(f'<div class="note">{n}</div>' for n in notes) + "</div>")
+ABOUT = []  # the page's notes, shown by about() under its main chart (this file reruns, so it starts empty)
+
+
+def finding(kicker, sentence, lede=None, notes=(), stats=(), notice=None):
+    """The top of every page: a navy band like the Home banner (faint photo, wave at the bottom) with
+    a small label, a SHORT headline with one idea and one number (bold the number with <b>), the details
+    on the line below, and 2-3 big numbers from those details: [(value, short label[, color]), ...].
+    The short notes (plain explanations of words like "points", or a caution) are kept for about();
+    a `notice` that can't wait (like "No forecast for today") stays in the band, under the details."""
+    ABOUT[:] = [notes] if isinstance(notes, str) else [n for n in notes if n]
+    tiles = ""
+    for v, l, *color in stats:
+        tint = f' keyed" style="--c:{color[0]}' if color else ""   # a tile in its legend color
+        tiles += f'<div class="stat{tint}"><div class="sv">{v}</div><div class="sl">{l}</div></div>'
+    st.html(band_style() + f'<div class="band"><div class="kicker">{html.escape(kicker)}</div>'
+            f'<div class="finding">{sentence}</div>' + (f'<div class="lede">{lede}</div>' if lede else "")
+            + (f'<div class="notice">{notice}</div>' if notice else "")
+            + (f'<div class="stats">{tiles}</div>' if tiles else "") + "</div>")
+
+
+def about():
+    """The page's notes from finding(), as one small line under the main chart."""
+    if ABOUT:
+        st.html(f'<div class="about"><b>About these numbers.</b> {" ".join(ABOUT)}</div>')
+        ABOUT.clear()
+
+
+def takeaway(heading):
+    """A navy band for the page's main takeaway (one per page). Use it like a panel: `with takeaway(...):`."""
+    box = st.container(key=f"takeaway-{next(_panels)}")
+    box.html(f'<div class="ptitle">{html.escape(heading)}</div>')
+    return box
 
 
 def cards(items):
@@ -609,8 +681,8 @@ def advisory_band(top, text="72-hour advisory"):
     """A light shaded band over days 0-3 (inside the advisory) with its label.
     Day 3 is roughly 48-96 hours after the rain, so it straddles the 72-hour line."""
     band = pd.DataFrame({"x": [-0.5], "x2": [3.5], "y": [top], "label": [text]})
-    rect = alt.Chart(band).mark_rect(color="#eef2f6").encode(x="x:Q", x2="x2:Q")
-    words = alt.Chart(band).mark_text(align="left", baseline="top", dx=4, dy=4, color=MUTED, fontSize=11).encode(
+    rect = alt.Chart(band).mark_rect(color="#DDEBFA").encode(x="x:Q", x2="x2:Q")   # light blue
+    words = alt.Chart(band).mark_text(align="left", baseline="top", dx=6, dy=6, color="#2B4A7A", fontSize=13).encode(
         x="x:Q", y=alt.value(0), text="label:N")
     return rect + words
 
@@ -665,7 +737,10 @@ def advisory_page():
             f"<b>{n['slow']} beaches</b> stay unsafe longer than LA County's 72-hour rain advisory.",
             f"After storms of 1 inch or more, they were still unsafe on <b>{pct(slow_big)}</b> of tests 4 to 6 days "
             f"later. Their normal level is {pct(rg['slow']['normal_wet_season_rate'])}. {also_dry}",
-            notes=[NORMAL_NOTE, ADVISORY_NOTE])
+            notes=[NORMAL_NOTE, ADVISORY_NOTE],
+            stats=[(pct(slow_big), "unsafe 4 to 6 days after storms of 1 inch or more"),
+                   (pct(rg['slow']['normal_wet_season_rate']), "their normal level")]
+                  + ([(slow_chronic, "also often unsafe in dry weather")] if slow_chronic else []))
 
     with panel():
         size = st.segmented_control("Storms", ["All storms", "1 inch or more"], default="All storms",
@@ -684,29 +759,31 @@ def advisory_page():
         color = alt.Color("group:N", scale=alt.Scale(domain=dom, range=[GROUPS[g]["hex"] for g in ("slow", "typical", "fast")]),
                           legend=None)
         top = max(df["unsafe"].max(), 10)
-        lines = alt.Chart(df).mark_line(strokeWidth=2, point=alt.OverlayMarkDef(size=45, filled=True)).encode(
-            x=day_axis(right=14.8), y=alt.Y("unsafe:Q", title="% of tests unsafe", scale=alt.Scale(domain=[0, top * 1.08])),
+        right = 19 if is_phone() else 14.8  # room for the line names (narrower on a phone)
+        lines = alt.Chart(df).mark_line(strokeWidth=3, point=alt.OverlayMarkDef(size=50, filled=True)).encode(
+            x=day_axis(right=right), y=alt.Y("unsafe:Q", title="% of tests unsafe", scale=alt.Scale(domain=[0, top * 1.08])),
             color=color,
             tooltip=[alt.Tooltip("group:N", title="Beaches"), alt.Tooltip("day:Q", title="Days since rain"),
                      alt.Tooltip("unsafe:Q", title="% unsafe", format=".0f"), alt.Tooltip("tests:Q", title="Tests")])
         # Each group's normal level (wet-season days with no rain for 8+ days): thin dashed line, same color.
-        normals = alt.Chart(df.drop_duplicates("group")).mark_rule(strokeDash=[4, 4], strokeWidth=1, opacity=.7).encode(
-            y="normal:Q", color=color)
+        # The dashed lines stop just past day 10, so they never run under the line names.
+        normals = alt.Chart(df.drop_duplicates("group").assign(x=-0.5, x2=10.15)).mark_rule(
+            strokeDash=[4, 4], strokeWidth=1.5, opacity=.8).encode(y="normal:Q", x="x:Q", x2="x2:Q", color=color)
         # Each line's name, in the empty space right of day 10 (two short lines of text each).
-        ends = end_labels(df, "group", "unsafe", top)
-        names = alt.Chart(ends).mark_text(align="left", dx=8, fontSize=10.5, fontWeight="bold", lineHeight=12,
+        ends = end_labels(df, "group", "unsafe", top, gap_share=0.15)
+        names = alt.Chart(ends).mark_text(align="left", dx=16, fontSize=13, fontWeight="bold", lineHeight=15,
                                           lineBreak="\n").encode(
             x="day:Q", y="label_y:Q", text="lines:N", color=color)
         show_chart(alt.layer(advisory_band(top), normals, lines, names).properties(height=330), width="stretch")
         st.caption("Shaded: days 0 to 3, inside the 72-hour advisory (we only know the day of the rain, not the hour, "
                    "so day 3 is roughly 48 to 96 hours later). Dashed lines: each group's normal level. Beaches often "
                    "unsafe in dry weather are left out of the lower two lines.")
+        about()
         numbers(df[["group", "day", "unsafe", "tests", "normal"]], f"after-rain-curves_{key.replace(' ', '-')}",
                 group="Beaches", day="Days since rain", unsafe=st.column_config.NumberColumn("% unsafe", format="%.1f"),
                 tests="Tests", normal=st.column_config.NumberColumn("Normal %", format="%.1f"))
 
-    with panel():
-        title("Tides matter too")
+    with takeaway("Tides matter too"):
         st.markdown(f"Three to seven days after rain, **{pct(tide['big_tide']['mean'])}** of tests were unsafe on big "
                     f"spring-tide days, vs. **{pct(tide['other']['mean'])}** on other days (all beaches). That fits a lagoon "
                     "or storm drain that keeps emptying runoff as the tide goes out.")
@@ -836,6 +913,19 @@ def diagnosis_sentence(s):
            f"In dry weather since {RECENT_YEAR}, {dry} of its tests were unsafe."))
 
 
+def profile_tiles(s, n_year, rate_year):
+    """The three big numbers in the Beach profile band: the past year, dry weather, and the recovery
+    group. A rate from fewer than MIN_TESTS tests shows "Not enough tests" instead."""
+    few = '<span class="sv-range">Not enough tests</span>'
+    year = pct(rate_year) if n_year >= MIN_TESTS else few
+    dry = pct(s["dry_unsafe_rate"]) if (s["dry_tests"] or 0) >= MIN_TESTS else few
+    g = group_of(s)
+    group = few if g == "few" else f'<span class="sv-range sv-words">{GROUPS[g]["word"]}</span>'
+    return [(year, f"unsafe in the past year ({n_year} tests)"),
+            (dry, f"unsafe in dry weather since {RECENT_YEAR} ({s['dry_tests'] or 0} tests)"),
+            (group, "after-rain recovery")]
+
+
 def enough(rate, n):
     """A big tile number: the rate, or 'Too few tests' (in smaller type) when fewer than MIN_TESTS."""
     return pct(rate) if n and n >= MIN_TESTS else '<span class="v-small">Too few tests</span>'
@@ -937,7 +1027,9 @@ def diagnosis_page():
     g = group_of(s)
     with top:
         head, details = diagnosis_sentence(s)
-        finding(f"Beach profile, station {code}", head, details,  # many beaches have several stations
+        n_year, rate_year = past_year(code, la_today())
+        finding(f"Beach profile, station {code}", head, details, stats=profile_tiles(s, n_year, rate_year),
+                # many beaches have several stations
                 notes=[NORMAL_NOTE + " It uses all years since 2010.",
                        f"Dry-weather rates use tests since {RECENT_YEAR} (all seasons), so a beach that changed shows "
                        "it; the two can differ.",
@@ -959,11 +1051,12 @@ def diagnosis_page():
         line = pd.DataFrame({"y": [normal], "x": [-0.5], "x2": [10.5], "label": [f"Normal\nlevel {normal:.0f}%"]})
         rule = alt.Chart(line).mark_rule(strokeDash=[4, 4], color=NAVY).encode(y="y:Q", x="x:Q", x2="x2:Q")
         # The label sits past the last bar, where nothing can cover it.
-        rule_text = alt.Chart(line).mark_text(align="left", baseline="middle", dx=6, color=NAVY, fontSize=11,
-                                              lineHeight=13, lineBreak="\n").encode(y="y:Q", x="x2:Q", text="label:N")
+        rule_text = alt.Chart(line).mark_text(align="left", baseline="middle", dx=6, color=NAVY, fontSize=13,
+                                              lineHeight=15, lineBreak="\n").encode(y="y:Q", x="x2:Q", text="label:N")
         show_chart((advisory_band(top) + bars + rule + rule_text).properties(height=290), width="stretch")
         st.caption("Shaded: inside the 72-hour advisory. Dashed line: this beach's normal level. "
                    "Pale bars have fewer than 8 tests, so they jump around by chance.")
+        about()
         numbers(df[["day", "unsafe", "tests"]], f"by-day-since-rain_{code}", day="Days since rain",
                 unsafe=st.column_config.NumberColumn("% unsafe", format="%.1f"), tests="Tests")
 
@@ -984,7 +1077,7 @@ def diagnosis_page():
              group_rates(s), GROUPS[g]["hex"]),
         ])
 
-    with st.expander("What the pattern points to"):
+    with takeaway("What the pattern points to"):
         st.markdown(s["fix_text"] or "There aren't enough tests after rain to point to a kind of fix.")
         if s.get("also_after_rain"):
             st.markdown(s["also_after_rain"])
@@ -1071,7 +1164,9 @@ def compare_page():
                 f"{html.escape(place(riskiest))} has the highest risk {when}: <b>{pct(day[riskiest]['risk'])}</b>.",
                 f"{len(picked)} beaches, up to {max(km_apart(a, b) for a, b in pairs):.1f} km apart. Each one's risk "
                 f"{when}, latest test, recovery after rain and dry-weather record.",
-                notes=[None if has_today else f"No forecast for today. Latest: {nice_date(fc_day)}.", NORMAL_NOTE])
+                notes=[NORMAL_NOTE], notice=None if has_today else f"No forecast for today. Latest: {nice_date(fc_day)}.",
+                stats=[(len(picked), "beaches side by side"),
+                       (f"{max(km_apart(a, b) for a, b in pairs):.1f} km", "farthest apart")])
 
     # One tile per beach: today's risk, in its level color.
     cards([(pct(day[c]["risk"]), html.escape(label(c)),
@@ -1116,6 +1211,7 @@ def compare_page():
         st.caption(f"In brackets: the number of tests behind each rate; rates from fewer than {MIN_TESTS} tests "
                    "are not shown. Recovery and normal level use all years since 2010; dry weather uses recent years. "
                    + PRECAUTION)
+        about()
         table = pd.DataFrame({label(c): [f(c) for _, f in measures] for c in picked}, index=[m for m, _ in measures])
         csv_button(table.reset_index(names="measure"), "compare_" + "_".join(picked))
 
@@ -1308,16 +1404,21 @@ def evaluator_page():
     # Headline: one idea and one number. The range and the method go on the line below.
     if r["verdict"] == "cleaner after":
         sentence = f"{who} was cleaner after {what}: <b>{whole(est)} points</b> fewer unsafe tests."
-        detail = f"Fewer than the weather and other beaches predict (95% range {whole(hi)} to {whole(lo)} points)."
+        rng = f"{whole(hi)} to {whole(lo)}"
+        detail = f"Fewer than the weather and other beaches predict (95% range {rng} points)."
     elif r["verdict"] == "dirtier after":
         sentence = f"{who} was dirtier after {what}: <b>{whole(est)} points</b> more unsafe tests."
-        detail = f"More than the weather and other beaches predict (95% range {whole(lo)} to {whole(hi)} points)."
+        rng = f"{whole(lo)} to {whole(hi)}"
+        detail = f"More than the weather and other beaches predict (95% range {rng} points)."
     else:
         sentence = f"{who} showed no clear change after {what}: <b>{signed(est)} points</b>."
-        detail = f"95% range {signed(lo)} to {signed(hi)} points, within normal year-to-year swings."
+        rng = f"{signed(lo)} to {signed(hi)}"
+        detail = f"95% range {rng} points, within normal year-to-year swings."
     detail += f" Based on {r['before']['tests']} tests before and {r['after']['tests']} after."
     with top:
-        finding("Cleanup projects", sentence, detail, notes=[POINTS_NOTE])
+        finding("Cleanup projects", sentence, detail, notes=[POINTS_NOTE],
+                stats=[(f'<span class="sv-range">{rng}</span>', "95% range, points"),
+                       (r["before"]["tests"], "tests before"), (r["after"]["tests"], "tests after")])
 
     b, a = r["before"], r["after"]
 
@@ -1331,7 +1432,7 @@ def evaluator_page():
         long = pd.concat([m.assign(who=name, v=m["beach"] * 100),
                           m.assign(who="Other beaches", v=m["others"] * 100)]).dropna(subset=["v"])
         color = alt.Color("who:N", scale=alt.Scale(domain=[name, "Other beaches"], range=[BLUE, MUTED]), legend=None)
-        lines = alt.Chart(long).mark_line(strokeWidth=1.5, point=alt.OverlayMarkDef(size=28, filled=True)).encode(
+        lines = alt.Chart(long).mark_line(strokeWidth=3, point=alt.OverlayMarkDef(size=34, filled=True)).encode(
             x=alt.X("month:T", title=None), y=alt.Y("v:Q", title="Points"),
             color=color, detail="period:N",
             tooltip=[alt.Tooltip("month:T", title="Month", format="%b %Y"), alt.Tooltip("who:N", title=" "),
@@ -1339,8 +1440,8 @@ def evaluator_page():
         zero = alt.Chart(pd.DataFrame({"y": [0]})).mark_rule(color="#c3cfd9").encode(y="y:Q")
         work = pd.DataFrame({"x": [pd.Timestamp(r["start"])], "x2": [pd.Timestamp(r["end"]) + pd.Timedelta(days=1)],
                              "label": ["Work"]})
-        work_band = alt.Chart(work).mark_rect(color="#eef2f6").encode(x="x:T", x2="x2:T")
-        work_text = alt.Chart(work).mark_text(align="left", baseline="top", dx=3, dy=4, color=MUTED, fontSize=11).encode(
+        work_band = alt.Chart(work).mark_rect(color="#DDEBFA").encode(x="x:T", x2="x2:T")
+        work_text = alt.Chart(work).mark_text(align="left", baseline="top", dx=3, dy=4, color=MUTED, fontSize=13).encode(
             x="x:T", y=alt.value(0), text="label:N")
         # The beach's average surprise in each period, as a flat line with its value.
         tw = pd.DataFrame(r["monthly"])
@@ -1353,11 +1454,12 @@ def evaluator_page():
         avg = pd.DataFrame(avg)
         avg_rule = alt.Chart(avg).mark_rule(color=NAVY, strokeWidth=2).encode(x="x:T", x2="x2:T", y="v:Q")
         # Labels sit in the top corner of each period, clear of the monthly points.
-        avg_text = alt.Chart(avg).mark_text(align="left", baseline="top", dx=4, dy=4, color=NAVY, fontSize=11,
+        avg_text = alt.Chart(avg).mark_text(align="left", baseline="top", dx=4, dy=4, color=NAVY, fontSize=13,
                                             fontWeight="bold").encode(x="x:T", y=alt.value(0), text="label:N")
         show_chart((work_band + work_text + zero + lines + avg_rule + avg_text).properties(height=320), width="stretch")
         st.caption("Above zero = more unsafe tests than rain, tides and season predict for this beach. Navy lines: the "
                    "beach's average surprise before and after. Months with few tests jump around.")
+        about()
         numbers(long[["month", "who", "v"]].rename(columns={"v": "points"}), f"monthly-surprise_{code}",
                 month=st.column_config.DateColumn("Month", format="MMM YYYY"), who=" ",
                 points=st.column_config.NumberColumn("Surprise (points)", format="%+.1f"))
@@ -1389,7 +1491,7 @@ def evaluator_page():
         dot = alt.Chart(iv_df).mark_point(filled=True, size=120, color=BLUE).encode(x="est:Q", y=alt.Y("y:N", axis=None))
         z = pd.DataFrame({"x": [0], "label": ["No change"]})
         zr = alt.Chart(z).mark_rule(color=NAVY, strokeDash=[4, 4], strokeWidth=1.5).encode(x="x:Q")
-        zt = alt.Chart(z).mark_text(align="left", dx=4, y=6, baseline="top", color=NAVY, fontSize=11).encode(
+        zt = alt.Chart(z).mark_text(align="left", dx=4, y=6, baseline="top", color=NAVY, fontSize=13).encode(
             x="x:Q", text="label:N")
         show_chart((zr + zt + rng + dot).properties(height=90), width="stretch")
         st.markdown(
@@ -1441,7 +1543,9 @@ def fires_page():
             f"Beaches below the 2025 Palisades burn: <b>{pts(o['estimate'])} points</b> compared with what the model "
             f"expected (95% range {pts(o['ci95'][0])} to {pts(o['ci95'][1])}). After rain: {pts(w['estimate'])} points, "
             f"but that range ({pts(w['ci95'][0])} to {pts(w['ci95'][1])}) also includes zero.",
-            notes=[POINTS_NOTE])
+            notes=[POINTS_NOTE],
+            stats=[(pts(o['estimate']), "points vs. expected, all days"),
+                   (pts(w['estimate']), "points after rain (range includes zero)")])
     if link:  # the page was opened for one beach (?beach=CODE): say where it fits in
         studied = {b["station"] for b in pf["burn_stations"]}
         km = km_to_burn(link)
@@ -1468,7 +1572,7 @@ def fires_page():
         st.caption("Surprise: each month, the share of tests that were unsafe minus the share the forecast model "
                    "expected from rain, tides and each beach's history. Above zero means dirtier than expected.")
         st.html(chips([(ORANGE, "Beaches near the burn"), (MUTED, "All other beaches")]))
-        lines = alt.Chart(long).mark_line(point=alt.OverlayMarkDef(size=30, filled=True), strokeWidth=1.5).encode(
+        lines = alt.Chart(long).mark_line(point=alt.OverlayMarkDef(size=34, filled=True), strokeWidth=3).encode(
             x=alt.X("month:T", title=None), y=alt.Y("surprise:Q", title="Points"),
             color=alt.Color("group:N", scale=alt.Scale(domain=["Beaches near the burn", "All other beaches"],
                                                        range=[ORANGE, MUTED]), legend=None),
@@ -1477,10 +1581,11 @@ def fires_page():
         zero = alt.Chart(pd.DataFrame({"y": [0]})).mark_rule(color="#c3cfd9").encode(y="y:Q")
         fire = pd.DataFrame({"x": [pd.Timestamp("2025-01-07")], "label": ["Fire, Jan 7, 2025"]})
         fire_rule = alt.Chart(fire).mark_rule(strokeDash=[4, 4], color=NAVY).encode(x="x:T")
-        fire_text = alt.Chart(fire).mark_text(align="left", dx=4, y=8, color=NAVY, fontSize=11).encode(x="x:T", text="label:N")
+        fire_text = alt.Chart(fire).mark_text(align="left", dx=4, y=8, color=NAVY, fontSize=13).encode(x="x:T", text="label:N")
         show_chart((zero + lines + fire_rule + fire_text).properties(height=300), width="stretch")
         st.caption("Above zero = more unsafe tests than the forecast model expected from rain, tides and the beach's "
                    "history. Monthly values jump around because some months have few tests near the burn.")
+        about()
         numbers(long[["month", "group", "surprise"]], "fire-monthly-surprise", month=st.column_config.DateColumn("Month", format="MMM YYYY"),
                 group=" ", surprise=st.column_config.NumberColumn("Surprise (points)", format="%+.1f"))
 
@@ -1786,7 +1891,7 @@ def history_chart(code):
                  alt.Tooltip("result:N", title="Result")])
     line = pd.DataFrame({"y": [limit], "label": [f"Safe limit: {limit:.0f}"]})
     rule = alt.Chart(line).mark_rule(strokeDash=[4, 4], color=NAVY).encode(y="y:Q")
-    rule_label = alt.Chart(line).mark_text(align="left", dx=4, dy=-7, color=NAVY, fontSize=11).encode(
+    rule_label = alt.Chart(line).mark_text(align="left", dx=4, dy=-7, color=NAVY, fontSize=13).encode(
         y="y:Q", x=alt.value(0), text="label:N")
     show_chart((points + rule + rule_label).properties(height=260), width="stretch")
     first, last = df["date"].min(), df["date"].max()
@@ -1832,18 +1937,20 @@ def forecast_page():
     has_today =replay or today in [d["date"] for d in any_beach["forecast"]]
     when_word = (" today" if day == today else f" on {nice_date(day)}") if not replay else \
         ("" if day == first else f" on {nice_date(day)}")
+    # The day's counts by level, as big tiles in the level colors (they double as the color key).
+    counts = [(levels.get(k, 0), LEVELS[k]["word"], LEVELS[k]["hex"]) for k in ("high", "caution", "low")]
     with top:
         if has_today:
             finding("Forecast" + (" replay" if replay else ""),
                     f"<b>{warned} of {len(fc['stations'])} beaches</b> {'were' if replay else 'are'} at caution or "
-                    f"high risk{when_word}.", when)
+                    f"high risk{when_word}.", when,
+                    stats=counts)
         else:  # the file doesn't have today: say so, and never call another day "today"
             finding("Forecast", f"No forecast for today. Latest: <b>{nice_date(first)}</b>.",
                     f"Today's forecast couldn't be made, so this is the last successful run. For {nice_date(day)}: "
-                    f"{warned} of {len(fc['stations'])} beaches at caution or high risk.")
+                    f"{warned} of {len(fc['stations'])} beaches at caution or high risk.", stats=counts)
         if error:
             st.caption(f"Couldn't update the forecast: {error}")
-    st.html(chips([(LEVELS[k]["hex"], f"{levels.get(k, 0)} {v['word']}") for k, v in LEVELS.items()]))
 
     # The beach picker lists forecast beaches first (A to Z), then sites without a forecast.
     beach_codes = sorted(fc_by_code, key=place)
@@ -1909,7 +2016,10 @@ def methods_page():
             f"of warnings. Difference: {gain(test['sign_plus_rain.gain'])}, on {fm['tested_beach_days']:,} tested "
             f"beach-days at {fm['beaches']} {COVERAGE} from {start:%B %Y} to {end:%B %Y} that the model never saw "
             "while learning.",
-            notes=[POINTS_NOTE])
+            notes=[POINTS_NOTE],
+            stats=[(pct(test['sign_plus_rain.caught'][0]), "caught by signs plus the rain advisory"),
+                   (f"{test['sign_plus_rain.gain'][0] * 100:+.1f}", "points more for the forecast"),
+                   (f"{fm['tested_beach_days']:,}", "tested beach-days")])
 
     names = {"sign": "Signs", "sign_plus_rain": "Signs + rain advisory",
              "sign3": "Signs (3 tests)", "sign3_plus_rain": "Signs (3 tests) + rain"}
@@ -1930,13 +2040,14 @@ def methods_page():
             color=alt.Color("who:N", scale=who_scale, legend=None),
             tooltip=[alt.Tooltip("rule:N", title="Compared with"), alt.Tooltip("who:N", title=" "),
                      alt.Tooltip("caught:Q", title="% caught", format=".0f")])
-        labels = base.mark_text(align="left", dx=4, color=NAVY, fontSize=11).encode(
+        labels = base.mark_text(align="left", dx=4, color=NAVY, fontSize=13).encode(
             x="caught:Q", text=alt.Text("caught:Q", format=".0f"))
         show_chart((bars + labels).properties(height=280), width="stretch")
         csv_button(bars_df.round(1).rename(columns={"caught": "percent_of_unsafe_days_caught"}), "forecast-vs-rules")
         st.caption("\"3 tests\" = signs posted when any of the three state ocean tests fails (enterococcus, "
                    f"fecal coliform, total coliform), which is what counties post on. Against signs alone: "
                    f"{gain(test['sign.gain'])}.")
+        about()
 
     # Calibration (pipeline step 14): when the forecast says 20%, are about 20% of those tests unsafe?
     cal = load_json("calibration.json")
@@ -2103,6 +2214,19 @@ WAVE = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 64" preserve
 </svg>"""
 
 
+def band_style():
+    """Background for the navy band at the top of every page (finding()): the Home photo, darkened until
+    it is only a texture, fading to solid navy above the same wave as Home. The band's background is
+    drawn as wide as the window (::before, ::after), and the main area clips it at its edges."""
+    photo = photo_data(HERO_PHOTO.stat().st_mtime_ns) if HERO_PHOTO.exists() else ""
+    wave = base64.b64encode(WAVE.encode()).decode()
+    return f"""<style>
+  .band::before {{ background: linear-gradient(180deg, rgba(27,42,74,.84) 0%, rgba(27,42,74,.90) 55%,
+                                #1B2A4A calc(100% - 48px)), url(data:image/jpeg;base64,{photo}) center 62% / cover #1B2A4A; }}
+  .band::after  {{ background: url(data:image/svg+xml;base64,{wave}) 0 0 / 100% 100% no-repeat; }}
+</style>"""
+
+
 def beach_questions(code):
     """Step 2 of the Home search: one line about the beach, then a link for each question this beach
     has data for. Each link opens that page with ?beach=CODE, and the page starts on this beach."""
@@ -2152,7 +2276,6 @@ def home_styles():
     st.html(f"""<style>
   [data-testid="stMainBlockContainer"] {{ max-width: none; padding: 0 0 var(--s7); }}
   .brand-main {{ display: none !important; }}           /* the banner already shows the logo */
-  [data-testid="stExpandSidebarButton"], [data-testid="stExpandSidebarButton"] * {{ color: #FFFFFF !important; }}  /* on the banner */
   [class*="st-key-home-body"], .st-key-found > div {{ max-width: 1080px; margin: 0 auto; width: 100%;
                                                        padding: 0 var(--s6); box-sizing: border-box; }}
   .st-key-hero {{ margin-top: calc(-1 * var(--s4));   /* cancel the gap after this (invisible) style block */
@@ -2289,7 +2412,7 @@ def home_page():
 # On a phone the menu folds away, so a small wordmark shows at the top of the page instead.
 st.sidebar.html(f'<div class="side-brand">{logo_img("after-the-rain-logo-on-dark.svg", 40)}{APP_NAME}</div>'
                 f'<div class="side-tag">{TAGLINE}</div>')
-st.html(f'<div class="brand-main">{logo_img("after-the-rain-logo.svg", 28)}{APP_NAME}</div>')
+st.html(f'<div class="brand-main">{logo_img("after-the-rain-logo-on-dark.svg", 28)}{APP_NAME}</div>')  # on the navy band
 check_model_ids()
 PAGES = {  # also used by the home page's question cards and actions
     "home": st.Page(home_page, title="Home", icon=":material/home:", url_path="home", default=True),
