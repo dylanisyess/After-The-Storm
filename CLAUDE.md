@@ -110,12 +110,22 @@ checks they all match `model/metrics.json`, and the app warns if they don't.
 `app.py` (Streamlit, AI-assisted; redesigned Oct 24-25, 2026 around causes for
 agencies and policymakers): `streamlit run app.py`. Name "After the Rain"
 (`APP_NAME` in app.py). Theme in
-`.streamlit/config.toml`. Pages, in order (st.navigation, top bar): Advisory check,
+`.streamlit/config.toml`. Pages, in order (left menu): Home (landing: hero with space for assets/hero.jpg,
+the problem, 3 findings from app_data, question cards, who it's for, trust strip), Advisory check,
 Beach diagnosis, Did it work? (live evaluator), After the fires, Forecast (keeps
 the Jan 2023 replay toggle), Methods (model-vs-signs, definitions, spills). Design
-rules: each page opens with ONE sentence stating the finding and its number, then
-annotated charts, then minimal bordered cards; no emoji; chip legends; every chart
-has a "Show the numbers" table. Methods reads `final_metrics.json`, so rerunning 10
+rules: each page opens with a SHORT headline (one idea, one number), details on the
+line below, plain one-line notes for "normal level", "points" and "surprise"; then
+annotated charts, then quiet number tiles; no emoji; chip legends; every chart
+has a "Show the numbers" table. Styling (Oct 25, from Dylan's refs in `design_refs/`):
+left menu in Harbor blue (st.navigation position="sidebar", icons); Gabarito headlines +
+Public Sans body (Google Fonts via config.toml); spacing scale --s1..--s7 (4-48 px);
+white panels (`panel()`), tinted tiles (`cards()`, 4 across, 2x2 at medium widths,
+no decorative sun since Oct 25); one chart
+theme (`after_rain`, horizontal grid only; draw charts with `show_chart()`); line names
+at the line ends, no duplicate legend; Carto Positron maps zoomed to the coast;
+one name per beach group everywhere (`GROUPS`: Unsafe longer than 72 hours, Back to
+normal within 72 hours, Recover faster than most, Often unsafe in dry weather); forecast cards carry a risk bar. Station labels are "Place (CODE)"; SMB-MC-2 is named Surfrider Beach (`KNOWN_PLACES`). Methods reads `final_metrics.json`, so rerunning 10
 updates it. Read only from `app_data/`; refresh the forecast by running
 `08_forecast.py` then `09_export_app_data.py`. To retrain, always use
 `bash pipeline/rebuild.sh` (06, 07, 11, 08 live and every replay, 09, 10, 12, then

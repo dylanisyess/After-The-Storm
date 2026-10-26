@@ -1,13 +1,27 @@
 # Look and feel for app.py (Streamlit reads this file automatically).
+# Palette: Harbor (menu), Fog (page), white panels, Tide tint (stat tiles), Marigold (the sun).
+# Fonts: Gabarito for headlines and numbers; Public Sans (the US government web
+# design system typeface, plain and civic) for everything else.
 [theme]
 base = "light"
-primaryColor = "#0e6ba8"              # ocean blue: buttons, toggles, links
-backgroundColor = "#ffffff"           # white page, so thin card borders read clearly
-secondaryBackgroundColor = "#e9f1f7"  # pale blue for inputs and sidebars
-textColor = "#0b2545"                 # deep navy text
-borderColor = "#d6e2ec"               # soft card borders
-baseRadius = "0.5rem"                 # small, quiet corners on the bordered cards
-font = "sans-serif"
+primaryColor = "#2a78d6"              # ocean blue: switches, selected buttons, links
+backgroundColor = "#F2F5F9"           # Fog: the page
+secondaryBackgroundColor = "#E8EEF6"  # Tide tint: inputs and quiet tiles
+textColor = "#1A2440"                 # deep ink
+borderColor = "#DCE4EE"               # hairlines on the white panels
+linkColor = "#2366C7"
+baseRadius = "0.75rem"
+font = "Public Sans:https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap"
+headingFont = "Gabarito:https://fonts.googleapis.com/css2?family=Gabarito:wght@600;700;800&display=swap"
+dataframeHeaderBackgroundColor = "#EEF3F9"
+chartCategoricalColors = ["#2a78d6", "#eb6834", "#1baf7a"]
+
+[theme.sidebar]                       # the left menu, in Harbor blue
+backgroundColor = "#22314F"
+secondaryBackgroundColor = "#2D3E62"
+textColor = "#E8EEF8"
+borderColor = "#34476E"
+primaryColor = "#F6C453"
 
 [client]
 toolbarMode = "minimal"               # hide the developer menu from visitors
