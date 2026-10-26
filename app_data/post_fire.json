@@ -1,5 +1,5 @@
 {
- "model_id": "40ebd86751",
+ "model_id": "e5207cd9bd",
  "method": "difference-in-differences on model residuals (observed minus predicted), burn-adjacent vs. far beaches, before vs. after 2025-01-07",
  "burn_stations": [
   {
@@ -68,49 +68,49 @@
   "burn_before": {
    "samples": 1799,
    "observed_unsafe_rate": 0.193,
-   "predicted_unsafe_rate": 0.138,
-   "mean_residual": 0.054
+   "predicted_unsafe_rate": 0.177,
+   "mean_residual": 0.016
   },
   "burn_after": {
    "samples": 1531,
    "observed_unsafe_rate": 0.182,
-   "predicted_unsafe_rate": 0.11,
-   "mean_residual": 0.072
+   "predicted_unsafe_rate": 0.145,
+   "mean_residual": 0.037
   },
   "control_before": {
    "samples": 9300,
    "observed_unsafe_rate": 0.112,
-   "predicted_unsafe_rate": 0.107,
-   "mean_residual": 0.005
+   "predicted_unsafe_rate": 0.115,
+   "mean_residual": -0.003
   },
   "control_after": {
    "samples": 8028,
    "observed_unsafe_rate": 0.089,
-   "predicted_unsafe_rate": 0.073,
-   "mean_residual": 0.016
+   "predicted_unsafe_rate": 0.081,
+   "mean_residual": 0.008
   }
  },
  "result": {
   "overall": {
-   "estimate": 0.006,
+   "estimate": 0.009,
    "ci95": [
-    -0.039,
-    0.061
+    -0.014,
+    0.049
    ]
   },
   "wet_days": {
-   "estimate": 0.086,
+   "estimate": 0.1,
    "ci95": [
-    -0.057,
-    0.22
+    -0.052,
+    0.215
    ],
    "samples": 2363
   },
   "dry_days": {
-   "estimate": -0.003,
+   "estimate": -0.0,
    "ci95": [
-    -0.041,
-    0.059
+    -0.027,
+    0.051
    ],
    "samples": 18295
   }
@@ -119,233 +119,233 @@
  "monthly": [
   {
    "month": "2023-01",
-   "burn_residual": 0.107,
-   "control_residual": 0.021
+   "burn_residual": 0.114,
+   "control_residual": 0.031
   },
   {
    "month": "2023-02",
-   "burn_residual": 0.053,
-   "control_residual": 0.018
+   "burn_residual": 0.029,
+   "control_residual": 0.019
   },
   {
    "month": "2023-03",
-   "burn_residual": 0.01,
-   "control_residual": -0.014
+   "burn_residual": -0.023,
+   "control_residual": -0.028
   },
   {
    "month": "2023-04",
-   "burn_residual": 0.062,
-   "control_residual": -0.011
-  },
-  {
-   "month": "2023-05",
-   "burn_residual": 0.196,
-   "control_residual": 0.032
-  },
-  {
-   "month": "2023-06",
-   "burn_residual": 0.069,
-   "control_residual": -0.025
-  },
-  {
-   "month": "2023-07",
-   "burn_residual": 0.108,
-   "control_residual": -0.014
-  },
-  {
-   "month": "2023-08",
-   "burn_residual": 0.042,
-   "control_residual": 0.036
-  },
-  {
-   "month": "2023-09",
-   "burn_residual": -0.014,
-   "control_residual": -0.025
-  },
-  {
-   "month": "2023-10",
-   "burn_residual": 0.003,
-   "control_residual": 0.004
-  },
-  {
-   "month": "2023-11",
-   "burn_residual": -0.043,
-   "control_residual": 0.003
-  },
-  {
-   "month": "2023-12",
-   "burn_residual": 0.002,
-   "control_residual": 0.065
-  },
-  {
-   "month": "2024-01",
    "burn_residual": 0.017,
-   "control_residual": -0.007
-  },
-  {
-   "month": "2024-02",
-   "burn_residual": 0.097,
-   "control_residual": 0.021
-  },
-  {
-   "month": "2024-03",
-   "burn_residual": 0.162,
-   "control_residual": -0.027
-  },
-  {
-   "month": "2024-04",
-   "burn_residual": 0.116,
-   "control_residual": 0.02
-  },
-  {
-   "month": "2024-05",
-   "burn_residual": 0.13,
-   "control_residual": 0.032
-  },
-  {
-   "month": "2024-06",
-   "burn_residual": 0.124,
-   "control_residual": 0.012
-  },
-  {
-   "month": "2024-07",
-   "burn_residual": 0.068,
-   "control_residual": -0.005
-  },
-  {
-   "month": "2024-08",
-   "burn_residual": 0.072,
-   "control_residual": -0.002
-  },
-  {
-   "month": "2024-09",
-   "burn_residual": 0.0,
-   "control_residual": 0.008
-  },
-  {
-   "month": "2024-10",
-   "burn_residual": 0.046,
-   "control_residual": 0.01
-  },
-  {
-   "month": "2024-11",
-   "burn_residual": -0.08,
-   "control_residual": -0.044
-  },
-  {
-   "month": "2024-12",
-   "burn_residual": -0.053,
-   "control_residual": -0.003
-  },
-  {
-   "month": "2025-01",
-   "burn_residual": 0.18,
-   "control_residual": 0.004
-  },
-  {
-   "month": "2025-02",
-   "burn_residual": 0.528,
-   "control_residual": 0.02
-  },
-  {
-   "month": "2025-03",
-   "burn_residual": 0.187,
-   "control_residual": 0.035
-  },
-  {
-   "month": "2025-04",
-   "burn_residual": -0.025,
    "control_residual": -0.015
   },
   {
+   "month": "2023-05",
+   "burn_residual": 0.186,
+   "control_residual": 0.028
+  },
+  {
+   "month": "2023-06",
+   "burn_residual": 0.061,
+   "control_residual": -0.03
+  },
+  {
+   "month": "2023-07",
+   "burn_residual": 0.089,
+   "control_residual": -0.022
+  },
+  {
+   "month": "2023-08",
+   "burn_residual": 0.005,
+   "control_residual": 0.025
+  },
+  {
+   "month": "2023-09",
+   "burn_residual": -0.042,
+   "control_residual": -0.031
+  },
+  {
+   "month": "2023-10",
+   "burn_residual": -0.022,
+   "control_residual": -0.001
+  },
+  {
+   "month": "2023-11",
+   "burn_residual": -0.096,
+   "control_residual": -0.013
+  },
+  {
+   "month": "2023-12",
+   "burn_residual": -0.039,
+   "control_residual": 0.061
+  },
+  {
+   "month": "2024-01",
+   "burn_residual": -0.032,
+   "control_residual": -0.006
+  },
+  {
+   "month": "2024-02",
+   "burn_residual": 0.058,
+   "control_residual": 0.016
+  },
+  {
+   "month": "2024-03",
+   "burn_residual": 0.062,
+   "control_residual": -0.036
+  },
+  {
+   "month": "2024-04",
+   "burn_residual": 0.053,
+   "control_residual": 0.009
+  },
+  {
+   "month": "2024-05",
+   "burn_residual": 0.068,
+   "control_residual": 0.02
+  },
+  {
+   "month": "2024-06",
+   "burn_residual": 0.055,
+   "control_residual": -0.004
+  },
+  {
+   "month": "2024-07",
+   "burn_residual": 0.029,
+   "control_residual": -0.02
+  },
+  {
+   "month": "2024-08",
+   "burn_residual": 0.04,
+   "control_residual": -0.016
+  },
+  {
+   "month": "2024-09",
+   "burn_residual": -0.025,
+   "control_residual": 0.004
+  },
+  {
+   "month": "2024-10",
+   "burn_residual": 0.015,
+   "control_residual": 0.004
+  },
+  {
+   "month": "2024-11",
+   "burn_residual": -0.118,
+   "control_residual": -0.054
+  },
+  {
+   "month": "2024-12",
+   "burn_residual": -0.077,
+   "control_residual": -0.017
+  },
+  {
+   "month": "2025-01",
+   "burn_residual": 0.129,
+   "control_residual": -0.008
+  },
+  {
+   "month": "2025-02",
+   "burn_residual": 0.46,
+   "control_residual": 0.022
+  },
+  {
+   "month": "2025-03",
+   "burn_residual": 0.113,
+   "control_residual": 0.029
+  },
+  {
+   "month": "2025-04",
+   "burn_residual": -0.066,
+   "control_residual": -0.026
+  },
+  {
    "month": "2025-05",
-   "burn_residual": -0.021,
-   "control_residual": 0.012
+   "burn_residual": -0.058,
+   "control_residual": 0.008
   },
   {
    "month": "2025-06",
-   "burn_residual": -0.004,
-   "control_residual": -0.002
+   "burn_residual": -0.03,
+   "control_residual": -0.003
   },
   {
    "month": "2025-07",
-   "burn_residual": 0.051,
-   "control_residual": -0.002
+   "burn_residual": 0.029,
+   "control_residual": -0.001
   },
   {
    "month": "2025-08",
-   "burn_residual": -0.001,
-   "control_residual": -0.011
+   "burn_residual": -0.01,
+   "control_residual": -0.012
   },
   {
    "month": "2025-09",
-   "burn_residual": -0.014,
-   "control_residual": 0.011
+   "burn_residual": -0.021,
+   "control_residual": 0.01
   },
   {
    "month": "2025-10",
-   "burn_residual": 0.049,
+   "burn_residual": 0.035,
    "control_residual": 0.054
   },
   {
    "month": "2025-11",
-   "burn_residual": 0.149,
-   "control_residual": 0.074
+   "burn_residual": 0.118,
+   "control_residual": 0.068
   },
   {
    "month": "2025-12",
-   "burn_residual": 0.047,
-   "control_residual": 0.072
+   "burn_residual": 0.01,
+   "control_residual": 0.045
   },
   {
    "month": "2026-01",
-   "burn_residual": 0.122,
-   "control_residual": -0.005
+   "burn_residual": 0.067,
+   "control_residual": -0.004
   },
   {
    "month": "2026-02",
-   "burn_residual": 0.173,
-   "control_residual": 0.025
+   "burn_residual": 0.114,
+   "control_residual": 0.002
   },
   {
    "month": "2026-03",
-   "burn_residual": 0.12,
-   "control_residual": 0.021
-  },
-  {
-   "month": "2026-04",
-   "burn_residual": 0.069,
-   "control_residual": 0.025
-  },
-  {
-   "month": "2026-05",
-   "burn_residual": -0.007,
-   "control_residual": -0.001
-  },
-  {
-   "month": "2026-06",
-   "burn_residual": 0.078,
-   "control_residual": 0.017
-  },
-  {
-   "month": "2026-07",
-   "burn_residual": -0.009,
-   "control_residual": -0.004
-  },
-  {
-   "month": "2026-08",
-   "burn_residual": -0.013,
+   "burn_residual": 0.066,
    "control_residual": 0.003
   },
   {
+   "month": "2026-04",
+   "burn_residual": 0.015,
+   "control_residual": 0.012
+  },
+  {
+   "month": "2026-05",
+   "burn_residual": -0.044,
+   "control_residual": -0.008
+  },
+  {
+   "month": "2026-06",
+   "burn_residual": 0.044,
+   "control_residual": 0.004
+  },
+  {
+   "month": "2026-07",
+   "burn_residual": -0.027,
+   "control_residual": -0.012
+  },
+  {
+   "month": "2026-08",
+   "burn_residual": -0.027,
+   "control_residual": -0.004
+  },
+  {
    "month": "2026-09",
-   "burn_residual": -0.011,
-   "control_residual": 0.042
+   "burn_residual": -0.031,
+   "control_residual": 0.031
   },
   {
    "month": "2026-10",
-   "burn_residual": -0.033,
-   "control_residual": -0.004
+   "burn_residual": -0.055,
+   "control_residual": -0.015
   }
  ]
 }

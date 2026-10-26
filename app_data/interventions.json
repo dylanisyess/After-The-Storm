@@ -1,5 +1,5 @@
 {
- "model_id": "40ebd86751",
+ "model_id": "e5207cd9bd",
  "method": "(same idea as the post-fire analysis in 07; the comparison itself is in\npipeline/evaluator.py, which app.py also uses):\n  1. Expected risk from WEATHER ONLY: a model that knows the beach, rain (including\n     the sample day, since this looks back in time), days since rain, tides and\n     season, but NOT recent test results or the date. The forecast model can't be\n     used here: its \"last test\" and past_rate inputs follow the beach's own recent\n     results, so after a real improvement its expected risk drops too and the\n     improvement disappears from the residuals.\n     Each year's expected risk comes from a model trained on the other years, so\n     no test is scored by a model that saw it.\n  2. Residual = what happened (1 unsafe / 0 safe) minus expected risk.\n  3. Change = (beach's residual after - before) minus (the same change at control\n     beaches 5+ km away), which removes region-wide swings like drought years.\n  4. 95% range: resample whole calendar months (1,000 times), keeping each month's\n     target and control tests together, then WIDEN it. On random beaches and\n     dates with no known project, the plain range called about a quarter of them\n     a real change instead of about 5%: beaches drift from year to year for\n     reasons we don't measure (sand, berms, birds, sampling). So we widen every\n     range by the factor that makes only 5% of random dates look like a change\n     (calibrate()), and check that on a second, separate set of random dates.\nThe years during the work itself (start to end) are left out. Results say\n\"cleaner after\" or \"no clear change after\", never \"because of\": one beach and\none date can't rule out something else changing at the same time.",
  "demos": [
   {
@@ -1142,10 +1142,10 @@
     0.066
    ],
    "forecast_model_result": {
-    "estimate": 0.006,
+    "estimate": 0.009,
     "ci95": [
-     -0.039,
-     0.061
+     -0.014,
+     0.049
     ]
    }
   },
@@ -1156,10 +1156,10 @@
     0.246
    ],
    "forecast_model_result": {
-    "estimate": 0.086,
+    "estimate": 0.1,
     "ci95": [
-     -0.057,
-     0.22
+     -0.052,
+     0.215
     ],
     "samples": 2363
    }
@@ -1171,10 +1171,10 @@
     0.065
    ],
    "forecast_model_result": {
-    "estimate": -0.003,
+    "estimate": -0.0,
     "ci95": [
-     -0.041,
-     0.059
+     -0.027,
+     0.051
     ],
     "samples": 18295
    }

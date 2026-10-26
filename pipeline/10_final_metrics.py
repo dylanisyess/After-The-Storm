@@ -70,6 +70,28 @@ def last_known(samples, known, lag_days):  # same as 05_build_table.py
     return out.drop(columns="known_date")
 
 
+def recent_rate(samples, hist, lag_days, days=365, min_tests=10):
+    """Same as 05_build_table.py. Past-year track record: for each sample, the share unsafe among the station's results
+    sampled in the `days` before it AND back from the lab by then (sampled at least lag_days
+    before). Blank (NaN) if fewer than min_tests such results. 08 and 10 use the same function.
+    For each station, dates are sorted, so searchsorted finds the window's first and last result,
+    and a running total of unsafe results gives the count inside the window."""
+    out = pd.Series(np.nan, index=samples.index)
+    for code, idx in samples.groupby("StationCode").groups.items():
+        h = hist[hist["StationCode"] == code].sort_values("date")
+        if h.empty:
+            continue
+        dates = h["date"].values
+        unsafe = np.concatenate([[0], np.cumsum(h["exceeds"].values)])
+        d = samples.loc[idx, "date"].values
+        hi = np.searchsorted(dates, d - np.timedelta64(lag_days, "D"), side="right")  # sampled on or before d - lag
+        lo = np.searchsorted(dates, d - np.timedelta64(days, "D"), side="left")       # sampled on or after d - 365
+        n = hi - lo
+        rate = (unsafe[hi] - unsafe[lo]) / np.maximum(n, 1)
+        out.loc[idx] = np.where(n >= min_tests, rate, np.nan)
+    return out
+
+
 # ---------------- Build the three scenarios ----------------
 df = pd.read_csv(P / "training_table.csv", parse_dates=["date"])
 test = df[(df["water"] == "ocean") & (df["date"] >= SPLIT)].dropna(subset=RAIN).copy()
@@ -94,6 +116,8 @@ C = test.drop(columns=["last_exceeds", "last_log_value", "days_since_last", "pas
 C = last_known(C, hist, LAB_LAG_DAYS + AHEAD)
 C[["past_n", "past_unsafe"]] = C[["past_n", "past_unsafe"]].fillna(0)
 C["days_since_last"] = (C["date"] - C["last_sample_date"]).dt.days
+C = C.reset_index(drop=True)
+C["recent_rate"] = recent_rate(C, lab.rename(columns={"SampleDate": "date"}), LAB_LAG_DAYS + AHEAD)  # 3 days ahead
 add_past_rate(C)
 
 for d in (A, B, C):

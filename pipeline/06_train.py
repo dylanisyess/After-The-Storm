@@ -28,7 +28,7 @@ RAIN = ["rain_1d", "rain_3d", "rain_7d", "rain_30d", "days_dry"]
 # No "month": with only two off-season storms in 2010-2022 it let the model invent an
 # October-storm effect (review/forecast_puzzle.md). wet_season keeps the seasonal signal.
 FEATURES = RAIN + ["tide_high", "tide_low", "tide_range", "wet_season",
-                   "last_exceeds", "last_log_value", "days_since_last", "past_rate", "lat", "lon"]
+                   "last_exceeds", "last_log_value", "days_since_last", "past_rate", "recent_rate", "lat", "lon"]
 # min_samples_leaf=100: every rule the model learns must rest on 100+ samples, not a few rare days.
 PARAMS = dict(learning_rate=0.05, max_iter=400, max_leaf_nodes=31, min_samples_leaf=100,
               l2_regularization=1.0, random_state=0)

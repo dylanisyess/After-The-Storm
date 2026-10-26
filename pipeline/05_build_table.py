@@ -83,6 +83,28 @@ def last_known(samples, known, lag_days):
     return out.drop(columns="known_date")
 
 
+def recent_rate(samples, hist, lag_days, days=365, min_tests=10):
+    """Past-year track record: for each sample, the share unsafe among the station's results
+    sampled in the `days` before it AND back from the lab by then (sampled at least lag_days
+    before). Blank (NaN) if fewer than min_tests such results. 08 and 10 use the same function.
+    For each station, dates are sorted, so searchsorted finds the window's first and last result,
+    and a running total of unsafe results gives the count inside the window."""
+    out = pd.Series(np.nan, index=samples.index)
+    for code, idx in samples.groupby("StationCode").groups.items():
+        h = hist[hist["StationCode"] == code].sort_values("date")
+        if h.empty:
+            continue
+        dates = h["date"].values
+        unsafe = np.concatenate([[0], np.cumsum(h["exceeds"].values)])
+        d = samples.loc[idx, "date"].values
+        hi = np.searchsorted(dates, d - np.timedelta64(lag_days, "D"), side="right")  # sampled on or before d - lag
+        lo = np.searchsorted(dates, d - np.timedelta64(days, "D"), side="left")       # sampled on or after d - 365
+        n = hi - lo
+        rate = (unsafe[hi] - unsafe[lo]) / np.maximum(n, 1)
+        out.loc[idx] = np.where(n >= min_tests, rate, np.nan)
+    return out
+
+
 # ---- Last result and station history KNOWN by the sample day (lab lag) ----
 hist = lab[["StationCode", "date", "value", "exceeds"]].sort_values(["StationCode", "date"])
 hist = hist.assign(
@@ -92,6 +114,7 @@ hist = hist.assign(
 ).rename(columns={"value": "last_value", "exceeds": "last_exceeds"})
 lab = last_known(lab, hist, LAB_LAG_DAYS)
 lab[["past_n", "past_unsafe"]] = lab[["past_n", "past_unsafe"]].fillna(0)  # nothing known yet
+lab["recent_rate"] = recent_rate(lab, hist.rename(columns={"last_exceeds": "exceeds"}), LAB_LAG_DAYS)
 lab["last_log_value"] = np.log10(lab["last_value"].clip(lower=1))
 lab["days_since_last"] = (lab["date"] - lab["last_sample_date"]).dt.days
 

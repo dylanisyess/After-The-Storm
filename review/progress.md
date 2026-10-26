@@ -135,3 +135,34 @@ Nothing committed. Headline numbers unchanged.
   (10000) at phone and desktop widths: search stays on Home with the summary, and every answer link opens its
   page on that beach (desktop returns Home through the menu, so it's one session). 0 failures. All pages
   pass; screenshots retaken.
+
+## Phase 3 (Oct 26, 2:17-2:47 AM; stop was 3:15)
+1. Freshness: `todays(s)` and `day_name(date, today, replay)`. "Today" only ever labels today's LA date. If the
+   file has no today: Forecast headline "No forecast for today. Latest: <date>", Compare states its date
+   ("on Thursday, October 22") and adds the same note, Home says "No forecast for today (latest: ...)".
+   Tested by temporarily shifting the file's dates 4 days back (real file restored; validator passes).
+2. Validator (`pipeline/validate_app_data.py`): exactly 4 consecutive dates from today, unique station IDs,
+   risk and typical_risk within 0-1, levels match the thresholds (08's rule; +-0.0005 for rounding). Tested on a
+   copy with 4 planted errors: all caught; the real file passes.
+3. Mismatch warning (`past_year()`): past-365-day unsafe share from history.json, 20+ tests, more than twice
+   the estimate -> "This beach failed X% of tests in the past year (N tests), more than this estimate suggests."
+   Santa Monica Pier: 44% of 230 tests vs 18% estimate (9% under the old model). 11 beaches today.
+4. Driver panel: "How the estimate changes with different inputs"; lines "With typical tides, the estimate
+   would be about 5% (now 9%)"; caption says each line changes one input group on its own. Methods text updated.
+5. "Rarely unsafe, or too few tests" split into "Historically low failure rate" (15 beaches: little change
+   after rain) and "Not enough tests to classify" (58: too few tests, or ranges too wide). Map, legends,
+   tables, sorting notes.
+6. Beach profile: notes say the normal level uses all years since 2010 (rainy season) and dry-weather rates use
+   tests since 2021 (all seasons). New "Unsafe share by year" chart (every test, from evaluator_data.json; pale
+   under 10 tests; numbers + CSV). Santa Monica Pier: ~10% (2016-18) -> 57% (2025).
+7. Retrain with `recent_rate` (started 2:23, before 2:40): past-365-day unsafe share among results back from the
+   lab (2-day lag; 5-day for day +3), blank under 10 results; in 05 (`recent_rate()`), 06 (FEATURES), 08, 10.
+   Same split. Old model backed up first. `rebuild.sh` + model-ID check passed at 2:28 (model e5207cd9bd).
+   Before -> after (final_metrics, 95% ranges): test +4.7 (+1.8 to +8.2) -> +7.0 (+4.0 to +10.0);
+   live +3.6 -> +5.6 (+2.4 to +8.7); day +3 +0.5 (-3.1 to +5.5) -> +4.4 (+1.0 to +8.1); AUC 0.859 -> 0.868.
+   All improved, so KEPT. Caution threshold 0.161 -> 0.195 (same warning budget).
+8. Forecast card: "Compare nearby beaches" link (?beach=). Stations sharing a beach name are labeled
+   "(monitoring site k/n, CODE)" in pickers and tables (code order; on-map stations only).
+- Checked: all pages at phone + desktop, no errors; Home flow test (3 beaches x 2 widths) 0 failures;
+  validator + model-ID check pass. Screenshots retaken (the replay desktop shot is cut off at the bottom:
+  the script measured the page before it finished drawing; the page itself is fine).

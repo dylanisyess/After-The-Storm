@@ -141,7 +141,7 @@ GROUPS = {"rain": ["rain_1d", "rain_3d", "rain_7d", "rain_30d", "days_dry"],
           "tides": ["tide_high", "tide_low", "tide_range"],
           "last test": ["last_exceeds", "last_log_value", "days_since_last"],
           "season": ["wet_season"],
-          "track record": ["past_rate"]}  # lat and lon never change for a beach, so they are left out
+          "track record": ["past_rate", "recent_rate"]}  # lat and lon never change for a beach, so they are left out
 tt = pd.read_csv(P / "training_table.csv", parse_dates=["date"])
 tt = tt[(tt["water"] == "ocean") & (tt["date"] < "2023-01-01")].dropna(subset=GROUPS["rain"]).copy()
 tt["past_rate"] = (tt["past_unsafe"] + bundle["prior_weight"] * bundle["global_rate"]) / (tt["past_n"] + bundle["prior_weight"])
@@ -157,14 +157,19 @@ for code, s in st.iterrows():
     n, unsafe = past.loc[code, "count"], past.loc[code, "sum"]
     # same formula as add_past_rate() in 06_train.py
     past_rate = (unsafe + bundle["prior_weight"] * bundle["global_rate"]) / (n + bundle["prior_weight"])
+    mine = known[known["StationCode"] == code]
     for d in days:
+        # Past-year track record, as in 05's recent_rate(): results sampled in the 365 days before d that are
+        # back from the lab (all of `known` is), blank if fewer than 10.
+        year = mine[mine["SampleDate"] >= d - pd.Timedelta(days=365)]["exceeds"]
+        recent_share = year.mean() if len(year) >= 10 else np.nan
         f = rain_feats(series[(s.cell_lat, s.cell_lon)], d)
         hi, lo = tide_day.loc[(s.tide_station, d)] if (s.tide_station, d) in tide_day.index else (np.nan, np.nan)
         f.update({"tide_high": hi, "tide_low": lo, "tide_range": hi - lo, "month": d.month,
                   "wet_season": int(d.month in [11, 12, 1, 2, 3, 4]),
                   "last_exceeds": lk["exceeds"], "last_log_value": np.log10(max(lk["value"], 1)),
                   "days_since_last": (d - lk["SampleDate"]).days,
-                  "past_rate": past_rate, "past_share": unsafe / n, "past_n": n,
+                  "past_rate": past_rate, "recent_rate": recent_share, "past_share": unsafe / n, "past_n": n,
                   "lat": s.lat, "lon": s.lon})
         X_rows.append(f); keys.append((code, d))
 X = pd.DataFrame(X_rows)
@@ -200,7 +205,9 @@ def describe(g, r, t):
     if g == "season":
         season = lambda w: "rainy season (Nov to Apr)" if w == 1 else "dry season (May to Oct)"
         return season(r.wet_season), season(round(t.wet_season))
-    return f"unsafe on {r.past_share:.0%} of {int(r.past_n)} past tests", f"{t.past_share:.0%}"
+    year = "" if pd.isna(r.recent_rate) else f"; {r.recent_rate:.0%} in the past year"
+    typ = "" if pd.isna(t.recent_rate) else f"; {t.recent_rate:.0%} in a typical past year"
+    return f"unsafe on {r.past_share:.0%} of {int(r.past_n)} past tests{year}", f"{t.past_share:.0%}{typ}"
 
 actual = lab.set_index(["StationCode", "SampleDate"])
 for code, s in st.iterrows():

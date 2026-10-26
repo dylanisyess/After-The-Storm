@@ -13,15 +13,15 @@ Data pipeline in `pipeline/` (run order and outputs in `pipeline/README.md`):
 - Model: scikit-learn HistGradientBoostingClassifier predicting P(enterococcus >
   104 MPN/100 mL) at beach stations. Trained 2010-2022, tested 2023-2026.
   Quotable numbers with 95% ranges: `review/final_metrics.md` (made by
-  `pipeline/10_final_metrics.py`). Model ID `40ebd86751` (Oct 24 rebuild). Test
-  set: ROC-AUC 0.86; at the same number of warnings, catches 66% of unsafe days
-  vs 61% for signs + 72-hour rain advisory (+4.7 points, 95% range +1.8 to +8.2),
-  and 53% vs 46% for signs alone. Estimated live mode: 65% vs 61% (+3.6, range
-  +0.7 to +7.6). Day +3: 62% vs 61% (range includes zero: "about as good as").
+  `pipeline/10_final_metrics.py`). Model ID `e5207cd9bd` (Oct 26, 2:28 AM rebuild, adds
+  `recent_rate`; before it: `40ebd86751`). Test set: ROC-AUC 0.87 (0.868); at the same number of
+  warnings, catches 68.2% of unsafe days vs 61.1% for signs + 72-hour rain advisory (+7.0 points,
+  95% range +4.0 to +10.0), and 54.9% vs 45.8% for signs alone (+9.1). Estimated live mode: 66.7% vs
+  61.1% (+5.6, range +2.4 to +8.7). Day +3: 65.5% vs 61.1% (+4.4, range +1.0 to +8.1, above zero).
 - Decisions already made (ask Dylan before changing): beaches only (inland E.
   coli stations have too few samples to model); time-based split; last test
   result lagged 2 days for lab turnaround; rain features use days before the
-  sample only; warning threshold = model risk 0.161 (same warning budget as
+  sample only; warning threshold = model risk 0.195 (0.161 before Oct 26) (same warning budget as
   signs + rain rule on the test years; a threshold set on 2022 alone gives
   similar results). No `month` feature (`wet_season` only) and
   min_samples_leaf=100: with month, the model invented an October-storm effect
@@ -31,7 +31,9 @@ Data pipeline in `pipeline/` (run order and outputs in `pipeline/README.md`):
   group (rain, tides, last test, season, track record) at the beach's typical value
   (median of its 2010-2022 training rows) and stores the change in points.
 - Audit fixes (Oct 24, 2026, AI-assisted): date parsing in 01 no longer drops
-  ~2% of samples; station history is `past_rate` (share of the station's
+  ~2% of samples; station history is `past_rate` (plus, since Oct 26, `recent_rate`: share unsafe among the
+  station's results from the past 365 days already back from the lab, 2-day lag, blank under 10; 05, 08, 10
+  share the function; 5-day lag for day +3) (`past_rate` = share of the station's
   results already back from the lab, smoothed with 10 'average' tests), not a
   frozen 2010-2022 rate; spill features removed (no effect); missing rain is
   left blank, never 0; signs are scored with a 1-day lag and also with all
@@ -114,14 +116,14 @@ checks they all match `model/metrics.json`, and the app warns if they don't.
   postings, postings_plus_rain}}`. Real Beach Watch postings/closures/rain advisories (records end Mar 6, 2026).
   `check` = forecast vs. REAL postings, 2023 to Mar 6 2026, step 10's equal-warnings method on
   `model/test_predictions.csv`, only beaches Beach Watch lists by name: signs counties actually posted (+
-  closures) caught 36.2% vs model 55.6%, +19.4 pts (+15.2 to +24.6); plus the counties' rain advisories 64.5% vs
-  71.1%, +6.5 (+3.6 to +9.8). County-wide advisories are filed under one placeholder station per health department
+  closures) caught 36.2% vs model 57.6%, +21.5 pts (+17.9 to +25.4); plus the counties' rain advisories 64.5% vs
+  73.0%, +8.5 (+5.5 to +11.0) (model e5207cd9bd). County-wide advisories are filed under one placeholder station per health department
   (`All_LosAngeles_County_Beaches`, `All_Long_Beach_City_Beaches`, `All_Ventura_County_Beaches`); 13 copies them to
   every station of that department. Dylan's decision: an advisory counts only if issued before the test day;
   shown as a separate Methods check ("Compared with what counties actually posted"), never the headline. Raw CSVs live in `beachwatch/` (gitignored);
   13 trims them to `processed/postings_la.csv` and `processed/beachwatch_stations_la.csv`.
 - `calibration.json` (14): test-set tests grouped by predicted risk (`bins`: tests, predicted, actual, Wilson
-  95% range); Methods calibration chart. 2023-2026: predicted 11.5% on average vs 14.0% actual (runs a little low).
+  95% range); Methods calibration chart. 2023-2026: predicted 13.0% on average vs 14.0% actual (11.5% before the Oct 26 retrain).
 - `burn_areas_2025.geojson`, `model_metrics.json` (copy of `model/metrics.json`:
   `baselines.{sign, sign_plus_rain, sign3, sign3_plus_rain}` each with `rule`
   and `model_same_budget`; `model_at_threshold`; `threshold_set_on_2022`).
