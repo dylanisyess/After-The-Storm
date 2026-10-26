@@ -4,7 +4,7 @@
 # design system typeface, plain and civic) for everything else.
 [theme]
 base = "light"
-primaryColor = "#2a78d6"              # ocean blue: switches, selected buttons, links
+primaryColor = "#2366C7"              # ocean blue: switches, selected buttons (5.5:1 with white text)
 backgroundColor = "#F2F5F9"           # Fog: the page
 secondaryBackgroundColor = "#E8EEF6"  # Tide tint: inputs and quiet tiles
 textColor = "#1A2440"                 # deep ink

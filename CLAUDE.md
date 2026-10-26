@@ -25,9 +25,11 @@ Data pipeline in `pipeline/` (run order and outputs in `pipeline/README.md`):
   signs + rain rule on the test years; a threshold set on 2022 alone gives
   similar results). No `month` feature (`wet_season` only) and
   min_samples_leaf=100: with month, the model invented an October-storm effect
-  from 2 off-season storms (see `review/forecast_puzzle.md`). A "big spring
-  tide" reason shows on caution/high days when the daily tide range is 6.5 ft+
-  (Boehm & Weisberg 2005).
+  from 2 off-season storms (see `review/forecast_puzzle.md`). Oct 25 (Dylan's
+  review): the hand-written forecast reasons (incl. the 6.5 ft spring-tide reason)
+  were replaced by "What's driving this risk": 08 reruns the model with one input
+  group (rain, tides, last test, season, track record) at the beach's typical value
+  (median of its 2010-2022 training rows) and stores the change in points.
 - Audit fixes (Oct 24, 2026, AI-assisted): date parsing in 01 no longer drops
   ~2% of samples; station history is `past_rate` (share of the station's
   results already back from the lab, smoothed with 10 'average' tests), not a
@@ -64,10 +66,15 @@ Data pipeline in `pipeline/` (run order and outputs in `pipeline/README.md`):
 ## App data contract (`app_data/`, all JSON)
 Every file has a top-level `model_id`; `python3 pipeline/check_model_ids.py`
 checks they all match `model/metrics.json`, and the app warns if they don't.
-- `forecast.json`: from `python pipeline/08_forecast.py` (live; needs internet).
-  `{issued, mode, rain_source, levels, standard, stations:[{station, name, lat,
-  lon, type, last_test:{date,value,unsafe}, forecast:[{date, risk, level
-  (low|caution|high), reasons:[str]}]}]}`, today + 3 days.
+- `forecast.json`: from `python pipeline/08_forecast.py` (live; needs internet;
+  "today" = Los Angeles date; written to a .tmp file then swapped in).
+  `{issued, made_at (LA time), mode, rain_source, levels, standard, stations:[{station,
+  name, lat, lon, type, last_test:{date,value,unsafe}, forecast:[{date, risk, level
+  (low|caution|high), typical_risk, drivers:[{input, points, now, typical}] (biggest
+  first)}]}]}`, today + 3 days. The app reruns 08 itself (subprocess, once per LA day,
+  30-minute wait after a failure) when `issued` is older than today; on failure it
+  keeps the old file and says "Last updated". Test results stay as of the last data
+  download; only rain and tides are fresh.
 - `replay_<date>.json`: same shape for a past day, plus `forecast[].actual
   {value, unsafe}` when a sample was taken. `replay_2023-01-09.json` is a big
   storm (good for the demo video).
@@ -111,14 +118,22 @@ checks they all match `model/metrics.json`, and the app warns if they don't.
 agencies and policymakers): `streamlit run app.py`. Name "After the Rain"
 (`APP_NAME` in app.py). Theme in
 `.streamlit/config.toml`. Pages, in order (left menu): Home (landing: hero with space for assets/hero.jpg,
-the problem, 3 findings from app_data, question cards, who it's for, trust strip), Advisory check,
-Beach diagnosis, Did it work? (live evaluator), After the fires, Forecast (keeps
-the Jan 2023 replay toggle), Methods (model-vs-signs, definitions, spills). Design
+a beach search that opens Forecast and an "Explore the findings" button, the problem, 3 findings,
+clickable question cards, who it's for, trust strip), After-rain patterns (/after-rain), Beach
+profile (/beach-profile), Cleanup projects (/cleanup-projects, live evaluator), Fire impacts
+(/fire-impacts), Forecast (keeps the Jan 2023 replay toggle; three-part beach card + "What's
+driving this risk"), Methods (model-vs-signs, sections in expanders). Pages renamed Oct 25.
+`?beach=CODE` works on Forecast and Beach profile, and the chosen beach carries between
+them (`chosen_beach()`, `remember_beach()`). Coverage is described as "LA and Ventura County
+beaches" (`COVERAGE`), and every beach is compared with LA County's 72-hour advisory. Design
 rules: each page opens with a SHORT headline (one idea, one number), details on the
 line below, plain one-line notes for "normal level", "points" and "surprise"; then
-annotated charts, then quiet number tiles; no emoji; chip legends; every chart
+the main chart or control, then secondary numbers and long text in expanders (Oct 25);
+wherever a group name like "back to normal" appears, its actual rate is shown (`group_rates()`);
+text at least 4.5:1 contrast (captions forced opaque; theme blue #2366C7); no emoji; chip legends; every chart
 has a "Show the numbers" table. Styling (Oct 25, from Dylan's refs in `design_refs/`):
-left menu in Harbor blue (st.navigation position="sidebar", icons); Gabarito headlines +
+left menu in Harbor blue (st.navigation position="sidebar", icons); logo from `assets/logo/` (on-dark SVG beside the name in the
+menu, plain SVG at 72 px beside the home title, 64 px PNG as the browser-tab icon; `logo_img()`); Gabarito headlines +
 Public Sans body (Google Fonts via config.toml); spacing scale --s1..--s7 (4-48 px);
 white panels (`panel()`), tinted tiles (`cards()`, 4 across, 2x2 at medium widths,
 no decorative sun since Oct 25); one chart
@@ -126,8 +141,8 @@ theme (`after_rain`, horizontal grid only; draw charts with `show_chart()`); lin
 at the line ends, no duplicate legend; Carto Positron maps zoomed to the coast;
 one name per beach group everywhere (`GROUPS`: Unsafe longer than 72 hours, Back to
 normal within 72 hours, Recover faster than most, Often unsafe in dry weather); forecast cards carry a risk bar. Station labels are "Place (CODE)"; SMB-MC-2 is named Surfrider Beach (`KNOWN_PLACES`). Methods reads `final_metrics.json`, so rerunning 10
-updates it. Read only from `app_data/`; refresh the forecast by running
-`08_forecast.py` then `09_export_app_data.py`. To retrain, always use
+updates it. Reads only from `app_data/` (cache keys include each file's change
+time, 1-hour TTL), except the daily forecast refresh above. To retrain, always use
 `bash pipeline/rebuild.sh` (06, 07, 11, 08 live and every replay, 09, 10, 12, then
 the model-ID check), never 06 alone. Screenshots (phone 390 px, desktop 1440 px) in
 `screenshots/`, made by `review/screenshots.py`.

@@ -12,9 +12,18 @@ so you can check the app against reality or demo a past storm.
 
 Features are built exactly as in training (05_build_table.py). The last test
 result counts only if it would have been back from the lab by the issue date.
+
+"What's driving this risk": for each day we also ask the model what the risk would be
+if one group of inputs (rain, tides, the latest test, season, track record) were at
+this beach's typical value instead, with everything else unchanged. Typical = the
+beach's median over its tests from the training years (2010-2022). The difference, in
+percentage points, is how much that group is pushing today's risk up or down.
+
+The app (app.py) reruns this step by itself when forecast.json is older than today.
 """
-import argparse, json, sys, urllib.request
-from datetime import date, timedelta
+import argparse, json, os, sys, urllib.request
+from datetime import datetime
+from zoneinfo import ZoneInfo
 from pathlib import Path
 import warnings
 import joblib
@@ -27,16 +36,13 @@ ROOT = Path(__file__).resolve().parent.parent
 P, OUT = ROOT / "processed", ROOT / "app_data"
 OUT.mkdir(exist_ok=True)
 LAB_LAG_DAYS, DAYS_AHEAD, WET_MM = 2, 3, 2.5
-# A daily tide range this big is a spring tide (new or full moon). Boehm & Weisberg (2005,
-# Environmental Science & Technology 39: 5575-5583) found Southern California beaches about
-# twice as likely to fail water standards during spring tides.
-SPRING_TIDE_FT = 6.5
+LA = ZoneInfo("America/Los_Angeles")  # "today" means today in LA, even on a server in another time zone
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--as-of", help="replay this past date (YYYY-MM-DD) from saved data")
 args = ap.parse_args()
 live = args.as_of is None
-d0 = pd.Timestamp(date.today() if live else args.as_of)
+d0 = pd.Timestamp(datetime.now(LA).date() if live else args.as_of)
 days = [d0 + pd.Timedelta(days=k) for k in range(DAYS_AHEAD + 1)]
 
 # ---- Model ----
@@ -128,6 +134,22 @@ tide_day = tides.groupby(["tide_station", "date"])["height_ft"].agg(["max", "min
 diag = {d["station"]: d["fix_category"] for d in json.loads((OUT / "diagnosis.json").read_text())["stations"]}
 inch = lambda mm: f"{mm / 25.4:.2f} in"
 
+# ---- Each beach's typical inputs (for "What's driving this risk") ----
+# The inputs in groups a reader can picture. Rain inputs move together (3 days of rain is
+# also in the 7-day total), so they are swapped together; same for tides and the last test.
+GROUPS = {"rain": ["rain_1d", "rain_3d", "rain_7d", "rain_30d", "days_dry"],
+          "tides": ["tide_high", "tide_low", "tide_range"],
+          "last test": ["last_exceeds", "last_log_value", "days_since_last"],
+          "season": ["wet_season"],
+          "track record": ["past_rate"]}  # lat and lon never change for a beach, so they are left out
+tt = pd.read_csv(P / "training_table.csv", parse_dates=["date"])
+tt = tt[(tt["water"] == "ocean") & (tt["date"] < "2023-01-01")].dropna(subset=GROUPS["rain"]).copy()
+tt["past_rate"] = (tt["past_unsafe"] + bundle["prior_weight"] * bundle["global_rate"]) / (tt["past_n"] + bundle["prior_weight"])
+tt["past_share"] = tt["past_unsafe"] / tt["past_n"]  # not a model input; only for the words shown
+inputs = [c for g in GROUPS.values() for c in g]
+typical = tt.groupby("StationCode")[inputs + ["past_share"]].median()
+typical_all = tt[inputs + ["past_share"]].median()  # for a beach with no tests in 2010-2022
+
 # ---- Predict ----
 out_st, X_rows, keys = [], [], []
 for code, s in st.iterrows():
@@ -154,6 +176,32 @@ if missing.any():
              "check that processed/rain_daily.csv covers the 30 days before each forecast day.")
 X["risk"] = model.predict_proba(X[FEATURES])[:, 1]
 
+# Same rows, with one group of inputs at the beach's typical values (and once with all of them).
+typ = pd.DataFrame([typical.loc[k[0]] if k[0] in typical.index else typical_all for k in keys]).reset_index(drop=True)
+def risk_with(cols):
+    X2 = X.copy()
+    X2[cols] = typ[cols].to_numpy()
+    return model.predict_proba(X2[FEATURES])[:, 1]
+X["typical_risk"] = risk_with(inputs)
+for g, cols in GROUPS.items():
+    X[f"push_{g}"] = X["risk"] - risk_with(cols)  # > 0: this group pushes the risk above a typical day
+
+def describe(g, r, t):
+    """Today's value of a group of inputs, and the beach's typical value, in words."""
+    if g == "rain":
+        return (f"{inch(r.rain_3d)} over the 3 days before, {inch(r.rain_7d)} over the week before",
+                f"{inch(t.rain_3d)} over 3 days, {inch(t.rain_7d)} over the week")
+    if g == "tides":
+        return f"{r.tide_range:.1f} ft between high and low tide", f"{t.tide_range:.1f} ft"
+    if g == "last test":
+        word = "over" if r.last_exceeds == 1 else "under"
+        return (f"{10 ** r.last_log_value:,.0f} bacteria per 100 mL ({word} the limit), {r.days_since_last:.0f} days old",
+                f"{10 ** t.last_log_value:,.0f} per 100 mL, {t.days_since_last:.0f} days old")
+    if g == "season":
+        season = lambda w: "rainy season (Nov to Apr)" if w == 1 else "dry season (May to Oct)"
+        return season(r.wet_season), season(round(t.wet_season))
+    return f"unsafe on {r.past_share:.0%} of {int(r.past_n)} past tests", f"{t.past_share:.0%}"
+
 actual = lab.set_index(["StationCode", "SampleDate"])
 for code, s in st.iterrows():
     lk = last.loc[code]
@@ -161,25 +209,12 @@ for code, s in st.iterrows():
     for i in [i for i, k in enumerate(keys) if k[0] == code]:
         r, d = X.iloc[i], keys[i][1]
         level = "high" if r.risk >= 0.5 else "caution" if r.risk >= thr else "low"
-        reasons = []
-        if r.rain_3d >= 2.54:
-            reasons.append(f"{inch(r.rain_3d)} of rain in the 3 days before")
-        elif r.rain_7d >= 12.7:
-            reasons.append(f"{inch(r.rain_7d)} of rain in the past week")
-        # Boehm & Weisberg 2005: ~2x more failures at spring tides. Only on caution/high days,
-        # so a low-risk day doesn't read like a warning.
-        if r.tide_range >= SPRING_TIDE_FT and level != "low":
-            reasons.append(f"big spring tide ({r.tide_range:.1f} ft range); beaches fail about twice as often "
-                           "during spring tides")
-        if r.last_exceeds == 1:
-            reasons.append(f"last test ({lk['SampleDate']:%b %d}) was over the limit")
-        if diag.get(code) == "chronic":
-            reasons.append("this beach is often unsafe even in dry weather")
-        elif r.past_rate >= 0.15:
-            reasons.append(f"history: unsafe on {r.past_share:.0%} of {int(r.past_n)} past tests")
-        if not reasons:
-            reasons.append("dry weather and a clean recent record")
-        item = {"date": f"{d:%Y-%m-%d}", "risk": round(float(r.risk), 3), "level": level, "reasons": reasons}
+        t = typ.iloc[i]
+        drivers = [{"input": g, "points": round(float(r[f"push_{g}"]) * 100, 1),
+                    "now": describe(g, r, t)[0], "typical": describe(g, r, t)[1]} for g in GROUPS]
+        drivers.sort(key=lambda x: -abs(x["points"]))  # biggest push (up or down) first
+        item = {"date": f"{d:%Y-%m-%d}", "risk": round(float(r.risk), 3), "level": level,
+                "typical_risk": round(float(r.typical_risk), 3), "drivers": drivers}
         if not live and (code, d) in actual.index:  # replay: what the water actually showed
             a = actual.loc[(code, d)]
             a = a.iloc[0] if isinstance(a, pd.DataFrame) else a
@@ -190,11 +225,16 @@ for code, s in st.iterrows():
                    "value": float(lk["value"]), "unsafe": bool(lk["exceeds"])}, "forecast": fc})
 
 res = {"model_id": bundle["model_id"], "issued": f"{d0:%Y-%m-%d}", "mode": "live" if live else "replay",
+       "made_at": datetime.now(LA).strftime("%Y-%m-%d %H:%M"),  # LA time
        "rain_source": source,
        "levels": {"low": f"risk under {thr:.2f}", "caution": f"{thr:.2f} to 0.50 (the warning threshold "
                   "tested on 2023-2026)", "high": "0.50 or more: unsafe more likely than not"},
        "standard": "enterococcus over 104 MPN/100 mL", "stations": out_st}
 name = "forecast.json" if live else f"replay_{d0:%Y-%m-%d}.json"
-(OUT / name).write_text(json.dumps(res, indent=1))
+# Write to a temporary file, then swap it in: if this step is stopped halfway, the app
+# keeps reading the last complete forecast instead of half a file.
+tmp = OUT / (name + ".tmp")
+tmp.write_text(json.dumps(res, indent=1))
+os.replace(tmp, OUT / name)
 lv = pd.Series([s["forecast"][0]["level"] for s in out_st]).value_counts().to_dict()
 print(f"Wrote app_data/{name}: {len(out_st)} beaches, day-1 levels {lv}")

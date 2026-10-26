@@ -11,7 +11,7 @@ Run in order from the `waterapp` folder (pip install pandas scikit-learn):
 | 5 | `05_build_table.py` | anywhere with pandas | `training_table.csv` (one row per sample, all features) |
 | 6 | `06_train.py` | needs scikit-learn | `model/beach_model.joblib`, `model/metrics.json`, `model/test_predictions.csv` |
 | 7 | `07_analysis.py` | anywhere | `app_data/spills.json`, `post_fire.json` (the old `hotspots.json` was retired; 11 replaces it) |
-| 8 | `08_forecast.py` | your computer (needs internet) | `app_data/forecast.json`; `--as-of YYYY-MM-DD` writes `app_data/replay_<date>.json` from saved data |
+| 8 | `08_forecast.py` | your computer or the app itself, daily (needs internet) | `app_data/forecast.json` (today in LA + 3 days, with what drives each day's risk); `--as-of YYYY-MM-DD` writes `app_data/replay_<date>.json` from saved data |
 | 9 | `09_export_app_data.py` | anywhere | `app_data/stations.json`, `history.json`, map layer, metrics |
 | 10 | `10_final_metrics.py` | needs scikit-learn | `review/final_metrics.md` (numbers to quote, with 95% ranges) and `app_data/final_metrics.json` (same numbers, read by app.py) |
 | 11 | `11_beach_diagnosis.py` | anywhere | `app_data/diagnosis.json`: per beach dry/after-rain rates and chronic label (last 5 years), rain trigger, recovery vs. the 72-hour advisory (all years), fix category. 08 and 09 read it, so it runs before 08 |

@@ -14,7 +14,7 @@ from pathlib import Path
 from playwright.sync_api import sync_playwright
 
 URL = sys.argv[1] if len(sys.argv) > 1 else "http://localhost:8599"
-PAGES = ["", "advisory", "diagnosis", "did-it-work", "fires", "forecast", "methods"]   # "" = the first page, Home
+PAGES = ["", "after-rain", "beach-profile", "cleanup-projects", "fire-impacts", "forecast", "methods"]  # "" = Home
 SIZES = {"phone": (390, 844), "desktop": (1440, 900)}   # iPhone 14 width; a laptop
 OUT = Path(__file__).resolve().parent.parent / "screenshots"
 OUT.mkdir(exist_ok=True)
