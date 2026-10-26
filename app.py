@@ -1,4 +1,4 @@
-"""After the Rain: LA and Ventura County beach water, what makes it unsafe and what
+"""After the Storm: LA and Ventura County beach water, what makes it unsafe and what
 fixes it (Congressional App Challenge 2026).
 
 Run inside WSL:  source ~/waterenv/bin/activate && streamlit run app.py
@@ -44,7 +44,7 @@ DATA = ROOT / "app_data"
 sys.path.insert(0, str(ROOT / "pipeline"))
 from evaluator import evaluate  # noqa: E402  (pipeline/evaluator.py, shared with step 12)
 
-APP_NAME = "After the Rain"
+APP_NAME = "After the Storm"
 TAGLINE = "LA and Ventura County beaches: what makes the water unsafe, and what fixes it"
 LOGO = ROOT / "assets" / "logo"   # a raindrop with rain, the sun and waves
 st.set_page_config(page_title=APP_NAME, page_icon=str(LOGO / "after-the-rain-icon-64.png"), layout="wide")
@@ -488,9 +488,9 @@ def chips(items):
 
 
 def csv_button(df, name, label="Download CSV"):
-    """A small button that saves `df` as a spreadsheet file named after-the-rain_<name>.csv.
+    """A small button that saves `df` as a spreadsheet file named after-the-storm_<name>.csv.
     on_click="ignore" means clicking it doesn't rerun the page."""
-    st.download_button(label, df.to_csv(index=False).encode("utf-8"), file_name=f"after-the-rain_{name}.csv",
+    st.download_button(label, df.to_csv(index=False).encode("utf-8"), file_name=f"after-the-storm_{name}.csv",
                        mime="text/csv", icon=":material/download:", type="tertiary", on_click="ignore",
                        key=f"csv-{name}")
 
@@ -1176,7 +1176,7 @@ def project_report(r, code, preset, years, calib):
     row = lambda k, v: f"<tr><th>{e(k)}</th><td>{v}</td></tr>"
     window = lambda w: f"{pd.Timestamp(w[0]):%b %d, %Y} to {pd.Timestamp(w[1]):%b %d, %Y}"
     return f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
-<title>After the Rain: cleanup project check, {e(place(code))}</title>
+<title>{e(APP_NAME)}: cleanup project check, {e(place(code))}</title>
 <style>
   @page {{ size: letter; margin: 0.5in; }}
   body {{ font-family: "Public Sans", Arial, sans-serif; color: #1A2440; font-size: 11pt; line-height: 1.4;
@@ -1190,7 +1190,7 @@ def project_report(r, code, preset, years, calib):
   @media print {{ body {{ margin: 0; padding: 0; font-size: 10pt; }} h1 {{ font-size: 16pt; }} }}
 </style></head><body>
 <h1>Cleanup project check: {e(place(code))} ({e(code)})</h1>
-<p class="sub">{e(what)}. Made by After the Rain on {datetime.now(LA):%B %d, %Y}.</p>
+<p class="sub">{e(what)}. Made by {e(APP_NAME)} on {datetime.now(LA):%B %d, %Y}.</p>
 <p class="verdict">{e(r["verdict"].capitalize())}: {pts(est)} points of unsafe tests beyond what the weather and
 other beaches explain (95% range {pts(lo)} to {pts(hi)}).</p>
 <h2>Dates and samples</h2><table>
@@ -1219,7 +1219,7 @@ The months of the work itself are left out.</li>
 <li>Water tests: California State Water Boards, Safe to Swim (enterococcus over 104 per 100 mL counts as unsafe).</li>
 <li>Rain: Open-Meteo (ERA5). Tides: NOAA.</li>
 {"".join(f'<li>Project dates: <a href="{e(u)}">{e(n)}</a> ({e(u.split("/")[2])})</li>' for n, u in news)}</ul>
-<p class="small">After the Rain is a student project for the 2026 Congressional App Challenge, not an official
+<p class="small">{e(APP_NAME)} is a student project for the 2026 Congressional App Challenge, not an official
 health advisory. Model {e(str(load_json("final_metrics.json").get("model_id", "")))}.</p>
 </body></html>"""
 
@@ -1363,7 +1363,7 @@ def evaluator_page():
                 points=st.column_config.NumberColumn("Surprise (points)", format="%+.1f"))
 
     st.download_button("Download a one-page report", project_report(r, code, preset, years, calib).encode("utf-8"),
-                       file_name=f"after-the-rain_project-check_{code}_{start}.html", mime="text/html",
+                       file_name=f"after-the-storm_project-check_{code}_{start}.html", mime="text/html",
                        icon=":material/description:", on_click="ignore", key="report",
                        help="A printable page with the dates, sample counts, change, 95% range, sources and "
                             "assumptions. Open it in a browser, then print or save as PDF.")
@@ -2073,14 +2073,34 @@ def methods_page():
         st.markdown(
             f"Data: California State Water Boards (Safe to Swim) tests at {COVERAGE}, Open-Meteo (ERA5 rain), NOAA (tides), CIWQS (sewage "
             "spills), CAL FIRE (burn areas), State Water Board Beach Watch (real posting records). Parts of the code and analysis were written with AI help (Claude Code); "
-            "every AI-assisted step is listed in the project's AI use log.")
+            "every AI-assisted step is listed in the project's AI use log.\n\n"
+            f"{APP_NAME} was built by Dylan Lin for the 2026 Congressional App Challenge. {PHOTO_CREDIT}.")
 
 
 # ---------------------------------------------------------------------------
 # Home
 # ---------------------------------------------------------------------------
 
-HERO_PHOTO = ROOT / "assets" / "hero.jpg"
+# The Home banner photo: assets/hero.jpg (by Venti Views, on Unsplash). The original is 5,470 px wide and
+# 5 MB, so the page uses assets/hero-banner.jpg, the same photo shrunk to 1,600 px (about 270 KB).
+HERO_PHOTO = ROOT / "assets" / "hero-banner.jpg"
+PHOTO_CREDIT = "Photo: Venti Views / Unsplash"
+
+
+@st.cache_data(show_spinner=False)
+def photo_data(version):
+    """The banner photo as text (base64), so CSS can use it as a background. `version` is only the cache key."""
+    return base64.b64encode(HERO_PHOTO.read_bytes()).decode()
+
+
+# A wave in the logo's shape: the light and sea-blue waves under a navy sky, ending in the page color.
+# st.html removes <svg> tags, so the drawing is used as a background image (base64), like the logo.
+WAVE = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 64" preserveAspectRatio="none">
+  <rect width="1440" height="64" fill="#1B2A4A"/>
+  <path d="M0 22 C120 2 240 2 360 22 S600 42 720 22 S960 2 1080 22 S1320 42 1440 22 V64 H0 Z" fill="#8CCBF2"/>
+  <path d="M0 36 C120 16 240 16 360 36 S600 56 720 36 S960 16 1080 36 S1320 56 1440 36 V64 H0 Z" fill="#2B7BD3"/>
+  <path d="M0 54 C120 44 240 44 360 54 S600 64 720 54 S960 44 1080 54 S1320 64 1440 54 V64 H0 Z" fill="#F2F5F9"/>
+</svg>"""
 
 
 def beach_questions(code):
@@ -2100,7 +2120,15 @@ def beach_questions(code):
         facts.append(f"<b>No forecast</b>: {html.escape(reason[0].lower() + reason[1:])}")
     if code in DIAG_BY:
         facts.append(GROUPS[group_of(DIAG_BY[code])]["word"])
-    st.html(f'<div class="beach-line"><b>{html.escape(place(code))}</b>{code_tag(code)}<br>{" · ".join(facts)}</div>')
+    # The same past-year warning as the forecast card, when the beach failed far more often than today's estimate.
+    warn = ""
+    if code in fc and todays(fc[code]):
+        n_year, rate_year = past_year(code, la_today())
+        if n_year >= 20 and rate_year > 2 * todays(fc[code])["risk"]:
+            warn = (f'<div class="warn">This beach failed <b>{pct(rate_year)}</b> of tests in the past year '
+                    f"({n_year} tests), more than today's estimate suggests.</div>")
+    st.html(f'<div class="beach-line"><b>{html.escape(place(code))}</b>{code_tag(code)}<br>{" · ".join(facts)}'
+            f"{warn}</div>")
 
     ex = eval_table(file_version("evaluator_data.json"))
     counts = ex["StationCode"].value_counts()
@@ -2116,6 +2144,66 @@ def beach_questions(code):
                              width="stretch")
 
 
+def home_styles():
+    """Styles only the Home page needs (drawn only on Home, so other pages keep their layout): the page
+    runs edge to edge, the banner and the navy findings band are full width, and the light sections
+    keep the usual 1080 px column."""
+    photo = photo_data(HERO_PHOTO.stat().st_mtime_ns) if HERO_PHOTO.exists() else ""
+    st.html(f"""<style>
+  [data-testid="stMainBlockContainer"] {{ max-width: none; padding: 0 0 var(--s7); }}
+  .brand-main {{ display: none !important; }}           /* the banner already shows the logo */
+  [data-testid="stExpandSidebarButton"], [data-testid="stExpandSidebarButton"] * {{ color: #FFFFFF !important; }}  /* on the banner */
+  [class*="st-key-home-body"], .st-key-found > div {{ max-width: 1080px; margin: 0 auto; width: 100%;
+                                                       padding: 0 var(--s6); box-sizing: border-box; }}
+  .st-key-hero {{ margin-top: calc(-1 * var(--s4));   /* cancel the gap after this (invisible) style block */
+                  background: linear-gradient(100deg, rgba(27,42,74,.94) 0%, rgba(27,42,74,.80) 45%, rgba(27,42,74,.45) 100%),
+                  url(data:image/jpeg;base64,{photo}) center 60% / cover;
+                  padding: var(--s7) max(var(--s6), calc((100% - 1080px) / 2 + var(--s6))) var(--s6); gap: var(--s3); }}
+  .st-key-hero > div {{ max-width: 600px; }}
+  .st-key-hero .home-hero h1, .st-key-hero .home-hero p, .st-key-hero label p,
+  .st-key-hero .beach-line, .st-key-hero .beach-line b {{ color: #FFFFFF; }}
+  .st-key-hero .beach-line .code {{ color: #C9D6EA; }}
+  .st-key-hero [data-testid="stSelectbox"] [role="group"] {{ background-color: #FFFFFF; border-color: #FFFFFF; }}  /* solid white search box */
+  .beach-line .warn {{ color: var(--ink); background: #FDF1D8; border-left: 3px solid #B7791F; border-radius: 6px;
+                       padding: var(--s2) var(--s3); margin-top: var(--s2); font-size: .9375rem; }}
+  .beach-line .warn b {{ color: var(--ink); }}
+  .st-key-hero a.explore {{ background: #F6C453; color: var(--ink); }}  /* the logo's sun, on the dark banner */
+  .st-key-hero a.explore:hover {{ background: #FFD873; color: var(--ink); }}
+  .credit {{ font-size: .75rem; color: #DCE6F3; text-align: right; max-width: none !important; }}
+  .wave {{ width: 100%; height: 48px; margin-top: calc(-1 * var(--s4));
+           background: url(data:image/svg+xml;base64,{base64.b64encode(WAVE.encode()).decode()}) 0 0 / 100% 100% no-repeat; }}
+  .live {{ display: flex; flex-wrap: wrap; align-items: center; gap: var(--s2) var(--s4); font-size: 1rem; color: var(--ink);
+           background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: var(--s3) var(--s4); }}
+  .live a {{ margin-left: auto; color: #2366C7; font-weight: 600; text-decoration: none; }}
+  .st-key-found {{ background: #1B2A4A; padding: var(--s6) 0 var(--s7); margin-top: var(--s6); }}
+  .st-key-found .section-h {{ color: #FFFFFF; margin-top: 0; }}
+  .st-key-found .card {{ background: rgba(255,255,255,.08); color: #FFFFFF; }}
+  .st-key-found .card .l {{ color: #E1E9F5; }}
+  .st-key-found .card .v {{ color: #FFFFFF; }}
+  @media (max-width: 767px) {{
+    .st-key-hero {{ padding: 72px var(--s4) var(--s5); }}
+    .st-key-hero {{ background-position: 65% 60%; }}
+    [class*="st-key-home-body"], .st-key-found > div {{ padding: 0 var(--s4); }}
+    .wave {{ height: 28px; }}
+  }}
+</style>""")
+
+
+def live_strip():
+    """One line under the banner: today's forecast across all beaches (or that there is none for today)."""
+    stations = load_json("forecast.json")["stations"]
+    days = [todays(s) for s in stations]
+    if any(d is None for d in days):
+        text = f"No forecast for today. Latest: {nice_date(stations[0]['forecast'][0]['date'])}."
+    else:
+        n = pd.Series([d["level"] for d in days]).value_counts()
+        text = (f"<span><b>Today across {len(stations)} beaches:</b> "  # the counts wrap as a whole, never split
+                f'<span style="white-space: nowrap"><span class="dot" style="--c:{LEVELS["caution"]["hex"]}"></span>'
+                f'{n.get("caution", 0)} caution · <span class="dot" style="--c:{LEVELS["high"]["hex"]}"></span>'
+                f'{n.get("high", 0)} high</span></span>')
+    st.html(f'<div class="live">{text}<a href="forecast" target="_self">See the forecast →</a></div>')
+
+
 def home_page():
     fm = load_json("final_metrics.json")
     test = fm["scenarios"]["test"]
@@ -2123,10 +2211,11 @@ def home_page():
     n_slow = DIAG["region"]["recovery_groups"]["slow"]["beaches"]
     n_chronic = sum(s["chronic"] for s in DIAG["stations"])
     first_year, last_year = DIAG["period"][:4], DIAG["period"][-10:-6]
+    home_styles()
 
-    left, right = st.columns([6, 5], gap="large", vertical_alignment="center")
-    with left:
-        st.html(f'<div class="home-hero"><div class="title-row">{logo_img("after-the-rain-logo.svg", 72)}'
+    # The banner: logo, name, one line, and the beach search on the photo.
+    with st.container(key="hero"):
+        st.html(f'<div class="home-hero"><div class="title-row">{logo_img("after-the-rain-logo-on-dark.svg", 72)}'
                 f'<h1>{APP_NAME}</h1></div><p>See which {COVERAGE} stay unsafe after rain, why, and whether '
                 f'cleanup projects worked, from {int(last_year) - int(first_year)} years of state water tests.</p></div>')
         # Two actions: look up one beach (step 1: search; step 2: what do you want to know?),
@@ -2137,59 +2226,59 @@ def home_page():
         if pick:
             beach_questions(pick)
         st.html('<a class="explore" href="#what-we-found" target="_self">See what we found <span>↓</span></a>')
-    with right:
-        if HERO_PHOTO.exists():
-            st.image(str(HERO_PHOTO), width="stretch")
-        else:  # the space is kept so the layout doesn't change once a photo is added
-            st.html('<div class="photo">Photo goes here: add assets/hero.jpg</div>')
+        st.html(f'<div class="credit">{PHOTO_CREDIT}</div>')
+    st.html('<div class="wave" aria-hidden="true"></div>')
 
-    st.html('<div class="section-h">The problem</div><div class="problem">'
-            "<p>Rain washes bacteria from streets and storm drains into the ocean, and swimmers can get sick.</p>"
-            "<p>LA County gives every beach the same rule: stay out for 72 hours after rain.</p>"
-            "<p>But beaches recover at different speeds, and lab results take a day or more to come back.</p></div>")
+    with st.container(key="home-body-1"):
+        live_strip()
+        st.html('<div class="section-h">The problem</div><div class="problem">'
+                "<p>Rain washes bacteria from streets and storm drains into the ocean, and swimmers can get sick.</p>"
+                "<p>LA County gives every beach the same rule: stay out for 72 hours after rain.</p>"
+                "<p>But beaches recover at different speeds, and lab results take a day or more to come back.</p></div>")
 
-    st.html('<div class="section-h" id="what-we-found">What we found</div>'
-            f'<div class="big3">'
-            f'<div class="card"><div class="v">{n_slow}</div><div class="l">beaches stay unsafe longer than '
-            "LA County's 72-hour rain advisory</div></div>"
-            f'<div class="card"><div class="v">{n_chronic}</div><div class="l">beaches are often unsafe even in '
-            f"dry weather, so rain isn't their only problem</div></div>"
-            f'<div class="card"><div class="v">{pct(test["sign_plus_rain.model_caught"][0])}</div><div class="l">'
-            f"In testing on {test_years} data, the forecast caught {pct(test['sign_plus_rain.model_caught'][0])} of "
-            f"unsafe tested days, vs. {pct(test['sign_plus_rain.caught'][0])} for warning signs plus the rain "
-            "advisory, with the same number of warnings.</div></div></div>")
+    with st.container(key="found"):  # a navy band, full width
+        st.html('<div class="section-h" id="what-we-found">What we found</div>'
+                f'<div class="big3">'
+                f'<div class="card"><div class="v">{n_slow}</div><div class="l">beaches stay unsafe longer than '
+                "LA County's 72-hour rain advisory</div></div>"
+                f'<div class="card"><div class="v">{n_chronic}</div><div class="l">beaches are often unsafe even in '
+                f"dry weather, so rain isn't their only problem</div></div>"
+                f'<div class="card"><div class="v">{pct(test["sign_plus_rain.model_caught"][0])}</div><div class="l">'
+                f"of unsafe days caught, vs. {pct(test['sign_plus_rain.caught'][0])} for today’s signs + rain advisory "
+                f"(same number of warnings; tested on {test_years}).</div></div></div>")
 
-    # One card per question; the whole card is a link to the page that answers it.
-    st.html('<div class="section-h">Start with a question</div>')
-    questions = [
-        ("Is 72 hours the right wait for every beach?", "advisory"),
-        ("Why is this beach unsafe, and what would fix it?", "diagnosis"),
-        ("How does a beach compare with its neighbors?", "compare"),
-        ("Was a beach cleaner after a cleanup project?", "evaluator"),
-        ("Did the 2025 fires make beaches dirtier?", "fires"),
-        ("Which beaches are risky today?", "forecast"),
-        ("How do you know?", "methods"),
-    ]
-    for r, row in enumerate((questions[:4], questions[4:])):  # 4 cards, then 3 (one per row on a phone)
-        for c, (col, (q, page)) in enumerate(zip(st.columns(4), row)):
-            with col.container(key=f"qcard-{r * 4 + c}"):
-                st.page_link(PAGES[page], label=q, icon=PAGES[page].icon, width="stretch")
+    with st.container(key="home-body-2"):
+        # One card per question; the whole card is a link to the page that answers it.
+        st.html('<div class="section-h">Start with a question</div>')
+        questions = [
+            ("Is 72 hours the right wait for every beach?", "advisory"),
+            ("Why is this beach unsafe, and what would fix it?", "diagnosis"),
+            ("How does a beach compare with its neighbors?", "compare"),
+            ("Was a beach cleaner after a cleanup project?", "evaluator"),
+            ("Did the 2025 fires make beaches dirtier?", "fires"),
+            ("Which beaches are risky today?", "forecast"),
+            ("How do you know?", "methods"),
+        ]
+        for r, row in enumerate((questions[:4], questions[4:])):  # 4 cards, then 3 (one per row on a phone)
+            for c, (col, (q, page)) in enumerate(zip(st.columns(4), row)):
+                with col.container(key=f"qcard-{r * 4 + c}"):
+                    st.page_link(PAGES[page], label=q, icon=PAGES[page].icon, width="stretch")
 
-    st.html('<div class="section-h">Who it\'s for</div><div class="who">'
-            "<p><b>City and county water staff</b>: see which beaches need a longer advisory, and what kind of fix "
-            "each one points to.</p>"
-            "<p><b>Lawmakers and their staff</b>: check whether a cleanup project was followed by cleaner water.</p>"
-            "<p><b>Beachgoers</b>: see each beach's risk today and for the next 3 days.</p></div>")
+        st.html('<div class="section-h">Who it\'s for</div><div class="who">'
+                "<p><b>City and county water staff</b>: see which beaches need a longer advisory, and what kind of fix "
+                "each one points to.</p>"
+                "<p><b>Lawmakers and their staff</b>: check whether a cleanup project was followed by cleaner water.</p>"
+                "<p><b>Beachgoers</b>: see each beach's risk today and for the next 3 days.</p></div>")
 
-    st.html('<div class="trust">'
-            f'<div><h4>Data</h4><p>California State Water Boards tests at {COVERAGE} ({first_year} to {last_year}), '
-            "Open-Meteo rain, NOAA tides, CIWQS sewage spills, CAL FIRE burn areas.</p></div>"
-            "<div><h4>What unsafe means</h4><p>A water test over 104 enterococcus bacteria per 100 mL, California's "
-            "standard for ocean beaches. Every beach is compared with LA County's 72-hour rain advisory.</p></div>"
-            '<div><h4>How it works</h4><p><a href="methods" target="_self">Read the methods</a>: how each number '
-            "was made, and its limits.</p></div>"
-            "<div><h4>Built by Dylan Lin</h4><p>For the 2026 Congressional App Challenge. AI help is listed "
-            "in the methods.</p></div></div>")
+        st.html('<div class="trust">'
+                f'<div><h4>Data</h4><p>California State Water Boards tests at {COVERAGE} ({first_year} to {last_year}), '
+                "Open-Meteo rain, NOAA tides, CIWQS sewage spills, CAL FIRE burn areas.</p></div>"
+                "<div><h4>What unsafe means</h4><p>A water test over 104 enterococcus bacteria per 100 mL, California's "
+                "standard for ocean beaches. Every beach is compared with LA County's 72-hour rain advisory.</p></div>"
+                '<div><h4>How it works</h4><p><a href="methods" target="_self">Read the methods</a>: how each number '
+                "was made, and its limits.</p></div>"
+                f"<div><h4>Built by Dylan Lin</h4><p>For the 2026 Congressional App Challenge. AI help is listed "
+                f"in the methods. {PHOTO_CREDIT}.</p></div></div>")
 
 
 # ---------------------------------------------------------------------------

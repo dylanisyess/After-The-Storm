@@ -12,3 +12,7 @@ processed/rain_cells/
 _to_delete/
 __pycache__/
 .venv/
+
+# Not part of the app: design reference screenshots of other sites, and video edit clips
+design_refs/
+video_clips/

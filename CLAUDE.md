@@ -58,7 +58,7 @@ Data pipeline in `pipeline/` (run order and outputs in `pipeline/README.md`):
   recovery uses all years, but the dry rate, after-rain rate and chronic label use
   the last 5 years; `hotspots.json` retired (08 and 09 read `diagnosis.json`; 11
   runs before 08 in rebuild.sh); verdicts say "cleaner after" / "no clear change
-  after", never "because of". Oct 25: app name "After the Rain" (final); the
+  after", never "because of". Oct 25: app name "After the Rain"; renamed "After the Storm" Oct 26 (brand only); the
   advisory headline leads with the 7 slow beaches ("2 of them are also often unsafe
   in dry weather"); the 29 fast beaches are described as "recover faster than most"
   (never "longer than the data needs"), with their days 2-3 rate vs. normal; the
@@ -130,7 +130,7 @@ checks they all match `model/metrics.json`, and the app warns if they don't.
 
 ## The app
 `app.py` (Streamlit, AI-assisted; redesigned Oct 24-25, 2026 around causes for
-agencies and policymakers): `streamlit run app.py`. Name "After the Rain"
+agencies and policymakers): `streamlit run app.py`. Name "After the Storm"
 (`APP_NAME` in app.py). Theme in
 `.streamlit/config.toml`. Pages, in order (left menu): Home (landing: hero with space for assets/hero.jpg,
 a beach search that opens Forecast and an "Explore the findings" button, the problem, 3 findings,

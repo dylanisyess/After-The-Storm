@@ -166,3 +166,16 @@ Nothing committed. Headline numbers unchanged.
 - Checked: all pages at phone + desktop, no errors; Home flow test (3 beaches x 2 widths) 0 failures;
   validator + model-ID check pass. Screenshots retaken (the replay desktop shot is cut off at the bottom:
   the script measured the page before it finished drawing; the page itself is fine).
+
+## Home visual polish (Oct 26, 2:56-3:08 AM; visual only, Home only)
+- New hero photo (assets/hero.jpg, Venti Views / Unsplash; credited on the banner and in the trust strip). The
+  original is 5470 px / 5.4 MB, so the page uses assets/hero-banner.jpg (same photo, 1600 px, ~270 KB).
+- Full-width banner (`st.container(key="hero")`): the photo as a CSS background under a navy gradient; logo
+  (on-dark), title, tagline, beach search (solid white box), summary + answer links, and a sun-yellow
+  "See what we found". Wave divider in the logo's wave shape and colors (an SVG used as a background image,
+  since st.html strips inline <svg>). Live strip: "Today across 132 beaches: 14 caution · 0 high" (or "No
+  forecast for today. Latest: ..."). "What we found" on a full-width navy band with white text.
+- Beach summary shows the same past-year warning as the forecast card (Santa Monica Pier: 44% of 230 tests).
+- Home-only styles live in `home_styles()`, drawn only on Home; checked that Forecast keeps its 1080 px column.
+- Checked: phone + desktop, no errors or sideways scroll; Home flow test (3 beaches x 2 widths) 0 failures;
+  Home screenshots retaken.
