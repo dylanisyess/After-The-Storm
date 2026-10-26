@@ -248,10 +248,22 @@ st.html("""
                                  color: var(--ink); }
   [class*="st-key-qcard-"] a::after { content: "→"; margin-left: auto; padding-left: var(--s2); font-size: 1.3rem;
                                       color: #2366C7; }
-  /* home actions: a beach search and a filled button */
-  .st-key-explore a { background: #2366C7; border-radius: 10px; padding: var(--s2) var(--s4); min-height: 2.5rem; }
-  .st-key-explore a p, .st-key-explore a span { color: #FFFFFF !important; font-weight: 600; }
-  .st-key-explore a:hover { background: #1D57AB; }
+  /* home actions: a beach search (then a line about the beach and its questions) and a filled button */
+  .beach-line   { font-size: 1rem; line-height: 1.5; color: var(--ink-2); margin: var(--s1) 0 var(--s2); }
+  .beach-line .code { font-size: .85rem; color: var(--muted); margin-left: var(--s2); }
+  .st-key-ask { gap: var(--s2); margin-bottom: var(--s3); }
+  .st-key-ask a { background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+                  padding: var(--s2) var(--s3); min-height: 2.75rem; }
+  .st-key-ask a:hover { border-color: #2366C7; }
+  .st-key-ask a * { white-space: normal !important; overflow: visible !important; text-overflow: clip !important; }
+  .st-key-ask a p { color: var(--ink); font-weight: 500; }
+  a.explore { display: inline-flex; gap: var(--s2); align-items: center; background: #2366C7; color: #FFFFFF;
+              border-radius: 10px; padding: var(--s2) var(--s4); min-height: 2.5rem; font-weight: 600;
+              text-decoration: none; margin-top: var(--s2); }
+  a.explore:hover { background: #1D57AB; color: #FFFFFF; }
+  a.explore:focus-visible { outline: 3px solid #2366C7; outline-offset: 2px; }
+  #what-we-found { scroll-margin-top: var(--s7); }
+  [data-testid="stMain"] { scroll-behavior: smooth; }
   .who p        { font-size: 1rem; line-height: 1.5; color: var(--ink-2); margin: 0 0 var(--s2); max-width: 70ch; }
   .who b        { color: var(--ink); }
   .trust        { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s5); background: var(--tide);
@@ -527,21 +539,34 @@ def group_rates(s):
     return f"dry weather: {pct(s['dry_unsafe_rate'])} of tests unsafe since {RECENT_YEAR}"
 
 
+def link_beach(page):
+    """The beach named in the link (?beach=CODE), but only the first time this page sees it.
+    After that the page's own picker wins, so picking another beach isn't undone by the link.
+    A new link (say, from the Home page's buttons) names a different beach, so it applies again."""
+    code = st.query_params.get("beach")
+    if code and st.session_state.get(f"link_used_{page}") != code:
+        st.session_state[f"link_used_{page}"] = code
+        return code
+    return None
+
+
 def chosen_beach(key, options, default):
     """Pick the beach a page shows, before its picker (with this widget key) is drawn.
-    In order: the picker's current value; a beach named in the link (?beach=CODE); the
-    beach last picked on the other page (Forecast and Beach profile share it); `default`."""
-    for code in (st.session_state.get(key), st.query_params.get("beach"), st.session_state.get("shared_beach")):
+    In order: a beach named in a new link (?beach=CODE); the picker's current value; the
+    beach last picked on another page (they share it); `default`."""
+    for code in (link_beach(key), st.session_state.get(key), st.session_state.get("shared_beach")):
         if code in options:
             st.session_state[key] = code
             return
     st.session_state[key] = default
 
 
-def remember_beach(code):
-    """Put the chosen beach in the link (so it can be shared) and pass it to the other page."""
+def remember_beach(code, page):
+    """Put the chosen beach in the link (so it can be shared) and pass it to the other pages.
+    `page` is the same name given to link_beach(), so this beach doesn't count as a new link."""
     st.query_params["beach"] = code
     st.session_state["shared_beach"] = code
+    st.session_state[f"link_used_{page}"] = code
 
 
 def rows_table(columns, rows):
@@ -856,7 +881,7 @@ def diagnosis_page():
     top = st.container()  # the finding sits above the picker, but is written after it (it depends on the choice)
     code = st.selectbox("Beach", codes, key="diag_beach", format_func=label,
                         help="Type to search. The link in your browser's address bar opens this beach.")
-    remember_beach(code)
+    remember_beach(code, "diag_beach")
     s = DIAG_BY[code]
     g = group_of(s)
     with top:
@@ -949,21 +974,29 @@ def km_apart(a, b):
     return 2 * 6371 * np.arcsin(np.sqrt(h))
 
 
+def nearest(code, options, n):
+    """The n stations in `options` closest to `code` (not counting itself)."""
+    return sorted((c for c in options if c != code), key=lambda c: km_apart(code, c))[:n]
+
+
 def compare_page():
     fc = load_json("forecast.json")
     fc_by_code = {s["station"]: s for s in fc["stations"]}
     codes = sorted(fc_by_code, key=place)
     today = la_today()
-    # Start with the beach picked on Forecast or Beach profile (or the riskiest today) and its 2 nearest beaches.
-    if "cmp_beaches" not in st.session_state:
-        first = st.session_state.get("shared_beach")
+    # Start with the beach in a new link (?beach=CODE), else the one picked on another page (or the
+    # riskiest today), plus its 2 nearest beaches.
+    link = link_beach("cmp")
+    if link in fc_by_code or "cmp_beaches" not in st.session_state:
+        first = link if link in fc_by_code else st.session_state.get("shared_beach")
         if first not in fc_by_code:
             first = max(codes, key=lambda c: fc_by_code[c]["forecast"][today_index(fc_by_code[c], today)]["risk"])
-        near = sorted((c for c in codes if c != first), key=lambda c: km_apart(first, c))[:2]
-        st.session_state["cmp_beaches"] = [first] + near
+        st.session_state["cmp_beaches"] = [first] + nearest(first, codes, 2)
     top = st.container()  # the finding sits above the picker, but is written after it
     picked = st.multiselect("Beaches (2 or 3)", codes, key="cmp_beaches", max_selections=3, format_func=label,
                             help="Type to search. Beaches with a forecast are listed.")
+    if picked:
+        remember_beach(picked[0], "cmp")
     if len(picked) < 2:
         with top:
             finding("Compare beaches", "Pick 2 or 3 beaches to compare.",
@@ -1131,8 +1164,17 @@ health advisory. Model {e(str(load_json("final_metrics.json").get("model_id", ""
 </body></html>"""
 
 
+CUSTOM = "Choose my own beach and dates"
+
+
+def dates_set():
+    """Someone typed real dates, so the page can show its check (see "ev_waiting")."""
+    st.session_state.pop("ev_waiting", None)
+
+
 def use_preset():
     """When someone picks a known project, fill in its beach and dates."""
+    dates_set()
     demos = {d["label"]: d for d in load_json("interventions.json")["demos"]}
     d = demos.get(st.session_state["ev_preset"])
     if d:
@@ -1148,22 +1190,43 @@ def evaluator_page():
     ex = eval_table(version)
     counts = ex["StationCode"].value_counts()
     codes = sorted(counts[counts >= 100].index, key=place)
+    link = link_beach("ev")
+    if link:  # a link names a beach: its known project if it has one, else "choose my own" on that beach
+        demo = next((d for d in demos.values() if d["station"] == link), None)
+        if demo:
+            st.session_state["ev_preset"] = demo["label"]
+            use_preset()
+        elif link in codes:
+            # Placeholder dates in the middle of the beach's record, so there are tests before and after.
+            mid = ex.loc[ex["StationCode"] == link, "date"].median().to_period("M").start_time.date()
+            st.session_state.update(ev_preset=CUSTOM, ev_beach=link, ev_start=mid, ev_end=mid, ev_waiting=True)
     if "ev_preset" not in st.session_state:
         st.session_state["ev_preset"] = next(iter(demos))
         use_preset()
 
     top = st.container()  # the finding sits above the controls, but is written after them
+    if link and link not in codes:
+        st.caption(f"{place(link)} has too few tests for this check (it needs 100), so it isn't listed.")
     with panel():
-        st.selectbox("Known project", list(demos) + ["Choose my own beach and dates"], key="ev_preset",
-                     on_change=use_preset)
+        st.selectbox("Known project", list(demos) + [CUSTOM], key="ev_preset", on_change=use_preset)
         if st.session_state["ev_preset"] in demos:
             st.caption(DATES_NOTE)
+        else:
+            st.caption("Set the dates the work started and finished. The check compares the years before and after.")
         c1, c2, c3 = st.columns([3, 2, 2])
         code = c1.selectbox("Beach", codes, key="ev_beach", format_func=label)
+        remember_beach(code, "ev")
         lo_d, hi_d = ex["date"].min().date(), ex["date"].max().date()
-        start = c2.date_input("Work started", key="ev_start", min_value=lo_d, max_value=hi_d)
-        end = c3.date_input("Work finished", key="ev_end", min_value=lo_d, max_value=hi_d)
+        start = c2.date_input("Work started", key="ev_start", min_value=lo_d, max_value=hi_d, on_change=dates_set)
+        end = c3.date_input("Work finished", key="ev_end", min_value=lo_d, max_value=hi_d, on_change=dates_set)
         years = st.segmented_control("Years to compare before and after", [1, 2, 3], default=2, key="ev_years") or 2
+
+    if st.session_state.get("ev_waiting"):  # opened from a link for a beach with no known project
+        with top:
+            finding("Cleanup projects", f"No known cleanup project at {html.escape(place(code))} yet.",
+                    "Set the dates the work started and finished, and this page checks whether the beach was cleaner "
+                    "after, beyond what the weather explains.")
+        return
 
     preset = demos.get(st.session_state["ev_preset"])
     if preset and (code, str(start), str(end)) != (preset["station"], preset["start"], preset["end"]):
@@ -1290,15 +1353,51 @@ def evaluator_page():
 # Page 4: Fire impacts
 # ---------------------------------------------------------------------------
 
+@st.cache_data(show_spinner=False)
+def palisades_points(version):
+    """Every corner point of the Palisades burn outline, as (lon, lat) rows (same as pipeline step 07)."""
+    gj = load_json("burn_areas_2025.geojson")
+    pal = next(f for f in gj["features"] if f["properties"]["FIRE_NAME"].upper() == "PALISADES")["geometry"]
+    rings = pal["coordinates"] if pal["type"] == "Polygon" else [r for poly in pal["coordinates"] for r in poly]
+    return np.vstack([np.array(r)[:, :2] for r in rings])
+
+
+def km_to_burn(code):
+    """Distance in km from a station to the nearest point of the Palisades burn outline. Like step 07,
+    which calls stations within 1 km 'below the burn area'. (1 degree of latitude = 111 km; of longitude
+    = 92 km at LA's latitude.)"""
+    v = palisades_points(file_version("burn_areas_2025.geojson"))
+    lat, lon = STATIONS.at[code, "lat"], STATIONS.at[code, "lon"]
+    return float(np.hypot((v[:, 1] - lat) * 111, (v[:, 0] - lon) * 92).min())
+
+
 def fires_page():
     pf = load_json("post_fire.json")
     res, cells_ = pf["result"], pf["cells"]
     o, w = res["overall"], res["wet_days"]
+    link = st.query_params.get("beach")
+    link = link if link in STATIONS.index else None
     finding("Fire impacts", "No clear change in measured bacteria.",
             f"Beaches below the 2025 Palisades burn: <b>{pts(o['estimate'])} points</b> compared with what the model "
             f"expected (95% range {pts(o['ci95'][0])} to {pts(o['ci95'][1])}). After rain: {pts(w['estimate'])} points, "
             f"but that range ({pts(w['ci95'][0])} to {pts(w['ci95'][1])}) also includes zero.",
             notes=[POINTS_NOTE])
+    if link:  # the page was opened for one beach (?beach=CODE): say where it fits in
+        studied = {b["station"] for b in pf["burn_stations"]}
+        km = km_to_burn(link)
+        far = "less than 0.1 km" if km < 0.1 else f"{km:.1f} km"
+        if link in studied:
+            note = (f"<b>{html.escape(place(link))}</b> is {far} from the Palisades burn area: one of the "
+                    f"{len(studied)} stations below the burn in this comparison. The result is for all {len(studied)} "
+                    "together; one beach alone has too few tests after the fire to tell.")
+        elif km <= 1:
+            note = (f"<b>{html.escape(place(link))}</b> is {far} from the Palisades burn area, but has too few "
+                    "tests to be part of this comparison.")
+        else:
+            note = (f"<b>{html.escape(place(link))}</b> is {km:.0f} km from the Palisades burn area, so it isn't one of "
+                    "the stations below the burn (within 1 km) compared here.")
+        with panel():
+            st.html(f"<div>{note}</div>")
 
     m = pd.DataFrame(pf["monthly"])
     m["month"] = pd.to_datetime(m["month"])
@@ -1358,7 +1457,11 @@ def fires_page():
                             get_line_color=[235, 104, 52], line_width_min_pixels=1),
                   pdk.Layer("ScatterplotLayer", data=near, get_position=["lon", "lat"], get_fill_color=[11, 37, 69],
                             get_radius=6, radius_units=PIXELS, stroked=True, get_line_color=[255, 255, 255],
-                            line_width_min_pixels=1, pickable=True)],
+                            line_width_min_pixels=1, pickable=True)]
+                 + ([pdk.Layer("ScatterplotLayer",  # a ring around the beach named in the link
+                               data=pd.DataFrame([{"lat": STATIONS.at[link, "lat"], "lon": STATIONS.at[link, "lon"]}]),
+                               get_position=["lon", "lat"], filled=False, stroked=True, get_line_color=[11, 37, 69],
+                               line_width_min_pixels=3, get_radius=13, radius_units=PIXELS)] if link else []),
                  lat=34.1, lon=-118.35, zoom=8.4, phone_zoom=8.0, height=320, tooltip="<b>{place}</b><br/>{km_from_burn} km from the burn area")
         st.html(chips([(ORANGE, "2025 burn areas (Palisades, left; Eaton, right)"), (NAVY, "Stations studied")]))
         st.caption(pf["eaton_note"] + " Fire perimeters: CAL FIRE.")
@@ -1660,7 +1763,7 @@ def forecast_page():
                             format_func=lambda c: label(c) + ("" if c in fc_by_code else " (no forecast)"),
                             help="Type to search, or tap a dot on the map. Starts on the highest-risk beach. "
                                  "The link in your browser's address bar opens this beach.")
-        remember_beach(code)
+        remember_beach(code, "beach")
         if code in fc_by_code:
             s = fc_by_code[code]
             i = today_index(s, day)
@@ -1880,6 +1983,37 @@ def methods_page():
 HERO_PHOTO = ROOT / "assets" / "hero.jpg"
 
 
+def beach_questions(code):
+    """Step 2 of the Home search: one line about the beach, then a link for each question this beach
+    has data for. Each link opens that page with ?beach=CODE, and the page starts on this beach."""
+    fc = {s["station"]: s for s in load_json("forecast.json")["stations"]}
+    facts = []
+    if code in fc:
+        d = fc[code]["forecast"][today_index(fc[code], la_today())]
+        lv = LEVELS[d["level"]]
+        facts.append(f'<span class="dot" style="--c:{lv["hex"]}"></span><b>{lv["word"]} today</b>: '
+                     f'{pct(d["risk"])} chance a test is over the limit')
+    else:
+        reason = no_forecast_reason(code).replace(", so no forecast", "")  # don't say "no forecast" twice
+        facts.append(f"<b>No forecast</b>: {html.escape(reason[0].lower() + reason[1:])}")
+    if code in DIAG_BY:
+        facts.append(GROUPS[group_of(DIAG_BY[code])]["word"])
+    st.html(f'<div class="beach-line"><b>{html.escape(place(code))}</b>{code_tag(code)}<br>{" · ".join(facts)}</div>')
+
+    ex = eval_table(file_version("evaluator_data.json"))
+    counts = ex["StationCode"].value_counts()
+    asks = [("Is it safe this week?" if code in fc else "What do its past tests show?", "forecast", True),
+            ("Why is it unsafe, and how fast does it recover after rain?", "diagnosis", code in DIAG_BY),
+            ("How does it compare to nearby beaches?", "compare", code in fc),
+            ("Did a cleanup project help here?", "evaluator", counts.get(code, 0) >= 100),
+            ("Was it affected by the 2025 fires?", "fires", km_to_burn(code) <= 1)]
+    with st.container(key="ask"):
+        for text, page, has_data in asks:
+            if has_data:
+                st.page_link(PAGES[page], label=text, icon=PAGES[page].icon, query_params={"beach": code},
+                             width="stretch")
+
+
 def home_page():
     fm = load_json("final_metrics.json")
     test = fm["scenarios"]["test"]
@@ -1893,15 +2027,14 @@ def home_page():
         st.html(f'<div class="home-hero"><div class="title-row">{logo_img("after-the-rain-logo.svg", 72)}'
                 f'<h1>{APP_NAME}</h1></div><p>See which {COVERAGE} stay unsafe after rain, why, and whether '
                 f'cleanup projects worked, from {int(last_year) - int(first_year)} years of state water tests.</p></div>')
-        # Two actions: look up one beach, or read the findings.
+        # Two actions: look up one beach (step 1: search; step 2: what do you want to know?),
+        # or jump down to the findings.
         codes = sorted((c for c in STATIONS.index[STATIONS["on_map"]] if c not in HIDE_FROM_MAP), key=place)
         pick = st.selectbox("Check a beach", codes, index=None, format_func=label, key="home_beach",
                             placeholder="Type a beach name")
-        if pick:  # open its forecast, with the beach in the link
-            st.switch_page(PAGES["forecast"], query_params={"beach": pick})
-        with st.container(key="explore"):
-            st.page_link(PAGES["advisory"], label="Explore the findings", icon=":material/arrow_forward:",
-                         icon_position="right")
+        if pick:
+            beach_questions(pick)
+        st.html('<a class="explore" href="#what-we-found" target="_self">See what we found <span>↓</span></a>')
     with right:
         if HERO_PHOTO.exists():
             st.image(str(HERO_PHOTO), width="stretch")
@@ -1913,7 +2046,7 @@ def home_page():
             "<p>LA County gives every beach the same rule: stay out for 72 hours after rain.</p>"
             "<p>But beaches recover at different speeds, and lab results take a day or more to come back.</p></div>")
 
-    st.html('<div class="section-h">What we found</div>'
+    st.html('<div class="section-h" id="what-we-found">What we found</div>'
             f'<div class="big3">'
             f'<div class="card"><div class="v">{n_slow}</div><div class="l">beaches stay unsafe longer than '
             "LA County's 72-hour rain advisory</div></div>"
@@ -1929,14 +2062,15 @@ def home_page():
     questions = [
         ("Is 72 hours the right wait for every beach?", "advisory"),
         ("Why is this beach unsafe, and what would fix it?", "diagnosis"),
+        ("How does a beach compare with its neighbors?", "compare"),
         ("Was a beach cleaner after a cleanup project?", "evaluator"),
         ("Did the 2025 fires make beaches dirtier?", "fires"),
         ("Which beaches are risky today?", "forecast"),
         ("How do you know?", "methods"),
     ]
-    for r, row in enumerate((questions[:3], questions[3:])):
-        for c, (col, (q, page)) in enumerate(zip(st.columns(3), row)):
-            with col.container(key=f"qcard-{r * 3 + c}"):
+    for r, row in enumerate((questions[:4], questions[4:])):  # 4 cards, then 3 (one per row on a phone)
+        for c, (col, (q, page)) in enumerate(zip(st.columns(4), row)):
+            with col.container(key=f"qcard-{r * 4 + c}"):
                 st.page_link(PAGES[page], label=q, icon=PAGES[page].icon, width="stretch")
 
     st.html('<div class="section-h">Who it\'s for</div><div class="who">'

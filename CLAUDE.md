@@ -145,6 +145,10 @@ commits forecast.json only); the repo has no GitHub remote yet. Log of tonight's
 Forecast has a Day picker (today + 3; map, counts, card and drivers follow it). Phones (`is_phone()`, from
 the User-Agent) open maps at `PHONE_ZOOM` 7.35 so Rincon to Long Beach fits. Beach profile shows each beach's
 official posting history ("records through ..."); Methods has "Checked against real postings".
+`?beach=CODE` works on every beach page (Oct 26): `link_beach(page)` applies a new link once, then the
+page's picker wins; `remember_beach(code, page)`. Home search is two steps: pick a beach, then a summary line
+and answer links (`beach_questions()`; Fire only within 1 km of the Palisades burn, `km_to_burn()`; Cleanup
+shows the beach's known project, else waits for real dates). "See what we found" scrolls to #what-we-found.
 `?beach=CODE` works on Forecast and Beach profile, and the chosen beach carries between
 them (`chosen_beach()`, `remember_beach()`). Coverage is described as "LA and Ventura County
 beaches" (`COVERAGE`), and every beach is compared with LA County's 72-hour advisory. Design

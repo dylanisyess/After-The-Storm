@@ -111,3 +111,27 @@ All Phase 2b items done before the 2:30 AM stop. Final pass: all 8 pages load wi
 scroll at phone (390 px) and desktop (1440 px); model-ID check and validate_app_data.py pass. Screenshots
 retaken (Compare is now 3_, so later pages moved up one number; the old numbered files were replaced).
 Nothing committed. Headline numbers unchanged.
+
+## Home beach search rebuild (Oct 26)
+- Bug report: picking a beach in the Home search cleared the box and stayed on Home. I couldn't reproduce it
+  in a headless browser on any of the three running servers (8501, 8599, 8600), at desktop or phone width.
+  The old code jumped pages from inside the search box's change (`st.switch_page`), which can lose a race with
+  another rerun in a real browser. The new flow never does that: the search only shows step 2, and each answer
+  is a plain link (`st.page_link(..., query_params={"beach": CODE})`).
+- Found and fixed a real ?beach= bug: `chosen_beach()` let a picker's old value beat the link, so a second link
+  in the same session could open the previous beach. New `link_beach(page)` applies each new link once;
+  `remember_beach(code, page)` marks the beach the page shows, so it isn't mistaken for a new link.
+- Home step 2 (`beach_questions()`): one line (today's level and risk, or "No forecast: <reason>"; plus its
+  pattern from GROUPS, e.g. "Often unsafe in dry weather"), then answer links shown only when the page has data:
+  Forecast (always; "What do its past tests show?" if no forecast), Beach profile (diagnosed beaches), Compare
+  (forecast beaches; the 2 nearest are prefilled), Cleanup projects (100+ tests; its known project if it has one,
+  otherwise "No known cleanup project at X yet" until real dates are entered, so no made-up dates get a verdict),
+  Fire impacts (within 1 km of the Palisades burn outline, same measure as step 07; `km_to_burn()`).
+- Every destination reads ?beach=: Forecast and Beach profile (picker), Compare (beach + 2 nearest), Cleanup
+  projects (preset or custom view), Fire impacts (a note on where the beach fits, and a ring on the map).
+- "Explore the findings" -> "See what we found", a link that scrolls to the findings on Home (#what-we-found).
+  Question cards: 7, incl. "How does a beach compare with its neighbors?" (4 then 3 across; 1 per row on phones).
+- Tested: Santa Monica Pier (SMB-3-3), Malibu Beach DHS001 (no forecast, below the burn) and Solimar Beach
+  (10000) at phone and desktop widths: search stays on Home with the summary, and every answer link opens its
+  page on that beach (desktop returns Home through the menu, so it's one session). 0 failures. All pages
+  pass; screenshots retaken.
