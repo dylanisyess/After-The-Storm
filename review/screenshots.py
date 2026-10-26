@@ -14,8 +14,11 @@ from pathlib import Path
 from playwright.sync_api import sync_playwright
 
 URL = sys.argv[1] if len(sys.argv) > 1 else "http://localhost:8599"
-PAGES = ["", "after-rain", "beach-profile", "cleanup-projects", "fire-impacts", "forecast", "methods"]  # "" = Home
+PAGES = ["", "after-rain", "beach-profile", "compare", "cleanup-projects", "fire-impacts", "forecast", "methods"]  # "" = Home
 SIZES = {"phone": (390, 844), "desktop": (1440, 900)}   # iPhone 14 width; a laptop
+# The app zooms maps out on phones, which it spots from the browser's User-Agent, so the phone shots send an iPhone's.
+PHONE_UA = ("Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 "
+            "(KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1")
 OUT = Path(__file__).resolve().parent.parent / "screenshots"
 OUT.mkdir(exist_ok=True)
 
@@ -43,7 +46,8 @@ with sync_playwright() as p:
     browser = p.chromium.launch(args=["--use-angle=swiftshader", "--enable-unsafe-swiftshader"])  # WebGL for maps
     for size, (w, h) in SIZES.items():
         ctx = browser.new_context(viewport={"width": w, "height": h}, device_scale_factor=2 if size == "phone" else 1,
-                                  is_mobile=size == "phone", has_touch=size == "phone")
+                                  is_mobile=size == "phone", has_touch=size == "phone",
+                                  user_agent=PHONE_UA if size == "phone" else None)
         page = ctx.new_page()
         for i, path in enumerate(PAGES):
             page.set_viewport_size({"width": w, "height": h})
@@ -55,6 +59,6 @@ with sync_playwright() as p:
         page.wait_for_selector(".finding", timeout=90_000)
         page.get_by_text("Replay the January 2023 storm").click()
         page.wait_for_selector("text=replay", timeout=60_000)
-        shoot(page, f"5b_forecast-replay_{size}", w)
+        shoot(page, f"6b_forecast-replay_{size}", w)
         ctx.close()
     browser.close()

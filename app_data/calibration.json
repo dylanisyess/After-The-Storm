@@ -1,0 +1,103 @@
+{
+ "model_id": "40ebd86751",
+ "period": [
+  "2023-01-02",
+  "2026-10-17"
+ ],
+ "tests": 30262,
+ "mean_predicted": 0.1149,
+ "mean_actual": 0.14,
+ "brier": 0.0865,
+ "bins": [
+  {
+   "from": 0.0,
+   "to": 0.05,
+   "tests": 16442,
+   "predicted": 0.0177,
+   "actual": 0.0274,
+   "actual_low": 0.025,
+   "actual_high": 0.03
+  },
+  {
+   "from": 0.05,
+   "to": 0.1,
+   "tests": 4490,
+   "predicted": 0.0711,
+   "actual": 0.1091,
+   "actual_low": 0.1003,
+   "actual_high": 0.1186
+  },
+  {
+   "from": 0.1,
+   "to": 0.15,
+   "tests": 2444,
+   "predicted": 0.1234,
+   "actual": 0.1747,
+   "actual_low": 0.1602,
+   "actual_high": 0.1903
+  },
+  {
+   "from": 0.15,
+   "to": 0.2,
+   "tests": 1598,
+   "predicted": 0.1738,
+   "actual": 0.2259,
+   "actual_low": 0.2061,
+   "actual_high": 0.2471
+  },
+  {
+   "from": 0.2,
+   "to": 0.3,
+   "tests": 2027,
+   "predicted": 0.2457,
+   "actual": 0.2975,
+   "actual_low": 0.278,
+   "actual_high": 0.3178
+  },
+  {
+   "from": 0.3,
+   "to": 0.4,
+   "tests": 1096,
+   "predicted": 0.3437,
+   "actual": 0.4051,
+   "actual_low": 0.3764,
+   "actual_high": 0.4345
+  },
+  {
+   "from": 0.4,
+   "to": 0.5,
+   "tests": 642,
+   "predicted": 0.4461,
+   "actual": 0.4798,
+   "actual_low": 0.4413,
+   "actual_high": 0.5184
+  },
+  {
+   "from": 0.5,
+   "to": 0.6,
+   "tests": 405,
+   "predicted": 0.5471,
+   "actual": 0.5852,
+   "actual_low": 0.5366,
+   "actual_high": 0.6322
+  },
+  {
+   "from": 0.6,
+   "to": 0.8,
+   "tests": 498,
+   "predicted": 0.6903,
+   "actual": 0.6908,
+   "actual_low": 0.6488,
+   "actual_high": 0.7298
+  },
+  {
+   "from": 0.8,
+   "to": 1.0,
+   "tests": 620,
+   "predicted": 0.9039,
+   "actual": 0.9258,
+   "actual_low": 0.9025,
+   "actual_high": 0.9439
+  }
+ ]
+}

@@ -16,5 +16,7 @@ for f in app_data/replay_*.json; do   # redo every replay that exists, e.g. repl
 done
 echo "09 export";           python3 pipeline/09_export_app_data.py
 echo "10 final metrics";    python3 pipeline/10_final_metrics.py
+echo "13 postings";         python3 pipeline/13_postings.py > /dev/null   # reads model/test_predictions.csv
+echo "14 calibration";      python3 pipeline/14_calibration.py > /dev/null   # reads model/test_predictions.csv
 echo "12 interventions";    python3 pipeline/12_intervention.py --demo > /dev/null   # uses cached weather-only risk
 python3 pipeline/check_model_ids.py

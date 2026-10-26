@@ -1,0 +1,218 @@
+Station_Name,AgencyStationIdentifier,CountyName
+1000,1000,Ventura
+10000,10000,Ventura
+1001,1001,Ventura
+1050,1050,Ventura
+1100,1100,Ventura
+11000,11000,Ventura
+12000,12000,Ventura
+13000,13000,Ventura
+13001,13001,Ventura
+14000,14000,Ventura
+15000,15000,Ventura
+16000,16000,Ventura
+17000,17000,Ventura
+18000,18000,Ventura
+19000,19000,Ventura
+2000,2000,Ventura
+20000,20000,Ventura
+21000,21000,Ventura
+22000,22000,Ventura
+23000,23000,Ventura
+24000,24000,Ventura
+25000,25000,Ventura
+26000,26000,Ventura
+27000,27000,Ventura
+28000,28000,Ventura
+29000,29000,Ventura
+29500,29500,Ventura
+3000,3000,Ventura
+30000,30000,Ventura
+31000,31000,Ventura
+32000,32000,Ventura
+33000,33000,Ventura
+34000,34000,Ventura
+35000,35000,Ventura
+36000,36000,Ventura
+37000,37000,Ventura
+37500,37500,Ventura
+38000,38000,Ventura
+39000,39000,Ventura
+4000,4000,Ventura
+40000,40000,Ventura
+41000,41000,Ventura
+42000,42000,Ventura
+43000,43000,Ventura
+44000,44000,Ventura
+45000,45000,Ventura
+46000,46000,Ventura
+47000,47000,Ventura
+48000,48000,Ventura
+49000,49000,Ventura
+5000,5000,Ventura
+50000,50000,Ventura
+6000,6000,Ventura
+7000,7000,Ventura
+8000,8000,Ventura
+9000,9000,Ventura
+All_LosAngeles_County_Beaches,All_LosAngeles_County_Beaches,Los Angeles
+All_Ventura_County_Beaches,All_Ventura_County_Beaches,Ventura
+B-10,B-10,Long Beach City
+B-11,B-11,Long Beach City
+B-12,B-12,Long Beach City
+B-13,B-13,Long Beach City
+B-14,B-14,Long Beach City
+B-15,B-15,Long Beach City
+B-16,B-16,Long Beach City
+B-17,B-17,Long Beach City
+B-18,B-18,Long Beach City
+B-19,B-19,Long Beach City
+B-20,B-20,Long Beach City
+B-21,B-21,Long Beach City
+B-22,B-22,Long Beach City
+B-23,B-23,Long Beach City
+B-24,B-24,Long Beach City
+B-25,B-25,Long Beach City
+B-26,B-26,Long Beach City
+B-27,B-27,Long Beach City
+B-28,B-28,Long Beach City
+B-29,B-29,Long Beach City
+B-3,B-3,Long Beach City
+B-30,B-30,Long Beach City
+B-31,B-31,Long Beach City
+B-33,B-33,Long Beach City
+B-34,B-34,Long Beach City
+B-35,B-35,Long Beach City
+B-37,B-37,Long Beach City
+B-4,B-4,Long Beach City
+B-40,B-40,Long Beach City
+B-5,B-5,Long Beach City
+B-50,B-50,Long Beach City
+B-51,B-51,Long Beach City
+B-52,B-52,Long Beach City
+B-53,B-53,Long Beach City
+B-54,B-54,Long Beach City
+B-55,B-55,Long Beach City
+B-56,B-56,Long Beach City
+B-57,B-57,Long Beach City
+B-58,B-58,Long Beach City
+B-59,B-59,Long Beach City
+B-6,B-6,Long Beach City
+B-60,B-60,Long Beach City
+B-61,B-61,Long Beach City
+B-62,B-62,Long Beach City
+B-63,B-63,Long Beach City
+B-64,B-64,Long Beach City
+B-65,B-65,Long Beach City
+B-66,B-66,Long Beach City
+B-67,B-67,Long Beach City
+B-68,B-68,Long Beach City
+B-69,B-69,Long Beach City
+B-7,B-7,Long Beach City
+B-70,B-70,Long Beach City
+B-8,B-8,Long Beach City
+B-9,B-9,Long Beach City
+DPH 001,DPH 001,Los Angeles
+DPH 002,DPH 002,Los Angeles
+DPH 003,DPH 003,Los Angeles
+DPH 004,DPH 004,Los Angeles
+DPH 005,DPH 005,Los Angeles
+DPH 006,SMB-1-7,Los Angeles
+DPH 007,DPH 007,Los Angeles
+DPH 008,DPH 008,Los Angeles
+DPH 009,DPH 009,Los Angeles
+DPH 010,DPH 010,Los Angeles
+DPH 101,DPH 101,Los Angeles
+DPH 102,DPH 102,Los Angeles
+DPH 103,DPH 103,Los Angeles
+DPH 104,DPH 104,Los Angeles
+DPH 105,DPH 105,Los Angeles
+DPH 106,DPH 106,Los Angeles
+DPH 107,DPH 107,Los Angeles
+DPH 108,DPH 108,Los Angeles
+DPH 109,DPH 109,Los Angeles
+DPH 110,DPH 110,Los Angeles
+DPH 111,DPH 111,Los Angeles
+DPH 112,DPH 112,Los Angeles
+DPH 113,DPH 113,Los Angeles
+DPH 114,DPH 114,Los Angeles
+DPH 115,DPH 115,Los Angeles
+DPH 116,DPH 116,Los Angeles
+DPH 117,DPH117,Los Angeles
+DPH 118,DPH118,Los Angeles
+DPH 119,DPH119,Los Angeles
+DPH 120,DPH120,Los Angeles
+DPH 121,DPH121,Los Angeles
+CB-01,CB1,Los Angeles
+CB-02,CB2,Los Angeles
+SMB-MC-2,SMB-MC-2,Los Angeles
+SMB-BC-1,SMB-BC-1,Los Angeles
+SMB-2-10,SMB-2-10,Los Angeles
+SMB-2-13,SMB-2-13,Los Angeles
+SMB-5-1,SMB-5-1,Los Angeles
+SMB-5-3,SMB-5-3,Los Angeles
+SMB-5-5,SMB-5-5,Los Angeles
+HYPS16,HYPS16,Los Angeles
+SMB-6-5,SMB-6-5,Los Angeles
+SMB-6-6,SMB-6-6,Los Angeles
+SMB-1-18,SMB-1-18,Los Angeles
+SMB-2-4,SMB-2-4,Los Angeles
+SMB-2-7,SMB-2-7,Los Angeles
+SMB-3-3,SMB-3-3,Los Angeles
+SMB-3-4,SMB-3-4,Los Angeles
+SMB-3-5,SMB-3-5,Los Angeles
+SMB-3-8,SMB-3-8,Los Angeles
+MDRH-2,MdRH-2,Los Angeles
+SMB-7-3,SMB-7-3,Los Angeles
+SMB-7-5,SMB-7-5,Los Angeles
+SMB-7-6,SMB-7-6,Los Angeles
+SMB-7-8,SMB-7-8,Los Angeles
+SMB-7-9,SMB-7-9,Los Angeles
+All_Long_Beach_City_Beaches,All_Long_Beach_City_Beaches,Long Beach City
+DPH 004B,DPH004B,Los Angeles
+DPH 005B,DPH005B,Los Angeles
+DPH 007B,DPH007B,Los Angeles
+DPH 008B,DPH008B,Los Angeles
+DPH 009B,DPH009B,Los Angeles
+DPH 010B,DPH010B,Los Angeles
+DPH 102B,DPH102B,Los Angeles
+DPH 103B,DPH103B,Los Angeles
+DPH 104B,DPH104B,Los Angeles
+DPH 105B,DPH105B,Los Angeles
+DPH 107B,DPH107B,Los Angeles
+DPH 112B,DPH112B,Los Angeles
+DPH 113B,DPH113B,Los Angeles
+DPH 115B,DPH115B,Los Angeles
+SMB-7-4,SMB-7-4,Los Angeles
+SMB-7-1,SMB-7-1,Los Angeles
+SMB-7-2,SMB-7-2,Los Angeles
+2700,2700,Ventura
+2500,2500,Ventura
+8100,8100,Ventura
+49500,49500,Ventura
+DPH 122,DPH122,Los Angeles
+DPH 123,DPH123,Los Angeles
+DPH 124,DPH124,Los Angeles
+DPH 002B,DPH002B,Los Angeles
+SMB-6-2,,Los Angeles
+MDRH-1,,Los Angeles
+MDRH-3,,Los Angeles
+SMB-3-6,,Los Angeles
+SMB-1-12,,Los Angeles
+SMB-1-10,,Los Angeles
+SMB-O-01,,Los Angeles
+SMB-O-02,,Los Angeles
+SMB-1-8,,Los Angeles
+SMB-1-13,,Los Angeles
+SMB-1-02,,Los Angeles
+SMB-1-3,,Los Angeles
+SMB-1-6,,Los Angeles
+SMB-1-14,,Los Angeles
+SMB-1-16,,Los Angeles
+SMB-1-17,,Los Angeles
+SMB-6-03,,Los Angeles
+DPH 125,,Los Angeles
+SMB-2-11,,Los Angeles
+SMB-2-1,,Los Angeles
+SMB-2-2,,Los Angeles
+DPH 126,,Los Angeles

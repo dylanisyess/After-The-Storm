@@ -109,6 +109,19 @@ checks they all match `model/metrics.json`, and the app warns if they don't.
   risk as parallel lists `s` (station index), `d` (days since `day0`), `y` (0/1),
   `e` (risk x 1000), plus `stations`, `widen`, `calibration`. The app runs
   `evaluator.evaluate()` on it.
+- `postings.json` (13; Oct 25-26): `{records_through, source, columns:[type,start,end,cause], stations:{code:[[...]]},
+  county:{code: Los Angeles|Ventura}, county_source, check:{period, tested_beach_days, beaches, unsafe_days,
+  postings, postings_plus_rain}}`. Real Beach Watch postings/closures/rain advisories (records end Mar 6, 2026).
+  `check` = forecast vs. REAL postings, 2023 to Mar 6 2026, step 10's equal-warnings method on
+  `model/test_predictions.csv`, only beaches Beach Watch lists by name: signs counties actually posted (+
+  closures) caught 36.2% vs model 55.6%, +19.4 pts (+15.2 to +24.6); plus the counties' rain advisories 64.5% vs
+  71.1%, +6.5 (+3.6 to +9.8). County-wide advisories are filed under one placeholder station per health department
+  (`All_LosAngeles_County_Beaches`, `All_Long_Beach_City_Beaches`, `All_Ventura_County_Beaches`); 13 copies them to
+  every station of that department. Dylan's decision: an advisory counts only if issued before the test day;
+  shown as a separate Methods check ("Compared with what counties actually posted"), never the headline. Raw CSVs live in `beachwatch/` (gitignored);
+  13 trims them to `processed/postings_la.csv` and `processed/beachwatch_stations_la.csv`.
+- `calibration.json` (14): test-set tests grouped by predicted risk (`bins`: tests, predicted, actual, Wilson
+  95% range); Methods calibration chart. 2023-2026: predicted 11.5% on average vs 14.0% actual (runs a little low).
 - `burn_areas_2025.geojson`, `model_metrics.json` (copy of `model/metrics.json`:
   `baselines.{sign, sign_plus_rain, sign3, sign3_plus_rain}` each with `rule`
   and `model_same_budget`; `model_at_threshold`; `threshold_set_on_2022`).
@@ -120,9 +133,18 @@ agencies and policymakers): `streamlit run app.py`. Name "After the Rain"
 `.streamlit/config.toml`. Pages, in order (left menu): Home (landing: hero with space for assets/hero.jpg,
 a beach search that opens Forecast and an "Explore the findings" button, the problem, 3 findings,
 clickable question cards, who it's for, trust strip), After-rain patterns (/after-rain), Beach
-profile (/beach-profile), Cleanup projects (/cleanup-projects, live evaluator), Fire impacts
+profile (/beach-profile), Compare beaches (/compare), Cleanup projects (/cleanup-projects, live evaluator), Fire impacts
 (/fire-impacts), Forecast (keeps the Jan 2023 replay toggle; three-part beach card + "What's
 driving this risk"), Methods (model-vs-signs, sections in expanders). Pages renamed Oct 25.
+Phase 2b (Oct 26, 1 AM): Compare beaches page (/compare, 2-3 beaches side by side, `compare_page()`);
+CSV downloads (`csv_button()`, and `numbers(df, name)` adds one under every chart); one-page HTML report per
+cleanup check (`project_report()`); `MIN_TESTS` 15 with `rate_n()` / `enough()` for "Not enough tests" states;
+forecast card flags a latest test over 30 days old. Daily GitHub Actions forecast:
+`.github/workflows/daily-forecast.yml` (10 AM LA; 08 -> `pipeline/validate_app_data.py` -> check_model_ids ->
+commits forecast.json only); the repo has no GitHub remote yet. Log of tonight's work: `review/progress.md`.
+Forecast has a Day picker (today + 3; map, counts, card and drivers follow it). Phones (`is_phone()`, from
+the User-Agent) open maps at `PHONE_ZOOM` 7.35 so Rincon to Long Beach fits. Beach profile shows each beach's
+official posting history ("records through ..."); Methods has "Checked against real postings".
 `?beach=CODE` works on Forecast and Beach profile, and the chosen beach carries between
 them (`chosen_beach()`, `remember_beach()`). Coverage is described as "LA and Ventura County
 beaches" (`COVERAGE`), and every beach is compared with LA County's 72-hour advisory. Design
@@ -143,7 +165,7 @@ one name per beach group everywhere (`GROUPS`: Unsafe longer than 72 hours, Back
 normal within 72 hours, Recover faster than most, Often unsafe in dry weather); forecast cards carry a risk bar. Station labels are "Place (CODE)"; SMB-MC-2 is named Surfrider Beach (`KNOWN_PLACES`). Methods reads `final_metrics.json`, so rerunning 10
 updates it. Reads only from `app_data/` (cache keys include each file's change
 time, 1-hour TTL), except the daily forecast refresh above. To retrain, always use
-`bash pipeline/rebuild.sh` (06, 07, 11, 08 live and every replay, 09, 10, 12, then
+`bash pipeline/rebuild.sh` (06, 07, 11, 08 live and every replay, 09, 10, 13, 14, 12, then
 the model-ID check), never 06 alone. Screenshots (phone 390 px, desktop 1440 px) in
 `screenshots/`, made by `review/screenshots.py`.
 

@@ -4,6 +4,7 @@
 /Cat1-2-3-Spills.txt
 /California_Historic_Fire_Perimeters_*.geojson
 /*.pdf
+/beachwatch/
 # Regenerable intermediates
 processed/bacteria_la.csv
 processed/rain_cells/

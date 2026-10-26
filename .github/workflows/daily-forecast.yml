@@ -1,0 +1,77 @@
+# Make today's forecast every morning and commit app_data/forecast.json, only if the checks pass.
+#
+# GitHub's schedule is in UTC, and Los Angeles is 7 hours behind UTC in summer (PDT) and 8 in
+# winter (PST). So this runs at both 17:00 and 18:00 UTC; the first step only lets the run go ahead
+# when it is 10 AM or later in LA and today's forecast hasn't been made yet. In summer the 17:00 run
+# (10 AM) makes it and the 18:00 run skips; in winter the 17:00 run (9 AM) skips and 18:00 (10 AM)
+# makes it. GitHub sometimes starts scheduled runs late, which is fine with this check.
+# "Run workflow" on the Actions tab (workflow_dispatch) runs it by hand at any time.
+name: Daily forecast
+
+on:
+  schedule:
+    - cron: "0 17 * * *"
+    - cron: "0 18 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write   # needed to push the commit
+
+concurrency:
+  group: daily-forecast   # never two runs at once
+
+jobs:
+  forecast:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Is it time? (10 AM or later in LA, and no forecast yet today)
+        id: when
+        run: |
+          today=$(TZ=America/Los_Angeles date +%F)
+          hour=$(TZ=America/Los_Angeles date +%-H)
+          issued=$(python3 -c "import json; print(json.load(open('app_data/forecast.json'))['issued'])")
+          echo "LA date $today, hour $hour; forecast.json is for $issued"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || { [ "$hour" -ge 10 ] && [ "$issued" != "$today" ]; }; then
+            echo "go=yes" >> "$GITHUB_OUTPUT"
+          else
+            echo "Not yet, or already done today: skipping."
+            echo "go=no" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/setup-python@v5
+        if: steps.when.outputs.go == 'yes'
+        with:
+          python-version: "3.14"   # the version the app was built with (WSL)
+          cache: pip
+
+      - name: Install packages (same scikit-learn as the saved model)
+        if: steps.when.outputs.go == 'yes'
+        run: pip install -r requirements.txt
+
+      - name: Make today's forecast (step 08; needs the internet for rain and tides)
+        if: steps.when.outputs.go == 'yes'
+        run: python3 pipeline/08_forecast.py
+
+      - name: Check every app file is there and valid JSON, and the forecast is today's
+        if: steps.when.outputs.go == 'yes'
+        run: python3 pipeline/validate_app_data.py
+
+      - name: Check every app file came from the same model (model ID)
+        if: steps.when.outputs.go == 'yes'
+        run: python3 pipeline/check_model_ids.py
+
+      - name: Commit forecast.json only
+        if: steps.when.outputs.go == 'yes'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app_data/forecast.json
+          if git diff --cached --quiet; then
+            echo "forecast.json didn't change; nothing to commit."
+          else
+            git commit -m "Daily forecast for $(TZ=America/Los_Angeles date +%F)"
+            git push
+          fi

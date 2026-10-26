@@ -13,6 +13,7 @@ the line below, then annotated charts, then quiet number tiles. Pages, in order 
   Home                what the app is for, three key findings, a question for each page
   After-rain patterns does LA County's 72-hour rain advisory fit each beach?
   Beach profile       one beach: dry vs. after rain, rain trigger, recovery, what fix it points to
+  Compare beaches     2 or 3 beaches side by side: risk today, latest test, recovery, distance apart
   Cleanup projects    a beach before vs. after a project, beyond what the weather explains
   Fire impacts        did beaches below the 2025 Palisades burn get dirtier?
   Forecast            today + 3 days for every beach (with the January 2023 storm replay)
@@ -188,6 +189,7 @@ st.html("""
   .day .meter { margin: var(--s2) 0 var(--s1); height: 4px; }
   .day .pct { font-size: .875rem; color: var(--ink-2); }
   .day .act { font-size: .8125rem; margin-top: var(--s2); color: var(--ink-2); }
+  .day.picked { border: 2px solid var(--harbor); padding: calc(var(--s3) - 1px); }  /* the day chosen above the map */
 
   .box .part { border-top: 1px solid var(--line); margin-top: var(--s4); padding-top: var(--s4); }
   .box .part:first-of-type { border-top: 0; margin-top: var(--s3); padding-top: 0; }
@@ -409,6 +411,16 @@ def pct(x):
     return "n/a" if x is None or pd.isna(x) else f"{x * 100:.0f}%"
 
 
+MIN_TESTS = 15  # fewer tests than this and a rate jumps around by chance (the same minimum as step 11's groups)
+
+
+def rate_n(rate, n):
+    """A rate with the number of tests behind it, e.g. '41% (34 tests)', or 'Not enough tests (6)'."""
+    if not n or n < MIN_TESTS or rate is None:
+        return f"Not enough tests ({n or 0})"
+    return f"{pct(rate)} ({n:,} tests)"
+
+
 def pts(x, sign=True):
     """0.071 -> '+7.1' (percentage points)."""
     return f"{x * 100:+.1f}" if sign else f"{abs(x) * 100:.1f}"
@@ -448,14 +460,38 @@ def chips(items):
     return f'<div class="chips">{spans}</div>'
 
 
-def numbers(df, **config):
-    """Every chart has a table twin, for screen readers and anyone who wants the exact values."""
+def csv_button(df, name, label="Download CSV"):
+    """A small button that saves `df` as a spreadsheet file named after-the-rain_<name>.csv.
+    on_click="ignore" means clicking it doesn't rerun the page."""
+    st.download_button(label, df.to_csv(index=False).encode("utf-8"), file_name=f"after-the-rain_{name}.csv",
+                       mime="text/csv", icon=":material/download:", type="tertiary", on_click="ignore",
+                       key=f"csv-{name}")
+
+
+def numbers(df, name, **config):
+    """Every chart has a table twin, for screen readers and anyone who wants the exact values,
+    and a button to download the same numbers as a CSV file (`name` names the file)."""
     with st.expander("Show the numbers"):
         st.dataframe(df, hide_index=True, width="stretch", column_config=config)
+    csv_button(df, name)
 
 
-def base_map(layers, lat=33.98, lon=-118.78, zoom=7.9, tooltip=None, height=400, **kw):
+def is_phone():
+    """True on a phone. Streamlit can't measure the screen, but phone browsers say "Mobile",
+    "iPhone" or "Android" in the User-Agent header they send with every request."""
+    agent = st.context.headers.get("User-Agent", "")
+    return any(word in agent for word in ("Mobile", "iPhone", "Android"))
+
+
+# On a phone the map is only about 360 px wide. The beaches run 1.33 degrees of longitude
+# (Rincon to Long Beach); at zoom 7.35 a 360 px map shows about 1.5 degrees, so they all fit.
+PHONE_ZOOM = 7.35
+
+
+def base_map(layers, lat=33.98, lon=-118.78, zoom=7.9, tooltip=None, height=400, phone_zoom=PHONE_ZOOM, **kw):
     """A plain grey map (so the colored dots stand out), zoomed to the coast from Ventura to Long Beach."""
+    if is_phone():
+        zoom = phone_zoom
     deck = pdk.Deck(layers=layers, initial_view_state=pdk.ViewState(latitude=lat, longitude=lon, zoom=zoom),
                     map_provider="carto", map_style=pdk.map_styles.CARTO_LIGHT,  # Carto 'Positron': quiet grey, no API key
                     tooltip={"html": tooltip, "style": {"backgroundColor": "white", "color": NAVY, "fontSize": "13px", "borderRadius": "8px",
@@ -620,7 +656,7 @@ def advisory_page():
         st.caption("Shaded: days 0 to 3, inside the 72-hour advisory (we only know the day of the rain, not the hour, "
                    "so day 3 is roughly 48 to 96 hours later). Dashed lines: each group's normal level. Beaches often "
                    "unsafe in dry weather are left out of the lower two lines.")
-        numbers(df[["group", "day", "unsafe", "tests", "normal"]],
+        numbers(df[["group", "day", "unsafe", "tests", "normal"]], f"after-rain-curves_{key.replace(' ', '-')}",
                 group="Beaches", day="Days since rain", unsafe=st.column_config.NumberColumn("% unsafe", format="%.1f"),
                 tests="Tests", normal=st.column_config.NumberColumn("Normal %", format="%.1f"))
 
@@ -664,13 +700,17 @@ def advisory_page():
         title(f"The {len(slow)} beaches that stay unsafe longer than 72 hours")
         st.markdown("All sit next to a big storm drain, creek or river mouth. After rain they fail far more often on "
                     "big spring-tide days.")
-        rate = lambda x: pct(x) if x is not None else "n/a"
         rows_table([("Beach", False), ("Often unsafe in dry weather", False), ("Days 4-6 after rain", True),
                     ("Normal", True), ("Days 3-7, big tide", True), ("Days 3-7, other tides", True)],
                    [[html.escape(label(s["station"])), "Yes" if s["chronic"] else "No",
-                     rate(s["groups"]["days 4-6"]["unsafe_rate"]), rate(s["normal_wet_season_rate"]),
-                     rate(s["after_rain_tides"]["big_tide_rate"]), rate(s["after_rain_tides"]["other_rate"])]
+                     rate_n(s["groups"]["days 4-6"]["unsafe_rate"], s["groups"]["days 4-6"]["tests"]),
+                     pct(s["normal_wet_season_rate"]),
+                     rate_n(s["after_rain_tides"]["big_tide_rate"], s["after_rain_tides"]["big_tide_tests"]),
+                     rate_n(s["after_rain_tides"]["other_rate"], s["after_rain_tides"]["other_tests"])]
                     for s in slow])
+        st.caption(f"In brackets: the number of tests behind each rate. Rates from fewer than {MIN_TESTS} tests "
+                   "are not shown.")
+        csv_button(diagnosis_table(), "all-beaches-after-rain", "Download all beaches (CSV)")
 
     counts = DIAG["recovery_counts"]
     with st.expander("How beaches were sorted, and the ones we couldn't sort"):
@@ -689,6 +729,18 @@ def advisory_page():
             f"beaches), and {counts.get('little change after rain', 0)} that rarely fail at all.\n"
             f"- This is a pattern in 16 years of tests at {COVERAGE}, not a health study. It supports a rule that "
             "depends on storm size and on the beach; it doesn't prove any single day was safe.")
+
+
+def diagnosis_table():
+    """Every diagnosed beach in one table (rates in %, with the number of tests behind each)."""
+    t = pd.DataFrame([{"Beach": label(x["station"]), "Station": x["station"], "Pattern": GROUPS[group_of(x)]["word"],
+                       "Dry weather": x["dry_unsafe_rate"], "Dry tests": x["dry_tests"],
+                       "During advisory": x["advisory_unsafe_rate"], "Advisory tests": x["advisory_tests"],
+                       "Days 4-6": x["groups"]["days 4-6"]["unsafe_rate"], "Days 4-6 tests": x["groups"]["days 4-6"]["tests"],
+                       "Normal": x["normal_wet_season_rate"], "Trigger": x["trigger"] or ""} for x in DIAG["stations"]])
+    for c in ["Dry weather", "During advisory", "Days 4-6", "Normal"]:
+        t[c] = (t[c].astype(float) * 100).round(1)
+    return t.sort_values("Days 4-6", ascending=False)
 
 
 def group_line(g, rg):
@@ -737,6 +789,63 @@ def diagnosis_sentence(s):
            f"In dry weather since {RECENT_YEAR}, {dry} of its tests were unsafe."))
 
 
+def enough(rate, n):
+    """A big tile number: the rate, or 'Too few tests' (in smaller type) when fewer than MIN_TESTS."""
+    return pct(rate) if n and n >= MIN_TESTS else '<span class="v-small">Too few tests</span>'
+
+
+ADVISORY_WORDS = {"Posting": "Warning sign", "Closure": "Closed", "Rain": "Rain advisory"}
+
+
+def posting_history(code):
+    """The beach's OFFICIAL advisory record from the state's Beach Watch database (pipeline step 13):
+    days under a warning sign, closure or rain advisory each year, and the latest advisories."""
+    pj = load_json("postings.json")
+    through = pd.Timestamp(pj["records_through"])
+    with panel():
+        title(f"Official posting history (records through {through:%B} {through.day}, {through.year})")
+        rows = pj["stations"].get(code)
+        if not rows:
+            st.markdown("No Beach Watch posting records for this station. That can mean it was never posted, or that "
+                        "the county records it under another station name.")
+            return
+        df = pd.DataFrame(rows, columns=pj["columns"])
+        df["start"] = pd.to_datetime(df["start"])
+        df["end"] = pd.to_datetime(df["end"])
+        # Days each advisory was up. One still open at the end of the records counts up to that date.
+        df["days"] = ((df["end"].fillna(through + pd.Timedelta(days=1)) - df["start"]).dt.days).clip(lower=1)
+        df["kind"] = df["type"].map(ADVISORY_WORDS).fillna(df["type"])
+        df["year"] = df["start"].dt.year
+        recent = df[df["year"] >= 2010]  # the same years as the test data
+        posted = recent[recent["type"] == "Posting"]
+        n_signs, n_closed, n_rain = len(posted), (recent["type"] == "Closure").sum(), (recent["type"] == "Rain").sum()
+        st.markdown(f"Since 2010: **{n_signs} warning {'sign' if n_signs == 1 else 'signs'}** "
+                    f"({posted['days'].sum():,} days posted), {n_closed} {'closure' if n_closed == 1 else 'closures'} "
+                    f"and {n_rain} recorded rain {'advisory' if n_rain == 1 else 'advisories'}.")
+        per_year = recent.groupby(["year", "kind"], as_index=False)["days"].sum()
+        kinds = [w for w in ADVISORY_WORDS.values() if w in set(per_year["kind"])]
+        colors = {"Warning sign": ORANGE, "Closed": LEVELS["high"]["hex"], "Rain advisory": BLUE}
+        st.html(chips([(colors[k], k) for k in kinds]))
+        bars = alt.Chart(per_year).mark_bar(cornerRadiusTopLeft=2, cornerRadiusTopRight=2).encode(
+            x=alt.X("year:O", title=None, axis=alt.Axis(labelAngle=0, values=list(range(2010, through.year + 1, 2)))),
+            y=alt.Y("days:Q", title="Days under advisory", stack=True),
+            color=alt.Color("kind:N", scale=alt.Scale(domain=kinds, range=[colors[k] for k in kinds]), legend=None),
+            tooltip=[alt.Tooltip("year:O", title="Year"), alt.Tooltip("kind:N", title=" "),
+                     alt.Tooltip("days:Q", title="Days")])
+        show_chart(bars.properties(height=200), width="stretch")
+        st.caption(f"{through.year} is partial: the state's records end {through:%B} {through.day}. Source: State "
+                   "Water Board, Beach Watch (data.ca.gov). Rain advisories cover all of a health department's beaches "
+                   "at once, so they appear for every beach it covers. Days can overlap when a sign and a rain "
+                   "advisory are up together.")
+        with st.expander("Latest advisories"):
+            last = df.sort_values("start", ascending=False).head(15)
+            rows_table([("Started", False), ("Type", False), ("Lifted", False), ("Days", True), ("Cause", False)],
+                       [[f"{r.start:%b %d, %Y}", r.kind, "still open" if pd.isna(r.end) else f"{r.end:%b %d, %Y}",
+                         str(r.days), html.escape(r.cause or "")] for r in last.itertuples()])
+        numbers(per_year.rename(columns={"kind": "type"}), f"postings-per-year_{code}", year=st.column_config.NumberColumn("Year", format="%d"),
+                type="Advisory", days="Days")
+
+
 def diagnosis_page():
     # Start on the beach in the link, or the one picked on Forecast, or else the beach that
     # stays unsafe longest after the advisory.
@@ -776,15 +885,18 @@ def diagnosis_page():
         show_chart((advisory_band(top) + bars + rule + rule_text).properties(height=290), width="stretch")
         st.caption("Shaded: inside the 72-hour advisory. Dashed line: this beach's normal level. "
                    "Pale bars have fewer than 8 tests, so they jump around by chance.")
-        numbers(df[["day", "unsafe", "tests"]], day="Days since rain",
+        numbers(df[["day", "unsafe", "tests"]], f"by-day-since-rain_{code}", day="Days since rain",
                 unsafe=st.column_config.NumberColumn("% unsafe", format="%.1f"), tests="Tests")
+
+    posting_history(code)
 
     trig = s["trigger"] or "no storm size reached 1 in 4"
     tide = s["after_rain_tides"]
     with st.expander("This beach in numbers"):
         cards([
-            (pct(s["dry_unsafe_rate"]), f"of dry-weather tests unsafe (since {RECENT_YEAR})", f"{s['dry_tests']} tests"),
-            (pct(s["advisory_unsafe_rate"]), f"unsafe during rain advisories (since {RECENT_YEAR})",
+            (enough(s["dry_unsafe_rate"], s["dry_tests"]), f"of dry-weather tests unsafe (since {RECENT_YEAR})",
+             f"{s['dry_tests']} tests"),
+            (enough(s["advisory_unsafe_rate"], s["advisory_tests"]), f"unsafe during rain advisories (since {RECENT_YEAR})",
              f"days 0 to 3 after rain, {s['advisory_tests']} tests"),
             (html.escape(trig), "rain that makes 1 in 4 tests fail", "storm total, tests on days 0 to 1"),
             ('<span class="v-small">' + GROUPS[g]["word"] + "</span>", "its group on the After-rain patterns page",
@@ -799,10 +911,13 @@ def diagnosis_page():
                    "(for example, DNA markers for human sewage) can confirm it.")
 
     with st.expander("Days 0 to 1 after rain, by storm size"):
-        st.caption("Dashed line: 1 in 4 tests unsafe.")
+        st.caption("Dashed line: 1 in 4 tests unsafe. Pale bars have fewer than 8 tests.")
         ss = pd.DataFrame(s["by_storm_size"])
         ss["unsafe"] = ss["unsafe_rate"].astype(float) * 100
+        ss["few"] = np.where(ss["tests"] < 8, "Fewer than 8 tests", "8 or more tests")
         sb = alt.Chart(ss).mark_bar(size=22, color=BLUE, cornerRadiusTopLeft=3, cornerRadiusTopRight=3).encode(
+            opacity=alt.Opacity("few:N", scale=alt.Scale(domain=["8 or more tests", "Fewer than 8 tests"], range=[1, .35]),
+                                legend=None),
             x=alt.X("storm:N", sort=list(ss["storm"]), title="Storm total", axis=alt.Axis(labelAngle=0)),
             y=alt.Y("unsafe:Q", title="% unsafe", scale=alt.Scale(domain=[0, 100])),
             tooltip=[alt.Tooltip("storm:N", title="Storm"), alt.Tooltip("unsafe:Q", title="% unsafe", format=".0f"),
@@ -814,17 +929,116 @@ def diagnosis_page():
                        f"big spring-tide days ({tide['big_tide_tests']} tests) vs. {pct(tide['other_rate'])} on other days.")
 
     with st.expander("All beaches"):
-        t = pd.DataFrame([{"Beach": label(x["station"]), "Pattern": GROUPS[group_of(x)]["word"],
-                           "Dry weather": x["dry_unsafe_rate"], "During advisory": x["advisory_unsafe_rate"],
-                           "Days 4-6": x["groups"]["days 4-6"]["unsafe_rate"], "Normal": x["normal_wet_season_rate"],
-                           "Trigger": x["trigger"] or ""} for x in DIAG["stations"]])
-        for c in ["Dry weather", "During advisory", "Days 4-6", "Normal"]:
-            t[c] = t[c].astype(float) * 100
+        t = diagnosis_table()
         fmt = st.column_config.NumberColumn(format="%.0f%%")
-        st.dataframe(t.sort_values("Days 4-6", ascending=False), hide_index=True, width="stretch",
+        st.dataframe(t, hide_index=True, width="stretch",
                      column_config={c: fmt for c in ["Dry weather", "During advisory", "Days 4-6", "Normal"]})
+        csv_button(t, "all-beaches-profile")
         st.caption(f"Dry weather and during-advisory rates use tests since {RECENT_YEAR}, so a beach that was fixed "
                    "isn't still called chronic. Days 4-6 and normal use all years since 2010, because recovery needs many storms.")
+
+
+# ---------------------------------------------------------------------------
+# Compare beaches: 2 or 3 beaches side by side
+# ---------------------------------------------------------------------------
+
+def km_apart(a, b):
+    """Straight-line distance between two stations in km (haversine: distance on a sphere)."""
+    la1, lo1, la2, lo2 = np.radians([STATIONS.at[a, "lat"], STATIONS.at[a, "lon"], STATIONS.at[b, "lat"], STATIONS.at[b, "lon"]])
+    h = np.sin((la2 - la1) / 2) ** 2 + np.cos(la1) * np.cos(la2) * np.sin((lo2 - lo1) / 2) ** 2
+    return 2 * 6371 * np.arcsin(np.sqrt(h))
+
+
+def compare_page():
+    fc = load_json("forecast.json")
+    fc_by_code = {s["station"]: s for s in fc["stations"]}
+    codes = sorted(fc_by_code, key=place)
+    today = la_today()
+    # Start with the beach picked on Forecast or Beach profile (or the riskiest today) and its 2 nearest beaches.
+    if "cmp_beaches" not in st.session_state:
+        first = st.session_state.get("shared_beach")
+        if first not in fc_by_code:
+            first = max(codes, key=lambda c: fc_by_code[c]["forecast"][today_index(fc_by_code[c], today)]["risk"])
+        near = sorted((c for c in codes if c != first), key=lambda c: km_apart(first, c))[:2]
+        st.session_state["cmp_beaches"] = [first] + near
+    top = st.container()  # the finding sits above the picker, but is written after it
+    picked = st.multiselect("Beaches (2 or 3)", codes, key="cmp_beaches", max_selections=3, format_func=label,
+                            help="Type to search. Beaches with a forecast are listed.")
+    if len(picked) < 2:
+        with top:
+            finding("Compare beaches", "Pick 2 or 3 beaches to compare.",
+                    "Each one's risk today, latest test, recovery after rain and dry-weather record, side by side.")
+        return
+
+    day = {c: fc_by_code[c]["forecast"][today_index(fc_by_code[c], today)] for c in picked}
+    riskiest = max(picked, key=lambda c: day[c]["risk"])
+    pairs = [(a, b) for i, a in enumerate(picked) for b in picked[i + 1:]]
+    with top:
+        finding("Compare beaches",
+                f"{html.escape(place(riskiest))} has the highest risk today: <b>{pct(day[riskiest]['risk'])}</b>.",
+                f"{len(picked)} beaches, up to {max(km_apart(a, b) for a, b in pairs):.1f} km apart. Each one's risk "
+                "today, latest test, recovery after rain and dry-weather record.",
+                notes=[NORMAL_NOTE])
+
+    # One tile per beach: today's risk, in its level color.
+    cards([(pct(day[c]["risk"]), html.escape(label(c)),
+            f"{LEVELS[day[c]['level']]['word']} today ({nice_date(day[c]['date'])})", LEVELS[day[c]["level"]]["hex"])
+           for c in picked])
+
+    # Side by side: one row per measure, one column per beach (one block per measure on a phone).
+    def latest(c):
+        t = fc_by_code[c]["last_test"]
+        age = (pd.Timestamp(today) - pd.Timestamp(t["date"])).days
+        return (f"{t['value']:,.0f} per 100 mL, {'over' if t['unsafe'] else 'under'} the limit; "
+                f"{pd.Timestamp(t['date']):%b %d, %Y} ({ago(t['date'], today)})" + ("; over 30 days old" if age > 30 else ""))
+
+    def diag(c, what):
+        s = DIAG_BY.get(c)
+        if s is None:
+            return "Not enough tests to tell"
+        if what == "group":
+            return GROUPS[group_of(s)]["word"]
+        if what == "dry":
+            return rate_n(s["dry_unsafe_rate"], s["dry_tests"])
+        if what == "normal":
+            return pct(s["normal_wet_season_rate"])
+        g = s["groups"][what]
+        return rate_n(g["unsafe_rate"], g["tests"])
+
+    measures = [
+        ("Forecast risk today", lambda c: f"{pct(day[c]['risk'])} ({LEVELS[day[c]['level']]['word']})"),
+        ("Latest test", latest),
+        ("After-rain recovery", lambda c: diag(c, "group")),
+        ("Unsafe 2 to 3 days after rain", lambda c: diag(c, "days 2-3")),
+        ("Unsafe 4 to 6 days after rain", lambda c: diag(c, "days 4-6")),
+        ("Normal level", lambda c: diag(c, "normal")),
+        (f"Unsafe in dry weather (since {RECENT_YEAR})", lambda c: diag(c, "dry")),
+        ("All tests", lambda c: f"{STATIONS.at[c, 'samples']:,} since {STATIONS.at[c, 'first'][:4]}"),
+        ("Distance to the others", lambda c: "; ".join(f"{km_apart(c, o):.1f} km to {o}" for o in picked if o != c)),
+    ]
+    with panel():
+        title("Side by side")
+        rows_table([("", False)] + [(label(c), False) for c in picked],
+                   [[html.escape(m)] + [html.escape(f(c)) for c in picked] for m, f in measures])
+        st.caption(f"In brackets: the number of tests behind each rate; rates from fewer than {MIN_TESTS} tests "
+                   "are not shown. Recovery and normal level use all years since 2010; dry weather uses recent years. "
+                   + PRECAUTION)
+        table = pd.DataFrame({label(c): [f(c) for _, f in measures] for c in picked}, index=[m for m, _ in measures])
+        csv_button(table.reset_index(names="measure"), "compare_" + "_".join(picked))
+
+    with panel():
+        title("Where they are")
+        m = pd.DataFrame([{"station": c, "lat": STATIONS.at[c, "lat"], "lon": STATIONS.at[c, "lon"], "place": place(c),
+                           "status": f"{LEVELS[day[c]['level']]['word']} ({pct(day[c]['risk'])})",
+                           "color": LEVELS[day[c]["level"]]["rgb"]} for c in picked])
+        span = max(km_apart(a, b) for a, b in pairs)
+        zoom = 12 if span < 3 else 10.5 if span < 15 else 9 if span < 50 else 7.8  # closer beaches, closer map
+        base_map([pdk.Layer("ScatterplotLayer", data=m, get_position=["lon", "lat"], get_fill_color="color",
+                            get_radius=9, radius_units=PIXELS, stroked=True, get_line_color=[11, 37, 69],
+                            line_width_min_pixels=2, pickable=True)],
+                 lat=m["lat"].mean(), lon=m["lon"].mean(), zoom=zoom, phone_zoom=zoom - 0.8, height=300,
+                 tooltip="<b>{place}</b><br/>{status}")
+        st.html(chips([(LEVELS[k]["hex"], LEVELS[k]["word"]) for k in LEVELS]))
 
 
 # ---------------------------------------------------------------------------
@@ -848,6 +1062,73 @@ def eval_table(version):
 @st.cache_data(ttl="1h", show_spinner=False)
 def run_eval(station, start, end, years, version):
     return evaluate(eval_table(version), station, start, end, years, load_json("evaluator_data.json")["widen"])
+
+
+# News articles for each known project's dates (see DATES_NOTE). Keys start like the project labels.
+PROJECT_SOURCES = {
+    "Malibu Lagoon": [("The Inertia", "https://www.theinertia.com/surf/malibu-lagoon-project-manager-responds-to-allegations-that-lagoon-restoration-is-ruining-surfrider-beach/"),
+                      ("SMDP", "https://www.smdp.com/malibu-lagoon-reopens-after-massive-reconstruction/")],
+    "Santa Monica Pier": [("Santa Monica Lookout", "https://santamonicalookout.com/ssm_site/the_lookout/news/News-2023/August-2023/08_21_2023_Water_Quality_Under_Pier_Gives_Santa_Monica_Beaches_a_Bum_Rap.html")],
+}
+
+
+def project_report(r, code, preset, years, calib):
+    """A one-page report of one cleanup-project check, as a web page (open it, then print or
+    save as PDF). Everything in it comes from the evaluator's result `r`."""
+    b, a = r["before"], r["after"]
+    est, (lo, hi) = r["change_beyond_weather"], r["ci95"]
+    what = preset["label"] if preset else "Beach and dates chosen by the user"
+    news = next((v for k, v in PROJECT_SOURCES.items() if preset and preset["label"].startswith(k)), [])
+    e = html.escape
+    row = lambda k, v: f"<tr><th>{e(k)}</th><td>{v}</td></tr>"
+    window = lambda w: f"{pd.Timestamp(w[0]):%b %d, %Y} to {pd.Timestamp(w[1]):%b %d, %Y}"
+    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
+<title>After the Rain: cleanup project check, {e(place(code))}</title>
+<style>
+  @page {{ size: letter; margin: 0.5in; }}
+  body {{ font-family: "Public Sans", Arial, sans-serif; color: #1A2440; font-size: 11pt; line-height: 1.4;
+          max-width: 7.3in; margin: 24px auto; padding: 0 16px; }}
+  h1 {{ font-size: 18pt; margin: 0 0 4px; }} h2 {{ font-size: 12pt; margin: 12px 0 2px; }}
+  .sub {{ color: #4E5B72; margin: 0 0 12px; }} .verdict {{ font-size: 14pt; font-weight: 700; margin: 8px 0; }}
+  table {{ border-collapse: collapse; width: 100%; }} th, td {{ text-align: left; padding: 3px 8px 3px 0;
+          border-bottom: 1px solid #DCE4EE; vertical-align: top; }} th {{ width: 42%; font-weight: 600; }}
+  ul {{ margin: 4px 0; padding-left: 18px; }} li {{ margin: 2px 0; }} .small {{ font-size: 9pt; color: #4E5B72; }}
+  /* last, so it wins over the rules above when printing */
+  @media print {{ body {{ margin: 0; padding: 0; font-size: 10pt; }} h1 {{ font-size: 16pt; }} }}
+</style></head><body>
+<h1>Cleanup project check: {e(place(code))} ({e(code)})</h1>
+<p class="sub">{e(what)}. Made by After the Rain on {datetime.now(LA):%B %d, %Y}.</p>
+<p class="verdict">{e(r["verdict"].capitalize())}: {pts(est)} points of unsafe tests beyond what the weather and
+other beaches explain (95% range {pts(lo)} to {pts(hi)}).</p>
+<h2>Dates and samples</h2><table>
+{row("Work started / finished", f"{pd.Timestamp(r['start']):%b %d, %Y} / {pd.Timestamp(r['end']):%b %d, %Y}" + (" (approximate, from news reports)" if preset else ""))}
+{row("Before period", f"{window(r['before_window'])}: {b['tests']} tests")}
+{row("After period", f"{window(r['after_window'])}: {a['tests']} tests")}
+{row("Comparison beaches", f"{r['control_beaches']} beaches more than 5 km away")}
+</table>
+<h2>Result</h2><table>
+{row("Unsafe before", f"{pct(b['unsafe_rate'])} of tests (weather alone predicts {pct(b['expected_from_weather'])})")}
+{row("Unsafe after", f"{pct(a['unsafe_rate'])} of tests (weather alone predicts {pct(a['expected_from_weather'])})")}
+{row("Change at the comparison beaches", f"{pts(r['control_change'])} points (subtracted out)")}
+{row("Change beyond weather and region", f"<b>{pts(est)} points</b>")}
+{row("95% range", f"{pts(lo)} to {pts(hi)} points" + ("" if years == 2 else " (approximate: the widening was set for 2-year comparisons)"))}
+</table>
+<h2>Assumptions</h2><ul>
+<li>Expected risk from weather only: a model that knows the beach, rain (including the test day), days since rain,
+tides and season, but not recent test results or the date. Each year is scored by a model trained on the other years.</li>
+<li>Change = (beach after minus before) minus (beaches 5+ km away, after minus before), using observed minus expected.
+The months of the work itself are left out.</li>
+<li>95% range: resampling whole months 1,000 times, widened {calib['widen']}x so that only
+{pct(calib['check_share_excluding_zero'])} of {calib['runs']} random beaches and dates look like a change (5% is the target).</li>
+<li>"Cleaner after" is not "because of": one beach and one date can't rule out something else changing at the same time.
+{e(POINTS_NOTE)}</li></ul>
+<h2>Sources</h2><ul>
+<li>Water tests: California State Water Boards, Safe to Swim (enterococcus over 104 per 100 mL counts as unsafe).</li>
+<li>Rain: Open-Meteo (ERA5). Tides: NOAA.</li>
+{"".join(f'<li>Project dates: <a href="{e(u)}">{e(n)}</a> ({e(u.split("/")[2])})</li>' for n, u in news)}</ul>
+<p class="small">After the Rain is a student project for the 2026 Congressional App Challenge, not an official
+health advisory. Model {e(str(load_json("final_metrics.json").get("model_id", "")))}.</p>
+</body></html>"""
 
 
 def use_preset():
@@ -911,6 +1192,7 @@ def evaluator_page():
     else:
         sentence = f"{who} showed no clear change after {what}: <b>{signed(est)} points</b>."
         detail = f"95% range {signed(lo)} to {signed(hi)} points, within normal year-to-year swings."
+    detail += f" Based on {r['before']['tests']} tests before and {r['after']['tests']} after."
     with top:
         finding("Cleanup projects", sentence, detail, notes=[POINTS_NOTE])
 
@@ -953,9 +1235,15 @@ def evaluator_page():
         show_chart((work_band + work_text + zero + lines + avg_rule + avg_text).properties(height=320), width="stretch")
         st.caption("Above zero = more unsafe tests than rain, tides and season predict for this beach. Navy lines: the "
                    "beach's average surprise before and after. Months with few tests jump around.")
-        numbers(long[["month", "who", "v"]].rename(columns={"v": "points"}),
+        numbers(long[["month", "who", "v"]].rename(columns={"v": "points"}), f"monthly-surprise_{code}",
                 month=st.column_config.DateColumn("Month", format="MMM YYYY"), who=" ",
                 points=st.column_config.NumberColumn("Surprise (points)", format="%+.1f"))
+
+    st.download_button("Download a one-page report", project_report(r, code, preset, years, calib).encode("utf-8"),
+                       file_name=f"after-the-rain_project-check_{code}_{start}.html", mime="text/html",
+                       icon=":material/description:", on_click="ignore", key="report",
+                       help="A printable page with the dates, sample counts, change, 95% range, sources and "
+                            "assumptions. Open it in a browser, then print or save as PDF.")
 
     with st.expander("Before and after, in numbers"):
         st.markdown(f"This compares the beach before and after, adjusts for the weather, and subtracts the change at "
@@ -995,9 +1283,7 @@ def evaluator_page():
         st.markdown("\n".join(f"- **{d['label']}** ({d['beach']}): {d['verdict']}, {pts(d['change_beyond_weather'])} "
                               f"points (95% range {pts(d['ci95'][0])} to {pts(d['ci95'][1])})" for d in iv["demos"]))
         st.markdown(f"{DATES_NOTE} Sources: "
-                    "[The Inertia](https://www.theinertia.com/surf/malibu-lagoon-project-manager-responds-to-allegations-that-lagoon-restoration-is-ruining-surfrider-beach/), "
-                    "[SMDP](https://www.smdp.com/malibu-lagoon-reopens-after-massive-reconstruction/), "
-                    "[Santa Monica Lookout](https://santamonicalookout.com/ssm_site/the_lookout/news/News-2023/August-2023/08_21_2023_Water_Quality_Under_Pier_Gives_Santa_Monica_Beaches_a_Bum_Rap.html).")
+                    + ", ".join(f"[{n}]({u})" for links in PROJECT_SOURCES.values() for n, u in links) + ".")
 
 
 # ---------------------------------------------------------------------------
@@ -1036,7 +1322,7 @@ def fires_page():
         show_chart((zero + lines + fire_rule + fire_text).properties(height=300), width="stretch")
         st.caption("Above zero = more unsafe tests than the forecast model expected from rain, tides and the beach's "
                    "history. Monthly values jump around because some months have few tests near the burn.")
-        numbers(long[["month", "group", "surprise"]], month=st.column_config.DateColumn("Month", format="MMM YYYY"),
+        numbers(long[["month", "group", "surprise"]], "fire-monthly-surprise", month=st.column_config.DateColumn("Month", format="MMM YYYY"),
                 group=" ", surprise=st.column_config.NumberColumn("Surprise (points)", format="%+.1f"))
 
     with st.expander("The numbers"):
@@ -1073,7 +1359,7 @@ def fires_page():
                   pdk.Layer("ScatterplotLayer", data=near, get_position=["lon", "lat"], get_fill_color=[11, 37, 69],
                             get_radius=6, radius_units=PIXELS, stroked=True, get_line_color=[255, 255, 255],
                             line_width_min_pixels=1, pickable=True)],
-                 lat=34.1, lon=-118.35, zoom=8.4, height=320, tooltip="<b>{place}</b><br/>{km_from_burn} km from the burn area")
+                 lat=34.1, lon=-118.35, zoom=8.4, phone_zoom=8.0, height=320, tooltip="<b>{place}</b><br/>{km_from_burn} km from the burn area")
         st.html(chips([(ORANGE, "2025 burn areas (Palisades, left; Eaton, right)"), (NAVY, "Stations studied")]))
         st.caption(pf["eaton_note"] + " Fire perimeters: CAL FIRE.")
 
@@ -1173,9 +1459,15 @@ def beach_map(fc_by_code, selected, day):
         layers.append(pdk.Layer("ScatterplotLayer", data=ring, get_position=["lon", "lat"], filled=False,
                                 stroked=True, get_line_color=[11, 37, 69], line_width_min_pixels=3,
                                 get_radius=14, radius_units=PIXELS))
-    base_map(layers, lat=33.92, lon=-118.78, zoom=7.8, height=430, tooltip="<b>{place}</b><br/>{status}",
+    base_map(layers, lat=33.86, lon=-118.78, zoom=7.8, height=430, tooltip="<b>{place}</b><br/>{status}",
              on_select=on_map_click, selection_mode="single-object", key="map")
     st.html(chips([(LEVELS[k]["hex"], LEVELS[k]["word"]) for k in LEVELS] + [(GREY["hex"], "No forecast")]))
+    table = pd.DataFrame([{"date": day, "station": c, "beach": place(c),
+                           "risk_percent": round(s["forecast"][today_index(s, day)]["risk"] * 100, 1),
+                           "level": LEVELS[s["forecast"][today_index(s, day)]["level"]]["word"],
+                           "last_test_date": s["last_test"]["date"], "last_test_value": s["last_test"]["value"],
+                           "lat": s["lat"], "lon": s["lon"]} for c, s in fc_by_code.items()])
+    csv_button(table.sort_values("risk_percent", ascending=False), f"forecast_{day}", "Download this day's forecast (CSV)")
 
 
 def status_box(code, s, i, today):
@@ -1191,6 +1483,12 @@ def status_box(code, s, i, today):
         pattern = f"<b>{GROUPS[g]['word']}</b>: {group_rates(DIAG_BY[code])}."
     else:
         pattern = "Not enough tests after rain to tell how this beach recovers."
+    # How much the estimate can lean on: the latest test's age and the beach's whole record.
+    age = (pd.Timestamp(today) - pd.Timestamp(last["date"])).days
+    stale = (f'<div class="old"><b>Latest test is {age} days old</b>, so this estimate leans on rain, tides and '
+             "the beach's track record.</div>") if age > 30 else ""
+    record = (f'<div class="old">Track record: {STATIONS.at[code, "samples"]:,} tests since '
+              f'{STATIONS.at[code, "first"][:4]}.</div>' if code in STATIONS.index else "")
     st.html(f"""
     <div class="box">
       <div class="where">{html.escape(place(code))}{code_tag(code)}</div>
@@ -1205,6 +1503,8 @@ def status_box(code, s, i, today):
         <div>{pd.Timestamp(last['date']):%b %d, %Y} ({ago(last['date'], today)}): {last['value']:,.0f} bacteria per
           100 mL, {result} of {limit_of(code):.0f}.</div>
         <div class="old">A test from an earlier day doesn't measure today's water. Lab results take a day or more.</div>
+        {stale}
+        {record}
       </div>
       <div class="part">
         <h5>After-rain pattern for this beach</h5>
@@ -1232,19 +1532,26 @@ def drivers_box(d):
                    "don't add up exactly. " + POINTS_NOTE)
 
 
-def day_boxes(s, i, replay):
-    """Small cards from the shown day on: today and the next days. In replay mode, also what tests found."""
+def day_name(date, first, replay):
+    """'Today' for the first day of a live forecast, else e.g. 'Mon 26'."""
+    d = pd.Timestamp(date)
+    return "Today" if date == first and not replay else f"{d:%a} {d.day}"
+
+
+def day_boxes(s, first_i, shown_date, replay):
+    """Small cards for today and the next days (the day picked above has a navy outline).
+    In replay mode, also what tests found."""
     out = []
-    for k, d in enumerate(s["forecast"][i:]):
+    first = s["forecast"][first_i]["date"]
+    for d in s["forecast"][first_i:]:
         lv = LEVELS[d["level"]]
-        day = pd.Timestamp(d["date"])
-        name = "Today" if k == 0 and not replay else f"{day:%a} {day.day}"
         actual = ""
         if "actual" in d:  # only in replay files, on days the beach was sampled
             a = d["actual"]
             actual = f'<div class="act">Tested: <b>{"unsafe" if a["unsafe"] else "OK"}</b> ({a["value"]:,.0f})</div>'
-        out.append(f'<div class="day"><b>{name}</b><div class="lv">{lv["word"]}</div>{meter(d["risk"], lv["hex"])}'
-                   f'<div class="pct">{pct(d["risk"])}</div>{actual}</div>')
+        picked = " picked" if d["date"] == shown_date else ""
+        out.append(f'<div class="day{picked}"><b>{day_name(d["date"], first, replay)}</b><div class="lv">{lv["word"]}</div>'
+                   f'{meter(d["risk"], lv["hex"])}<div class="pct">{pct(d["risk"])}</div>{actual}</div>')
     st.html(f'<div class="days">{"".join(out)}</div>')
 
 
@@ -1293,6 +1600,7 @@ def history_chart(code):
     first, last = df["date"].min(), df["date"].max()
     st.caption(f"{len(df)} tests from {first:%b %Y} to {last:%b %Y}, {df['unsafe'].sum()} over the limit. "
                "Hover or tap a dot for details.")
+    csv_button(df[["date", "value", "unsafe"]].assign(date=df["date"].dt.date), f"past-tests_{code}")
 
 
 def forecast_page():
@@ -1306,24 +1614,34 @@ def forecast_page():
     # The day to show: today in LA. In a replay, or if the file is too old to have today, its first day.
     today = fc["issued"] if replay else la_today()
     any_beach = fc["stations"][0]
-    day = any_beach["forecast"][today_index(any_beach, today)]["date"]
+    first_i = today_index(any_beach, today)
+    first = any_beach["forecast"][first_i]["date"]  # today, or the file's first day if it is too old to have today
+
+    # The day picker: today and the next days. The map, the counts, the beach card and
+    # "What's driving this risk" below all show the picked day.
+    dates = [d["date"] for d in any_beach["forecast"][first_i:]]
+    day = st.segmented_control("Day", dates, default=first, key=f"fc_day_{'replay' if replay else 'live'}",
+                               format_func=lambda d: day_name(d, first, replay)) or first
     levels = pd.Series([s["forecast"][today_index(s, day)]["level"] for s in fc["stations"]]).value_counts()
     warned = levels.get("caution", 0) + levels.get("high", 0)
     if replay:
-        when = (f"{nice_date(day, year=True)}: the forecast as it would have looked that day, using the rain that "
-                "actually fell (a best case). Day cards show real test results where a beach was sampled.")
+        made_on = "that day" if day == first else f"on {nice_date(first)}"
+        when = (f"{nice_date(day, year=True)}: the forecast as it would have looked {made_on}, "
+                "using the rain that actually fell (a best case). Day cards show real test results where a beach was sampled.")
     elif fc["issued"] >= today:
         made = pd.Timestamp(fc.get("made_at", fc["issued"]))
+        ahead = (pd.Timestamp(day) - pd.Timestamp(today)).days
         when = (f"Forecast for {nice_date(day)}, made {made:%b} {made.day} at {made.hour % 12 or 12}:{made:%M %p} "
-                "(LA time). Each beach's chance that a water test would be over the safe limit, today and the "
-                "next 3 days.")
+                "(LA time): each beach's chance that a water test would be over the safe limit."
+                + ("" if ahead == 0 else f" {ahead} day{'s' if ahead > 1 else ''} ahead, so less sure than today's."))
     else:
         when = (f"Last updated {nice_date(fc['issued'])}. Today's forecast couldn't be made, so this is the last "
                 f"successful run, shown for {nice_date(day)}.")
+    when_word = ("" if replay else " today") if day == first else f" on {nice_date(day)}"
     with top:
         finding("Forecast" + (" replay" if replay else ""),
                 f"<b>{warned} of {len(fc['stations'])} beaches</b> {'were' if replay else 'are'} at caution or high "
-                f"risk{'' if replay else (' today' if day == today else '')}.", when)
+                f"risk{when_word}.", when)
         if error:
             st.caption(f"Couldn't update the forecast: {error}")
     st.html(chips([(LEVELS[k]["hex"], f"{levels.get(k, 0)} {v['word']}") for k, v in LEVELS.items()]))
@@ -1347,7 +1665,7 @@ def forecast_page():
             s = fc_by_code[code]
             i = today_index(s, day)
             status_box(code, s, i, today)
-            day_boxes(s, i, replay)
+            day_boxes(s, today_index(s, first), day, replay)
         else:
             grey_box(code)
     with right:
@@ -1413,9 +1731,46 @@ def methods_page():
         labels = base.mark_text(align="left", dx=4, color=NAVY, fontSize=11).encode(
             x="caught:Q", text=alt.Text("caught:Q", format=".0f"))
         show_chart((bars + labels).properties(height=280), width="stretch")
+        csv_button(bars_df.round(1).rename(columns={"caught": "percent_of_unsafe_days_caught"}), "forecast-vs-rules")
         st.caption("\"3 tests\" = signs posted when any of the three state ocean tests fails (enterococcus, "
                    f"fecal coliform, total coliform), which is what counties post on. Against signs alone: "
                    f"{gain(test['sign.gain'])}.")
+
+    # Calibration (pipeline step 14): when the forecast says 20%, are about 20% of those tests unsafe?
+    cal = load_json("calibration.json")
+    cb = pd.DataFrame(cal["bins"])
+    for c in ("predicted", "actual", "actual_low", "actual_high"):
+        cb[c] = cb[c] * 100
+    cb["group"] = [f"{f * 100:.0f} to {t * 100:.0f}%" for f, t in zip(cb["from"], cb["to"])]
+    middle = cb[(cb["from"] >= .05) & (cb["to"] <= .5)]
+    gap = (middle["actual"] - middle["predicted"]).abs()  # how far off the risk is, in points
+    with panel():
+        title("Does the risk mean what it says? Predicted risk vs. how often tests were unsafe")
+        st.markdown(f"Each dot is a group of test days from {cal['period'][0][:4]} to {cal['period'][1][:4]} with a "
+                    "similar forecast risk. On the dashed line, the risk would be exactly right. Over all "
+                    f"{cal['tests']:,} tests the forecast averaged **{pct(cal['mean_predicted'])}** and "
+                    f"**{pct(cal['mean_actual'])}** were unsafe: the risk runs a little "
+                    f"{'low' if cal['mean_actual'] > cal['mean_predicted'] else 'high'}, by about {gap.min():.0f} to "
+                    f"{gap.max():.0f} points in the groups from 5% to 50%.")
+        axis = alt.Scale(domain=[0, 100])
+        diag = alt.Chart(pd.DataFrame({"x": [0, 100], "y": [0, 100]})).mark_line(
+            strokeDash=[4, 4], color=NAVY, strokeWidth=1).encode(x="x:Q", y="y:Q")
+        ranges = alt.Chart(cb).mark_rule(color=BLUE, strokeWidth=2).encode(
+            x=alt.X("predicted:Q", title="Forecast risk (%)", scale=axis),
+            y=alt.Y("actual_low:Q", title="Tests actually unsafe (%)", scale=axis), y2="actual_high:Q")
+        dots = alt.Chart(cb).mark_point(filled=True, color=BLUE, opacity=1).encode(
+            x="predicted:Q", y="actual:Q", size=alt.Size("tests:Q", legend=None, scale=alt.Scale(range=[40, 260])),
+            tooltip=[alt.Tooltip("group:N", title="Forecast risk"), alt.Tooltip("tests:Q", title="Tests", format=","),
+                     alt.Tooltip("predicted:Q", title="Average forecast %", format=".1f"),
+                     alt.Tooltip("actual:Q", title="Actually unsafe %", format=".1f")])
+        show_chart((diag + ranges + dots).properties(height=320), width="stretch")
+        st.caption("Bigger dots have more tests. The short lines are 95% ranges for the share unsafe; groups with "
+                   "few tests have wider ranges. Tests the model never saw while learning.")
+        numbers(cb[["group", "tests", "predicted", "actual", "actual_low", "actual_high"]], "calibration",
+                group="Forecast risk", tests="Tests", predicted=st.column_config.NumberColumn("Average forecast %", format="%.1f"),
+                actual=st.column_config.NumberColumn("Actually unsafe %", format="%.1f"),
+                actual_low=st.column_config.NumberColumn("95% range low", format="%.1f"),
+                actual_high=st.column_config.NumberColumn("95% range high", format="%.1f"))
 
     d3 = day3["sign_plus_rain.gain"]
     d3_verdict = ("the whole range is above zero, so it does better than today's signs" if d3[1] > 0 else
@@ -1442,6 +1797,30 @@ def methods_page():
             "ERA5 over past years.\n"
             "- **What's driving this risk:** the forecast page reruns the model with one group of inputs (rain, tides, "
             "the latest test, season, track record) set to the beach's typical value, and shows the 3 biggest changes.")
+
+    # A separate check against the state's REAL posting records (pipeline step 13). It doesn't
+    # replace the numbers above, which use signs rebuilt from the test results.
+    pj = load_json("postings.json")
+    ck = pj["check"]
+    pc, (c0, c1) = ck["postings"], (pd.Timestamp(d) for d in ck["period"])
+    pr = ck["postings_plus_rain"]
+    with st.expander("Compared with what counties actually posted"):
+        st.markdown(
+            f"The comparison above rebuilds warning signs from the test results. As a separate check, we used the "
+            f"state's records of what counties **actually posted** (Beach Watch), {c0:%B %Y} to {c1:%B} {c1.day}, "
+            f"{c1.year} (where the records end): {ck['tested_beach_days']:,} tested beach-days at {ck['beaches']} "
+            "beaches. Each row gives the forecast the same number of warnings as the real advisories.")
+        rows_table([("Compared with", False), ("Warns on", True), ("Real advisories caught", True),
+                    ("Forecast caught", True), ("Difference", False)],
+                   [[name, pct(r["share"][0]), pct(r["caught"][0]), pct(r["model_caught"][0]), gain(r["gain"])]
+                    for name, r in [("Signs counties actually posted (and closures)", pc),
+                                    ("Those signs plus the counties' rain advisories", pr)]])
+        st.markdown(
+            "- An advisory counts if it was up at the start of the test day (issued on an earlier day).\n"
+            "- Rain advisories are issued for all of a health department's beaches at once (LA County, the City of "
+            "Long Beach, Ventura County), so each one counts for every beach that department covers.\n"
+            "- The second row is the fairer match for the main comparison above (signs plus the 72-hour rain "
+            f"advisory, {gain(test['sign_plus_rain.gain'])}). The main numbers stay the headline.")
 
     defs = DIAG["definitions"]
     calib = load_json("evaluator_data.json")["calibration"]
@@ -1480,7 +1859,8 @@ def methods_page():
     with st.expander("Limits"):
         st.markdown(
             "- Results count days a beach was actually tested, and beaches are often retested after a bad result.\n"
-            "- Warning signs were rebuilt from the test data, not from records of real postings.\n"
+            "- The main comparison rebuilds warning signs from the test data; the check against what counties "
+            f"actually posted (above) only runs to {pd.Timestamp(pj['records_through']):%B %Y}, where the state's records end.\n"
             "- Rain forecasts get less accurate further ahead, so later forecast days are less certain.\n"
             "- The daily forecast uses fresh rain and tides, but test results only up to the last data download "
             f"({pd.Timestamp(DIAG['period'][-10:]):%B %d, %Y}); the forecast card says how old each beach's latest "
@@ -1489,7 +1869,7 @@ def methods_page():
     with st.expander("Data and AI use"):
         st.markdown(
             f"Data: California State Water Boards (Safe to Swim) tests at {COVERAGE}, Open-Meteo (ERA5 rain), NOAA (tides), CIWQS (sewage "
-            "spills), CAL FIRE (burn areas). Parts of the code and analysis were written with AI help (Claude Code); "
+            "spills), CAL FIRE (burn areas), State Water Board Beach Watch (real posting records). Parts of the code and analysis were written with AI help (Claude Code); "
             "every AI-assisted step is listed in the project's AI use log.")
 
 
@@ -1590,6 +1970,7 @@ PAGES = {  # also used by the home page's question cards and actions
     "home": st.Page(home_page, title="Home", icon=":material/home:", url_path="home", default=True),
     "advisory": st.Page(advisory_page, title="After-rain patterns", icon=":material/rainy:", url_path="after-rain"),
     "diagnosis": st.Page(diagnosis_page, title="Beach profile", icon=":material/beach_access:", url_path="beach-profile"),
+    "compare": st.Page(compare_page, title="Compare beaches", icon=":material/view_column:", url_path="compare"),
     "evaluator": st.Page(evaluator_page, title="Cleanup projects", icon=":material/compare_arrows:",
                          url_path="cleanup-projects"),
     "fires": st.Page(fires_page, title="Fire impacts", icon=":material/local_fire_department:", url_path="fire-impacts"),
